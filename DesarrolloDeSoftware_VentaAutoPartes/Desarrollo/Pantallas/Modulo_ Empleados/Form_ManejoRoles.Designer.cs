@@ -30,31 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigoRolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rolBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.Guardar = new System.Windows.Forms.Button();
-            this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.RolTableAdapter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.fKEmpleadosRolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadosTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.EmpleadosTableAdapter();
-            this.rolBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.codigoRolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKEmpleadosRolBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,6 +72,30 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(347, 108);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // codigoRolDataGridViewTextBoxColumn
+            // 
+            this.codigoRolDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Rol";
+            this.codigoRolDataGridViewTextBoxColumn.HeaderText = "Codigo de Rol";
+            this.codigoRolDataGridViewTextBoxColumn.Name = "codigoRolDataGridViewTextBoxColumn";
+            this.codigoRolDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rolBindingSource1
+            // 
+            this.rolBindingSource1.DataMember = "Rol";
+            this.rolBindingSource1.DataSource = this.ventasAutoPartesDataSet;
+            // 
+            // ventasAutoPartesDataSet
+            // 
+            this.ventasAutoPartesDataSet.DataSetName = "VentasAutoPartesDataSet";
+            this.ventasAutoPartesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button2
             // 
@@ -95,39 +119,7 @@
             this.groupBox1.Size = new System.Drawing.Size(347, 83);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modificar Rol";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Descripcion";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(49, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(45, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Codigo";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(170, 19);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 20);
-            this.textBox4.TabIndex = 9;
+            this.groupBox1.Text = "Manejo de Roles";
             // 
             // Guardar
             // 
@@ -138,10 +130,37 @@
             this.Guardar.Text = "Guardar";
             this.Guardar.UseVisualStyleBackColor = true;
             // 
-            // ventasAutoPartesDataSet
+            // textBox4
             // 
-            this.ventasAutoPartesDataSet.DataSetName = "VentasAutoPartesDataSet";
-            this.ventasAutoPartesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.textBox4.Location = new System.Drawing.Point(170, 19);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(171, 20);
+            this.textBox4.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(49, 19);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(45, 20);
+            this.textBox3.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(100, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Descripcion";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Codigo";
             // 
             // rolBindingSource
             // 
@@ -163,17 +182,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones de Manejo";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(16, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Agregar";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -185,6 +193,17 @@
             this.radioButton2.Text = "Modificar";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(16, 26);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(62, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Agregar";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // fKEmpleadosRolBindingSource
             // 
             this.fKEmpleadosRolBindingSource.DataMember = "FK_Empleados_Rol";
@@ -193,25 +212,6 @@
             // empleadosTableAdapter
             // 
             this.empleadosTableAdapter.ClearBeforeFill = true;
-            // 
-            // rolBindingSource1
-            // 
-            this.rolBindingSource1.DataMember = "Rol";
-            this.rolBindingSource1.DataSource = this.ventasAutoPartesDataSet;
-            // 
-            // codigoRolDataGridViewTextBoxColumn
-            // 
-            this.codigoRolDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Rol";
-            this.codigoRolDataGridViewTextBoxColumn.HeaderText = "Codigo de Rol";
-            this.codigoRolDataGridViewTextBoxColumn.Name = "codigoRolDataGridViewTextBoxColumn";
-            this.codigoRolDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form_ManejoRoles
             // 
@@ -229,14 +229,14 @@
             this.Text = "Manejo de Roles";
             this.Load += new System.EventHandler(this.Form_ManejoRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKEmpleadosRolBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
