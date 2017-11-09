@@ -50,6 +50,12 @@
     <Compile Include="Clases\Empleados.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Pantallas\Modulo _ Productos\Form_Productos_ManejoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Modulo _ Productos\Form_Productos_ManejoProductos.designer.cs">
+      <DependentUpon>Form_Productos_ManejoProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Modulo_ Empleados\Form_ManejoRoles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VentasAutoPartesDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pantallas\Modulo _ Productos\Form_Productos_ManejoProductos.resx">
+      <DependentUpon>Form_Productos_ManejoProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Modulo_ Empleados\Form_ManejoRoles.resx">
       <DependentUpon>Form_ManejoRoles.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,7 +182,6 @@
     <None Include="Resources\Sin título.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pantallas\Modulo _ Productos\" />
     <Folder Include="Pantallas\Modulo _ Proveedores\" />
     <Folder Include="Pantallas\Modulo_ Clientes\" />
     <Folder Include="Pantallas\Modulo_Compras\" />
