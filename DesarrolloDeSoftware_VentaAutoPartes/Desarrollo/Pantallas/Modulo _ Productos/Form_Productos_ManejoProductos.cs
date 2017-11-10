@@ -26,5 +26,48 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         {
 
         }
+
+        private void Form_Productos_ManejoProductos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'ventasAutoPartesDataSet.Categoria_Producto' Puede moverla o quitarla según sea necesario.
+            this.categoria_ProductoTableAdapter.Fill(this.ventasAutoPartesDataSet.Categoria_Producto);
+            // TODO: esta línea de código carga datos en la tabla 'ventasAutoPartesDataSet._Productos_Historicos' Puede moverla o quitarla según sea necesario.
+            this.productos_HistoricosTableAdapter.Fill(this.ventasAutoPartesDataSet._Productos_Historicos);
+            // TODO: esta línea de código carga datos en la tabla 'ventasAutoPartesDataSet.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.ventasAutoPartesDataSet.Producto);
+            // TODO: esta línea de código carga datos en la tabla 'ventasAutoPartesDataSet.Modelo' Puede moverla o quitarla según sea necesario.
+            this.modeloTableAdapter.Fill(this.ventasAutoPartesDataSet.Modelo);
+            // TODO: esta línea de código carga datos en la tabla 'ventasAutoPartesDataSet.Marca' Puede moverla o quitarla según sea necesario.
+            this.marcaTableAdapter.Fill(this.ventasAutoPartesDataSet.Marca);
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productoTableAdapter.FillBy(this.ventasAutoPartesDataSet.Producto);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
