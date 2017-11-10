@@ -64,11 +64,11 @@ namespace Desarrollo.Clases
         }
 
 
-        public bool Fun_Buscar()
+        public bool Fun_PruebaComprobarEstado( string ID, string  Password)
         {
            
             bool resultado = false;
-            this.sql = string.Format(@"select ID, Nombre, Codigo_Estado, Contraseña, Codigo_Rol from Empleados where [ID]='{0}' AND [Contraseña]='{1}'", this.id_empleado, this.contrasena);
+            this.sql = string.Format(@"select ID, Nombre, Codigo_Estado, Contraseña, Codigo_Rol from Empleados where [ID]='{0}' AND [Contraseña]='{1}'", ID, Password);
             this.cmd = new SqlCommand(this.sql, this.cnx);
             this.cnx.Open();
             SqlDataReader Reg = null;
@@ -78,11 +78,13 @@ namespace Desarrollo.Clases
             {
                 
                 Var_Codigo_estado = Reg["Codigo_Estado"].ToString();
-                Var_Codigo_Rol = Reg[" Codigo_Rol"].ToString();
+                Var_Codigo_Rol = Reg["Codigo_Rol"].ToString();
+                
 
                 if(Convert.ToInt16(Var_Codigo_estado) == 1)
                 {
                     this.cnx.Close();
+                    
                     resultado = true;
                 }else
                 {
@@ -100,40 +102,8 @@ namespace Desarrollo.Clases
 
 
 
-        public void Fun_BloquearUsuario()
-        {
 
-        }
-
-        public string Fun_OptenerNumeroIntentos()
-        {
-            string Intentos;
-
-            this.sql = string.Format(@"select Oportunidades, Codigo_Estado from Login where Codigo_Estado =1", this.id_empleado, this.contrasena);
-            this.cmd = new SqlCommand(this.sql, this.cnx);
-            this.cnx.Open();
-            SqlDataReader Reg = null;
-            
-           Reg = this.cmd.ExecuteReader();
-             if (Reg.Read())
-                {
-                Intentos = Reg["Oportunidades"].ToString();
-                this.cnx.Close();
-                return Intentos;
-            }
-            this.cnx.Close();
-            return Intentos = Convert.ToString(1);
-        }
-
-        public void Fun_ReducirIntentos()
-        {
-        }
-
-        public void Fun_ValidarContraseña()
-        {
-        }
-        public void Fun_NuevaContraseña()
-        {
-        }
+        ///////////////////////////////////////////////////////////////////////
+        
     }
     }

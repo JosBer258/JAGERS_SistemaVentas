@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.Txt_Password_Primera = new System.Windows.Forms.TextBox();
             this.Txt_UserID = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,6 +51,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 128);
             this.panel1.TabIndex = 0;
+            // 
+            // Txt_Password_Primera
+            // 
+            this.Txt_Password_Primera.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Txt_Password_Primera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Password_Primera.ForeColor = System.Drawing.SystemColors.Info;
+            this.Txt_Password_Primera.Location = new System.Drawing.Point(69, 75);
+            this.Txt_Password_Primera.Margin = new System.Windows.Forms.Padding(7);
+            this.Txt_Password_Primera.MaxLength = 15;
+            this.Txt_Password_Primera.Name = "Txt_Password_Primera";
+            this.Txt_Password_Primera.Size = new System.Drawing.Size(220, 26);
+            this.Txt_Password_Primera.TabIndex = 26;
+            this.Txt_Password_Primera.UseSystemPasswordChar = true;
+            this.Txt_Password_Primera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Password_Primera_KeyPress);
+            // 
+            // Txt_UserID
+            // 
+            this.Txt_UserID.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Txt_UserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_UserID.ForeColor = System.Drawing.SystemColors.Info;
+            this.Txt_UserID.Location = new System.Drawing.Point(69, 30);
+            this.Txt_UserID.Margin = new System.Windows.Forms.Padding(7);
+            this.Txt_UserID.MaxLength = 15;
+            this.Txt_UserID.Name = "Txt_UserID";
+            this.Txt_UserID.Size = new System.Drawing.Size(220, 26);
+            this.Txt_UserID.TabIndex = 25;
+            this.Txt_UserID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_UserID_KeyPress);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Desarrollo.Properties.Resources._2;
+            this.pictureBox6.Image = global::Desarrollo.Properties.Resources.candado;
+            this.pictureBox6.Location = new System.Drawing.Point(15, 68);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(44, 43);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 24;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Desarrollo.Properties.Resources._2;
+            this.pictureBox5.Image = global::Desarrollo.Properties.Resources.corbata;
+            this.pictureBox5.Location = new System.Drawing.Point(15, 18);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(44, 43);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 23;
+            this.pictureBox5.TabStop = false;
             // 
             // button1
             // 
@@ -76,53 +125,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Txt_Password_Primera
-            // 
-            this.Txt_Password_Primera.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.Txt_Password_Primera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Password_Primera.ForeColor = System.Drawing.SystemColors.Info;
-            this.Txt_Password_Primera.Location = new System.Drawing.Point(69, 75);
-            this.Txt_Password_Primera.Margin = new System.Windows.Forms.Padding(7);
-            this.Txt_Password_Primera.MaxLength = 15;
-            this.Txt_Password_Primera.Name = "Txt_Password_Primera";
-            this.Txt_Password_Primera.Size = new System.Drawing.Size(220, 26);
-            this.Txt_Password_Primera.TabIndex = 26;
-            this.Txt_Password_Primera.UseSystemPasswordChar = true;
-            // 
-            // Txt_UserID
-            // 
-            this.Txt_UserID.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.Txt_UserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_UserID.ForeColor = System.Drawing.SystemColors.Info;
-            this.Txt_UserID.Location = new System.Drawing.Point(69, 30);
-            this.Txt_UserID.Margin = new System.Windows.Forms.Padding(7);
-            this.Txt_UserID.MaxLength = 15;
-            this.Txt_UserID.Name = "Txt_UserID";
-            this.Txt_UserID.Size = new System.Drawing.Size(220, 26);
-            this.Txt_UserID.TabIndex = 25;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Desarrollo.Properties.Resources._2;
-            this.pictureBox5.Image = global::Desarrollo.Properties.Resources.corbata;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 18);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(44, 43);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 23;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::Desarrollo.Properties.Resources._2;
-            this.pictureBox6.Image = global::Desarrollo.Properties.Resources.candado;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 68);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(44, 43);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 24;
-            this.pictureBox6.TabStop = false;
-            // 
             // Form_Desbloqueo_De_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,10 +140,11 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Desbloqueo del Sistema";
+            this.Load += new System.EventHandler(this.Form_Desbloqueo_De_Usuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

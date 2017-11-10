@@ -81,6 +81,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.Pest2_Txt_IDBuscar = new System.Windows.Forms.TextBox();
             this.Pest2_DataGriew_InformacionEmpleado = new System.Windows.Forms.DataGridView();
+            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
             this.Pest_ModificarEmpleados = new System.Windows.Forms.TabPage();
             this.Pest3_Bttn_Guardar = new System.Windows.Forms.Button();
             this.Pest3_Bttn_Limpiar = new System.Windows.Forms.Button();
@@ -112,8 +114,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Botton_Salir = new System.Windows.Forms.Button();
-            this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
-            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadosTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.EmpleadosTableAdapter();
             this.codigoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,10 +136,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pest2_DataGriew_InformacionEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
             this.Pest_ModificarEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -676,6 +676,16 @@
             this.Pest2_DataGriew_InformacionEmpleado.TabIndex = 0;
             this.Pest2_DataGriew_InformacionEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // empleadosBindingSource
+            // 
+            this.empleadosBindingSource.DataMember = "Empleados";
+            this.empleadosBindingSource.DataSource = this.ventasAutoPartesDataSet;
+            // 
+            // ventasAutoPartesDataSet
+            // 
+            this.ventasAutoPartesDataSet.DataSetName = "VentasAutoPartesDataSet";
+            this.ventasAutoPartesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Pest_ModificarEmpleados
             // 
             this.Pest_ModificarEmpleados.Controls.Add(this.Pest3_Bttn_Guardar);
@@ -972,16 +982,6 @@
             this.Botton_Salir.UseVisualStyleBackColor = false;
             this.Botton_Salir.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ventasAutoPartesDataSet
-            // 
-            this.ventasAutoPartesDataSet.DataSetName = "VentasAutoPartesDataSet";
-            this.ventasAutoPartesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadosBindingSource
-            // 
-            this.empleadosBindingSource.DataMember = "Empleados";
-            this.empleadosBindingSource.DataSource = this.ventasAutoPartesDataSet;
-            // 
             // empleadosTableAdapter
             // 
             this.empleadosTableAdapter.ClearBeforeFill = true;
@@ -989,7 +989,7 @@
             // codigoEmpleadoDataGridViewTextBoxColumn
             // 
             this.codigoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Empleado";
-            this.codigoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Codigo_Empleado";
+            this.codigoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Codigo de Empleado";
             this.codigoEmpleadoDataGridViewTextBoxColumn.Name = "codigoEmpleadoDataGridViewTextBoxColumn";
             this.codigoEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -1056,13 +1056,13 @@
             // codigoRolDataGridViewTextBoxColumn
             // 
             this.codigoRolDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Rol";
-            this.codigoRolDataGridViewTextBoxColumn.HeaderText = "Codigo_Rol";
+            this.codigoRolDataGridViewTextBoxColumn.HeaderText = "Codigo de Rol";
             this.codigoRolDataGridViewTextBoxColumn.Name = "codigoRolDataGridViewTextBoxColumn";
             // 
             // codigoEstadoDataGridViewTextBoxColumn
             // 
             this.codigoEstadoDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Estado";
-            this.codigoEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo_Estado";
+            this.codigoEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de Estado";
             this.codigoEstadoDataGridViewTextBoxColumn.Name = "codigoEstadoDataGridViewTextBoxColumn";
             // 
             // Form_Manejo_de_Empleados
@@ -1089,11 +1089,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pest2_DataGriew_InformacionEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).EndInit();
             this.Pest_ModificarEmpleados.ResumeLayout(false);
             this.Pest_ModificarEmpleados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

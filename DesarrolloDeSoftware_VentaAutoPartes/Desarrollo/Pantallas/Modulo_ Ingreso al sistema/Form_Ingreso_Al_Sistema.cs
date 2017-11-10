@@ -14,14 +14,16 @@ namespace Desarrollo
 {
     public partial class Form_Ingreso_Al_Sistema : Form
     {
-       
+        C_Usuarios Users = new C_Usuarios();
+        Validaciones Validar = new Validaciones();
+
 
         public Form_Ingreso_Al_Sistema()
         {
             InitializeComponent();
         }
 
-        
+
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
@@ -30,6 +32,10 @@ namespace Desarrollo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var blankContextMenu = new ContextMenuStrip();
+            txtuser.ContextMenuStrip = blankContextMenu;
+            txtpwd.ContextMenuStrip = blankContextMenu;
+
             txtuser.AutoSize = false;
             txtuser.Size = new Size(220, 30);
 
@@ -52,71 +58,35 @@ namespace Desarrollo
 
         private void pictureBox8_Click_1(object sender, EventArgs e)
         {
-            C_Usuarios Users = new C_Usuarios();
+
             Conexion con = new Conexion();
 
-            
-            int cont = Convert.ToInt16(Users.Fun_OptenerNumeroIntentos());
+            bool Respuesta;
 
             string login_pass = txtpwd.Text;
             string login_usuario = txtuser.Text;
-
-            Users.Var_Id_empleado = login_usuario;
-            Users.Var_Contrasena = login_pass;
-
-            if (login_usuario.Equals("0")== true || login_pass.Equals("12345")== true)
-            {
-                MessageBox.Show("Por Favor ingrese un usuario y una contraseña", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             
+            Respuesta = Users.Fun_PruebaComprobarEstado(login_usuario, login_pass);
 
-            if (Users.Fun_Buscar() == true)
+            if (Respuesta == true)
             {
-
-                if (Convert.ToInt16(Users.Var_Codigo_Rol) == 1)
-                {
-                    MessageBox.Show("Bienbenido a Venta Rogers Truck", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (Convert.ToInt16(Users.Var_Codigo_Rol) == 2)
-                {
-                    MessageBox.Show("Bienbenido a Venta Rogers Truck", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (Convert.ToInt16(Users.Var_Codigo_Rol) == 3)
-                {
-                    MessageBox.Show("Bienbenido a Venta Rogers Truck", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (Convert.ToInt16(Users.Var_Codigo_Rol) == 4)
-                {
-                    MessageBox.Show("Bienbenido a Venta Rogers Truck", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Usted No tiene Autorizacion para Continuar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                Menu_Principal Men = new Menu_Principal();
+                Men.ID_Empleado = txtuser.Text;
+                Men.Empleado_Contraseña = txtpwd.Text;
+                Men.ShowDialog();
 
 
-
-            } else 
-            if (Users.Fun_Buscar() == false)
+            }
+            else if (Respuesta == false)
             {
-                cont--;
-                if (cont > 0)
-                {
-                    MessageBox.Show("Verifique Usuario o Contraseña incorrectos. \nTiene " + cont + " intentos", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    MessageBox.Show("Ingreso Incorrecto de datos. \nLa Aplicacion se cerrara", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Application.Exit();
-                }
+                DesbloqueDelSistema();
+                MessageBox.Show("s");
             }
 
 
 
-            Menu_Principal Menu = new Menu_Principal();
-            Menu.ShowDialog();
+    
+            
         }
 
         private void pictureBox8_MouseMove_1(object sender, MouseEventArgs e)
@@ -133,6 +103,36 @@ namespace Desarrollo
         {
             Form_Desbloqueo_De_Usuario DesbloqueoSistema = new Form_Desbloqueo_De_Usuario();
             DesbloqueoSistema.ShowDialog();
+        }
+
+
+
+        public void DesbloqueDelSistema()
+        {
+
+            if (Convert.ToInt16(Users.Var_Codigo_estado) == 3)
+            {
+                if (Convert.ToInt16(Users.Var_Codigo_Rol) == 1)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    Form_Desbloqueo_De_Usuario Desbloqueo = new Form_Desbloqueo_De_Usuario();
+                    Desbloqueo.ID_UsuarioADesbloquear = Convert.ToInt16(txtuser.Text);
+                    Desbloqueo.ShowDialog();
+                }
+            }
+        }
+
+        private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.ValidarID(sender, e);
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

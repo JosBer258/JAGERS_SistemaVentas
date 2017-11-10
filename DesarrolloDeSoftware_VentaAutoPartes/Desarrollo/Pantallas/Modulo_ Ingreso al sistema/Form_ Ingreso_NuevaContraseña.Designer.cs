@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Txt_Password_Second = new System.Windows.Forms.TextBox();
             this.Txt_Password_Primera = new System.Windows.Forms.TextBox();
@@ -40,6 +41,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -48,11 +51,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.pictureBox7);
             this.groupBox1.Controls.Add(this.Txt_Password_Second);
             this.groupBox1.Controls.Add(this.Txt_Password_Primera);
             this.groupBox1.Controls.Add(this.Txt_UserID);
@@ -81,7 +86,9 @@
             this.Txt_Password_Second.Name = "Txt_Password_Second";
             this.Txt_Password_Second.Size = new System.Drawing.Size(220, 26);
             this.Txt_Password_Second.TabIndex = 24;
+            this.toolTip1.SetToolTip(this.Txt_Password_Second, "Confirmacion de Nueva Contraseña");
             this.Txt_Password_Second.UseSystemPasswordChar = true;
+            this.Txt_Password_Second.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Password_Second_KeyPress);
             // 
             // Txt_Password_Primera
             // 
@@ -94,7 +101,9 @@
             this.Txt_Password_Primera.Name = "Txt_Password_Primera";
             this.Txt_Password_Primera.Size = new System.Drawing.Size(220, 26);
             this.Txt_Password_Primera.TabIndex = 22;
+            this.toolTip1.SetToolTip(this.Txt_Password_Primera, "Nueva Contraseña");
             this.Txt_Password_Primera.UseSystemPasswordChar = true;
+            this.Txt_Password_Primera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Password_Primera_KeyPress);
             // 
             // Txt_UserID
             // 
@@ -107,6 +116,7 @@
             this.Txt_UserID.Name = "Txt_UserID";
             this.Txt_UserID.Size = new System.Drawing.Size(220, 26);
             this.Txt_UserID.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.Txt_UserID, "Numero ID del Usuario");
             this.Txt_UserID.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             // 
             // pictureBox8
@@ -115,7 +125,7 @@
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::Desarrollo.Properties.Resources._09_Keychain_v2;
-            this.pictureBox8.Location = new System.Drawing.Point(314, 117);
+            this.pictureBox8.Location = new System.Drawing.Point(314, 125);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(63, 63);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,6 +206,18 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Desarrollo.Properties.Resources._1;
+            this.pictureBox7.Image = global::Desarrollo.Properties.Resources.shutdown1;
+            this.pictureBox7.Location = new System.Drawing.Point(345, 234);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 25;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
             // Form__Ingreso_NuevaContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +234,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Contraseña";
+            this.Load += new System.EventHandler(this.Form__Ingreso_NuevaContraseña_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -221,6 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +263,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
