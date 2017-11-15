@@ -60,6 +60,26 @@ namespace Desarrollo.Clases
             }
         }
 
+        public void ValidarCorreoIngreso(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsNumber(e.KeyChar) &&
+               e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
+               && e.KeyChar != Convert.ToChar('@') && e.KeyChar != Convert.ToChar('.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void ValidarDireccion(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsNumber(e.KeyChar) &&
+               e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
+               && e.KeyChar != Convert.ToChar('.') && e.KeyChar != Convert.ToChar(',') && e.KeyChar != Convert.ToChar(Keys.Space))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         public  string EncriptarContraseña(string laCadena)
         {
@@ -73,13 +93,13 @@ namespace Desarrollo.Clases
 
         public void Solonumero(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = false;
+                e.Handled = true;
             }
             else
             {
-                e.Handled = true;
+                e.Handled = false;
             }
         }
 
@@ -146,13 +166,13 @@ namespace Desarrollo.Clases
 
         public void SoloLetras(KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back))
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Back))
             {
-                e.Handled = false;
+                e.Handled = true;
             }
             else
             {
-                e.Handled = true;
+                e.Handled = false;
             }
         }
 
