@@ -51,18 +51,6 @@
             this.Pest2_Txt_IDBuscar = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.Pest2_DataGriew_InformacionEmpleado = new System.Windows.Forms.DataGridView();
-            this.codigoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoFijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoCelularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoCivilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoRolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pest_NuevoEmpleado = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Pest1_Grupo_OpcionesManejo = new System.Windows.Forms.GroupBox();
@@ -72,9 +60,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.Pest1_Grupo_ManejoEmpleados = new System.Windows.Forms.GroupBox();
-            this.Pest1_ComBox_CelularCodigo = new System.Windows.Forms.ComboBox();
             this.Pest1_Mask_CelularEmpleado = new System.Windows.Forms.MaskedTextBox();
-            this.Pest1_ComBox_TelefonoFijoCodigo = new System.Windows.Forms.ComboBox();
             this.Pest1_ComBox_Estado = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.Pest1_Mask_NumeroFijoEmpleado = new System.Windows.Forms.MaskedTextBox();
@@ -107,6 +93,9 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Pest1_Txt_Contraseña = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Pest2_Bttn_Actualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
@@ -170,6 +159,7 @@
             // 
             // Pest_BusquedaEmpleados
             // 
+            this.Pest_BusquedaEmpleados.Controls.Add(this.Pest2_Bttn_Actualizar);
             this.Pest_BusquedaEmpleados.Controls.Add(this.Picture);
             this.Pest_BusquedaEmpleados.Controls.Add(this.pictureBox1);
             this.Pest_BusquedaEmpleados.Controls.Add(this.Pest2_GrupoBusqueda);
@@ -205,7 +195,7 @@
             this.Pest2_GrupoBusqueda.Controls.Add(this.label16);
             this.Pest2_GrupoBusqueda.Location = new System.Drawing.Point(22, 23);
             this.Pest2_GrupoBusqueda.Name = "Pest2_GrupoBusqueda";
-            this.Pest2_GrupoBusqueda.Size = new System.Drawing.Size(557, 107);
+            this.Pest2_GrupoBusqueda.Size = new System.Drawing.Size(740, 107);
             this.Pest2_GrupoBusqueda.TabIndex = 1;
             this.Pest2_GrupoBusqueda.TabStop = false;
             this.Pest2_GrupoBusqueda.Text = "Busqueda de Empleados";
@@ -253,6 +243,8 @@
             this.Pest2_Txt_CodigoBuscar.Name = "Pest2_Txt_CodigoBuscar";
             this.Pest2_Txt_CodigoBuscar.Size = new System.Drawing.Size(154, 21);
             this.Pest2_Txt_CodigoBuscar.TabIndex = 27;
+            this.Pest2_Txt_CodigoBuscar.TextChanged += new System.EventHandler(this.Pest2_Txt_CodigoBuscar_TextChanged);
+            this.Pest2_Txt_CodigoBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Txt_CodigoBuscar_KeyPress);
             // 
             // label14
             // 
@@ -269,6 +261,8 @@
             this.Pest2_Txt_NombreBuscar.Name = "Pest2_Txt_NombreBuscar";
             this.Pest2_Txt_NombreBuscar.Size = new System.Drawing.Size(154, 21);
             this.Pest2_Txt_NombreBuscar.TabIndex = 32;
+            this.Pest2_Txt_NombreBuscar.TextChanged += new System.EventHandler(this.Pest2_Txt_NombreBuscar_TextChanged);
+            this.Pest2_Txt_NombreBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Txt_NombreBuscar_KeyPress);
             // 
             // label15
             // 
@@ -285,6 +279,8 @@
             this.Pest2_Txt_IDBuscar.Name = "Pest2_Txt_IDBuscar";
             this.Pest2_Txt_IDBuscar.Size = new System.Drawing.Size(154, 21);
             this.Pest2_Txt_IDBuscar.TabIndex = 29;
+            this.Pest2_Txt_IDBuscar.TextChanged += new System.EventHandler(this.Pest2_Txt_IDBuscar_TextChanged);
+            this.Pest2_Txt_IDBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Txt_IDBuscar_KeyPress);
             // 
             // label16
             // 
@@ -296,116 +292,20 @@
             // 
             // Pest2_DataGriew_InformacionEmpleado
             // 
-            this.Pest2_DataGriew_InformacionEmpleado.AutoGenerateColumns = false;
+            this.Pest2_DataGriew_InformacionEmpleado.AllowUserToAddRows = false;
+            this.Pest2_DataGriew_InformacionEmpleado.AllowUserToDeleteRows = false;
+            this.Pest2_DataGriew_InformacionEmpleado.AllowUserToResizeRows = false;
+            this.Pest2_DataGriew_InformacionEmpleado.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Pest2_DataGriew_InformacionEmpleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.Pest2_DataGriew_InformacionEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Pest2_DataGriew_InformacionEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoEmpleadoDataGridViewTextBoxColumn,
-            this.iDDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
-            this.correoDataGridViewTextBoxColumn,
-            this.telefonoFijoDataGridViewTextBoxColumn,
-            this.telefonoCelularDataGridViewTextBoxColumn,
-            this.fechaNacimientoDataGridViewTextBoxColumn,
-            this.generoDataGridViewTextBoxColumn,
-            this.estadoCivilDataGridViewTextBoxColumn,
-            this.codigoRolDataGridViewTextBoxColumn,
-            this.codigoEstadoDataGridViewTextBoxColumn});
-            this.Pest2_DataGriew_InformacionEmpleado.DataSource = this.empleadosBindingSource1;
             this.Pest2_DataGriew_InformacionEmpleado.Location = new System.Drawing.Point(22, 146);
             this.Pest2_DataGriew_InformacionEmpleado.Name = "Pest2_DataGriew_InformacionEmpleado";
             this.Pest2_DataGriew_InformacionEmpleado.ReadOnly = true;
+            this.Pest2_DataGriew_InformacionEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.Pest2_DataGriew_InformacionEmpleado.Size = new System.Drawing.Size(993, 258);
             this.Pest2_DataGriew_InformacionEmpleado.TabIndex = 0;
             this.Pest2_DataGriew_InformacionEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.Pest2_DataGriew_InformacionEmpleado.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Pest2_DataGriew_InformacionEmpleado_CellContentDoubleClick);
-            // 
-            // codigoEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.codigoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Empleado";
-            this.codigoEmpleadoDataGridViewTextBoxColumn.HeaderText = "Codigo de Empleado";
-            this.codigoEmpleadoDataGridViewTextBoxColumn.Name = "codigoEmpleadoDataGridViewTextBoxColumn";
-            this.codigoEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoEmpleadoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // correoDataGridViewTextBoxColumn
-            // 
-            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
-            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
-            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonoFijoDataGridViewTextBoxColumn
-            // 
-            this.telefonoFijoDataGridViewTextBoxColumn.DataPropertyName = "TelefonoFijo";
-            this.telefonoFijoDataGridViewTextBoxColumn.HeaderText = "TelefonoFijo";
-            this.telefonoFijoDataGridViewTextBoxColumn.Name = "telefonoFijoDataGridViewTextBoxColumn";
-            this.telefonoFijoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonoCelularDataGridViewTextBoxColumn
-            // 
-            this.telefonoCelularDataGridViewTextBoxColumn.DataPropertyName = "TelefonoCelular";
-            this.telefonoCelularDataGridViewTextBoxColumn.HeaderText = "TelefonoCelular";
-            this.telefonoCelularDataGridViewTextBoxColumn.Name = "telefonoCelularDataGridViewTextBoxColumn";
-            this.telefonoCelularDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaNacimientoDataGridViewTextBoxColumn
-            // 
-            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "FechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
-            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // generoDataGridViewTextBoxColumn
-            // 
-            this.generoDataGridViewTextBoxColumn.DataPropertyName = "Genero";
-            this.generoDataGridViewTextBoxColumn.HeaderText = "Genero";
-            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
-            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoCivilDataGridViewTextBoxColumn
-            // 
-            this.estadoCivilDataGridViewTextBoxColumn.DataPropertyName = "EstadoCivil";
-            this.estadoCivilDataGridViewTextBoxColumn.HeaderText = "EstadoCivil";
-            this.estadoCivilDataGridViewTextBoxColumn.Name = "estadoCivilDataGridViewTextBoxColumn";
-            this.estadoCivilDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codigoRolDataGridViewTextBoxColumn
-            // 
-            this.codigoRolDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Rol";
-            this.codigoRolDataGridViewTextBoxColumn.HeaderText = "Codigo de Rol";
-            this.codigoRolDataGridViewTextBoxColumn.Name = "codigoRolDataGridViewTextBoxColumn";
-            this.codigoRolDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codigoEstadoDataGridViewTextBoxColumn
-            // 
-            this.codigoEstadoDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Estado";
-            this.codigoEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo de Estado";
-            this.codigoEstadoDataGridViewTextBoxColumn.Name = "codigoEstadoDataGridViewTextBoxColumn";
-            this.codigoEstadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Pest_NuevoEmpleado
             // 
@@ -496,9 +396,9 @@
             // 
             // Pest1_Grupo_ManejoEmpleados
             // 
-            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_ComBox_CelularCodigo);
+            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Txt_Contraseña);
+            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.label17);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Mask_CelularEmpleado);
-            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_ComBox_TelefonoFijoCodigo);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_ComBox_Estado);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.label34);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Mask_NumeroFijoEmpleado);
@@ -538,34 +438,15 @@
             this.Pest1_Grupo_ManejoEmpleados.Text = "Ingreso de Datos del Empleado";
             this.Pest1_Grupo_ManejoEmpleados.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
-            // Pest1_ComBox_CelularCodigo
-            // 
-            this.Pest1_ComBox_CelularCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest1_ComBox_CelularCodigo.FormattingEnabled = true;
-            this.Pest1_ComBox_CelularCodigo.Location = new System.Drawing.Point(102, 154);
-            this.Pest1_ComBox_CelularCodigo.Name = "Pest1_ComBox_CelularCodigo";
-            this.Pest1_ComBox_CelularCodigo.Size = new System.Drawing.Size(67, 23);
-            this.Pest1_ComBox_CelularCodigo.TabIndex = 40;
-            this.Pest1_ComBox_CelularCodigo.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            // 
             // Pest1_Mask_CelularEmpleado
             // 
             this.Pest1_Mask_CelularEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Mask_CelularEmpleado.Location = new System.Drawing.Point(175, 154);
+            this.Pest1_Mask_CelularEmpleado.Location = new System.Drawing.Point(103, 154);
             this.Pest1_Mask_CelularEmpleado.Mask = "0000-0000";
             this.Pest1_Mask_CelularEmpleado.Name = "Pest1_Mask_CelularEmpleado";
-            this.Pest1_Mask_CelularEmpleado.Size = new System.Drawing.Size(80, 22);
+            this.Pest1_Mask_CelularEmpleado.Size = new System.Drawing.Size(152, 22);
             this.Pest1_Mask_CelularEmpleado.TabIndex = 39;
             this.Pest1_Mask_CelularEmpleado.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
-            // Pest1_ComBox_TelefonoFijoCodigo
-            // 
-            this.Pest1_ComBox_TelefonoFijoCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest1_ComBox_TelefonoFijoCodigo.FormattingEnabled = true;
-            this.Pest1_ComBox_TelefonoFijoCodigo.Location = new System.Drawing.Point(351, 37);
-            this.Pest1_ComBox_TelefonoFijoCodigo.Name = "Pest1_ComBox_TelefonoFijoCodigo";
-            this.Pest1_ComBox_TelefonoFijoCodigo.Size = new System.Drawing.Size(67, 23);
-            this.Pest1_ComBox_TelefonoFijoCodigo.TabIndex = 38;
             // 
             // Pest1_ComBox_Estado
             // 
@@ -588,10 +469,10 @@
             // Pest1_Mask_NumeroFijoEmpleado
             // 
             this.Pest1_Mask_NumeroFijoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Mask_NumeroFijoEmpleado.Location = new System.Drawing.Point(424, 37);
+            this.Pest1_Mask_NumeroFijoEmpleado.Location = new System.Drawing.Point(351, 37);
             this.Pest1_Mask_NumeroFijoEmpleado.Mask = "0000-0000";
             this.Pest1_Mask_NumeroFijoEmpleado.Name = "Pest1_Mask_NumeroFijoEmpleado";
-            this.Pest1_Mask_NumeroFijoEmpleado.Size = new System.Drawing.Size(80, 22);
+            this.Pest1_Mask_NumeroFijoEmpleado.Size = new System.Drawing.Size(153, 22);
             this.Pest1_Mask_NumeroFijoEmpleado.TabIndex = 35;
             // 
             // label1
@@ -620,7 +501,7 @@
             // 
             this.Pest1_ComBox_FechaAño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Pest1_ComBox_FechaAño.FormattingEnabled = true;
-            this.Pest1_ComBox_FechaAño.Location = new System.Drawing.Point(754, 63);
+            this.Pest1_ComBox_FechaAño.Location = new System.Drawing.Point(612, 66);
             this.Pest1_ComBox_FechaAño.Name = "Pest1_ComBox_FechaAño";
             this.Pest1_ComBox_FechaAño.Size = new System.Drawing.Size(54, 23);
             this.Pest1_ComBox_FechaAño.TabIndex = 31;
@@ -642,10 +523,11 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.Pest1_ComBox_FechaMes.Location = new System.Drawing.Point(666, 63);
+            this.Pest1_ComBox_FechaMes.Location = new System.Drawing.Point(668, 66);
             this.Pest1_ComBox_FechaMes.Name = "Pest1_ComBox_FechaMes";
             this.Pest1_ComBox_FechaMes.Size = new System.Drawing.Size(87, 23);
             this.Pest1_ComBox_FechaMes.TabIndex = 30;
+            this.Pest1_ComBox_FechaMes.SelectedIndexChanged += new System.EventHandler(this.Pest1_ComBox_FechaMes_SelectedIndexChanged);
             // 
             // Pest1_Guardar
             // 
@@ -658,6 +540,7 @@
             this.Pest1_Guardar.TabIndex = 2;
             this.Pest1_Guardar.Text = "Guardar";
             this.Pest1_Guardar.UseVisualStyleBackColor = false;
+            this.Pest1_Guardar.Click += new System.EventHandler(this.Pest1_Guardar_Click);
             // 
             // Pest1_ComBox_FechaDia
             // 
@@ -695,7 +578,7 @@
             "29",
             "30",
             "31"});
-            this.Pest1_ComBox_FechaDia.Location = new System.Drawing.Point(612, 63);
+            this.Pest1_ComBox_FechaDia.Location = new System.Drawing.Point(756, 66);
             this.Pest1_ComBox_FechaDia.Name = "Pest1_ComBox_FechaDia";
             this.Pest1_ComBox_FechaDia.Size = new System.Drawing.Size(52, 23);
             this.Pest1_ComBox_FechaDia.TabIndex = 29;
@@ -708,6 +591,7 @@
             this.Pest1_Text_Direccion.Size = new System.Drawing.Size(153, 83);
             this.Pest1_Text_Direccion.TabIndex = 27;
             this.Pest1_Text_Direccion.Text = "";
+            this.Pest1_Text_Direccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Text_Direccion_KeyPress);
             // 
             // Pest1_Txt_CodigoEmpleado
             // 
@@ -734,6 +618,7 @@
             this.Pest1_Txt_ApellidoEmpleado.Name = "Pest1_Txt_ApellidoEmpleado";
             this.Pest1_Txt_ApellidoEmpleado.Size = new System.Drawing.Size(152, 21);
             this.Pest1_Txt_ApellidoEmpleado.TabIndex = 14;
+            this.Pest1_Txt_ApellidoEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_ApellidoEmpleado_KeyPress);
             // 
             // Pest1_Txt_ID
             // 
@@ -742,6 +627,7 @@
             this.Pest1_Txt_ID.Name = "Pest1_Txt_ID";
             this.Pest1_Txt_ID.Size = new System.Drawing.Size(152, 21);
             this.Pest1_Txt_ID.TabIndex = 26;
+            this.Pest1_Txt_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_ID_KeyPress);
             // 
             // label3
             // 
@@ -759,6 +645,7 @@
             this.Pest1_Text_CorreoEmpleado.Name = "Pest1_Text_CorreoEmpleado";
             this.Pest1_Text_CorreoEmpleado.Size = new System.Drawing.Size(155, 21);
             this.Pest1_Text_CorreoEmpleado.TabIndex = 11;
+            this.Pest1_Text_CorreoEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Text_CorreoEmpleado_KeyPress);
             // 
             // Pest1_ComBox_RolEmpleado
             // 
@@ -882,6 +769,7 @@
             this.Pest1_Txt_NombreEmpleado.Name = "Pest1_Txt_NombreEmpleado";
             this.Pest1_Txt_NombreEmpleado.Size = new System.Drawing.Size(152, 21);
             this.Pest1_Txt_NombreEmpleado.TabIndex = 4;
+            this.Pest1_Txt_NombreEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_NombreEmpleado_KeyPress);
             // 
             // label30
             // 
@@ -911,6 +799,38 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1045, 441);
             this.tabControl1.TabIndex = 0;
+            // 
+            // Pest1_Txt_Contraseña
+            // 
+            this.Pest1_Txt_Contraseña.Location = new System.Drawing.Point(612, 99);
+            this.Pest1_Txt_Contraseña.MaxLength = 28;
+            this.Pest1_Txt_Contraseña.Name = "Pest1_Txt_Contraseña";
+            this.Pest1_Txt_Contraseña.Size = new System.Drawing.Size(196, 21);
+            this.Pest1_Txt_Contraseña.TabIndex = 42;
+            this.Pest1_Txt_Contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_Contraseña_KeyPress);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(532, 102);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 15);
+            this.label17.TabIndex = 41;
+            this.label17.Text = "Contraseña";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // Pest2_Bttn_Actualizar
+            // 
+            this.Pest2_Bttn_Actualizar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Pest2_Bttn_Actualizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_Bttn_Actualizar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Pest2_Bttn_Actualizar.Location = new System.Drawing.Point(596, 57);
+            this.Pest2_Bttn_Actualizar.Name = "Pest2_Bttn_Actualizar";
+            this.Pest2_Bttn_Actualizar.Size = new System.Drawing.Size(139, 55);
+            this.Pest2_Bttn_Actualizar.TabIndex = 1;
+            this.Pest2_Bttn_Actualizar.Text = "Actualizar";
+            this.Pest2_Bttn_Actualizar.UseVisualStyleBackColor = false;
+            this.Pest2_Bttn_Actualizar.Click += new System.EventHandler(this.Pest2_Bttn_Actualizar_Click);
             // 
             // Form_Manejo_de_Empleados
             // 
@@ -967,18 +887,6 @@
         private System.Windows.Forms.TextBox Pest2_Txt_IDBuscar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView Pest2_DataGriew_InformacionEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoEmpleadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoFijoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoCelularDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoCivilDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoRolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoEstadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage Pest_NuevoEmpleado;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox Pest1_Grupo_OpcionesManejo;
@@ -1020,8 +928,9 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.ComboBox Pest1_ComBox_TelefonoFijoCodigo;
-        private System.Windows.Forms.ComboBox Pest1_ComBox_CelularCodigo;
         private System.Windows.Forms.MaskedTextBox Pest1_Mask_CelularEmpleado;
+        private System.Windows.Forms.TextBox Pest1_Txt_Contraseña;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button Pest2_Bttn_Actualizar;
     }
 }

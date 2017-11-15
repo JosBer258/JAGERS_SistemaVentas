@@ -208,6 +208,22 @@ namespace Desarrollo.Clases
                 }
             }
         }
+
+
+        public void ValidarNombres_SoloLetras(object sender, KeyPressEventArgs e)
+        {
+            if ( e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
+             && e.KeyChar != Convert.ToChar(Keys.Space))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        public void ValidarNombres_LetrasYNumeros()
+        {
+
+        }
     }
 
 }

@@ -22,6 +22,8 @@ namespace Desarrollo
         public DataTable dt;
         public DataRow Dr;
         public SqlDataReader DtR;
+        public DataSet Dataset;
+        public DataView DataView;
     
 
 

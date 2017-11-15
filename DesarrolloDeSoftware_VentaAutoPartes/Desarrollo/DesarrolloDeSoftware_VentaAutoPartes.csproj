@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\C_Clientes.cs" />
+    <Compile Include="Clases\C_ContactosProveedores.cs" />
+    <Compile Include="Clases\C_Productos.cs" />
+    <Compile Include="Clases\C_Proveedores.cs" />
     <Compile Include="Clases\Desbloqueo.cs" />
     <Compile Include="Clases\C_Empleados.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />

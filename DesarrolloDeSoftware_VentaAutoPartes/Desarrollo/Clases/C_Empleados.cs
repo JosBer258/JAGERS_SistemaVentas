@@ -15,16 +15,30 @@ namespace Desarrollo.Clases
         private string nombre_empleado;
         private string apellido_empleado;
         private string correo_empleado;
-        private int telefono_fijo;
-        private int telefono_celular;
-        private DateTime fecha_nacimiento;
+        private string telefono_fijo;
+        private string telefono_celular;
+        private string fecha_nacimiento;
         private string genero;
         private string contrasena;
         private string estado_civil;
-        private int codigo_rol;
-        private int codigo_estado;
+        private string codigo_rol;
+        private string empleado_estado;
+        private string direccion;
 
-        public int Codigo_empleado
+        public string Var_Direccion
+        {
+            get
+            {
+                return direccion;
+            }
+
+            set
+            {
+                direccion = value;
+            }
+        }
+
+        public int Var_Codigo_empleado
         {
             get
             {
@@ -37,7 +51,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public string Id_empleado
+        public string Var_Id_empleado
         {
             get
             {
@@ -50,7 +64,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public string Nombre_empleado
+        public string Var_Nombre_empleado
         {
             get
             {
@@ -63,7 +77,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public string Apellido_empleado
+        public string Var_Apellido_empleado
         {
             get
             {
@@ -76,7 +90,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public string Correo_empleado
+        public string Var_Correo_empleado
         {
             get
             {
@@ -89,7 +103,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public int Telefono_fijo
+        public string Var_Telefono_fijo
         {
             get
             {
@@ -102,7 +116,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public int Telefono_celular
+        public string Var_Telefono_celular
         {
             get
             {
@@ -115,7 +129,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public DateTime Fecha_nacimiento
+        public string Var_Fecha_nacimiento
         {
             get
             {
@@ -128,7 +142,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public string Genero
+        public string Var_Genero
         {
             get
             {
@@ -141,7 +155,7 @@ namespace Desarrollo.Clases
             }
         }
 
-        public string Contrasena
+        public string Var_Contrasena
         {
             get
             {
@@ -159,14 +173,14 @@ namespace Desarrollo.Clases
             set{ estado_civil = value;}
         }
 
-        public int Var_Codigo_rol
+        public string Var_Rol
         {   get { return codigo_rol; }
             set {codigo_rol = value;}
         }
 
-        public int Var_Codigo_estado
-        {  get { return codigo_estado; }
-           set { codigo_estado = value;}
+        public string Var_Codigo_estado
+        {  get { return empleado_estado; }
+           set { empleado_estado = value;}
         }
 
         public bool Fun_IngresoNuevoEmpleado()
@@ -200,12 +214,12 @@ namespace Desarrollo.Clases
         }
 
 
-        ///CAS0: Agregar empleado
-        ///
+        //////////////////////////////////////////////////////////////CAS0: Agregar empleado
+        ////////////////////////////////////////////////////////////////////////////////////
         public int OptenerUltimoID()
         {
             int Codigo=0;
-            this.sql = string.Format(@"select Top 1 Codigo_Empleado as CodigoFinal from Empleados");
+            this.sql = string.Format(@"select top 1 Codigo_Empleado as CodigoFinal from Empleados order by Codigo_Empleado desc");
             this.cmd = new SqlCommand(this.sql, this.cnx);
             this.cnx.Open();
 
@@ -225,6 +239,65 @@ namespace Desarrollo.Clases
             this.cnx.Close();
             return (Codigo + 1);
         }
-         //////////////////////////////
+
+
+        public bool RevisionDeDatos()
+        {
+            this.sql = string.Format(@"select * from Empleados where ID='{0}' or (Nombre='{1}' and Apellido='{2}')", Var_Id_empleado, Var_Nombre_empleado, Var_Apellido_empleado);
+            this.cmd = new SqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            SqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+                
+                this.cnx.Close();
+                return false;
+                
+            }
+            else
+            {
+                this.cnx.Close();
+                
+                return true;
+            }
+
+        }
+
+        public void IngresoDatos()
+        {
+
+            //char Genero;
+
+            //if (Var_Genero.Equals("Masculino")) { Genero = 'M'; } else { Genero = 'F'; }
+
+            this.sql = string.Format(@"insert into Empleados values(
+            '{0}',  '{1}',  '{2}',  '{3}', '{4}', '{5}', '{6}', '{7}','{8}','{9}', 
+            '{10}', 
+            (select Codigo_Estado from Estados where Descripcion_Estado='{11}'),
+            NULL)",
+            Var_Id_empleado, Var_Nombre_empleado, Var_Apellido_empleado,Var_Correo_empleado, Var_Telefono_fijo,
+            Var_Telefono_celular,Var_Fecha_nacimiento, Var_Genero, Var_Contrasena, Var_Estado_civil,
+            Var_Rol, Var_Codigo_estado);
+
+            this.cmd = new SqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            SqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();    
+            this.cnx.Close();
+        }
+
+
+
+
+        public void Fun_MoodificarDatos()
+        {
+
+
+
+
+        }
+        ///////////////////////////////////////////////////////////////////////////////////////////////
     }
 }
