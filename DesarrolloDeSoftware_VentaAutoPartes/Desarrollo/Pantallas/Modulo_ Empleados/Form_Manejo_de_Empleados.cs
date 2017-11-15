@@ -609,8 +609,11 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         ///
 
         public void Fun_DeshabilitarTextBox()
-        {
-            Pest1_ComBox_Estado.SelectedValue = 1;
+        {       
+            Pest1_Txt_ApellidoEmpleado.Enabled=true;
+            Pest1_Txt_CodigoEmpleado.Enabled=true;
+            Pest1_Txt_ID.Enabled=true;
+            Pest1_Txt_NombreEmpleado.Enabled=true;
         }
 
 
