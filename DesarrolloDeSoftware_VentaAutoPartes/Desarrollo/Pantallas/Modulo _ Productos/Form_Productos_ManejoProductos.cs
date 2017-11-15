@@ -88,6 +88,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         private void button2_Click(object sender, EventArgs e)
         {
             Funcion();//Funcion de Busqueda___Eli Josua
+        ////MARIO
         }
 
 
