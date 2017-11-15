@@ -31,5 +31,10 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
         {
 
         }
+
+        private void Bttn_Salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

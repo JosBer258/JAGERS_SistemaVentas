@@ -34,7 +34,7 @@
     <Shape ID="DesignTable:Proveedor|Historico" ZOrder="42" X="2110" Y="2177" Height="267" Width="261" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:Referencia_Comerciales" ZOrder="41" X="330" Y="5138" Height="172" Width="281" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:Referencia_Personales" ZOrder="40" X="330" Y="5380" Height="172" Width="273" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:Rol" ZOrder="39" X="1205" Y="3653" Height="115" Width="163" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:Rol" ZOrder="39" X="1205" Y="3653" Height="153" Width="163" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Tipo_Factura" ZOrder="38" X="928" Y="4341" Height="115" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Tipo_Transaccion" ZOrder="37" X="625" Y="4730" Height="134" Width="244" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:Tipos_Documentos" ZOrder="36" X="625" Y="4934" Height="134" Width="254" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />

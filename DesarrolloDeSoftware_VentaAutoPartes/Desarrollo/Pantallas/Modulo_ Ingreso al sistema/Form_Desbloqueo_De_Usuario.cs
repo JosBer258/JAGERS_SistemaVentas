@@ -14,7 +14,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
     public partial class Form_Desbloqueo_De_Usuario : Form
     {
         Validaciones Validar = new Validaciones();
-        public int ID_UsuarioADesbloquear;
+        public string ID_UsuarioADesbloquear;
 
         public Form_Desbloqueo_De_Usuario()
         {
@@ -23,7 +23,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,19 +42,21 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 
                 return; }
 
-            if (Txt_UserID.Text.Trim().Length < 5)
+            if (Txt_UserID.Text.Trim().Length > 50)
             {
                 MessageBox.Show("Longitud de Datos incorrecto \n Ingrese un ID de Longitud mayor a 5 Digitos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; 
             }
-            
 
-            string contra_encriptada = Validar.EncriptarContraseña(Txt_Password_Primera.Text);
-            respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, contra_encriptada);
 
+
+            //string contra_encriptada = Validar.EncriptarContraseña(Txt_Password_Primera.Text);
+            //respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, contra_encriptada);
+            respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, Txt_Password_Primera.Text);
             if (respuesta == true)
             {
                 DesbloquearUser.Fun_Restauracion(Convert.ToString( ID_UsuarioADesbloquear));
+                DesbloquearUser.Fun_RestablecerIntentos(Convert.ToString(ID_UsuarioADesbloquear));
                 this.Close();
             }
             else

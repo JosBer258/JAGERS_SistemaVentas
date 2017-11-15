@@ -18,12 +18,37 @@ namespace Desarrollo
         public string mensaje;
         public SqlConnection cnx;
         public SqlCommand cmd;
+        public SqlDataAdapter DataAdapter;
+        public DataTable dt;
+        public DataRow Dr;
+        public SqlDataReader DtR;
+    
+
 
         public Conexion()
         {
-            this.ccnx = Settings.Default.VentasAutoPartesConnectionString;
-            this.cnx = new SqlConnection(this.ccnx);
+            try
+            {
+                this.ccnx = Settings.Default.VentasAutoPartesConnectionString;
+                this.cnx = new SqlConnection(this.ccnx);
+            }
+            catch(Exception)
+            {
 
+            }
+
+        }
+
+        public void Abrir()
+        {
+            try
+            {
+                cnx.Open();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Error");
+            }
         }
     }
 }

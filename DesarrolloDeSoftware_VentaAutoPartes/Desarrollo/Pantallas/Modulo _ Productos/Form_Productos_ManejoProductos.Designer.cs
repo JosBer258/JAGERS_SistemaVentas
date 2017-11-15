@@ -33,24 +33,24 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Pest1_CuadroTexto_Descripcion = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Pest1_Txt_Nombre = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_PrecioVentas = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_PrecioCompras = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_TotalEnTienda = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_TotalBodega = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_Codigo = new System.Windows.Forms.TextBox();
+            this.Pest1_ComBox_Categoria = new System.Windows.Forms.ComboBox();
+            this.Pest1_ComBox_Modelo = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Pest1_ComBox_Filtro_NombreMarca = new System.Windows.Forms.ComboBox();
+            this.Pest1_Txt_Filtro_NombreMarca = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Pest1_ComBox_Filtro_NombreProveedor = new System.Windows.Forms.ComboBox();
+            this.Pest1_Txt_Filtro_NombreProveedor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,48 +63,37 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantExistenteTiendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantExistenteBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codModeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pest2_DataGriew_Productos = new System.Windows.Forms.DataGridView();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Pest2_Bttn_Aceptar = new System.Windows.Forms.Button();
+            this.Pest2_Bttn_Limpiar = new System.Windows.Forms.Button();
+            this.Pest2_Txt_CodigoFiltro = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_NombreFiltro = new System.Windows.Forms.TextBox();
+            this.Pest2_Radio_Nombre = new System.Windows.Forms.RadioButton();
+            this.Pest2_Radio_Codigo = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.Pest3_Txt_RichText_Descripcion = new System.Windows.Forms.RichTextBox();
+            this.Pest3_ComBox_Estado = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_Categorias = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_Filtro_NombreProveedor = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_NombreMarca = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_Modelo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_Nombre = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_PrecioVenta = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_Compras = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_TotalTienda = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_TotalBodega = new System.Windows.Forms.TextBox();
+            this.Pest3_Txt_Codigo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -115,91 +104,76 @@
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.Pest4_Grupo_Manejo = new System.Windows.Forms.GroupBox();
+            this.Pest4_Bttn_LimpiarManejo = new System.Windows.Forms.Button();
+            this.Pest4_Bttn_AceptarManejo = new System.Windows.Forms.Button();
+            this.Pest4_Txt_Manejo_Categoria = new System.Windows.Forms.TextBox();
+            this.Pest4_Txt_Manejo_CodCategoria = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.Pest4_Grupo_BusquedaModificacion = new System.Windows.Forms.GroupBox();
+            this.Pest4_Txt_Busqueda_Categoria = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.Pest4_Bttn_LimpiarDataGriew = new System.Windows.Forms.Button();
+            this.Pest4_Txt_Busqueda_CodCategoria = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.codigoCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.Pest4_Grupo_OpcionesManejo = new System.Windows.Forms.GroupBox();
+            this.Pest4_Radio_Agregar = new System.Windows.Forms.RadioButton();
+            this.Pest4_Radio_Buscar = new System.Windows.Forms.RadioButton();
+            this.Pest4_Radio_Manejo = new System.Windows.Forms.RadioButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.Pest5_GrupoManejo = new System.Windows.Forms.GroupBox();
+            this.Pest5_Bttn_Manejo_Limpiar = new System.Windows.Forms.Button();
+            this.Pest5_Bttn_Manejo_Aceptar = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.Pest5_Radio_Manejo_Estados = new System.Windows.Forms.ComboBox();
+            this.Pest5_Txt_Manejo_Descripcion = new System.Windows.Forms.TextBox();
+            this.Pest5_Txt_Manejo_Codigo = new System.Windows.Forms.TextBox();
+            this.Pest5_GrupoBusqueda = new System.Windows.Forms.GroupBox();
+            this.Pest5_Txt_Busqueda_Descripcion = new System.Windows.Forms.TextBox();
+            this.Pest5_Txt_Busqueda_Codigo = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.DG_CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_MarcaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Modelos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.codMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pest5_DataGriewMarcasProductos = new System.Windows.Forms.DataGridView();
+            this.Pest5_DataGriewMarcas = new System.Windows.Forms.DataGridView();
             this.marcaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.Pest5_GrupoOpciones = new System.Windows.Forms.GroupBox();
+            this.Pest5_Radio_Agregar = new System.Windows.Forms.RadioButton();
+            this.Pest5_Radio_Buscar = new System.Windows.Forms.RadioButton();
+            this.Pest5_Radio_Manejo = new System.Windows.Forms.RadioButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.Pest6_Bttn_Manejo_Limpiar = new System.Windows.Forms.Button();
+            this.Pest6_Bttn_Manejo_Aceptar = new System.Windows.Forms.Button();
+            this.Pest6_Txt_Manejo_FiltroMarca = new System.Windows.Forms.TextBox();
+            this.Pest6_ComboBox_Manejo_ResultadoMarca = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.Pest6_Txt_Manejo_Descripcion = new System.Windows.Forms.RichTextBox();
+            this.Pest6_Txt_Manejo_CodigoModulo = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.Pest6_Bttn_Busqueda_Limpiar = new System.Windows.Forms.Button();
+            this.Pest6_Bttn_Busqueda_Aceptar = new System.Windows.Forms.Button();
+            this.Pest6_ComBox_Busqueda_Estados = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.Pest6_Txt_Busqueda_CodigoMarca = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.codModeloDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codMarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pest6_Txt_Busqueda_Descripcion = new System.Windows.Forms.RichTextBox();
+            this.Pest6_DataGreiw_Busqueda = new System.Windows.Forms.DataGridView();
             this.modeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.Pest6_Txt_Busqueda_CodigoModelo = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.Pest6_GrupoManejo = new System.Windows.Forms.GroupBox();
+            this.Pest6_Radio_Agregar = new System.Windows.Forms.RadioButton();
+            this.Pest6_Radio_Buscar = new System.Windows.Forms.RadioButton();
+            this.Pest6_Radio_Manejo = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.fKModeloMarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -212,6 +186,32 @@
             this.productoTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.ProductoTableAdapter();
             this.productos_HistoricosTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.Productos_HistoricosTableAdapter();
             this.categoria_ProductoTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.Categoria_ProductoTableAdapter();
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.DG_CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_MarcaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_Modelos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantExistenteTiendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantExistenteBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codModeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codModeloDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codMarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -219,7 +219,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest2_DataGriew_Productos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -228,24 +228,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.Pest4_Grupo_Manejo.SuspendLayout();
+            this.Pest4_Grupo_BusquedaModificacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoBindingSource)).BeginInit();
-            this.groupBox5.SuspendLayout();
+            this.Pest4_Grupo_OpcionesManejo.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.Pest5_GrupoManejo.SuspendLayout();
+            this.Pest5_GrupoBusqueda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest5_DataGriewMarcasProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest5_DataGriewMarcas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource1)).BeginInit();
-            this.groupBox8.SuspendLayout();
+            this.Pest5_GrupoOpciones.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest6_DataGreiw_Busqueda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).BeginInit();
-            this.groupBox10.SuspendLayout();
+            this.Pest6_GrupoManejo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKModeloMarcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKProductoModeloBindingSource)).BeginInit();
@@ -263,10 +263,10 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 30);
+            this.tabControl1.Location = new System.Drawing.Point(8, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(711, 371);
+            this.tabControl1.Size = new System.Drawing.Size(936, 415);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -275,23 +275,23 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(703, 345);
+            this.tabPage1.Size = new System.Drawing.Size(928, 389);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Agregar Producto";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.Pest1_CuadroTexto_Descripcion);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.Pest1_Txt_Nombre);
+            this.groupBox1.Controls.Add(this.Pest1_Txt_PrecioVentas);
+            this.groupBox1.Controls.Add(this.Pest1_Txt_PrecioCompras);
+            this.groupBox1.Controls.Add(this.Pest1_Txt_TotalEnTienda);
+            this.groupBox1.Controls.Add(this.Pest1_Txt_TotalBodega);
+            this.groupBox1.Controls.Add(this.Pest1_Txt_Codigo);
+            this.groupBox1.Controls.Add(this.Pest1_ComBox_Categoria);
+            this.groupBox1.Controls.Add(this.Pest1_ComBox_Modelo);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label8);
@@ -305,109 +305,112 @@
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(691, 330);
+            this.groupBox1.Size = new System.Drawing.Size(916, 366);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Producto";
             // 
-            // richTextBox1
+            // Pest1_CuadroTexto_Descripcion
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(359, 231);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(169, 53);
-            this.richTextBox1.TabIndex = 27;
-            this.richTextBox1.Text = "";
+            this.Pest1_CuadroTexto_Descripcion.Location = new System.Drawing.Point(421, 234);
+            this.Pest1_CuadroTexto_Descripcion.Name = "Pest1_CuadroTexto_Descripcion";
+            this.Pest1_CuadroTexto_Descripcion.Size = new System.Drawing.Size(214, 53);
+            this.Pest1_CuadroTexto_Descripcion.TabIndex = 27;
+            this.Pest1_CuadroTexto_Descripcion.Text = "";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(16, 99);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 15);
+            this.label9.Size = new System.Drawing.Size(60, 16);
             this.label9.TabIndex = 26;
             this.label9.Text = "Modelo";
             // 
-            // textBox10
+            // Pest1_Txt_Nombre
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(137, 64);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(117, 21);
-            this.textBox10.TabIndex = 25;
+            this.Pest1_Txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Nombre.Location = new System.Drawing.Point(159, 64);
+            this.Pest1_Txt_Nombre.Name = "Pest1_Txt_Nombre";
+            this.Pest1_Txt_Nombre.Size = new System.Drawing.Size(147, 21);
+            this.Pest1_Txt_Nombre.TabIndex = 25;
             // 
-            // textBox8
+            // Pest1_Txt_PrecioVentas
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(137, 131);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(118, 21);
-            this.textBox8.TabIndex = 23;
+            this.Pest1_Txt_PrecioVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_PrecioVentas.Location = new System.Drawing.Point(159, 131);
+            this.Pest1_Txt_PrecioVentas.Name = "Pest1_Txt_PrecioVentas";
+            this.Pest1_Txt_PrecioVentas.Size = new System.Drawing.Size(148, 21);
+            this.Pest1_Txt_PrecioVentas.TabIndex = 23;
             // 
-            // textBox7
+            // Pest1_Txt_PrecioCompras
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(137, 168);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(117, 21);
-            this.textBox7.TabIndex = 22;
+            this.Pest1_Txt_PrecioCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_PrecioCompras.Location = new System.Drawing.Point(159, 168);
+            this.Pest1_Txt_PrecioCompras.Name = "Pest1_Txt_PrecioCompras";
+            this.Pest1_Txt_PrecioCompras.Size = new System.Drawing.Size(147, 21);
+            this.Pest1_Txt_PrecioCompras.TabIndex = 22;
             // 
-            // textBox6
+            // Pest1_Txt_TotalEnTienda
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(137, 233);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(117, 21);
-            this.textBox6.TabIndex = 21;
+            this.Pest1_Txt_TotalEnTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_TotalEnTienda.Location = new System.Drawing.Point(159, 233);
+            this.Pest1_Txt_TotalEnTienda.Name = "Pest1_Txt_TotalEnTienda";
+            this.Pest1_Txt_TotalEnTienda.Size = new System.Drawing.Size(147, 21);
+            this.Pest1_Txt_TotalEnTienda.TabIndex = 21;
             // 
-            // textBox5
+            // Pest1_Txt_TotalBodega
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(137, 263);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(117, 21);
-            this.textBox5.TabIndex = 20;
+            this.Pest1_Txt_TotalBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_TotalBodega.Location = new System.Drawing.Point(159, 263);
+            this.Pest1_Txt_TotalBodega.Name = "Pest1_Txt_TotalBodega";
+            this.Pest1_Txt_TotalBodega.Size = new System.Drawing.Size(147, 21);
+            this.Pest1_Txt_TotalBodega.TabIndex = 20;
             // 
-            // textBox1
+            // Pest1_Txt_Codigo
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(71, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(34, 21);
-            this.textBox1.TabIndex = 16;
+            this.Pest1_Txt_Codigo.Enabled = false;
+            this.Pest1_Txt_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Codigo.Location = new System.Drawing.Point(71, 29);
+            this.Pest1_Txt_Codigo.Name = "Pest1_Txt_Codigo";
+            this.Pest1_Txt_Codigo.Size = new System.Drawing.Size(34, 21);
+            this.Pest1_Txt_Codigo.TabIndex = 16;
             // 
-            // comboBox2
+            // Pest1_ComBox_Categoria
             // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(137, 202);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(117, 23);
-            this.comboBox2.TabIndex = 15;
+            this.Pest1_ComBox_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest1_ComBox_Categoria.Enabled = false;
+            this.Pest1_ComBox_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_ComBox_Categoria.FormattingEnabled = true;
+            this.Pest1_ComBox_Categoria.Location = new System.Drawing.Point(159, 202);
+            this.Pest1_ComBox_Categoria.Name = "Pest1_ComBox_Categoria";
+            this.Pest1_ComBox_Categoria.Size = new System.Drawing.Size(147, 23);
+            this.Pest1_ComBox_Categoria.TabIndex = 15;
             // 
-            // comboBox1
+            // Pest1_ComBox_Modelo
             // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 96);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 14;
+            this.Pest1_ComBox_Modelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest1_ComBox_Modelo.Enabled = false;
+            this.Pest1_ComBox_Modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_ComBox_Modelo.FormattingEnabled = true;
+            this.Pest1_ComBox_Modelo.Location = new System.Drawing.Point(159, 96);
+            this.Pest1_ComBox_Modelo.Name = "Pest1_ComBox_Modelo";
+            this.Pest1_ComBox_Modelo.Size = new System.Drawing.Size(147, 23);
+            this.Pest1_ComBox_Modelo.TabIndex = 14;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.Pest1_ComBox_Filtro_NombreMarca);
+            this.groupBox3.Controls.Add(this.Pest1_Txt_Filtro_NombreMarca);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(267, 126);
+            this.groupBox3.Location = new System.Drawing.Point(329, 123);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(261, 84);
+            this.groupBox3.Size = new System.Drawing.Size(306, 90);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Busqueda de Marca";
@@ -416,39 +419,40 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 28);
+            this.label10.Location = new System.Drawing.Point(6, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(122, 15);
             this.label10.TabIndex = 27;
             this.label10.Text = "Nombre de Marca";
             // 
-            // comboBox3
+            // Pest1_ComBox_Filtro_NombreMarca
             // 
-            this.comboBox3.Enabled = false;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(111, 44);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(144, 23);
-            this.comboBox3.TabIndex = 27;
+            this.Pest1_ComBox_Filtro_NombreMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest1_ComBox_Filtro_NombreMarca.Enabled = false;
+            this.Pest1_ComBox_Filtro_NombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_ComBox_Filtro_NombreMarca.FormattingEnabled = true;
+            this.Pest1_ComBox_Filtro_NombreMarca.Location = new System.Drawing.Point(147, 52);
+            this.Pest1_ComBox_Filtro_NombreMarca.Name = "Pest1_ComBox_Filtro_NombreMarca";
+            this.Pest1_ComBox_Filtro_NombreMarca.Size = new System.Drawing.Size(144, 23);
+            this.Pest1_ComBox_Filtro_NombreMarca.TabIndex = 27;
             // 
-            // textBox2
+            // Pest1_Txt_Filtro_NombreMarca
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(6, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 21);
-            this.textBox2.TabIndex = 17;
+            this.Pest1_Txt_Filtro_NombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Filtro_NombreMarca.Location = new System.Drawing.Point(6, 55);
+            this.Pest1_Txt_Filtro_NombreMarca.Name = "Pest1_Txt_Filtro_NombreMarca";
+            this.Pest1_Txt_Filtro_NombreMarca.Size = new System.Drawing.Size(122, 21);
+            this.Pest1_Txt_Filtro_NombreMarca.TabIndex = 17;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.Pest1_ComBox_Filtro_NombreProveedor);
+            this.groupBox2.Controls.Add(this.Pest1_Txt_Filtro_NombreProveedor);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(267, 31);
+            this.groupBox2.Location = new System.Drawing.Point(329, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(261, 83);
+            this.groupBox2.Size = new System.Drawing.Size(306, 95);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Busqueda de Proveedor";
@@ -457,47 +461,48 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 24);
+            this.label11.Location = new System.Drawing.Point(6, 38);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(147, 15);
             this.label11.TabIndex = 28;
             this.label11.Text = "Nombre de Proveedor";
             // 
-            // comboBox4
+            // Pest1_ComBox_Filtro_NombreProveedor
             // 
-            this.comboBox4.Enabled = false;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(111, 42);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(144, 23);
-            this.comboBox4.TabIndex = 29;
+            this.Pest1_ComBox_Filtro_NombreProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest1_ComBox_Filtro_NombreProveedor.Enabled = false;
+            this.Pest1_ComBox_Filtro_NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_ComBox_Filtro_NombreProveedor.FormattingEnabled = true;
+            this.Pest1_ComBox_Filtro_NombreProveedor.Location = new System.Drawing.Point(147, 56);
+            this.Pest1_ComBox_Filtro_NombreProveedor.Name = "Pest1_ComBox_Filtro_NombreProveedor";
+            this.Pest1_ComBox_Filtro_NombreProveedor.Size = new System.Drawing.Size(144, 23);
+            this.Pest1_ComBox_Filtro_NombreProveedor.TabIndex = 29;
             // 
-            // textBox3
+            // Pest1_Txt_Filtro_NombreProveedor
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(6, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 21);
-            this.textBox3.TabIndex = 28;
+            this.Pest1_Txt_Filtro_NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Filtro_NombreProveedor.Location = new System.Drawing.Point(6, 58);
+            this.Pest1_Txt_Filtro_NombreProveedor.Name = "Pest1_Txt_Filtro_NombreProveedor";
+            this.Pest1_Txt_Filtro_NombreProveedor.Size = new System.Drawing.Size(122, 21);
+            this.Pest1_Txt_Filtro_NombreProveedor.TabIndex = 28;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(14, 234);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 15);
+            this.label8.Size = new System.Drawing.Size(118, 16);
             this.label8.TabIndex = 11;
             this.label8.Text = "Total en Tienda";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(13, 67);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 15);
+            this.label7.Size = new System.Drawing.Size(63, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "Nombre";
             // 
@@ -505,7 +510,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(270, 232);
+            this.label6.Location = new System.Drawing.Point(332, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 15);
             this.label6.TabIndex = 9;
@@ -514,50 +519,50 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(14, 203);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 15);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Categoria";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(14, 169);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 15);
+            this.label4.Size = new System.Drawing.Size(133, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Precio de Compra";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 15);
+            this.label3.Size = new System.Drawing.Size(119, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Precio de Venta";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(14, 266);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 15);
+            this.label2.Size = new System.Drawing.Size(124, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Total en Bodega";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Codigo";
             // 
@@ -566,27 +571,27 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(579, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(770, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(131, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(579, 191);
+            this.button2.Location = new System.Drawing.Point(770, 215);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 66);
+            this.button2.Size = new System.Drawing.Size(131, 66);
             this.button2.TabIndex = 1;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(579, 263);
+            this.button3.Location = new System.Drawing.Point(770, 295);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 65);
+            this.button3.Size = new System.Drawing.Size(131, 65);
             this.button3.TabIndex = 2;
             this.button3.Text = "Limpiar";
             this.button3.UseVisualStyleBackColor = true;
@@ -595,22 +600,22 @@
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.Pest2_DataGriew_Productos);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(703, 345);
+            this.tabPage2.Size = new System.Drawing.Size(928, 389);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Busqueda de Producto";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // Pest2_DataGriew_Productos
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pest2_DataGriew_Productos.AutoGenerateColumns = false;
+            this.Pest2_DataGriew_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Pest2_DataGriew_Productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codProductoDataGridViewTextBoxColumn,
             this.nombreProductoDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn,
@@ -622,78 +627,11 @@
             this.codProveedorDataGridViewTextBoxColumn,
             this.codCategoriaDataGridViewTextBoxColumn,
             this.codEstadoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.productoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 208);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(691, 127);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // codProductoDataGridViewTextBoxColumn
-            // 
-            this.codProductoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Producto";
-            this.codProductoDataGridViewTextBoxColumn.HeaderText = "Cod_Producto";
-            this.codProductoDataGridViewTextBoxColumn.Name = "codProductoDataGridViewTextBoxColumn";
-            this.codProductoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreProductoDataGridViewTextBoxColumn
-            // 
-            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "NombreProducto";
-            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "NombreProducto";
-            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            // 
-            // precioVentaDataGridViewTextBoxColumn
-            // 
-            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "PrecioVenta";
-            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "PrecioVenta";
-            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
-            // 
-            // precioCompraDataGridViewTextBoxColumn
-            // 
-            this.precioCompraDataGridViewTextBoxColumn.DataPropertyName = "PrecioCompra";
-            this.precioCompraDataGridViewTextBoxColumn.HeaderText = "PrecioCompra";
-            this.precioCompraDataGridViewTextBoxColumn.Name = "precioCompraDataGridViewTextBoxColumn";
-            // 
-            // cantExistenteTiendaDataGridViewTextBoxColumn
-            // 
-            this.cantExistenteTiendaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteTienda";
-            this.cantExistenteTiendaDataGridViewTextBoxColumn.HeaderText = "CantExistenteTienda";
-            this.cantExistenteTiendaDataGridViewTextBoxColumn.Name = "cantExistenteTiendaDataGridViewTextBoxColumn";
-            // 
-            // cantExistenteBodegaDataGridViewTextBoxColumn
-            // 
-            this.cantExistenteBodegaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteBodega";
-            this.cantExistenteBodegaDataGridViewTextBoxColumn.HeaderText = "CantExistenteBodega";
-            this.cantExistenteBodegaDataGridViewTextBoxColumn.Name = "cantExistenteBodegaDataGridViewTextBoxColumn";
-            // 
-            // codModeloDataGridViewTextBoxColumn
-            // 
-            this.codModeloDataGridViewTextBoxColumn.DataPropertyName = "Cod_Modelo";
-            this.codModeloDataGridViewTextBoxColumn.HeaderText = "Cod_Modelo";
-            this.codModeloDataGridViewTextBoxColumn.Name = "codModeloDataGridViewTextBoxColumn";
-            // 
-            // codProveedorDataGridViewTextBoxColumn
-            // 
-            this.codProveedorDataGridViewTextBoxColumn.DataPropertyName = "Cod_Proveedor";
-            this.codProveedorDataGridViewTextBoxColumn.HeaderText = "Cod_Proveedor";
-            this.codProveedorDataGridViewTextBoxColumn.Name = "codProveedorDataGridViewTextBoxColumn";
-            // 
-            // codCategoriaDataGridViewTextBoxColumn
-            // 
-            this.codCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Categoria";
-            this.codCategoriaDataGridViewTextBoxColumn.HeaderText = "Cod_Categoria";
-            this.codCategoriaDataGridViewTextBoxColumn.Name = "codCategoriaDataGridViewTextBoxColumn";
-            // 
-            // codEstadoDataGridViewTextBoxColumn
-            // 
-            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
+            this.Pest2_DataGriew_Productos.DataSource = this.productoBindingSource;
+            this.Pest2_DataGriew_Productos.Location = new System.Drawing.Point(6, 166);
+            this.Pest2_DataGriew_Productos.Name = "Pest2_DataGriew_Productos";
+            this.Pest2_DataGriew_Productos.Size = new System.Drawing.Size(916, 217);
+            this.Pest2_DataGriew_Productos.TabIndex = 5;
             // 
             // productoBindingSource
             // 
@@ -710,104 +648,107 @@
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(585, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(709, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 111);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.textBox11);
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.radioButton3);
-            this.groupBox4.Controls.Add(this.radioButton1);
+            this.groupBox4.Controls.Add(this.Pest2_Bttn_Aceptar);
+            this.groupBox4.Controls.Add(this.Pest2_Bttn_Limpiar);
+            this.groupBox4.Controls.Add(this.Pest2_Txt_CodigoFiltro);
+            this.groupBox4.Controls.Add(this.Pest2_Txt_NombreFiltro);
+            this.groupBox4.Controls.Add(this.Pest2_Radio_Nombre);
+            this.groupBox4.Controls.Add(this.Pest2_Radio_Codigo);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(6, 19);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 183);
+            this.groupBox4.Size = new System.Drawing.Size(312, 130);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Busqueda de Productos";
             // 
-            // button5
+            // Pest2_Bttn_Aceptar
             // 
-            this.button5.Location = new System.Drawing.Point(98, 142);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Acceptar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Pest2_Bttn_Aceptar.Location = new System.Drawing.Point(226, 35);
+            this.Pest2_Bttn_Aceptar.Name = "Pest2_Bttn_Aceptar";
+            this.Pest2_Bttn_Aceptar.Size = new System.Drawing.Size(80, 32);
+            this.Pest2_Bttn_Aceptar.TabIndex = 6;
+            this.Pest2_Bttn_Aceptar.Text = "Acceptar";
+            this.Pest2_Bttn_Aceptar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Pest2_Bttn_Limpiar
             // 
-            this.button4.Location = new System.Drawing.Point(10, 142);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Limpiar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Pest2_Bttn_Limpiar.Location = new System.Drawing.Point(226, 85);
+            this.Pest2_Bttn_Limpiar.Name = "Pest2_Bttn_Limpiar";
+            this.Pest2_Bttn_Limpiar.Size = new System.Drawing.Size(80, 32);
+            this.Pest2_Bttn_Limpiar.TabIndex = 5;
+            this.Pest2_Bttn_Limpiar.Text = "Limpiar";
+            this.Pest2_Bttn_Limpiar.UseVisualStyleBackColor = true;
             // 
-            // textBox11
+            // Pest2_Txt_CodigoFiltro
             // 
-            this.textBox11.Location = new System.Drawing.Point(12, 102);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(161, 21);
-            this.textBox11.TabIndex = 4;
+            this.Pest2_Txt_CodigoFiltro.Location = new System.Drawing.Point(12, 96);
+            this.Pest2_Txt_CodigoFiltro.Name = "Pest2_Txt_CodigoFiltro";
+            this.Pest2_Txt_CodigoFiltro.Size = new System.Drawing.Size(161, 21);
+            this.Pest2_Txt_CodigoFiltro.TabIndex = 4;
             // 
-            // textBox4
+            // Pest2_Txt_NombreFiltro
             // 
-            this.textBox4.Location = new System.Drawing.Point(10, 46);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 21);
-            this.textBox4.TabIndex = 3;
+            this.Pest2_Txt_NombreFiltro.Location = new System.Drawing.Point(10, 46);
+            this.Pest2_Txt_NombreFiltro.Name = "Pest2_Txt_NombreFiltro";
+            this.Pest2_Txt_NombreFiltro.Size = new System.Drawing.Size(161, 21);
+            this.Pest2_Txt_NombreFiltro.TabIndex = 3;
             // 
-            // radioButton3
+            // Pest2_Radio_Nombre
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(13, 23);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(76, 19);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Nombre";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.Pest2_Radio_Nombre.AutoSize = true;
+            this.Pest2_Radio_Nombre.Location = new System.Drawing.Point(13, 23);
+            this.Pest2_Radio_Nombre.Name = "Pest2_Radio_Nombre";
+            this.Pest2_Radio_Nombre.Size = new System.Drawing.Size(76, 19);
+            this.Pest2_Radio_Nombre.TabIndex = 2;
+            this.Pest2_Radio_Nombre.TabStop = true;
+            this.Pest2_Radio_Nombre.Text = "Nombre";
+            this.Pest2_Radio_Nombre.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // Pest2_Radio_Codigo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(15, 79);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 19);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Codigo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Pest2_Radio_Codigo.AutoSize = true;
+            this.Pest2_Radio_Codigo.Location = new System.Drawing.Point(15, 73);
+            this.Pest2_Radio_Codigo.Name = "Pest2_Radio_Codigo";
+            this.Pest2_Radio_Codigo.Size = new System.Drawing.Size(70, 19);
+            this.Pest2_Radio_Codigo.TabIndex = 0;
+            this.Pest2_Radio_Codigo.TabStop = true;
+            this.Pest2_Radio_Codigo.Text = "Codigo";
+            this.Pest2_Radio_Codigo.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.richTextBox2);
-            this.tabPage3.Controls.Add(this.comboBox5);
+            this.tabPage3.Controls.Add(this.label41);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_MuestraNombre_Codigo_Proveedor);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_RichText_Descripcion);
+            this.tabPage3.Controls.Add(this.Pest3_ComBox_Estado);
             this.tabPage3.Controls.Add(this.label23);
             this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.pictureBox3);
-            this.tabPage3.Controls.Add(this.textBox22);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_Categorias);
             this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.textBox20);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_Filtro_NombreProveedor);
             this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.textBox19);
-            this.tabPage3.Controls.Add(this.textBox21);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_NombreMarca);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_Modelo);
             this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.textBox12);
-            this.tabPage3.Controls.Add(this.textBox14);
-            this.tabPage3.Controls.Add(this.textBox15);
-            this.tabPage3.Controls.Add(this.textBox16);
-            this.tabPage3.Controls.Add(this.textBox17);
-            this.tabPage3.Controls.Add(this.textBox18);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_Nombre);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_PrecioVenta);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_Compras);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_TotalTienda);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_TotalBodega);
+            this.tabPage3.Controls.Add(this.Pest3_Txt_Codigo);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.label17);
@@ -819,52 +760,53 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(703, 345);
+            this.tabPage3.Size = new System.Drawing.Size(928, 389);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modificar Producto";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // richTextBox2
+            // Pest3_Txt_RichText_Descripcion
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(440, 196);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(160, 57);
-            this.richTextBox2.TabIndex = 53;
-            this.richTextBox2.Text = "";
+            this.Pest3_Txt_RichText_Descripcion.Location = new System.Drawing.Point(508, 202);
+            this.Pest3_Txt_RichText_Descripcion.Name = "Pest3_Txt_RichText_Descripcion";
+            this.Pest3_Txt_RichText_Descripcion.Size = new System.Drawing.Size(245, 57);
+            this.Pest3_Txt_RichText_Descripcion.TabIndex = 53;
+            this.Pest3_Txt_RichText_Descripcion.Text = "";
             // 
-            // comboBox5
+            // Pest3_ComBox_Estado
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(140, 83);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(148, 21);
-            this.comboBox5.TabIndex = 52;
+            this.Pest3_ComBox_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest3_ComBox_Estado.FormattingEnabled = true;
+            this.Pest3_ComBox_Estado.Location = new System.Drawing.Point(164, 83);
+            this.Pest3_ComBox_Estado.Name = "Pest3_ComBox_Estado";
+            this.Pest3_ComBox_Estado.Size = new System.Drawing.Size(148, 21);
+            this.Pest3_ComBox_Estado.TabIndex = 52;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(19, 86);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(51, 15);
+            this.label23.Size = new System.Drawing.Size(61, 18);
             this.label23.TabIndex = 51;
             this.label23.Text = "Estado";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(440, 287);
+            this.button7.Location = new System.Drawing.Point(688, 314);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(98, 49);
+            this.button7.Size = new System.Drawing.Size(107, 49);
             this.button7.TabIndex = 50;
             this.button7.Text = "Limpiar";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(599, 287);
+            this.button6.Location = new System.Drawing.Point(801, 314);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 49);
+            this.button6.Size = new System.Drawing.Size(108, 49);
             this.button6.TabIndex = 3;
             this.button6.Text = "Aceptar";
             this.button6.UseVisualStyleBackColor = true;
@@ -874,213 +816,213 @@
             this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(585, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(810, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(112, 111);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox22
+            // Pest3_Txt_Categorias
             // 
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(140, 190);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(147, 21);
-            this.textBox22.TabIndex = 48;
+            this.Pest3_Txt_Categorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_Categorias.Location = new System.Drawing.Point(164, 190);
+            this.Pest3_Txt_Categorias.Name = "Pest3_Txt_Categorias";
+            this.Pest3_Txt_Categorias.Size = new System.Drawing.Size(147, 21);
+            this.Pest3_Txt_Categorias.TabIndex = 48;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(292, 125);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(340, 86);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(147, 15);
+            this.label14.Size = new System.Drawing.Size(156, 16);
             this.label14.TabIndex = 28;
-            this.label14.Text = "Nombre de Proveedor";
+            this.label14.Text = "Filtro para Proveedor";
             // 
-            // textBox20
+            // Pest3_Txt_Filtro_NombreProveedor
             // 
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(440, 125);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(160, 21);
-            this.textBox20.TabIndex = 28;
+            this.Pest3_Txt_Filtro_NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_Filtro_NombreProveedor.Location = new System.Drawing.Point(508, 86);
+            this.Pest3_Txt_Filtro_NombreProveedor.Name = "Pest3_Txt_Filtro_NombreProveedor";
+            this.Pest3_Txt_Filtro_NombreProveedor.Size = new System.Drawing.Size(190, 21);
+            this.Pest3_Txt_Filtro_NombreProveedor.TabIndex = 28;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(292, 160);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(340, 166);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 15);
+            this.label13.Size = new System.Drawing.Size(132, 16);
             this.label13.TabIndex = 27;
             this.label13.Text = "Nombre de Marca";
             // 
-            // textBox19
+            // Pest3_Txt_NombreMarca
             // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(440, 157);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(160, 21);
-            this.textBox19.TabIndex = 17;
+            this.Pest3_Txt_NombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_NombreMarca.Location = new System.Drawing.Point(508, 163);
+            this.Pest3_Txt_NombreMarca.Name = "Pest3_Txt_NombreMarca";
+            this.Pest3_Txt_NombreMarca.Size = new System.Drawing.Size(190, 21);
+            this.Pest3_Txt_NombreMarca.TabIndex = 17;
             // 
-            // textBox21
+            // Pest3_Txt_Modelo
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(140, 288);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(148, 21);
-            this.textBox21.TabIndex = 47;
+            this.Pest3_Txt_Modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_Modelo.Location = new System.Drawing.Point(164, 288);
+            this.Pest3_Txt_Modelo.Name = "Pest3_Txt_Modelo";
+            this.Pest3_Txt_Modelo.Size = new System.Drawing.Size(148, 21);
+            this.Pest3_Txt_Modelo.TabIndex = 47;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(19, 288);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 15);
+            this.label12.Size = new System.Drawing.Size(64, 18);
             this.label12.TabIndex = 46;
             this.label12.Text = "Modelo";
             // 
-            // textBox12
+            // Pest3_Txt_Nombre
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(140, 54);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(147, 21);
-            this.textBox12.TabIndex = 45;
+            this.Pest3_Txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_Nombre.Location = new System.Drawing.Point(164, 54);
+            this.Pest3_Txt_Nombre.Name = "Pest3_Txt_Nombre";
+            this.Pest3_Txt_Nombre.Size = new System.Drawing.Size(147, 21);
+            this.Pest3_Txt_Nombre.TabIndex = 45;
             // 
-            // textBox14
+            // Pest3_Txt_PrecioVenta
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(140, 121);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(148, 21);
-            this.textBox14.TabIndex = 43;
+            this.Pest3_Txt_PrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_PrecioVenta.Location = new System.Drawing.Point(164, 121);
+            this.Pest3_Txt_PrecioVenta.Name = "Pest3_Txt_PrecioVenta";
+            this.Pest3_Txt_PrecioVenta.Size = new System.Drawing.Size(148, 21);
+            this.Pest3_Txt_PrecioVenta.TabIndex = 43;
             // 
-            // textBox15
+            // Pest3_Txt_Compras
             // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(140, 158);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(147, 21);
-            this.textBox15.TabIndex = 42;
+            this.Pest3_Txt_Compras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_Compras.Location = new System.Drawing.Point(164, 158);
+            this.Pest3_Txt_Compras.Name = "Pest3_Txt_Compras";
+            this.Pest3_Txt_Compras.Size = new System.Drawing.Size(147, 21);
+            this.Pest3_Txt_Compras.TabIndex = 42;
             // 
-            // textBox16
+            // Pest3_Txt_TotalTienda
             // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(140, 223);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(147, 21);
-            this.textBox16.TabIndex = 41;
+            this.Pest3_Txt_TotalTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_TotalTienda.Location = new System.Drawing.Point(164, 223);
+            this.Pest3_Txt_TotalTienda.Name = "Pest3_Txt_TotalTienda";
+            this.Pest3_Txt_TotalTienda.Size = new System.Drawing.Size(147, 21);
+            this.Pest3_Txt_TotalTienda.TabIndex = 41;
             // 
-            // textBox17
+            // Pest3_Txt_TotalBodega
             // 
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(140, 253);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(147, 21);
-            this.textBox17.TabIndex = 40;
+            this.Pest3_Txt_TotalBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_TotalBodega.Location = new System.Drawing.Point(164, 253);
+            this.Pest3_Txt_TotalBodega.Name = "Pest3_Txt_TotalBodega";
+            this.Pest3_Txt_TotalBodega.Size = new System.Drawing.Size(147, 21);
+            this.Pest3_Txt_TotalBodega.TabIndex = 40;
             // 
-            // textBox18
+            // Pest3_Txt_Codigo
             // 
-            this.textBox18.Enabled = false;
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(140, 22);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(34, 21);
-            this.textBox18.TabIndex = 39;
+            this.Pest3_Txt_Codigo.Enabled = false;
+            this.Pest3_Txt_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_Codigo.Location = new System.Drawing.Point(164, 22);
+            this.Pest3_Txt_Codigo.Name = "Pest3_Txt_Codigo";
+            this.Pest3_Txt_Codigo.Size = new System.Drawing.Size(34, 21);
+            this.Pest3_Txt_Codigo.TabIndex = 39;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(17, 224);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 15);
+            this.label15.Size = new System.Drawing.Size(124, 18);
             this.label15.TabIndex = 34;
             this.label15.Text = "Total en Tienda";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(16, 57);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 15);
+            this.label16.Size = new System.Drawing.Size(68, 18);
             this.label16.TabIndex = 33;
             this.label16.Text = "Nombre";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(291, 196);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(339, 202);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(83, 15);
+            this.label17.Size = new System.Drawing.Size(91, 16);
             this.label17.TabIndex = 32;
             this.label17.Text = "Descripcion";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(17, 193);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(69, 15);
+            this.label18.Size = new System.Drawing.Size(81, 18);
             this.label18.TabIndex = 31;
             this.label18.Text = "Categoria";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(17, 159);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(122, 15);
+            this.label19.Size = new System.Drawing.Size(145, 18);
             this.label19.TabIndex = 30;
             this.label19.Text = "Precio de Compra";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(16, 121);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 15);
+            this.label20.Size = new System.Drawing.Size(127, 18);
             this.label20.TabIndex = 29;
             this.label20.Text = "Precio de Venta";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(17, 256);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(112, 15);
+            this.label21.Size = new System.Drawing.Size(131, 18);
             this.label21.TabIndex = 28;
             this.label21.Text = "Total en Bodega";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(16, 22);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 15);
+            this.label22.Size = new System.Drawing.Size(62, 18);
             this.label22.TabIndex = 27;
             this.label22.Text = "Codigo";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.pictureBox4);
-            this.tabPage4.Controls.Add(this.groupBox7);
-            this.tabPage4.Controls.Add(this.groupBox6);
-            this.tabPage4.Controls.Add(this.groupBox5);
+            this.tabPage4.Controls.Add(this.Pest4_Grupo_Manejo);
+            this.tabPage4.Controls.Add(this.Pest4_Grupo_BusquedaModificacion);
+            this.tabPage4.Controls.Add(this.Pest4_Grupo_OpcionesManejo);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(703, 345);
+            this.tabPage4.Size = new System.Drawing.Size(928, 389);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Categorias de Producto";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1090,61 +1032,60 @@
             this.pictureBox4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.ErrorImage")));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.InitialImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(600, 18);
+            this.pictureBox4.Location = new System.Drawing.Point(709, 6);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(94, 96);
+            this.pictureBox4.Size = new System.Drawing.Size(112, 111);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 50;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // groupBox7
+            // Pest4_Grupo_Manejo
             // 
-            this.groupBox7.Controls.Add(this.button11);
-            this.groupBox7.Controls.Add(this.button10);
-            this.groupBox7.Controls.Add(this.textBox23);
-            this.groupBox7.Controls.Add(this.textBox24);
-            this.groupBox7.Controls.Add(this.label27);
-            this.groupBox7.Controls.Add(this.label26);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(195, 6);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(334, 110);
-            this.groupBox7.TabIndex = 3;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Opciones de Manejo";
+            this.Pest4_Grupo_Manejo.Controls.Add(this.Pest4_Bttn_LimpiarManejo);
+            this.Pest4_Grupo_Manejo.Controls.Add(this.Pest4_Bttn_AceptarManejo);
+            this.Pest4_Grupo_Manejo.Controls.Add(this.Pest4_Txt_Manejo_Categoria);
+            this.Pest4_Grupo_Manejo.Controls.Add(this.Pest4_Txt_Manejo_CodCategoria);
+            this.Pest4_Grupo_Manejo.Controls.Add(this.label27);
+            this.Pest4_Grupo_Manejo.Controls.Add(this.label26);
+            this.Pest4_Grupo_Manejo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Grupo_Manejo.Location = new System.Drawing.Point(273, 9);
+            this.Pest4_Grupo_Manejo.Name = "Pest4_Grupo_Manejo";
+            this.Pest4_Grupo_Manejo.Size = new System.Drawing.Size(334, 110);
+            this.Pest4_Grupo_Manejo.TabIndex = 3;
+            this.Pest4_Grupo_Manejo.TabStop = false;
+            this.Pest4_Grupo_Manejo.Text = "Manejo";
             // 
-            // button11
+            // Pest4_Bttn_LimpiarManejo
             // 
-            this.button11.Location = new System.Drawing.Point(235, 63);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(93, 33);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "Limpiar";
-            this.button11.UseVisualStyleBackColor = true;
+            this.Pest4_Bttn_LimpiarManejo.Location = new System.Drawing.Point(235, 63);
+            this.Pest4_Bttn_LimpiarManejo.Name = "Pest4_Bttn_LimpiarManejo";
+            this.Pest4_Bttn_LimpiarManejo.Size = new System.Drawing.Size(93, 33);
+            this.Pest4_Bttn_LimpiarManejo.TabIndex = 11;
+            this.Pest4_Bttn_LimpiarManejo.Text = "Limpiar";
+            this.Pest4_Bttn_LimpiarManejo.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // Pest4_Bttn_AceptarManejo
             // 
-            this.button10.Location = new System.Drawing.Point(235, 12);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(93, 33);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Aceptar";
-            this.button10.UseVisualStyleBackColor = true;
+            this.Pest4_Bttn_AceptarManejo.Location = new System.Drawing.Point(235, 12);
+            this.Pest4_Bttn_AceptarManejo.Name = "Pest4_Bttn_AceptarManejo";
+            this.Pest4_Bttn_AceptarManejo.Size = new System.Drawing.Size(93, 33);
+            this.Pest4_Bttn_AceptarManejo.TabIndex = 7;
+            this.Pest4_Bttn_AceptarManejo.Text = "Aceptar";
+            this.Pest4_Bttn_AceptarManejo.UseVisualStyleBackColor = true;
             // 
-            // textBox23
+            // Pest4_Txt_Manejo_Categoria
             // 
-            this.textBox23.Location = new System.Drawing.Point(8, 79);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(167, 20);
-            this.textBox23.TabIndex = 10;
+            this.Pest4_Txt_Manejo_Categoria.Location = new System.Drawing.Point(8, 79);
+            this.Pest4_Txt_Manejo_Categoria.Name = "Pest4_Txt_Manejo_Categoria";
+            this.Pest4_Txt_Manejo_Categoria.Size = new System.Drawing.Size(167, 20);
+            this.Pest4_Txt_Manejo_Categoria.TabIndex = 10;
             // 
-            // textBox24
+            // Pest4_Txt_Manejo_CodCategoria
             // 
-            this.textBox24.Location = new System.Drawing.Point(8, 36);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(167, 20);
-            this.textBox24.TabIndex = 9;
+            this.Pest4_Txt_Manejo_CodCategoria.Location = new System.Drawing.Point(8, 36);
+            this.Pest4_Txt_Manejo_CodCategoria.Name = "Pest4_Txt_Manejo_CodCategoria";
+            this.Pest4_Txt_Manejo_CodCategoria.Size = new System.Drawing.Size(167, 20);
+            this.Pest4_Txt_Manejo_CodCategoria.TabIndex = 9;
             // 
             // label27
             // 
@@ -1164,62 +1105,52 @@
             this.label26.TabIndex = 8;
             this.label26.Text = "Descripcion de Categoria";
             // 
-            // groupBox6
+            // Pest4_Grupo_BusquedaModificacion
             // 
-            this.groupBox6.Controls.Add(this.button9);
-            this.groupBox6.Controls.Add(this.button8);
-            this.groupBox6.Controls.Add(this.textBox13);
-            this.groupBox6.Controls.Add(this.textBox9);
-            this.groupBox6.Controls.Add(this.label25);
-            this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Controls.Add(this.dataGridView2);
-            this.groupBox6.Location = new System.Drawing.Point(23, 135);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(678, 205);
-            this.groupBox6.TabIndex = 3;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Busqueda y Modificacion";
+            this.Pest4_Grupo_BusquedaModificacion.Controls.Add(this.Pest4_Txt_Busqueda_Categoria);
+            this.Pest4_Grupo_BusquedaModificacion.Controls.Add(this.label25);
+            this.Pest4_Grupo_BusquedaModificacion.Controls.Add(this.Pest4_Bttn_LimpiarDataGriew);
+            this.Pest4_Grupo_BusquedaModificacion.Controls.Add(this.Pest4_Txt_Busqueda_CodCategoria);
+            this.Pest4_Grupo_BusquedaModificacion.Controls.Add(this.label24);
+            this.Pest4_Grupo_BusquedaModificacion.Controls.Add(this.dataGridView2);
+            this.Pest4_Grupo_BusquedaModificacion.Location = new System.Drawing.Point(23, 135);
+            this.Pest4_Grupo_BusquedaModificacion.Name = "Pest4_Grupo_BusquedaModificacion";
+            this.Pest4_Grupo_BusquedaModificacion.Size = new System.Drawing.Size(878, 239);
+            this.Pest4_Grupo_BusquedaModificacion.TabIndex = 3;
+            this.Pest4_Grupo_BusquedaModificacion.TabStop = false;
+            this.Pest4_Grupo_BusquedaModificacion.Text = "Busqueda y Modificacion";
             // 
-            // button9
+            // Pest4_Txt_Busqueda_Categoria
             // 
-            this.button9.Location = new System.Drawing.Point(443, 31);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(93, 48);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Aceptar";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(560, 31);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(93, 48);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "Limpiar";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(195, 57);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(167, 20);
-            this.textBox13.TabIndex = 4;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(195, 31);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(167, 20);
-            this.textBox9.TabIndex = 3;
+            this.Pest4_Txt_Busqueda_Categoria.Location = new System.Drawing.Point(431, 31);
+            this.Pest4_Txt_Busqueda_Categoria.Name = "Pest4_Txt_Busqueda_Categoria";
+            this.Pest4_Txt_Busqueda_Categoria.Size = new System.Drawing.Size(167, 20);
+            this.Pest4_Txt_Busqueda_Categoria.TabIndex = 8;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(31, 61);
+            this.label25.Location = new System.Drawing.Point(275, 34);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(150, 13);
-            this.label25.TabIndex = 2;
+            this.label25.TabIndex = 7;
             this.label25.Text = "Descripcion de Categoria";
+            // 
+            // Pest4_Bttn_LimpiarDataGriew
+            // 
+            this.Pest4_Bttn_LimpiarDataGriew.Location = new System.Drawing.Point(767, 26);
+            this.Pest4_Bttn_LimpiarDataGriew.Name = "Pest4_Bttn_LimpiarDataGriew";
+            this.Pest4_Bttn_LimpiarDataGriew.Size = new System.Drawing.Size(93, 48);
+            this.Pest4_Bttn_LimpiarDataGriew.TabIndex = 5;
+            this.Pest4_Bttn_LimpiarDataGriew.Text = "Limpiar";
+            this.Pest4_Bttn_LimpiarDataGriew.UseVisualStyleBackColor = true;
+            // 
+            // Pest4_Txt_Busqueda_CodCategoria
+            // 
+            this.Pest4_Txt_Busqueda_CodCategoria.Location = new System.Drawing.Point(161, 32);
+            this.Pest4_Txt_Busqueda_CodCategoria.Name = "Pest4_Txt_Busqueda_CodCategoria";
+            this.Pest4_Txt_Busqueda_CodCategoria.Size = new System.Drawing.Size(98, 20);
+            this.Pest4_Txt_Busqueda_CodCategoria.TabIndex = 3;
             // 
             // label24
             // 
@@ -1242,123 +1173,109 @@
             this.dataGridView2.Location = new System.Drawing.Point(6, 90);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(666, 103);
+            this.dataGridView2.Size = new System.Drawing.Size(866, 143);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // codigoCategoriaDataGridViewTextBoxColumn
-            // 
-            this.codigoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Categoria";
-            this.codigoCategoriaDataGridViewTextBoxColumn.HeaderText = "Codigo_Categoria";
-            this.codigoCategoriaDataGridViewTextBoxColumn.Name = "codigoCategoriaDataGridViewTextBoxColumn";
-            this.codigoCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn1
-            // 
-            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
-            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // categoriaProductoBindingSource
             // 
             this.categoriaProductoBindingSource.DataMember = "Categoria_Producto";
             this.categoriaProductoBindingSource.DataSource = this.ventasAutoPartesDataSet;
             // 
-            // groupBox5
+            // Pest4_Grupo_OpcionesManejo
             // 
-            this.groupBox5.Controls.Add(this.radioButton5);
-            this.groupBox5.Controls.Add(this.radioButton4);
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Location = new System.Drawing.Point(23, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(150, 110);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Opciones de Manejo";
+            this.Pest4_Grupo_OpcionesManejo.Controls.Add(this.Pest4_Radio_Agregar);
+            this.Pest4_Grupo_OpcionesManejo.Controls.Add(this.Pest4_Radio_Buscar);
+            this.Pest4_Grupo_OpcionesManejo.Controls.Add(this.Pest4_Radio_Manejo);
+            this.Pest4_Grupo_OpcionesManejo.Location = new System.Drawing.Point(23, 6);
+            this.Pest4_Grupo_OpcionesManejo.Name = "Pest4_Grupo_OpcionesManejo";
+            this.Pest4_Grupo_OpcionesManejo.Size = new System.Drawing.Size(150, 110);
+            this.Pest4_Grupo_OpcionesManejo.TabIndex = 0;
+            this.Pest4_Grupo_OpcionesManejo.TabStop = false;
+            this.Pest4_Grupo_OpcionesManejo.Text = "Opciones de Manejo";
             // 
-            // radioButton5
+            // Pest4_Radio_Agregar
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(28, 28);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(69, 17);
-            this.radioButton5.TabIndex = 2;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Agregar";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.Pest4_Radio_Agregar.AutoSize = true;
+            this.Pest4_Radio_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Radio_Agregar.Location = new System.Drawing.Point(28, 28);
+            this.Pest4_Radio_Agregar.Name = "Pest4_Radio_Agregar";
+            this.Pest4_Radio_Agregar.Size = new System.Drawing.Size(69, 17);
+            this.Pest4_Radio_Agregar.TabIndex = 2;
+            this.Pest4_Radio_Agregar.TabStop = true;
+            this.Pest4_Radio_Agregar.Text = "Agregar";
+            this.Pest4_Radio_Agregar.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // Pest4_Radio_Buscar
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(28, 80);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(64, 17);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Buscar";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Pest4_Radio_Buscar.AutoSize = true;
+            this.Pest4_Radio_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Radio_Buscar.Location = new System.Drawing.Point(28, 80);
+            this.Pest4_Radio_Buscar.Name = "Pest4_Radio_Buscar";
+            this.Pest4_Radio_Buscar.Size = new System.Drawing.Size(64, 17);
+            this.Pest4_Radio_Buscar.TabIndex = 1;
+            this.Pest4_Radio_Buscar.TabStop = true;
+            this.Pest4_Radio_Buscar.Text = "Buscar";
+            this.Pest4_Radio_Buscar.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // Pest4_Radio_Manejo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(28, 54);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(66, 17);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Manejo";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Pest4_Radio_Manejo.AutoSize = true;
+            this.Pest4_Radio_Manejo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Radio_Manejo.Location = new System.Drawing.Point(28, 54);
+            this.Pest4_Radio_Manejo.Name = "Pest4_Radio_Manejo";
+            this.Pest4_Radio_Manejo.Size = new System.Drawing.Size(66, 17);
+            this.Pest4_Radio_Manejo.TabIndex = 0;
+            this.Pest4_Radio_Manejo.TabStop = true;
+            this.Pest4_Radio_Manejo.Text = "Manejo";
+            this.Pest4_Radio_Manejo.UseVisualStyleBackColor = true;
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.groupBox11);
-            this.tabPage5.Controls.Add(this.groupBox9);
-            this.tabPage5.Controls.Add(this.groupBox8);
+            this.tabPage5.Controls.Add(this.Pest5_GrupoManejo);
+            this.tabPage5.Controls.Add(this.Pest5_GrupoBusqueda);
+            this.tabPage5.Controls.Add(this.Pest5_GrupoOpciones);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(703, 345);
+            this.tabPage5.Size = new System.Drawing.Size(928, 389);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Marcas de Producto";
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
-            // groupBox11
+            // Pest5_GrupoManejo
             // 
-            this.groupBox11.Controls.Add(this.button13);
-            this.groupBox11.Controls.Add(this.button12);
-            this.groupBox11.Controls.Add(this.label33);
-            this.groupBox11.Controls.Add(this.label32);
-            this.groupBox11.Controls.Add(this.label31);
-            this.groupBox11.Controls.Add(this.comboBox6);
-            this.groupBox11.Controls.Add(this.textBox26);
-            this.groupBox11.Controls.Add(this.textBox25);
-            this.groupBox11.Location = new System.Drawing.Point(159, 13);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(394, 110);
-            this.groupBox11.TabIndex = 4;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Manejo";
+            this.Pest5_GrupoManejo.Controls.Add(this.Pest5_Bttn_Manejo_Limpiar);
+            this.Pest5_GrupoManejo.Controls.Add(this.Pest5_Bttn_Manejo_Aceptar);
+            this.Pest5_GrupoManejo.Controls.Add(this.label33);
+            this.Pest5_GrupoManejo.Controls.Add(this.label32);
+            this.Pest5_GrupoManejo.Controls.Add(this.label31);
+            this.Pest5_GrupoManejo.Controls.Add(this.Pest5_Radio_Manejo_Estados);
+            this.Pest5_GrupoManejo.Controls.Add(this.Pest5_Txt_Manejo_Descripcion);
+            this.Pest5_GrupoManejo.Controls.Add(this.Pest5_Txt_Manejo_Codigo);
+            this.Pest5_GrupoManejo.Location = new System.Drawing.Point(174, 13);
+            this.Pest5_GrupoManejo.Name = "Pest5_GrupoManejo";
+            this.Pest5_GrupoManejo.Size = new System.Drawing.Size(394, 110);
+            this.Pest5_GrupoManejo.TabIndex = 4;
+            this.Pest5_GrupoManejo.TabStop = false;
+            this.Pest5_GrupoManejo.Text = "Manejo";
             // 
-            // button13
+            // Pest5_Bttn_Manejo_Limpiar
             // 
-            this.button13.Location = new System.Drawing.Point(294, 62);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(82, 38);
-            this.button13.TabIndex = 9;
-            this.button13.Text = "Limpiar";
-            this.button13.UseVisualStyleBackColor = true;
+            this.Pest5_Bttn_Manejo_Limpiar.Location = new System.Drawing.Point(294, 62);
+            this.Pest5_Bttn_Manejo_Limpiar.Name = "Pest5_Bttn_Manejo_Limpiar";
+            this.Pest5_Bttn_Manejo_Limpiar.Size = new System.Drawing.Size(82, 38);
+            this.Pest5_Bttn_Manejo_Limpiar.TabIndex = 9;
+            this.Pest5_Bttn_Manejo_Limpiar.Text = "Limpiar";
+            this.Pest5_Bttn_Manejo_Limpiar.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // Pest5_Bttn_Manejo_Aceptar
             // 
-            this.button12.Location = new System.Drawing.Point(294, 14);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(82, 38);
-            this.button12.TabIndex = 8;
-            this.button12.Text = "Aceptar";
-            this.button12.UseVisualStyleBackColor = true;
+            this.Pest5_Bttn_Manejo_Aceptar.Location = new System.Drawing.Point(294, 14);
+            this.Pest5_Bttn_Manejo_Aceptar.Name = "Pest5_Bttn_Manejo_Aceptar";
+            this.Pest5_Bttn_Manejo_Aceptar.Size = new System.Drawing.Size(82, 38);
+            this.Pest5_Bttn_Manejo_Aceptar.TabIndex = 8;
+            this.Pest5_Bttn_Manejo_Aceptar.Text = "Aceptar";
+            this.Pest5_Bttn_Manejo_Aceptar.UseVisualStyleBackColor = true;
             // 
             // label33
             // 
@@ -1387,67 +1304,58 @@
             this.label31.TabIndex = 5;
             this.label31.Text = "Descripcion";
             // 
-            // comboBox6
+            // Pest5_Radio_Manejo_Estados
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(88, 79);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 2;
+            this.Pest5_Radio_Manejo_Estados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest5_Radio_Manejo_Estados.FormattingEnabled = true;
+            this.Pest5_Radio_Manejo_Estados.Location = new System.Drawing.Point(88, 79);
+            this.Pest5_Radio_Manejo_Estados.Name = "Pest5_Radio_Manejo_Estados";
+            this.Pest5_Radio_Manejo_Estados.Size = new System.Drawing.Size(121, 21);
+            this.Pest5_Radio_Manejo_Estados.TabIndex = 2;
             // 
-            // textBox26
+            // Pest5_Txt_Manejo_Descripcion
             // 
-            this.textBox26.Location = new System.Drawing.Point(88, 53);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(123, 20);
-            this.textBox26.TabIndex = 1;
+            this.Pest5_Txt_Manejo_Descripcion.Location = new System.Drawing.Point(88, 53);
+            this.Pest5_Txt_Manejo_Descripcion.Name = "Pest5_Txt_Manejo_Descripcion";
+            this.Pest5_Txt_Manejo_Descripcion.Size = new System.Drawing.Size(123, 20);
+            this.Pest5_Txt_Manejo_Descripcion.TabIndex = 1;
             // 
-            // textBox25
+            // Pest5_Txt_Manejo_Codigo
             // 
-            this.textBox25.Location = new System.Drawing.Point(88, 28);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(59, 20);
-            this.textBox25.TabIndex = 0;
+            this.Pest5_Txt_Manejo_Codigo.Location = new System.Drawing.Point(88, 28);
+            this.Pest5_Txt_Manejo_Codigo.Name = "Pest5_Txt_Manejo_Codigo";
+            this.Pest5_Txt_Manejo_Codigo.Size = new System.Drawing.Size(59, 20);
+            this.Pest5_Txt_Manejo_Codigo.TabIndex = 0;
             // 
-            // groupBox9
+            // Pest5_GrupoBusqueda
             // 
-            this.groupBox9.Controls.Add(this.button18);
-            this.groupBox9.Controls.Add(this.textBox28);
-            this.groupBox9.Controls.Add(this.textBox27);
-            this.groupBox9.Controls.Add(this.label30);
-            this.groupBox9.Controls.Add(this.label29);
-            this.groupBox9.Controls.Add(this.label28);
-            this.groupBox9.Controls.Add(this.dataGridView4);
-            this.groupBox9.Controls.Add(this.dataGridView3);
-            this.groupBox9.Location = new System.Drawing.Point(3, 139);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(697, 198);
-            this.groupBox9.TabIndex = 2;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Busqueda";
+            this.Pest5_GrupoBusqueda.Controls.Add(this.Pest5_Txt_Busqueda_Descripcion);
+            this.Pest5_GrupoBusqueda.Controls.Add(this.Pest5_Txt_Busqueda_Codigo);
+            this.Pest5_GrupoBusqueda.Controls.Add(this.label30);
+            this.Pest5_GrupoBusqueda.Controls.Add(this.label29);
+            this.Pest5_GrupoBusqueda.Controls.Add(this.label28);
+            this.Pest5_GrupoBusqueda.Controls.Add(this.Pest5_DataGriewMarcasProductos);
+            this.Pest5_GrupoBusqueda.Controls.Add(this.Pest5_DataGriewMarcas);
+            this.Pest5_GrupoBusqueda.Location = new System.Drawing.Point(18, 139);
+            this.Pest5_GrupoBusqueda.Name = "Pest5_GrupoBusqueda";
+            this.Pest5_GrupoBusqueda.Size = new System.Drawing.Size(907, 232);
+            this.Pest5_GrupoBusqueda.TabIndex = 2;
+            this.Pest5_GrupoBusqueda.TabStop = false;
+            this.Pest5_GrupoBusqueda.Text = "Busqueda";
             // 
-            // button18
+            // Pest5_Txt_Busqueda_Descripcion
             // 
-            this.button18.Location = new System.Drawing.Point(300, 24);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(67, 23);
-            this.button18.TabIndex = 5;
-            this.button18.Text = "Aceptar";
-            this.button18.UseVisualStyleBackColor = true;
+            this.Pest5_Txt_Busqueda_Descripcion.Location = new System.Drawing.Point(84, 26);
+            this.Pest5_Txt_Busqueda_Descripcion.Name = "Pest5_Txt_Busqueda_Descripcion";
+            this.Pest5_Txt_Busqueda_Descripcion.Size = new System.Drawing.Size(77, 20);
+            this.Pest5_Txt_Busqueda_Descripcion.TabIndex = 4;
             // 
-            // textBox28
+            // Pest5_Txt_Busqueda_Codigo
             // 
-            this.textBox28.Location = new System.Drawing.Point(84, 26);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(77, 20);
-            this.textBox28.TabIndex = 4;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(217, 26);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(77, 20);
-            this.textBox27.TabIndex = 3;
+            this.Pest5_Txt_Busqueda_Codigo.Location = new System.Drawing.Point(217, 26);
+            this.Pest5_Txt_Busqueda_Codigo.Name = "Pest5_Txt_Busqueda_Codigo";
+            this.Pest5_Txt_Busqueda_Codigo.Size = new System.Drawing.Size(77, 20);
+            this.Pest5_Txt_Busqueda_Codigo.TabIndex = 3;
             // 
             // label30
             // 
@@ -1470,226 +1378,181 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(388, 34);
+            this.label28.Location = new System.Drawing.Point(490, 34);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(224, 13);
             this.label28.TabIndex = 1;
             this.label28.Text = "Productos perteneciente a esta Marca";
             // 
-            // dataGridView4
+            // Pest5_DataGriewMarcasProductos
             // 
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pest5_DataGriewMarcasProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.Pest5_DataGriewMarcasProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Pest5_DataGriewMarcasProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DG_CodigoProducto,
             this.DG_MarcaNombre,
             this.DG_Modelos,
             this.DG_DescripcionProducto});
-            this.dataGridView4.Location = new System.Drawing.Point(382, 58);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(303, 129);
-            this.dataGridView4.TabIndex = 0;
+            this.Pest5_DataGriewMarcasProductos.Location = new System.Drawing.Point(493, 58);
+            this.Pest5_DataGriewMarcasProductos.Name = "Pest5_DataGriewMarcasProductos";
+            this.Pest5_DataGriewMarcasProductos.Size = new System.Drawing.Size(408, 157);
+            this.Pest5_DataGriewMarcasProductos.TabIndex = 0;
             // 
-            // DG_CodigoProducto
+            // Pest5_DataGriewMarcas
             // 
-            this.DG_CodigoProducto.HeaderText = "Nombre de Producto";
-            this.DG_CodigoProducto.Name = "DG_CodigoProducto";
-            this.DG_CodigoProducto.Width = 135;
-            // 
-            // DG_MarcaNombre
-            // 
-            this.DG_MarcaNombre.HeaderText = "Marca";
-            this.DG_MarcaNombre.Name = "DG_MarcaNombre";
-            this.DG_MarcaNombre.ReadOnly = true;
-            this.DG_MarcaNombre.Width = 67;
-            // 
-            // DG_Modelos
-            // 
-            this.DG_Modelos.HeaderText = "Modelos";
-            this.DG_Modelos.Name = "DG_Modelos";
-            this.DG_Modelos.ReadOnly = true;
-            this.DG_Modelos.Width = 79;
-            // 
-            // DG_DescripcionProducto
-            // 
-            this.DG_DescripcionProducto.HeaderText = "Descripcion de Producto";
-            this.DG_DescripcionProducto.Name = "DG_DescripcionProducto";
-            this.DG_DescripcionProducto.ReadOnly = true;
-            this.DG_DescripcionProducto.Width = 111;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pest5_DataGriewMarcas.AutoGenerateColumns = false;
+            this.Pest5_DataGriewMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Pest5_DataGriewMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Pest5_DataGriewMarcas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codMarcaDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn2,
             this.codEstadoDataGridViewTextBoxColumn1});
-            this.dataGridView3.DataSource = this.marcaBindingSource1;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 58);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(361, 129);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // codMarcaDataGridViewTextBoxColumn
-            // 
-            this.codMarcaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Marca";
-            this.codMarcaDataGridViewTextBoxColumn.HeaderText = "Cod_Marca";
-            this.codMarcaDataGridViewTextBoxColumn.Name = "codMarcaDataGridViewTextBoxColumn";
-            this.codMarcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn2
-            // 
-            this.descripcionDataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn2.Name = "descripcionDataGridViewTextBoxColumn2";
-            // 
-            // codEstadoDataGridViewTextBoxColumn1
-            // 
-            this.codEstadoDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn1.HeaderText = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn1.Name = "codEstadoDataGridViewTextBoxColumn1";
+            this.Pest5_DataGriewMarcas.DataSource = this.marcaBindingSource1;
+            this.Pest5_DataGriewMarcas.Location = new System.Drawing.Point(6, 58);
+            this.Pest5_DataGriewMarcas.Name = "Pest5_DataGriewMarcas";
+            this.Pest5_DataGriewMarcas.Size = new System.Drawing.Size(440, 157);
+            this.Pest5_DataGriewMarcas.TabIndex = 0;
             // 
             // marcaBindingSource1
             // 
             this.marcaBindingSource1.DataMember = "Marca";
             this.marcaBindingSource1.DataSource = this.ventasAutoPartesDataSet;
             // 
-            // groupBox8
+            // Pest5_GrupoOpciones
             // 
-            this.groupBox8.Controls.Add(this.radioButton6);
-            this.groupBox8.Controls.Add(this.radioButton7);
-            this.groupBox8.Controls.Add(this.radioButton8);
-            this.groupBox8.Location = new System.Drawing.Point(3, 13);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(150, 110);
-            this.groupBox8.TabIndex = 1;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Opciones de Manejo";
+            this.Pest5_GrupoOpciones.Controls.Add(this.Pest5_Radio_Agregar);
+            this.Pest5_GrupoOpciones.Controls.Add(this.Pest5_Radio_Buscar);
+            this.Pest5_GrupoOpciones.Controls.Add(this.Pest5_Radio_Manejo);
+            this.Pest5_GrupoOpciones.Location = new System.Drawing.Point(18, 13);
+            this.Pest5_GrupoOpciones.Name = "Pest5_GrupoOpciones";
+            this.Pest5_GrupoOpciones.Size = new System.Drawing.Size(150, 110);
+            this.Pest5_GrupoOpciones.TabIndex = 1;
+            this.Pest5_GrupoOpciones.TabStop = false;
+            this.Pest5_GrupoOpciones.Text = "Opciones de Manejo";
             // 
-            // radioButton6
+            // Pest5_Radio_Agregar
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(28, 28);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(69, 17);
-            this.radioButton6.TabIndex = 2;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Agregar";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.Pest5_Radio_Agregar.AutoSize = true;
+            this.Pest5_Radio_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest5_Radio_Agregar.Location = new System.Drawing.Point(28, 28);
+            this.Pest5_Radio_Agregar.Name = "Pest5_Radio_Agregar";
+            this.Pest5_Radio_Agregar.Size = new System.Drawing.Size(69, 17);
+            this.Pest5_Radio_Agregar.TabIndex = 2;
+            this.Pest5_Radio_Agregar.TabStop = true;
+            this.Pest5_Radio_Agregar.Text = "Agregar";
+            this.Pest5_Radio_Agregar.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // Pest5_Radio_Buscar
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(28, 80);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(64, 17);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Buscar";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.Pest5_Radio_Buscar.AutoSize = true;
+            this.Pest5_Radio_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest5_Radio_Buscar.Location = new System.Drawing.Point(28, 80);
+            this.Pest5_Radio_Buscar.Name = "Pest5_Radio_Buscar";
+            this.Pest5_Radio_Buscar.Size = new System.Drawing.Size(64, 17);
+            this.Pest5_Radio_Buscar.TabIndex = 1;
+            this.Pest5_Radio_Buscar.TabStop = true;
+            this.Pest5_Radio_Buscar.Text = "Buscar";
+            this.Pest5_Radio_Buscar.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // Pest5_Radio_Manejo
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(28, 54);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(66, 17);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Manejo";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.Pest5_Radio_Manejo.AutoSize = true;
+            this.Pest5_Radio_Manejo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest5_Radio_Manejo.Location = new System.Drawing.Point(28, 54);
+            this.Pest5_Radio_Manejo.Name = "Pest5_Radio_Manejo";
+            this.Pest5_Radio_Manejo.Size = new System.Drawing.Size(66, 17);
+            this.Pest5_Radio_Manejo.TabIndex = 0;
+            this.Pest5_Radio_Manejo.TabStop = true;
+            this.Pest5_Radio_Manejo.Text = "Manejo";
+            this.Pest5_Radio_Manejo.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.groupBox13);
             this.tabPage6.Controls.Add(this.groupBox12);
-            this.tabPage6.Controls.Add(this.groupBox10);
+            this.tabPage6.Controls.Add(this.Pest6_GrupoManejo);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(703, 345);
+            this.tabPage6.Size = new System.Drawing.Size(928, 389);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Modelos de Productos";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.button17);
-            this.groupBox13.Controls.Add(this.button16);
-            this.groupBox13.Controls.Add(this.textBox32);
-            this.groupBox13.Controls.Add(this.comboBox8);
+            this.groupBox13.Controls.Add(this.Pest6_Bttn_Manejo_Limpiar);
+            this.groupBox13.Controls.Add(this.Pest6_Bttn_Manejo_Aceptar);
+            this.groupBox13.Controls.Add(this.Pest6_Txt_Manejo_FiltroMarca);
+            this.groupBox13.Controls.Add(this.Pest6_ComboBox_Manejo_ResultadoMarca);
             this.groupBox13.Controls.Add(this.label40);
-            this.groupBox13.Controls.Add(this.richTextBox4);
-            this.groupBox13.Controls.Add(this.textBox31);
+            this.groupBox13.Controls.Add(this.Pest6_Txt_Manejo_Descripcion);
+            this.groupBox13.Controls.Add(this.Pest6_Txt_Manejo_CodigoModulo);
             this.groupBox13.Controls.Add(this.label39);
             this.groupBox13.Controls.Add(this.label38);
-            this.groupBox13.Location = new System.Drawing.Point(170, 7);
+            this.groupBox13.Location = new System.Drawing.Point(170, 14);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(530, 110);
+            this.groupBox13.Size = new System.Drawing.Size(596, 110);
             this.groupBox13.TabIndex = 4;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Agregar Modelo";
             // 
-            // button17
+            // Pest6_Bttn_Manejo_Limpiar
             // 
-            this.button17.Location = new System.Drawing.Point(422, 67);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(100, 30);
-            this.button17.TabIndex = 18;
-            this.button17.Text = "Limpiar";
-            this.button17.UseVisualStyleBackColor = true;
+            this.Pest6_Bttn_Manejo_Limpiar.Location = new System.Drawing.Point(479, 66);
+            this.Pest6_Bttn_Manejo_Limpiar.Name = "Pest6_Bttn_Manejo_Limpiar";
+            this.Pest6_Bttn_Manejo_Limpiar.Size = new System.Drawing.Size(100, 30);
+            this.Pest6_Bttn_Manejo_Limpiar.TabIndex = 18;
+            this.Pest6_Bttn_Manejo_Limpiar.Text = "Limpiar";
+            this.Pest6_Bttn_Manejo_Limpiar.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // Pest6_Bttn_Manejo_Aceptar
             // 
-            this.button16.Location = new System.Drawing.Point(422, 26);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(100, 30);
-            this.button16.TabIndex = 13;
-            this.button16.Text = "Aceptar";
-            this.button16.UseVisualStyleBackColor = true;
+            this.Pest6_Bttn_Manejo_Aceptar.Location = new System.Drawing.Point(479, 25);
+            this.Pest6_Bttn_Manejo_Aceptar.Name = "Pest6_Bttn_Manejo_Aceptar";
+            this.Pest6_Bttn_Manejo_Aceptar.Size = new System.Drawing.Size(100, 30);
+            this.Pest6_Bttn_Manejo_Aceptar.TabIndex = 13;
+            this.Pest6_Bttn_Manejo_Aceptar.Text = "Aceptar";
+            this.Pest6_Bttn_Manejo_Aceptar.UseVisualStyleBackColor = true;
             // 
-            // textBox32
+            // Pest6_Txt_Manejo_FiltroMarca
             // 
-            this.textBox32.Location = new System.Drawing.Point(248, 42);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(104, 20);
-            this.textBox32.TabIndex = 17;
+            this.Pest6_Txt_Manejo_FiltroMarca.Location = new System.Drawing.Point(305, 42);
+            this.Pest6_Txt_Manejo_FiltroMarca.Name = "Pest6_Txt_Manejo_FiltroMarca";
+            this.Pest6_Txt_Manejo_FiltroMarca.Size = new System.Drawing.Size(141, 20);
+            this.Pest6_Txt_Manejo_FiltroMarca.TabIndex = 17;
             // 
-            // comboBox8
+            // Pest6_ComboBox_Manejo_ResultadoMarca
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(248, 76);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(104, 21);
-            this.comboBox8.TabIndex = 13;
+            this.Pest6_ComboBox_Manejo_ResultadoMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest6_ComboBox_Manejo_ResultadoMarca.FormattingEnabled = true;
+            this.Pest6_ComboBox_Manejo_ResultadoMarca.Location = new System.Drawing.Point(305, 76);
+            this.Pest6_ComboBox_Manejo_ResultadoMarca.Name = "Pest6_ComboBox_Manejo_ResultadoMarca";
+            this.Pest6_ComboBox_Manejo_ResultadoMarca.Size = new System.Drawing.Size(141, 21);
+            this.Pest6_ComboBox_Manejo_ResultadoMarca.TabIndex = 13;
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(249, 22);
+            this.label40.Location = new System.Drawing.Point(306, 22);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(107, 13);
             this.label40.TabIndex = 13;
             this.label40.Text = "Nombre de Marca";
             // 
-            // richTextBox4
+            // Pest6_Txt_Manejo_Descripcion
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(128, 49);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(100, 48);
-            this.richTextBox4.TabIndex = 16;
-            this.richTextBox4.Text = "";
+            this.Pest6_Txt_Manejo_Descripcion.Location = new System.Drawing.Point(128, 49);
+            this.Pest6_Txt_Manejo_Descripcion.Name = "Pest6_Txt_Manejo_Descripcion";
+            this.Pest6_Txt_Manejo_Descripcion.Size = new System.Drawing.Size(152, 48);
+            this.Pest6_Txt_Manejo_Descripcion.TabIndex = 16;
+            this.Pest6_Txt_Manejo_Descripcion.Text = "";
             // 
-            // textBox31
+            // Pest6_Txt_Manejo_CodigoModulo
             // 
-            this.textBox31.Location = new System.Drawing.Point(128, 22);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(42, 20);
-            this.textBox31.TabIndex = 14;
+            this.Pest6_Txt_Manejo_CodigoModulo.Location = new System.Drawing.Point(128, 22);
+            this.Pest6_Txt_Manejo_CodigoModulo.Name = "Pest6_Txt_Manejo_CodigoModulo";
+            this.Pest6_Txt_Manejo_CodigoModulo.Size = new System.Drawing.Size(42, 20);
+            this.Pest6_Txt_Manejo_CodigoModulo.TabIndex = 14;
             // 
             // label39
             // 
@@ -1711,49 +1574,50 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.button15);
-            this.groupBox12.Controls.Add(this.button14);
-            this.groupBox12.Controls.Add(this.comboBox7);
+            this.groupBox12.Controls.Add(this.Pest6_Bttn_Busqueda_Limpiar);
+            this.groupBox12.Controls.Add(this.Pest6_Bttn_Busqueda_Aceptar);
+            this.groupBox12.Controls.Add(this.Pest6_ComBox_Busqueda_Estados);
             this.groupBox12.Controls.Add(this.label37);
-            this.groupBox12.Controls.Add(this.textBox29);
+            this.groupBox12.Controls.Add(this.Pest6_Txt_Busqueda_CodigoMarca);
             this.groupBox12.Controls.Add(this.label36);
-            this.groupBox12.Controls.Add(this.richTextBox3);
-            this.groupBox12.Controls.Add(this.dataGridView5);
-            this.groupBox12.Controls.Add(this.textBox30);
+            this.groupBox12.Controls.Add(this.Pest6_Txt_Busqueda_Descripcion);
+            this.groupBox12.Controls.Add(this.Pest6_DataGreiw_Busqueda);
+            this.groupBox12.Controls.Add(this.Pest6_Txt_Busqueda_CodigoModelo);
             this.groupBox12.Controls.Add(this.label34);
             this.groupBox12.Controls.Add(this.label35);
-            this.groupBox12.Location = new System.Drawing.Point(6, 132);
+            this.groupBox12.Location = new System.Drawing.Point(3, 143);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(694, 213);
+            this.groupBox12.Size = new System.Drawing.Size(904, 213);
             this.groupBox12.TabIndex = 3;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Busqueda";
             // 
-            // button15
+            // Pest6_Bttn_Busqueda_Limpiar
             // 
-            this.button15.Location = new System.Drawing.Point(13, 169);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(100, 30);
-            this.button15.TabIndex = 12;
-            this.button15.Text = "Limpiar";
-            this.button15.UseVisualStyleBackColor = true;
+            this.Pest6_Bttn_Busqueda_Limpiar.Location = new System.Drawing.Point(13, 160);
+            this.Pest6_Bttn_Busqueda_Limpiar.Name = "Pest6_Bttn_Busqueda_Limpiar";
+            this.Pest6_Bttn_Busqueda_Limpiar.Size = new System.Drawing.Size(109, 39);
+            this.Pest6_Bttn_Busqueda_Limpiar.TabIndex = 12;
+            this.Pest6_Bttn_Busqueda_Limpiar.Text = "Limpiar";
+            this.Pest6_Bttn_Busqueda_Limpiar.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // Pest6_Bttn_Busqueda_Aceptar
             // 
-            this.button14.Location = new System.Drawing.Point(164, 169);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(100, 30);
-            this.button14.TabIndex = 11;
-            this.button14.Text = "Aceptar";
-            this.button14.UseVisualStyleBackColor = true;
+            this.Pest6_Bttn_Busqueda_Aceptar.Location = new System.Drawing.Point(196, 160);
+            this.Pest6_Bttn_Busqueda_Aceptar.Name = "Pest6_Bttn_Busqueda_Aceptar";
+            this.Pest6_Bttn_Busqueda_Aceptar.Size = new System.Drawing.Size(109, 39);
+            this.Pest6_Bttn_Busqueda_Aceptar.TabIndex = 11;
+            this.Pest6_Bttn_Busqueda_Aceptar.Text = "Aceptar";
+            this.Pest6_Bttn_Busqueda_Aceptar.UseVisualStyleBackColor = true;
             // 
-            // comboBox7
+            // Pest6_ComBox_Busqueda_Estados
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(125, 127);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(139, 21);
-            this.comboBox7.TabIndex = 10;
+            this.Pest6_ComBox_Busqueda_Estados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest6_ComBox_Busqueda_Estados.FormattingEnabled = true;
+            this.Pest6_ComBox_Busqueda_Estados.Location = new System.Drawing.Point(125, 127);
+            this.Pest6_ComBox_Busqueda_Estados.Name = "Pest6_ComBox_Busqueda_Estados";
+            this.Pest6_ComBox_Busqueda_Estados.Size = new System.Drawing.Size(180, 21);
+            this.Pest6_ComBox_Busqueda_Estados.TabIndex = 10;
             // 
             // label37
             // 
@@ -1765,12 +1629,12 @@
             this.label37.Text = "Estado";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox29
+            // Pest6_Txt_Busqueda_CodigoMarca
             // 
-            this.textBox29.Location = new System.Drawing.Point(125, 100);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(139, 20);
-            this.textBox29.TabIndex = 8;
+            this.Pest6_Txt_Busqueda_CodigoMarca.Location = new System.Drawing.Point(125, 100);
+            this.Pest6_Txt_Busqueda_CodigoMarca.Name = "Pest6_Txt_Busqueda_CodigoMarca";
+            this.Pest6_Txt_Busqueda_CodigoMarca.Size = new System.Drawing.Size(180, 20);
+            this.Pest6_Txt_Busqueda_CodigoMarca.TabIndex = 8;
             // 
             // label36
             // 
@@ -1781,65 +1645,41 @@
             this.label36.TabIndex = 7;
             this.label36.Text = "Codigo de Modelo";
             // 
-            // richTextBox3
+            // Pest6_Txt_Busqueda_Descripcion
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(125, 49);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(139, 48);
-            this.richTextBox3.TabIndex = 6;
-            this.richTextBox3.Text = "";
+            this.Pest6_Txt_Busqueda_Descripcion.Location = new System.Drawing.Point(125, 49);
+            this.Pest6_Txt_Busqueda_Descripcion.Name = "Pest6_Txt_Busqueda_Descripcion";
+            this.Pest6_Txt_Busqueda_Descripcion.Size = new System.Drawing.Size(180, 48);
+            this.Pest6_Txt_Busqueda_Descripcion.TabIndex = 6;
+            this.Pest6_Txt_Busqueda_Descripcion.Text = "";
             // 
-            // dataGridView5
+            // Pest6_DataGreiw_Busqueda
             // 
-            this.dataGridView5.AutoGenerateColumns = false;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pest6_DataGreiw_Busqueda.AutoGenerateColumns = false;
+            this.Pest6_DataGreiw_Busqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Pest6_DataGreiw_Busqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Pest6_DataGreiw_Busqueda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codModeloDataGridViewTextBoxColumn1,
             this.codMarcaDataGridViewTextBoxColumn1,
             this.descripcionDataGridViewTextBoxColumn3,
             this.codEstadoDataGridViewTextBoxColumn2});
-            this.dataGridView5.DataSource = this.modeloBindingSource;
-            this.dataGridView5.Location = new System.Drawing.Point(282, 19);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(406, 177);
-            this.dataGridView5.TabIndex = 5;
-            // 
-            // codModeloDataGridViewTextBoxColumn1
-            // 
-            this.codModeloDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Modelo";
-            this.codModeloDataGridViewTextBoxColumn1.HeaderText = "Cod_Modelo";
-            this.codModeloDataGridViewTextBoxColumn1.Name = "codModeloDataGridViewTextBoxColumn1";
-            this.codModeloDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // codMarcaDataGridViewTextBoxColumn1
-            // 
-            this.codMarcaDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Marca";
-            this.codMarcaDataGridViewTextBoxColumn1.HeaderText = "Cod_Marca";
-            this.codMarcaDataGridViewTextBoxColumn1.Name = "codMarcaDataGridViewTextBoxColumn1";
-            // 
-            // descripcionDataGridViewTextBoxColumn3
-            // 
-            this.descripcionDataGridViewTextBoxColumn3.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn3.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn3.Name = "descripcionDataGridViewTextBoxColumn3";
-            // 
-            // codEstadoDataGridViewTextBoxColumn2
-            // 
-            this.codEstadoDataGridViewTextBoxColumn2.DataPropertyName = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn2.HeaderText = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn2.Name = "codEstadoDataGridViewTextBoxColumn2";
+            this.Pest6_DataGreiw_Busqueda.DataSource = this.modeloBindingSource;
+            this.Pest6_DataGreiw_Busqueda.Location = new System.Drawing.Point(351, 22);
+            this.Pest6_DataGreiw_Busqueda.Name = "Pest6_DataGreiw_Busqueda";
+            this.Pest6_DataGreiw_Busqueda.Size = new System.Drawing.Size(525, 177);
+            this.Pest6_DataGreiw_Busqueda.TabIndex = 5;
             // 
             // modeloBindingSource
             // 
             this.modeloBindingSource.DataMember = "Modelo";
             this.modeloBindingSource.DataSource = this.ventasAutoPartesDataSet;
             // 
-            // textBox30
+            // Pest6_Txt_Busqueda_CodigoModelo
             // 
-            this.textBox30.Location = new System.Drawing.Point(125, 22);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(139, 20);
-            this.textBox30.TabIndex = 3;
+            this.Pest6_Txt_Busqueda_CodigoModelo.Location = new System.Drawing.Point(125, 22);
+            this.Pest6_Txt_Busqueda_CodigoModelo.Name = "Pest6_Txt_Busqueda_CodigoModelo";
+            this.Pest6_Txt_Busqueda_CodigoModelo.Size = new System.Drawing.Size(180, 20);
+            this.Pest6_Txt_Busqueda_CodigoModelo.TabIndex = 3;
             // 
             // label34
             // 
@@ -1859,63 +1699,64 @@
             this.label35.TabIndex = 2;
             this.label35.Text = "Codigo de Modelo";
             // 
-            // groupBox10
+            // Pest6_GrupoManejo
             // 
-            this.groupBox10.Controls.Add(this.radioButton9);
-            this.groupBox10.Controls.Add(this.radioButton10);
-            this.groupBox10.Controls.Add(this.radioButton11);
-            this.groupBox10.Location = new System.Drawing.Point(14, 7);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(150, 110);
-            this.groupBox10.TabIndex = 2;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Opciones de Manejo";
+            this.Pest6_GrupoManejo.Controls.Add(this.Pest6_Radio_Agregar);
+            this.Pest6_GrupoManejo.Controls.Add(this.Pest6_Radio_Buscar);
+            this.Pest6_GrupoManejo.Controls.Add(this.Pest6_Radio_Manejo);
+            this.Pest6_GrupoManejo.Location = new System.Drawing.Point(14, 14);
+            this.Pest6_GrupoManejo.Name = "Pest6_GrupoManejo";
+            this.Pest6_GrupoManejo.Size = new System.Drawing.Size(150, 110);
+            this.Pest6_GrupoManejo.TabIndex = 2;
+            this.Pest6_GrupoManejo.TabStop = false;
+            this.Pest6_GrupoManejo.Text = "Opciones de Manejo";
             // 
-            // radioButton9
+            // Pest6_Radio_Agregar
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton9.Location = new System.Drawing.Point(28, 28);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(69, 17);
-            this.radioButton9.TabIndex = 2;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Agregar";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.Pest6_Radio_Agregar.AutoSize = true;
+            this.Pest6_Radio_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest6_Radio_Agregar.Location = new System.Drawing.Point(28, 28);
+            this.Pest6_Radio_Agregar.Name = "Pest6_Radio_Agregar";
+            this.Pest6_Radio_Agregar.Size = new System.Drawing.Size(69, 17);
+            this.Pest6_Radio_Agregar.TabIndex = 2;
+            this.Pest6_Radio_Agregar.TabStop = true;
+            this.Pest6_Radio_Agregar.Text = "Agregar";
+            this.Pest6_Radio_Agregar.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // Pest6_Radio_Buscar
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton10.Location = new System.Drawing.Point(28, 80);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(64, 17);
-            this.radioButton10.TabIndex = 1;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Buscar";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.Pest6_Radio_Buscar.AutoSize = true;
+            this.Pest6_Radio_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest6_Radio_Buscar.Location = new System.Drawing.Point(28, 80);
+            this.Pest6_Radio_Buscar.Name = "Pest6_Radio_Buscar";
+            this.Pest6_Radio_Buscar.Size = new System.Drawing.Size(64, 17);
+            this.Pest6_Radio_Buscar.TabIndex = 1;
+            this.Pest6_Radio_Buscar.TabStop = true;
+            this.Pest6_Radio_Buscar.Text = "Buscar";
+            this.Pest6_Radio_Buscar.UseVisualStyleBackColor = true;
             // 
-            // radioButton11
+            // Pest6_Radio_Manejo
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton11.Location = new System.Drawing.Point(28, 54);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(66, 17);
-            this.radioButton11.TabIndex = 0;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Manejo";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.Pest6_Radio_Manejo.AutoSize = true;
+            this.Pest6_Radio_Manejo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest6_Radio_Manejo.Location = new System.Drawing.Point(28, 54);
+            this.Pest6_Radio_Manejo.Name = "Pest6_Radio_Manejo";
+            this.Pest6_Radio_Manejo.Size = new System.Drawing.Size(66, 17);
+            this.Pest6_Radio_Manejo.TabIndex = 0;
+            this.Pest6_Radio_Manejo.TabStop = true;
+            this.Pest6_Radio_Manejo.Text = "Manejo";
+            this.Pest6_Radio_Manejo.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(616, 407);
+            this.button1.Location = new System.Drawing.Point(835, 443);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 39);
             this.button1.TabIndex = 1;
             this.button1.Text = "Salir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fKModeloMarcaBindingSource
             // 
@@ -1967,16 +1808,204 @@
             // 
             this.categoria_ProductoTableAdapter.ClearBeforeFill = true;
             // 
+            // Pest3_Txt_MuestraNombre_Codigo_Proveedor
+            // 
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Location = new System.Drawing.Point(508, 113);
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Name = "Pest3_Txt_MuestraNombre_Codigo_Proveedor";
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Size = new System.Drawing.Size(190, 21);
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.TabIndex = 54;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(340, 113);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(162, 16);
+            this.label41.TabIndex = 55;
+            this.label41.Text = "Nombre de Proveedor";
+            // 
+            // DG_CodigoProducto
+            // 
+            this.DG_CodigoProducto.HeaderText = "Nombre de Producto";
+            this.DG_CodigoProducto.Name = "DG_CodigoProducto";
+            this.DG_CodigoProducto.ReadOnly = true;
+            this.DG_CodigoProducto.Width = 135;
+            // 
+            // DG_MarcaNombre
+            // 
+            this.DG_MarcaNombre.HeaderText = "Marca";
+            this.DG_MarcaNombre.Name = "DG_MarcaNombre";
+            this.DG_MarcaNombre.ReadOnly = true;
+            this.DG_MarcaNombre.Width = 67;
+            // 
+            // DG_Modelos
+            // 
+            this.DG_Modelos.HeaderText = "Modelos";
+            this.DG_Modelos.Name = "DG_Modelos";
+            this.DG_Modelos.ReadOnly = true;
+            this.DG_Modelos.Width = 79;
+            // 
+            // DG_DescripcionProducto
+            // 
+            this.DG_DescripcionProducto.HeaderText = "Descripcion de Producto";
+            this.DG_DescripcionProducto.Name = "DG_DescripcionProducto";
+            this.DG_DescripcionProducto.ReadOnly = true;
+            this.DG_DescripcionProducto.Width = 111;
+            // 
+            // codProductoDataGridViewTextBoxColumn
+            // 
+            this.codProductoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Producto";
+            this.codProductoDataGridViewTextBoxColumn.HeaderText = "Codigo del Producto";
+            this.codProductoDataGridViewTextBoxColumn.Name = "codProductoDataGridViewTextBoxColumn";
+            this.codProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreProductoDataGridViewTextBoxColumn
+            // 
+            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "NombreProducto";
+            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "Nombre de Producto";
+            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
+            this.nombreProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioVentaDataGridViewTextBoxColumn
+            // 
+            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "PrecioVenta";
+            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "Precio de Venta";
+            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
+            this.precioVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioCompraDataGridViewTextBoxColumn
+            // 
+            this.precioCompraDataGridViewTextBoxColumn.DataPropertyName = "PrecioCompra";
+            this.precioCompraDataGridViewTextBoxColumn.HeaderText = "Precio de Compra";
+            this.precioCompraDataGridViewTextBoxColumn.Name = "precioCompraDataGridViewTextBoxColumn";
+            this.precioCompraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantExistenteTiendaDataGridViewTextBoxColumn
+            // 
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteTienda";
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.HeaderText = "Cantidad Existente en Tienda";
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.Name = "cantExistenteTiendaDataGridViewTextBoxColumn";
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantExistenteBodegaDataGridViewTextBoxColumn
+            // 
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteBodega";
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.HeaderText = "Cantidad Existente en Bodega";
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.Name = "cantExistenteBodegaDataGridViewTextBoxColumn";
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codModeloDataGridViewTextBoxColumn
+            // 
+            this.codModeloDataGridViewTextBoxColumn.DataPropertyName = "Cod_Modelo";
+            this.codModeloDataGridViewTextBoxColumn.HeaderText = "Codigo del Modelo";
+            this.codModeloDataGridViewTextBoxColumn.Name = "codModeloDataGridViewTextBoxColumn";
+            this.codModeloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codProveedorDataGridViewTextBoxColumn
+            // 
+            this.codProveedorDataGridViewTextBoxColumn.DataPropertyName = "Cod_Proveedor";
+            this.codProveedorDataGridViewTextBoxColumn.HeaderText = "Codigo del Proveedor";
+            this.codProveedorDataGridViewTextBoxColumn.Name = "codProveedorDataGridViewTextBoxColumn";
+            this.codProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codCategoriaDataGridViewTextBoxColumn
+            // 
+            this.codCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Categoria";
+            this.codCategoriaDataGridViewTextBoxColumn.HeaderText = "Codigo de la Categoria";
+            this.codCategoriaDataGridViewTextBoxColumn.Name = "codCategoriaDataGridViewTextBoxColumn";
+            this.codCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codEstadoDataGridViewTextBoxColumn
+            // 
+            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Estado";
+            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo del Estado";
+            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
+            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codigoCategoriaDataGridViewTextBoxColumn
+            // 
+            this.codigoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Categoria";
+            this.codigoCategoriaDataGridViewTextBoxColumn.HeaderText = "Codigo de la Categoria";
+            this.codigoCategoriaDataGridViewTextBoxColumn.Name = "codigoCategoriaDataGridViewTextBoxColumn";
+            this.codigoCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn1
+            // 
+            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripcion del Producto";
+            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
+            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // codMarcaDataGridViewTextBoxColumn
+            // 
+            this.codMarcaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Marca";
+            this.codMarcaDataGridViewTextBoxColumn.HeaderText = "Codigo de Marca";
+            this.codMarcaDataGridViewTextBoxColumn.Name = "codMarcaDataGridViewTextBoxColumn";
+            this.codMarcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn2
+            // 
+            this.descripcionDataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn2.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn2.Name = "descripcionDataGridViewTextBoxColumn2";
+            this.descripcionDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // codEstadoDataGridViewTextBoxColumn1
+            // 
+            this.codEstadoDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Estado";
+            this.codEstadoDataGridViewTextBoxColumn1.HeaderText = "Codigo del Estado";
+            this.codEstadoDataGridViewTextBoxColumn1.Name = "codEstadoDataGridViewTextBoxColumn1";
+            this.codEstadoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // codModeloDataGridViewTextBoxColumn1
+            // 
+            this.codModeloDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Modelo";
+            this.codModeloDataGridViewTextBoxColumn1.HeaderText = "Codigo del Modelo";
+            this.codModeloDataGridViewTextBoxColumn1.Name = "codModeloDataGridViewTextBoxColumn1";
+            this.codModeloDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // codMarcaDataGridViewTextBoxColumn1
+            // 
+            this.codMarcaDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Marca";
+            this.codMarcaDataGridViewTextBoxColumn1.HeaderText = "Codigo de Marca";
+            this.codMarcaDataGridViewTextBoxColumn1.Name = "codMarcaDataGridViewTextBoxColumn1";
+            this.codMarcaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn3
+            // 
+            this.descripcionDataGridViewTextBoxColumn3.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn3.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn3.Name = "descripcionDataGridViewTextBoxColumn3";
+            this.descripcionDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // codEstadoDataGridViewTextBoxColumn2
+            // 
+            this.codEstadoDataGridViewTextBoxColumn2.DataPropertyName = "Cod_Estado";
+            this.codEstadoDataGridViewTextBoxColumn2.HeaderText = "Codigo del Estado";
+            this.codEstadoDataGridViewTextBoxColumn2.Name = "codEstadoDataGridViewTextBoxColumn2";
+            this.codEstadoDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // Form_Productos_ManejoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Desarrollo.Properties.Resources.rayos_azules_51b330b6e7aaa;
-            this.ClientSize = new System.Drawing.Size(731, 451);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(956, 494);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form_Productos_ManejoProductos";
-            this.Text = "Form_Productos_ManejoProductos";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "Manejo de Productos";
             this.Load += new System.EventHandler(this.Form_Productos_ManejoProductos_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1988,7 +2017,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest2_DataGriew_Productos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1999,33 +2028,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.Pest4_Grupo_Manejo.ResumeLayout(false);
+            this.Pest4_Grupo_Manejo.PerformLayout();
+            this.Pest4_Grupo_BusquedaModificacion.ResumeLayout(false);
+            this.Pest4_Grupo_BusquedaModificacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoBindingSource)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.Pest4_Grupo_OpcionesManejo.ResumeLayout(false);
+            this.Pest4_Grupo_OpcionesManejo.PerformLayout();
             this.tabPage5.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.Pest5_GrupoManejo.ResumeLayout(false);
+            this.Pest5_GrupoManejo.PerformLayout();
+            this.Pest5_GrupoBusqueda.ResumeLayout(false);
+            this.Pest5_GrupoBusqueda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest5_DataGriewMarcasProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest5_DataGriewMarcas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource1)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.Pest5_GrupoOpciones.ResumeLayout(false);
+            this.Pest5_GrupoOpciones.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest6_DataGreiw_Busqueda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).EndInit();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
+            this.Pest6_GrupoManejo.ResumeLayout(false);
+            this.Pest6_GrupoManejo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKModeloMarcaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKProductoModeloBindingSource)).EndInit();
@@ -2050,22 +2079,22 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Pest1_Txt_Nombre;
+        private System.Windows.Forms.TextBox Pest1_Txt_PrecioVentas;
+        private System.Windows.Forms.TextBox Pest1_Txt_PrecioCompras;
+        private System.Windows.Forms.TextBox Pest1_Txt_TotalEnTienda;
+        private System.Windows.Forms.TextBox Pest1_Txt_TotalBodega;
+        private System.Windows.Forms.TextBox Pest1_Txt_Codigo;
+        private System.Windows.Forms.ComboBox Pest1_ComBox_Categoria;
+        private System.Windows.Forms.ComboBox Pest1_ComBox_Modelo;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox Pest1_ComBox_Filtro_NombreMarca;
+        private System.Windows.Forms.TextBox Pest1_Txt_Filtro_NombreMarca;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox Pest1_ComBox_Filtro_NombreProveedor;
+        private System.Windows.Forms.TextBox Pest1_Txt_Filtro_NombreProveedor;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -2077,10 +2106,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox Pest2_Txt_CodigoFiltro;
+        private System.Windows.Forms.TextBox Pest2_Txt_NombreFiltro;
+        private System.Windows.Forms.RadioButton Pest2_Radio_Nombre;
+        private System.Windows.Forms.RadioButton Pest2_Radio_Codigo;
         private VentasAutoPartesDataSet ventasAutoPartesDataSet;
         private System.Windows.Forms.BindingSource marcaBindingSource;
         private VentasAutoPartesDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter;
@@ -2094,7 +2123,108 @@
         private System.Windows.Forms.BindingSource fKProductosHistoricosProductoBindingSource;
         private VentasAutoPartesDataSetTableAdapters.Productos_HistoricosTableAdapter productos_HistoricosTableAdapter;
         private System.Windows.Forms.BindingSource productoBindingSource2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Pest2_DataGriew_Productos;
+        private System.Windows.Forms.Button Pest2_Bttn_Aceptar;
+        private System.Windows.Forms.Button Pest2_Bttn_Limpiar;
+        private System.Windows.Forms.TextBox Pest3_Txt_Categorias;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox Pest3_Txt_Filtro_NombreProveedor;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox Pest3_Txt_NombreMarca;
+        private System.Windows.Forms.TextBox Pest3_Txt_Modelo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox Pest3_Txt_Nombre;
+        private System.Windows.Forms.TextBox Pest3_Txt_PrecioVenta;
+        private System.Windows.Forms.TextBox Pest3_Txt_Compras;
+        private System.Windows.Forms.TextBox Pest3_Txt_TotalTienda;
+        private System.Windows.Forms.TextBox Pest3_Txt_TotalBodega;
+        private System.Windows.Forms.TextBox Pest3_Txt_Codigo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.RichTextBox Pest1_CuadroTexto_Descripcion;
+        private System.Windows.Forms.RichTextBox Pest3_Txt_RichText_Descripcion;
+        private System.Windows.Forms.ComboBox Pest3_ComBox_Estado;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.GroupBox Pest4_Grupo_BusquedaModificacion;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource categoriaProductoBindingSource;
+        private VentasAutoPartesDataSetTableAdapters.Categoria_ProductoTableAdapter categoria_ProductoTableAdapter;
+        private System.Windows.Forms.GroupBox Pest4_Grupo_Manejo;
+        private System.Windows.Forms.Button Pest4_Bttn_LimpiarManejo;
+        private System.Windows.Forms.Button Pest4_Bttn_AceptarManejo;
+        private System.Windows.Forms.TextBox Pest4_Txt_Manejo_Categoria;
+        private System.Windows.Forms.TextBox Pest4_Txt_Manejo_CodCategoria;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button Pest4_Bttn_LimpiarDataGriew;
+        private System.Windows.Forms.TextBox Pest4_Txt_Busqueda_CodCategoria;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox Pest4_Grupo_OpcionesManejo;
+        private System.Windows.Forms.RadioButton Pest4_Radio_Agregar;
+        private System.Windows.Forms.RadioButton Pest4_Radio_Buscar;
+        private System.Windows.Forms.RadioButton Pest4_Radio_Manejo;
+        private System.Windows.Forms.GroupBox Pest5_GrupoManejo;
+        private System.Windows.Forms.GroupBox Pest5_GrupoBusqueda;
+        private System.Windows.Forms.DataGridView Pest5_DataGriewMarcasProductos;
+        private System.Windows.Forms.DataGridView Pest5_DataGriewMarcas;
+        private System.Windows.Forms.BindingSource marcaBindingSource1;
+        private System.Windows.Forms.GroupBox Pest5_GrupoOpciones;
+        private System.Windows.Forms.RadioButton Pest5_Radio_Agregar;
+        private System.Windows.Forms.RadioButton Pest5_Radio_Buscar;
+        private System.Windows.Forms.RadioButton Pest5_Radio_Manejo;
+        private System.Windows.Forms.Button Pest5_Bttn_Manejo_Limpiar;
+        private System.Windows.Forms.Button Pest5_Bttn_Manejo_Aceptar;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ComboBox Pest5_Radio_Manejo_Estados;
+        private System.Windows.Forms.TextBox Pest5_Txt_Manejo_Descripcion;
+        private System.Windows.Forms.TextBox Pest5_Txt_Manejo_Codigo;
+        private System.Windows.Forms.TextBox Pest5_Txt_Busqueda_Descripcion;
+        private System.Windows.Forms.TextBox Pest5_Txt_Busqueda_Codigo;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button Pest6_Bttn_Manejo_Limpiar;
+        private System.Windows.Forms.Button Pest6_Bttn_Manejo_Aceptar;
+        private System.Windows.Forms.TextBox Pest6_Txt_Manejo_FiltroMarca;
+        private System.Windows.Forms.ComboBox Pest6_ComboBox_Manejo_ResultadoMarca;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.RichTextBox Pest6_Txt_Manejo_Descripcion;
+        private System.Windows.Forms.TextBox Pest6_Txt_Manejo_CodigoModulo;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button Pest6_Bttn_Busqueda_Limpiar;
+        private System.Windows.Forms.Button Pest6_Bttn_Busqueda_Aceptar;
+        private System.Windows.Forms.ComboBox Pest6_ComBox_Busqueda_Estados;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox Pest6_Txt_Busqueda_CodigoMarca;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.RichTextBox Pest6_Txt_Busqueda_Descripcion;
+        private System.Windows.Forms.DataGridView Pest6_DataGreiw_Busqueda;
+        private System.Windows.Forms.TextBox Pest6_Txt_Busqueda_CodigoModelo;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.GroupBox Pest6_GrupoManejo;
+        private System.Windows.Forms.RadioButton Pest6_Radio_Agregar;
+        private System.Windows.Forms.RadioButton Pest6_Radio_Buscar;
+        private System.Windows.Forms.RadioButton Pest6_Radio_Manejo;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox Pest4_Txt_Busqueda_Categoria;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox Pest3_Txt_MuestraNombre_Codigo_Proveedor;
+        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
@@ -2106,119 +2236,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codProveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codCategoriaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codEstadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource categoriaProductoBindingSource;
-        private VentasAutoPartesDataSetTableAdapters.Categoria_ProductoTableAdapter categoria_ProductoTableAdapter;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoCategoriaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_CodigoProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_MarcaNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_Modelos;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_DescripcionProducto;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn codMarcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn codEstadoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource marcaBindingSource1;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridViewTextBoxColumn codModeloDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codMarcaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn codEstadoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
     }
 }

@@ -30,18 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ingreso_Al_Sistema));
-            this.txtpassword = new System.Windows.Forms.TextBox();
-            this.txtusuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpwd = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -51,34 +49,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtpassword
-            // 
-            this.txtpassword.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtpassword.Location = new System.Drawing.Point(149, 226);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(7);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(207, 26);
-            this.txtpassword.TabIndex = 8;
-            // 
-            // txtusuario
-            // 
-            this.txtusuario.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtusuario.Location = new System.Drawing.Point(149, 170);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(7);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(207, 26);
-            this.txtusuario.TabIndex = 7;
             // 
             // label1
             // 
@@ -88,9 +65,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(84, 371);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 13);
+            this.label1.Size = new System.Drawing.Size(146, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Derechos Reservados C";
+            this.label1.Text = "Derechos Reservados© ";
             // 
             // pictureBox1
             // 
@@ -118,7 +95,7 @@
             // 
             this.pictureBox6.BackgroundImage = global::Desarrollo.Properties.Resources._2;
             this.pictureBox6.Image = global::Desarrollo.Properties.Resources.candado;
-            this.pictureBox6.Location = new System.Drawing.Point(30, 131);
+            this.pictureBox6.Location = new System.Drawing.Point(56, 127);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(44, 43);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,13 +107,30 @@
             // 
             this.pictureBox5.BackgroundImage = global::Desarrollo.Properties.Resources._2;
             this.pictureBox5.Image = global::Desarrollo.Properties.Resources.corbata;
-            this.pictureBox5.Location = new System.Drawing.Point(30, 81);
+            this.pictureBox5.Location = new System.Drawing.Point(56, 77);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(44, 43);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox5, "Usuario");
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::Desarrollo.Properties.Resources._2;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = global::Desarrollo.Properties.Resources._09_Keychain_v2;
+            this.pictureBox8.Location = new System.Drawing.Point(343, 89);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 19;
+            this.pictureBox8.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox8, "Entrar");
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click_1);
+            this.pictureBox8.MouseLeave += new System.EventHandler(this.pictureBox8_MouseLeave);
+            this.pictureBox8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove_1);
             // 
             // pictureBox9
             // 
@@ -158,7 +152,7 @@
             this.txtuser.BackColor = System.Drawing.Color.LightSkyBlue;
             this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtuser.Location = new System.Drawing.Point(84, 93);
+            this.txtuser.Location = new System.Drawing.Point(110, 89);
             this.txtuser.Margin = new System.Windows.Forms.Padding(7);
             this.txtuser.MaxLength = 15;
             this.txtuser.Name = "txtuser";
@@ -166,7 +160,6 @@
             this.txtuser.TabIndex = 21;
             this.txtuser.Text = "Usuario";
             this.toolTip1.SetToolTip(this.txtuser, "Ingresar usuario");
-            this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // txtpwd
@@ -174,7 +167,7 @@
             this.txtpwd.BackColor = System.Drawing.Color.LightSkyBlue;
             this.txtpwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpwd.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtpwd.Location = new System.Drawing.Point(84, 138);
+            this.txtpwd.Location = new System.Drawing.Point(110, 134);
             this.txtpwd.Margin = new System.Windows.Forms.Padding(7);
             this.txtpwd.MaxLength = 20;
             this.txtpwd.Name = "txtpwd";
@@ -182,24 +175,7 @@
             this.txtpwd.TabIndex = 22;
             this.txtpwd.Text = "12345";
             this.toolTip1.SetToolTip(this.txtpwd, "Ingresar contraseña");
-            this.txtpwd.UseSystemPasswordChar = true;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::Desarrollo.Properties.Resources._2;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::Desarrollo.Properties.Resources._09_Keychain_v2;
-            this.pictureBox8.Location = new System.Drawing.Point(341, 93);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 19;
-            this.pictureBox8.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox8, "Entrar");
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click_1);
-            this.pictureBox8.MouseLeave += new System.EventHandler(this.pictureBox8_MouseLeave);
-            this.pictureBox8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove_1);
+            this.txtpwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpwd_KeyPress);
             // 
             // pictureBox3
             // 
@@ -271,9 +247,7 @@
             this.ClientSize = new System.Drawing.Size(667, 416);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtusuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox7);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -286,8 +260,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

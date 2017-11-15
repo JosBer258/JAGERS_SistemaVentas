@@ -35,5 +35,10 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
             this.tipo_TransaccionTableAdapter.Fill(this.ventasAutoPartesDataSet.Tipo_Transaccion);
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -85,6 +85,17 @@ namespace Desarrollo.Clases
             this.cnx.Close();
         }
 
+        public void Fun_RestablecerIntentos(string ID)
+        {
+            this.sql = string.Format(@" UPDATE  A Set A.Oportunidades = 6 from Login as A INNER JOIN Empleados as B  ON A.Codigo_Empleado = B.Codigo_Empleado WHERE B.ID ='{0}'", ID);
+            this.cmd = new SqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            SqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            this.cnx.Close();
+        }
+
         public void Fun_NuevaContraseña(string ID, string Contraseña)
         {
             this.sql = string.Format(@"update Empleados set Contraseña = '{0}' where ID = '{1}'",Contraseña, ID);

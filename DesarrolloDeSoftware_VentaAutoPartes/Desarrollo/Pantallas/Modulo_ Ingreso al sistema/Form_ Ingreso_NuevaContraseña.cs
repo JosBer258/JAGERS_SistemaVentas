@@ -31,6 +31,23 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
         {
             string contraseña_a_codificar;
 
+
+            if (Txt_ContraseñaVieja.Text == "")
+            {
+                MessageBox.Show("Debe Ingresar la Contraseña actual para continuar", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Txt_ContraseñaVieja.Focus();
+                Txt_Password_Primera.Text = "";
+                Txt_Password_Second.Text = "";
+                return;
+            }
+            else if(Txt_ContraseñaVieja.Text != base_Contraseña)
+            {
+                MessageBox.Show("La Contraseña actual es incorrecta, \n Intente nuevamente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Txt_ContraseñaVieja.Focus();
+                Txt_Password_Primera.Text = "";
+                Txt_Password_Second.Text = "";
+                return;
+            }
             if (Txt_Password_Primera.Text == "") {
                 MessageBox.Show("La Contraseña no debe quedar en Vacio", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Txt_Password_Primera.Focus();
@@ -43,13 +60,13 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
                 return;
 
             }
-            else if(Txt_Password_Primera == Txt_Password_Second)
+            else if(Txt_Password_Primera != Txt_Password_Second)
             {
                 MessageBox.Show("La Contraseña y la confirmacion deben ser iguales", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }else if(Txt_Password_Primera.Text.Trim().Length < 8)
             {
-                MessageBox.Show("La Contraseña debe ser almenos de 8 digitos de Largo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La Contraseña debe ser almenos de 8 digitos de Longitud", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Txt_Password_Primera.Focus();
                 return;
             }else if(Txt_Password_Primera.Text == base_Contraseña)
@@ -59,14 +76,14 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
                 Txt_Password_Second.Text = "";
                 return;
             }
-
+           
 
 
             contraseña_a_codificar = Validar.EncriptarContraseña(Txt_Password_Primera.Text);
-
-            MessageBox.Show(contraseña_a_codificar);
-
             Des.Fun_NuevaContraseña(base_ID, contraseña_a_codificar);
+            Des.Fun_Restauracion(base_ID);
+
+            MessageBox.Show("Contraseña cambiada con exito","Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             this.Close();
         }
 
@@ -85,6 +102,11 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
             Validar.ValidarPassword(sender, e);
         }
 
+        private void Txt_ContraseñaVieja_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.ValidarPassword(sender, e);
+        }
+
         private void Form__Ingreso_NuevaContraseña_Load(object sender, EventArgs e)
         {
             Txt_UserID.Text = base_ID;
@@ -92,6 +114,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
             var blankContextMenu = new ContextMenuStrip();
             Txt_Password_Primera.ContextMenuStrip = blankContextMenu;
             Txt_Password_Second.ContextMenuStrip = blankContextMenu;
+            Txt_ContraseñaVieja.ContextMenuStrip = blankContextMenu;
         }
     }
 }

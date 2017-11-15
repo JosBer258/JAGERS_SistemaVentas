@@ -14,9 +14,7 @@ namespace Desarrollo
 {
     public partial class Form_Ingreso_Al_Sistema : Form
     {
-        C_Usuarios Users = new C_Usuarios();
-        Validaciones Validar = new Validaciones();
-
+       
 
         public Form_Ingreso_Al_Sistema()
         {
@@ -24,7 +22,7 @@ namespace Desarrollo
         }
 
 
-
+        int cont = 5;
         private void pictureBox8_Click(object sender, EventArgs e)
         {
 
@@ -35,6 +33,7 @@ namespace Desarrollo
             var blankContextMenu = new ContextMenuStrip();
             txtuser.ContextMenuStrip = blankContextMenu;
             txtpwd.ContextMenuStrip = blankContextMenu;
+
 
             txtuser.AutoSize = false;
             txtuser.Size = new Size(220, 30);
@@ -51,42 +50,107 @@ namespace Desarrollo
                 Application.Exit();
         }
 
-        private void txtuser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void pictureBox8_Click_1(object sender, EventArgs e)
         {
-
+            C_Usuarios Users = new C_Usuarios();
             Conexion con = new Conexion();
 
-            bool Respuesta;
+            
 
-            string login_pass = txtpwd.Text;
+            Validaciones encriptar = new Validaciones();
+
+            //string login_pass = encriptar.EncriptarContraseña(txtpwd.Text);
             string login_usuario = txtuser.Text;
-            
-            Respuesta = Users.Fun_PruebaComprobarEstado(login_usuario, login_pass);
+            string login_pass = (txtpwd.Text);
 
-            if (Respuesta == true)
+            Users.Var_Id_empleado = login_usuario;
+            Users.Var_Contrasena = login_pass;
+
+            if (txtuser.Text == "Usuario" && txtpwd.Text == "12345")
             {
-                Menu_Principal Men = new Menu_Principal();
-                Men.ID_Empleado = txtuser.Text;
-                Men.Empleado_Contraseña = txtpwd.Text;
-                Men.ShowDialog();
-
-
-            }
-            else if (Respuesta == false)
+                MessageBox.Show("Por Favor ingrese un usuario y una contraseña", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+            }else
+            if (Users.Fun_Buscar_UserAndPass() == true)
             {
-                DesbloqueDelSistema();
-                MessageBox.Show("s");
+
+                if(Users.Var_Codigo_estado == 1)
+                {
+                    Users.Fun_RestablecerIntentos();
+
+                    if (Users.Var_Codigo_rol == 1 || Users.Var_Codigo_rol == 2 || Users.Var_Codigo_rol == 3 || Users.Var_Codigo_rol == 4)
+                    {
+                        MessageBox.Show("Bienvenido a Venta Rogers Truck", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                          Menu_Principal Menu = new Menu_Principal();
+                         Menu.CodigoRol = Convert.ToString(Users.Var_Codigo_rol);
+                         Menu.Empleado_Contraseña = Convert.ToString(txtpwd.Text);
+                         Menu.ID_Empleado = Convert.ToString(txtuser.Text);
+                         Menu.Empleado_Nombre = Convert.ToString(Users.Var_Nombre);
+                    this.Hide();
+                        Menu.Show();
+                 }
+                else
+                    if (Users.Var_Codigo_estado == 2)
+                {
+                    MessageBox.Show("Usuario: " + Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Form_Desbloqueo_De_Usuario Desbloque = new Form_Desbloqueo_De_Usuario();
+                    Desbloque.ID_UsuarioADesbloquear = txtuser.Text;
+                    Desbloque.ShowDialog();
+                }
+                else if (Users.Var_Codigo_estado == 3)
+                {
+                    MessageBox.Show("Usuario: " + Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Form_Desbloqueo_De_Usuario Desbloque = new Form_Desbloqueo_De_Usuario();
+                    Desbloque.ID_UsuarioADesbloquear = txtuser.Text;
+                    Desbloque.ShowDialog();
+                }
+                else
+                {
+                    Form__Ingreso_NuevaContraseña NuevaContraseña = new Form__Ingreso_NuevaContraseña();
+                    NuevaContraseña.base_ID = txtuser.Text;
+                    NuevaContraseña.base_Contraseña = txtpwd.Text;
+                    NuevaContraseña.ShowDialog();
+                }
             }
+            else
+                if (Users.Fun_Buscar_User() == true)
+            {
+                
+                txtpwd.Text = "";
+                txtpwd.Focus();
 
+                if (Users.Var_Oportunidades_numero > 0)
+                {
+                    MessageBox.Show("Quedan: " + Users.Var_Oportunidades_numero + " intentos.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    
+                  MessageBox.Show("Usuario: " + Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+               
 
-    
-            
+                }
+
+          
+            }
+            else 
+            if (Users.Fun_Buscar_UserAndPass() == false)
+            {
+                cont--;
+                if (cont > 0)
+                {
+                    MessageBox.Show("Verifique Usuario o Contraseña incorrectos. \nTiene " + cont + " intentos", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Ingreso Incorrecto de datos. \nLa Aplicacion se cerrara", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Application.Exit();
+                }
+            }
         }
 
         private void pictureBox8_MouseMove_1(object sender, MouseEventArgs e)
@@ -101,38 +165,28 @@ namespace Desarrollo
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form_Desbloqueo_De_Usuario DesbloqueoSistema = new Form_Desbloqueo_De_Usuario();
-            DesbloqueoSistema.ShowDialog();
+            Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña NuevaContraseña = new Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña();
+            NuevaContraseña.ShowDialog();
         }
 
-
-
-        public void DesbloqueDelSistema()
+        private void txtpwd_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Validaciones pwd = new Validaciones();
+            pwd.ValidarPassword(sender, e);
 
-            if (Convert.ToInt16(Users.Var_Codigo_estado) == 3)
-            {
-                if (Convert.ToInt16(Users.Var_Codigo_Rol) == 1)
-                {
-                    Application.Exit();
-                }
-                else
-                {
-                    Form_Desbloqueo_De_Usuario Desbloqueo = new Form_Desbloqueo_De_Usuario();
-                    Desbloqueo.ID_UsuarioADesbloquear = Convert.ToInt16(txtuser.Text);
-                    Desbloqueo.ShowDialog();
-                }
-            }
+           if (e.KeyChar == 13)
+                pictureBox8_Click_1(null, null);
+        }
+
+        private void txtpwd_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.ValidarID(sender, e);
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            
+            Validaciones numeros = new Validaciones(); ;
+            numeros.ValidarID(sender, e);
         }
     }
 }

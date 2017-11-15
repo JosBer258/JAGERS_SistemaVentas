@@ -69,5 +69,20 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

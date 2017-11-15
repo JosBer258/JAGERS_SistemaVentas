@@ -28,5 +28,10 @@ namespace Desarrollo.Pantallas.Estados
         {
             this.Close();
         }
+
+        private void Bttn_Aceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -26,8 +26,8 @@ namespace Desarrollo.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=VELASQUEZ-PC\\SQLEXPRESS3;Initial Catalog=VentasAutoPartes;Integrated " +
-            "Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HSQSR3R\\SQLEXPRESS;Initial Catalog=VentasAutoPartes;Integrate" +
+            "d Security=True")]
         public string VentasAutoPartesConnectionString {
             get {
                 return ((string)(this["VentasAutoPartesConnectionString"]));

@@ -38,5 +38,15 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
