@@ -84,5 +84,23 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Funcion();//Funcion de Busqueda___Eli Josua
+        }
+
+
+
+        //CASO NUEVOI PRODUCTO___ELI JOSUA
+
+        public void Funcion()//Funcion de Busqueda___Eli Josua
+        {
+            MessageBox.Show("Vin Dicel");
+        }
+
+
+        ///CARLOS
+
     }
 }

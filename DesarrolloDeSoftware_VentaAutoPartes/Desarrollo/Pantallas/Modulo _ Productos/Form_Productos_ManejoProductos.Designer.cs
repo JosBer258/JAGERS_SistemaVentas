@@ -64,6 +64,17 @@
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Pest2_DataGriew_Productos = new System.Windows.Forms.DataGridView();
+            this.codProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantExistenteTiendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantExistenteBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codModeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -75,6 +86,8 @@
             this.Pest2_Radio_Nombre = new System.Windows.Forms.RadioButton();
             this.Pest2_Radio_Codigo = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label41 = new System.Windows.Forms.Label();
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor = new System.Windows.Forms.TextBox();
             this.Pest3_Txt_RichText_Descripcion = new System.Windows.Forms.RichTextBox();
             this.Pest3_ComBox_Estado = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -118,6 +131,8 @@
             this.Pest4_Txt_Busqueda_CodCategoria = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.codigoCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Pest4_Grupo_OpcionesManejo = new System.Windows.Forms.GroupBox();
             this.Pest4_Radio_Agregar = new System.Windows.Forms.RadioButton();
@@ -140,7 +155,14 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.Pest5_DataGriewMarcasProductos = new System.Windows.Forms.DataGridView();
+            this.DG_CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_MarcaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_Modelos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pest5_DataGriewMarcas = new System.Windows.Forms.DataGridView();
+            this.codMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Pest5_GrupoOpciones = new System.Windows.Forms.GroupBox();
             this.Pest5_Radio_Agregar = new System.Windows.Forms.RadioButton();
@@ -166,6 +188,10 @@
             this.label36 = new System.Windows.Forms.Label();
             this.Pest6_Txt_Busqueda_Descripcion = new System.Windows.Forms.RichTextBox();
             this.Pest6_DataGreiw_Busqueda = new System.Windows.Forms.DataGridView();
+            this.codModeloDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codMarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codEstadoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Pest6_Txt_Busqueda_CodigoModelo = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -186,32 +212,6 @@
             this.productoTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.ProductoTableAdapter();
             this.productos_HistoricosTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.Productos_HistoricosTableAdapter();
             this.categoria_ProductoTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.Categoria_ProductoTableAdapter();
-            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.DG_CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_MarcaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Modelos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_DescripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantExistenteTiendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantExistenteBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codModeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codModeloDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codMarcaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codEstadoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -586,6 +586,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -632,6 +633,83 @@
             this.Pest2_DataGriew_Productos.Name = "Pest2_DataGriew_Productos";
             this.Pest2_DataGriew_Productos.Size = new System.Drawing.Size(916, 217);
             this.Pest2_DataGriew_Productos.TabIndex = 5;
+            // 
+            // codProductoDataGridViewTextBoxColumn
+            // 
+            this.codProductoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Producto";
+            this.codProductoDataGridViewTextBoxColumn.HeaderText = "Codigo del Producto";
+            this.codProductoDataGridViewTextBoxColumn.Name = "codProductoDataGridViewTextBoxColumn";
+            this.codProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreProductoDataGridViewTextBoxColumn
+            // 
+            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "NombreProducto";
+            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "Nombre de Producto";
+            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
+            this.nombreProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioVentaDataGridViewTextBoxColumn
+            // 
+            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "PrecioVenta";
+            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "Precio de Venta";
+            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
+            this.precioVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioCompraDataGridViewTextBoxColumn
+            // 
+            this.precioCompraDataGridViewTextBoxColumn.DataPropertyName = "PrecioCompra";
+            this.precioCompraDataGridViewTextBoxColumn.HeaderText = "Precio de Compra";
+            this.precioCompraDataGridViewTextBoxColumn.Name = "precioCompraDataGridViewTextBoxColumn";
+            this.precioCompraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantExistenteTiendaDataGridViewTextBoxColumn
+            // 
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteTienda";
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.HeaderText = "Cantidad Existente en Tienda";
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.Name = "cantExistenteTiendaDataGridViewTextBoxColumn";
+            this.cantExistenteTiendaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantExistenteBodegaDataGridViewTextBoxColumn
+            // 
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteBodega";
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.HeaderText = "Cantidad Existente en Bodega";
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.Name = "cantExistenteBodegaDataGridViewTextBoxColumn";
+            this.cantExistenteBodegaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codModeloDataGridViewTextBoxColumn
+            // 
+            this.codModeloDataGridViewTextBoxColumn.DataPropertyName = "Cod_Modelo";
+            this.codModeloDataGridViewTextBoxColumn.HeaderText = "Codigo del Modelo";
+            this.codModeloDataGridViewTextBoxColumn.Name = "codModeloDataGridViewTextBoxColumn";
+            this.codModeloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codProveedorDataGridViewTextBoxColumn
+            // 
+            this.codProveedorDataGridViewTextBoxColumn.DataPropertyName = "Cod_Proveedor";
+            this.codProveedorDataGridViewTextBoxColumn.HeaderText = "Codigo del Proveedor";
+            this.codProveedorDataGridViewTextBoxColumn.Name = "codProveedorDataGridViewTextBoxColumn";
+            this.codProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codCategoriaDataGridViewTextBoxColumn
+            // 
+            this.codCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Categoria";
+            this.codCategoriaDataGridViewTextBoxColumn.HeaderText = "Codigo de la Categoria";
+            this.codCategoriaDataGridViewTextBoxColumn.Name = "codCategoriaDataGridViewTextBoxColumn";
+            this.codCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codEstadoDataGridViewTextBoxColumn
+            // 
+            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Estado";
+            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo del Estado";
+            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
+            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productoBindingSource
             // 
@@ -765,6 +843,24 @@
             this.tabPage3.Text = "Modificar Producto";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(340, 113);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(162, 16);
+            this.label41.TabIndex = 55;
+            this.label41.Text = "Nombre de Proveedor";
+            // 
+            // Pest3_Txt_MuestraNombre_Codigo_Proveedor
+            // 
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Location = new System.Drawing.Point(508, 113);
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Name = "Pest3_Txt_MuestraNombre_Codigo_Proveedor";
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Size = new System.Drawing.Size(190, 21);
+            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.TabIndex = 54;
             // 
             // Pest3_Txt_RichText_Descripcion
             // 
@@ -1176,6 +1272,20 @@
             this.dataGridView2.Size = new System.Drawing.Size(866, 143);
             this.dataGridView2.TabIndex = 0;
             // 
+            // codigoCategoriaDataGridViewTextBoxColumn
+            // 
+            this.codigoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Categoria";
+            this.codigoCategoriaDataGridViewTextBoxColumn.HeaderText = "Codigo de la Categoria";
+            this.codigoCategoriaDataGridViewTextBoxColumn.Name = "codigoCategoriaDataGridViewTextBoxColumn";
+            this.codigoCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn1
+            // 
+            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripcion del Producto";
+            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
+            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // categoriaProductoBindingSource
             // 
             this.categoriaProductoBindingSource.DataMember = "Categoria_Producto";
@@ -1398,6 +1508,34 @@
             this.Pest5_DataGriewMarcasProductos.Size = new System.Drawing.Size(408, 157);
             this.Pest5_DataGriewMarcasProductos.TabIndex = 0;
             // 
+            // DG_CodigoProducto
+            // 
+            this.DG_CodigoProducto.HeaderText = "Nombre de Producto";
+            this.DG_CodigoProducto.Name = "DG_CodigoProducto";
+            this.DG_CodigoProducto.ReadOnly = true;
+            this.DG_CodigoProducto.Width = 135;
+            // 
+            // DG_MarcaNombre
+            // 
+            this.DG_MarcaNombre.HeaderText = "Marca";
+            this.DG_MarcaNombre.Name = "DG_MarcaNombre";
+            this.DG_MarcaNombre.ReadOnly = true;
+            this.DG_MarcaNombre.Width = 67;
+            // 
+            // DG_Modelos
+            // 
+            this.DG_Modelos.HeaderText = "Modelos";
+            this.DG_Modelos.Name = "DG_Modelos";
+            this.DG_Modelos.ReadOnly = true;
+            this.DG_Modelos.Width = 79;
+            // 
+            // DG_DescripcionProducto
+            // 
+            this.DG_DescripcionProducto.HeaderText = "Descripcion de Producto";
+            this.DG_DescripcionProducto.Name = "DG_DescripcionProducto";
+            this.DG_DescripcionProducto.ReadOnly = true;
+            this.DG_DescripcionProducto.Width = 111;
+            // 
             // Pest5_DataGriewMarcas
             // 
             this.Pest5_DataGriewMarcas.AutoGenerateColumns = false;
@@ -1412,6 +1550,27 @@
             this.Pest5_DataGriewMarcas.Name = "Pest5_DataGriewMarcas";
             this.Pest5_DataGriewMarcas.Size = new System.Drawing.Size(440, 157);
             this.Pest5_DataGriewMarcas.TabIndex = 0;
+            // 
+            // codMarcaDataGridViewTextBoxColumn
+            // 
+            this.codMarcaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Marca";
+            this.codMarcaDataGridViewTextBoxColumn.HeaderText = "Codigo de Marca";
+            this.codMarcaDataGridViewTextBoxColumn.Name = "codMarcaDataGridViewTextBoxColumn";
+            this.codMarcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn2
+            // 
+            this.descripcionDataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn2.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn2.Name = "descripcionDataGridViewTextBoxColumn2";
+            this.descripcionDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // codEstadoDataGridViewTextBoxColumn1
+            // 
+            this.codEstadoDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Estado";
+            this.codEstadoDataGridViewTextBoxColumn1.HeaderText = "Codigo del Estado";
+            this.codEstadoDataGridViewTextBoxColumn1.Name = "codEstadoDataGridViewTextBoxColumn1";
+            this.codEstadoDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // marcaBindingSource1
             // 
@@ -1669,6 +1828,34 @@
             this.Pest6_DataGreiw_Busqueda.Size = new System.Drawing.Size(525, 177);
             this.Pest6_DataGreiw_Busqueda.TabIndex = 5;
             // 
+            // codModeloDataGridViewTextBoxColumn1
+            // 
+            this.codModeloDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Modelo";
+            this.codModeloDataGridViewTextBoxColumn1.HeaderText = "Codigo del Modelo";
+            this.codModeloDataGridViewTextBoxColumn1.Name = "codModeloDataGridViewTextBoxColumn1";
+            this.codModeloDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // codMarcaDataGridViewTextBoxColumn1
+            // 
+            this.codMarcaDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Marca";
+            this.codMarcaDataGridViewTextBoxColumn1.HeaderText = "Codigo de Marca";
+            this.codMarcaDataGridViewTextBoxColumn1.Name = "codMarcaDataGridViewTextBoxColumn1";
+            this.codMarcaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn3
+            // 
+            this.descripcionDataGridViewTextBoxColumn3.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn3.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn3.Name = "descripcionDataGridViewTextBoxColumn3";
+            this.descripcionDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // codEstadoDataGridViewTextBoxColumn2
+            // 
+            this.codEstadoDataGridViewTextBoxColumn2.DataPropertyName = "Cod_Estado";
+            this.codEstadoDataGridViewTextBoxColumn2.HeaderText = "Codigo del Estado";
+            this.codEstadoDataGridViewTextBoxColumn2.Name = "codEstadoDataGridViewTextBoxColumn2";
+            this.codEstadoDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // modeloBindingSource
             // 
             this.modeloBindingSource.DataMember = "Modelo";
@@ -1807,192 +1994,6 @@
             // categoria_ProductoTableAdapter
             // 
             this.categoria_ProductoTableAdapter.ClearBeforeFill = true;
-            // 
-            // Pest3_Txt_MuestraNombre_Codigo_Proveedor
-            // 
-            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Location = new System.Drawing.Point(508, 113);
-            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Name = "Pest3_Txt_MuestraNombre_Codigo_Proveedor";
-            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.Size = new System.Drawing.Size(190, 21);
-            this.Pest3_Txt_MuestraNombre_Codigo_Proveedor.TabIndex = 54;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(340, 113);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(162, 16);
-            this.label41.TabIndex = 55;
-            this.label41.Text = "Nombre de Proveedor";
-            // 
-            // DG_CodigoProducto
-            // 
-            this.DG_CodigoProducto.HeaderText = "Nombre de Producto";
-            this.DG_CodigoProducto.Name = "DG_CodigoProducto";
-            this.DG_CodigoProducto.ReadOnly = true;
-            this.DG_CodigoProducto.Width = 135;
-            // 
-            // DG_MarcaNombre
-            // 
-            this.DG_MarcaNombre.HeaderText = "Marca";
-            this.DG_MarcaNombre.Name = "DG_MarcaNombre";
-            this.DG_MarcaNombre.ReadOnly = true;
-            this.DG_MarcaNombre.Width = 67;
-            // 
-            // DG_Modelos
-            // 
-            this.DG_Modelos.HeaderText = "Modelos";
-            this.DG_Modelos.Name = "DG_Modelos";
-            this.DG_Modelos.ReadOnly = true;
-            this.DG_Modelos.Width = 79;
-            // 
-            // DG_DescripcionProducto
-            // 
-            this.DG_DescripcionProducto.HeaderText = "Descripcion de Producto";
-            this.DG_DescripcionProducto.Name = "DG_DescripcionProducto";
-            this.DG_DescripcionProducto.ReadOnly = true;
-            this.DG_DescripcionProducto.Width = 111;
-            // 
-            // codProductoDataGridViewTextBoxColumn
-            // 
-            this.codProductoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Producto";
-            this.codProductoDataGridViewTextBoxColumn.HeaderText = "Codigo del Producto";
-            this.codProductoDataGridViewTextBoxColumn.Name = "codProductoDataGridViewTextBoxColumn";
-            this.codProductoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreProductoDataGridViewTextBoxColumn
-            // 
-            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "NombreProducto";
-            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "Nombre de Producto";
-            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
-            this.nombreProductoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioVentaDataGridViewTextBoxColumn
-            // 
-            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "PrecioVenta";
-            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "Precio de Venta";
-            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
-            this.precioVentaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioCompraDataGridViewTextBoxColumn
-            // 
-            this.precioCompraDataGridViewTextBoxColumn.DataPropertyName = "PrecioCompra";
-            this.precioCompraDataGridViewTextBoxColumn.HeaderText = "Precio de Compra";
-            this.precioCompraDataGridViewTextBoxColumn.Name = "precioCompraDataGridViewTextBoxColumn";
-            this.precioCompraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cantExistenteTiendaDataGridViewTextBoxColumn
-            // 
-            this.cantExistenteTiendaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteTienda";
-            this.cantExistenteTiendaDataGridViewTextBoxColumn.HeaderText = "Cantidad Existente en Tienda";
-            this.cantExistenteTiendaDataGridViewTextBoxColumn.Name = "cantExistenteTiendaDataGridViewTextBoxColumn";
-            this.cantExistenteTiendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cantExistenteBodegaDataGridViewTextBoxColumn
-            // 
-            this.cantExistenteBodegaDataGridViewTextBoxColumn.DataPropertyName = "CantExistenteBodega";
-            this.cantExistenteBodegaDataGridViewTextBoxColumn.HeaderText = "Cantidad Existente en Bodega";
-            this.cantExistenteBodegaDataGridViewTextBoxColumn.Name = "cantExistenteBodegaDataGridViewTextBoxColumn";
-            this.cantExistenteBodegaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codModeloDataGridViewTextBoxColumn
-            // 
-            this.codModeloDataGridViewTextBoxColumn.DataPropertyName = "Cod_Modelo";
-            this.codModeloDataGridViewTextBoxColumn.HeaderText = "Codigo del Modelo";
-            this.codModeloDataGridViewTextBoxColumn.Name = "codModeloDataGridViewTextBoxColumn";
-            this.codModeloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codProveedorDataGridViewTextBoxColumn
-            // 
-            this.codProveedorDataGridViewTextBoxColumn.DataPropertyName = "Cod_Proveedor";
-            this.codProveedorDataGridViewTextBoxColumn.HeaderText = "Codigo del Proveedor";
-            this.codProveedorDataGridViewTextBoxColumn.Name = "codProveedorDataGridViewTextBoxColumn";
-            this.codProveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codCategoriaDataGridViewTextBoxColumn
-            // 
-            this.codCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Categoria";
-            this.codCategoriaDataGridViewTextBoxColumn.HeaderText = "Codigo de la Categoria";
-            this.codCategoriaDataGridViewTextBoxColumn.Name = "codCategoriaDataGridViewTextBoxColumn";
-            this.codCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codEstadoDataGridViewTextBoxColumn
-            // 
-            this.codEstadoDataGridViewTextBoxColumn.DataPropertyName = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn.HeaderText = "Codigo del Estado";
-            this.codEstadoDataGridViewTextBoxColumn.Name = "codEstadoDataGridViewTextBoxColumn";
-            this.codEstadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codigoCategoriaDataGridViewTextBoxColumn
-            // 
-            this.codigoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Categoria";
-            this.codigoCategoriaDataGridViewTextBoxColumn.HeaderText = "Codigo de la Categoria";
-            this.codigoCategoriaDataGridViewTextBoxColumn.Name = "codigoCategoriaDataGridViewTextBoxColumn";
-            this.codigoCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn1
-            // 
-            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripcion del Producto";
-            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
-            this.descripcionDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // codMarcaDataGridViewTextBoxColumn
-            // 
-            this.codMarcaDataGridViewTextBoxColumn.DataPropertyName = "Cod_Marca";
-            this.codMarcaDataGridViewTextBoxColumn.HeaderText = "Codigo de Marca";
-            this.codMarcaDataGridViewTextBoxColumn.Name = "codMarcaDataGridViewTextBoxColumn";
-            this.codMarcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn2
-            // 
-            this.descripcionDataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn2.Name = "descripcionDataGridViewTextBoxColumn2";
-            this.descripcionDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // codEstadoDataGridViewTextBoxColumn1
-            // 
-            this.codEstadoDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn1.HeaderText = "Codigo del Estado";
-            this.codEstadoDataGridViewTextBoxColumn1.Name = "codEstadoDataGridViewTextBoxColumn1";
-            this.codEstadoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // codModeloDataGridViewTextBoxColumn1
-            // 
-            this.codModeloDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Modelo";
-            this.codModeloDataGridViewTextBoxColumn1.HeaderText = "Codigo del Modelo";
-            this.codModeloDataGridViewTextBoxColumn1.Name = "codModeloDataGridViewTextBoxColumn1";
-            this.codModeloDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // codMarcaDataGridViewTextBoxColumn1
-            // 
-            this.codMarcaDataGridViewTextBoxColumn1.DataPropertyName = "Cod_Marca";
-            this.codMarcaDataGridViewTextBoxColumn1.HeaderText = "Codigo de Marca";
-            this.codMarcaDataGridViewTextBoxColumn1.Name = "codMarcaDataGridViewTextBoxColumn1";
-            this.codMarcaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn3
-            // 
-            this.descripcionDataGridViewTextBoxColumn3.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn3.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn3.Name = "descripcionDataGridViewTextBoxColumn3";
-            this.descripcionDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // codEstadoDataGridViewTextBoxColumn2
-            // 
-            this.codEstadoDataGridViewTextBoxColumn2.DataPropertyName = "Cod_Estado";
-            this.codEstadoDataGridViewTextBoxColumn2.HeaderText = "Codigo del Estado";
-            this.codEstadoDataGridViewTextBoxColumn2.Name = "codEstadoDataGridViewTextBoxColumn2";
-            this.codEstadoDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // Form_Productos_ManejoProductos
             // 
