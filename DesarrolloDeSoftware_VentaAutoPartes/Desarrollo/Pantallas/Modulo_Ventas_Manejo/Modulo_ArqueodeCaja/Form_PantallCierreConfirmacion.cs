@@ -16,5 +16,15 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja
         {
             InitializeComponent();
         }
+
+        private void Form_PantallCierreConfirmacion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Bttn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

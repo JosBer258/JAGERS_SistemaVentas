@@ -60,9 +60,9 @@ namespace Desarrollo
 
             Validaciones encriptar = new Validaciones();
 
-            //string login_pass = encriptar.EncriptarContraseña(txtpwd.Text);
+            string login_pass = encriptar.EncriptarContraseña(txtpwd.Text);
             string login_usuario = txtuser.Text;
-            string login_pass = (txtpwd.Text);
+            //string login_pass = (txtpwd.Text);
 
             Users.Var_Id_empleado = login_usuario;
             Users.Var_Contrasena = login_pass;
@@ -78,11 +78,6 @@ namespace Desarrollo
                 if(Users.Var_Codigo_estado == 1)
                 {
                     Users.Fun_RestablecerIntentos();
-
-                    if (Users.Var_Codigo_rol == 1 || Users.Var_Codigo_rol == 2 || Users.Var_Codigo_rol == 3 || Users.Var_Codigo_rol == 4)
-                    {
-                        MessageBox.Show("Bienvenido a Venta Rogers Truck", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
 
                           Menu_Principal Menu = new Menu_Principal();
                          Menu.CodigoRol = Convert.ToString(Users.Var_Codigo_rol);

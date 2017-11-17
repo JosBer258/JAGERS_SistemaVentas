@@ -250,11 +250,12 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
             DialogResult opcion;
             opcion = MessageBox.Show("¿Desea salir del sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (opcion == DialogResult.Yes)
-                MessageBox.Show("El Usuario ha salido correctamente", "", MessageBoxButtons.OK);
-            Form_Ingreso_Al_Sistema Ingreso = new Form_Ingreso_Al_Sistema();
+            {
+                Form_Ingreso_Al_Sistema Ingreso = new Form_Ingreso_Al_Sistema();
 
-            this.Close();
-            Ingreso.Show();
+                this.Close();
+                Ingreso.Show();
+            }
         }
 
         private void Menu_Principal_Load(object sender, EventArgs e)
@@ -272,6 +273,8 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
                 creditosToolStripMenuItem.Visible = true;
                 comprasToolStripMenuItem.Visible = true;
                 Menu_Empleado.Visible = true;
+
+                Picture_Decoracion.Visible = false;
 
                 //Extras
                 mantenimientoDeCaiToolStripMenuItem.Visible = true;
@@ -297,6 +300,9 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
                 comprasToolStripMenuItem.Visible = false;
                 estadosToolStripMenuItem.Visible = false;
                 proveedoresToolStripMenuItem.Visible = false;
+
+
+               
 
             }
             else if (Convert.ToInt16(CodigoRol) == 3)//Agente de Cobros

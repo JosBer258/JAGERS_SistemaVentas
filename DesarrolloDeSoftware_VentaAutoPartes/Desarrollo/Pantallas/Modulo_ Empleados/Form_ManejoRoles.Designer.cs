@@ -40,7 +40,6 @@
             this.Grupo_OpcionesManejo = new System.Windows.Forms.GroupBox();
             this.Radio_Modificar = new System.Windows.Forms.RadioButton();
             this.Radio_Agregar = new System.Windows.Forms.RadioButton();
-            this.fKEmpleadosRolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
             this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,14 +50,14 @@
             this.comprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comprasTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.ComprasTableAdapter();
             this.DataGriew_MuestraDatos = new System.Windows.Forms.DataGridView();
-            this.codigoRolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rolBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.ventasAutoPartesDataSet1 = new Desarrollo.VentasAutoPartesDataSet();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Picture = new System.Windows.Forms.PictureBox();
             this.Imagen_1 = new System.Windows.Forms.PictureBox();
+            this.fKEmpleadosRolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Grupo_IngresoDatos.SuspendLayout();
             this.Grupo_OpcionesManejo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKEmpleadosRolBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
@@ -68,12 +67,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGriew_MuestraDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKEmpleadosRolBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Bttn_Salir
             // 
-            this.Bttn_Salir.Location = new System.Drawing.Point(310, 301);
+            this.Bttn_Salir.Location = new System.Drawing.Point(310, 331);
             this.Bttn_Salir.Name = "Bttn_Salir";
             this.Bttn_Salir.Size = new System.Drawing.Size(108, 35);
             this.Bttn_Salir.TabIndex = 2;
@@ -170,11 +171,6 @@
             this.Radio_Agregar.Text = "Agregar";
             this.Radio_Agregar.UseVisualStyleBackColor = true;
             // 
-            // fKEmpleadosRolBindingSource
-            // 
-            this.fKEmpleadosRolBindingSource.DataMember = "FK_Empleados_Rol";
-            this.fKEmpleadosRolBindingSource.DataSource = this.rolBindingSource;
-            // 
             // rolBindingSource
             // 
             this.rolBindingSource.DataMember = "Rol";
@@ -219,30 +215,16 @@
             // 
             // DataGriew_MuestraDatos
             // 
-            this.DataGriew_MuestraDatos.AutoGenerateColumns = false;
             this.DataGriew_MuestraDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGriew_MuestraDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGriew_MuestraDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoRolDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn});
-            this.DataGriew_MuestraDatos.DataSource = this.rolBindingSource3;
             this.DataGriew_MuestraDatos.Location = new System.Drawing.Point(14, 182);
             this.DataGriew_MuestraDatos.Name = "DataGriew_MuestraDatos";
-            this.DataGriew_MuestraDatos.Size = new System.Drawing.Size(404, 107);
+            this.DataGriew_MuestraDatos.ReadOnly = true;
+            this.DataGriew_MuestraDatos.Size = new System.Drawing.Size(404, 143);
             this.DataGriew_MuestraDatos.TabIndex = 10;
-            // 
-            // codigoRolDataGridViewTextBoxColumn
-            // 
-            this.codigoRolDataGridViewTextBoxColumn.DataPropertyName = "Codigo_Rol";
-            this.codigoRolDataGridViewTextBoxColumn.HeaderText = "Codigo_Rol";
-            this.codigoRolDataGridViewTextBoxColumn.Name = "codigoRolDataGridViewTextBoxColumn";
-            this.codigoRolDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.DataGriew_MuestraDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGriew_MuestraDatos_CellContentClick);
+            this.DataGriew_MuestraDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGriew_MuestraDatos_CellContentDoubleClick);
+            this.DataGriew_MuestraDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGriew_MuestraDatos_CellDoubleClick);
             // 
             // rolBindingSource3
             // 
@@ -254,6 +236,19 @@
             this.ventasAutoPartesDataSet1.DataSetName = "VentasAutoPartesDataSet";
             this.ventasAutoPartesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // Picture
+            // 
+            this.Picture.BackColor = System.Drawing.Color.Transparent;
+            this.Picture.Image = ((System.Drawing.Image)(resources.GetObject("Picture.Image")));
+            this.Picture.Location = new System.Drawing.Point(26, 185);
+            this.Picture.Name = "Picture";
+            this.Picture.Size = new System.Drawing.Size(14, 15);
+            this.Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picture.TabIndex = 12;
+            this.Picture.TabStop = false;
+            this.toolTip1.SetToolTip(this.Picture, "Dele doble clic al Código o a la descripción \r\ndel Rol que usted desea Modificar\r" +
+        "\n");
+            // 
             // Imagen_1
             // 
             this.Imagen_1.Image = ((System.Drawing.Image)(resources.GetObject("Imagen_1.Image")));
@@ -264,13 +259,19 @@
             this.Imagen_1.TabIndex = 11;
             this.Imagen_1.TabStop = false;
             // 
+            // fKEmpleadosRolBindingSource
+            // 
+            this.fKEmpleadosRolBindingSource.DataMember = "FK_Empleados_Rol";
+            this.fKEmpleadosRolBindingSource.DataSource = this.rolBindingSource;
+            // 
             // Form_ManejoRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(439, 356);
+            this.ClientSize = new System.Drawing.Size(439, 378);
             this.ControlBox = false;
+            this.Controls.Add(this.Picture);
             this.Controls.Add(this.Imagen_1);
             this.Controls.Add(this.DataGriew_MuestraDatos);
             this.Controls.Add(this.Grupo_OpcionesManejo);
@@ -285,7 +286,6 @@
             this.Grupo_IngresoDatos.PerformLayout();
             this.Grupo_OpcionesManejo.ResumeLayout(false);
             this.Grupo_OpcionesManejo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKEmpleadosRolBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).EndInit();
@@ -295,7 +295,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGriew_MuestraDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKEmpleadosRolBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,8 +326,8 @@
         private System.Windows.Forms.DataGridView DataGriew_MuestraDatos;
         private VentasAutoPartesDataSet ventasAutoPartesDataSet1;
         private System.Windows.Forms.BindingSource rolBindingSource3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoRolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox Imagen_1;
+        private System.Windows.Forms.PictureBox Picture;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

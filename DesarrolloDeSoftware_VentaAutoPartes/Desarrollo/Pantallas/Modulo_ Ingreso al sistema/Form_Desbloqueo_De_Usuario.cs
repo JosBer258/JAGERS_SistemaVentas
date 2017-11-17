@@ -50,9 +50,9 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 
 
 
-            //string contra_encriptada = Validar.EncriptarContraseña(Txt_Password_Primera.Text);
-            //respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, contra_encriptada);
-            respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, Txt_Password_Primera.Text);
+            string contra_encriptada = Validar.EncriptarContraseña(Txt_Password_Primera.Text);
+            respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, contra_encriptada);
+            //respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, Txt_Password_Primera.Text);
             if (respuesta == true)
             {
                 DesbloquearUser.Fun_Restauracion(Convert.ToString( ID_UsuarioADesbloquear));

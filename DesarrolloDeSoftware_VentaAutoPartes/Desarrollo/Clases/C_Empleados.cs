@@ -271,15 +271,13 @@ namespace Desarrollo.Clases
             //char Genero;
 
             //if (Var_Genero.Equals("Masculino")) { Genero = 'M'; } else { Genero = 'F'; }
-
+            
             this.sql = string.Format(@"insert into Empleados values(
             '{0}',  '{1}',  '{2}',  '{3}', '{4}', '{5}', '{6}', '{7}','{8}','{9}', 
-            '{10}', 
-            (select Codigo_Estado from Estados where Descripcion_Estado='{11}'),
-            NULL)",
+            '{10}', '{11}', '{12}')",
             Var_Id_empleado, Var_Nombre_empleado, Var_Apellido_empleado,Var_Correo_empleado, Var_Telefono_fijo,
             Var_Telefono_celular,Var_Fecha_nacimiento, Var_Genero, Var_Contrasena, Var_Estado_civil,
-            Var_Rol, Var_Codigo_estado);
+            Var_Rol, Var_Codigo_estado, Var_Direccion);
 
             this.cmd = new SqlCommand(this.sql, this.cnx);
             this.cnx.Open();
@@ -291,11 +289,19 @@ namespace Desarrollo.Clases
 
 
 
-        public void Fun_MoodificarDatos()
+        public void Fun_MoodificarDatos(string Telefono, int Estado, string Civil, int CodigoRol, string Direccion, string correo, string contra, string fijo ,int Codigo_e)
         {
+            this.sql = string.Format(@"update Empleados
+                                       set TelefonoCelular='{0}', Codigo_Estado='{1}', EstadoCivil='{2}', Codigo_Rol='{3}', 
+                                         Direccion='{4}', Correo='{5}', Contraseña='{6}', TelefonoFijo='{7}' where Codigo_Empleado = '{8}'",
+                                         Telefono, Estado, Civil, CodigoRol, Direccion, correo, contra, fijo, Codigo_e);
 
+            this.cmd = new SqlCommand(this.sql, this.cnx);
 
-
+            this.cnx.Open();
+            SqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+            this.cnx.Close();
 
         }
         ///////////////////////////////////////////////////////////////////////////////////////////////

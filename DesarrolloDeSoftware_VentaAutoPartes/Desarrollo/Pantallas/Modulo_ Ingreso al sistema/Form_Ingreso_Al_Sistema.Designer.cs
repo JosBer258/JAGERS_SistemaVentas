@@ -175,6 +175,7 @@
             this.txtpwd.TabIndex = 22;
             this.txtpwd.Text = "12345";
             this.toolTip1.SetToolTip(this.txtpwd, "Ingresar contraseña");
+            this.txtpwd.UseSystemPasswordChar = true;
             this.txtpwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpwd_KeyPress);
             // 
             // pictureBox3

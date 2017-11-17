@@ -41,5 +41,10 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Nuevas
         {
 
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

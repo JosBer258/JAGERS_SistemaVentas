@@ -60,6 +60,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.Pest1_Grupo_ManejoEmpleados = new System.Windows.Forms.GroupBox();
+            this.Pest1_Txt_Contraseña = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.Pest1_Mask_CelularEmpleado = new System.Windows.Forms.MaskedTextBox();
             this.Pest1_ComBox_Estado = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -93,9 +95,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Pest1_Txt_Contraseña = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.Pest2_Bttn_Actualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
@@ -159,7 +158,6 @@
             // 
             // Pest_BusquedaEmpleados
             // 
-            this.Pest_BusquedaEmpleados.Controls.Add(this.Pest2_Bttn_Actualizar);
             this.Pest_BusquedaEmpleados.Controls.Add(this.Picture);
             this.Pest_BusquedaEmpleados.Controls.Add(this.pictureBox1);
             this.Pest_BusquedaEmpleados.Controls.Add(this.Pest2_GrupoBusqueda);
@@ -195,7 +193,7 @@
             this.Pest2_GrupoBusqueda.Controls.Add(this.label16);
             this.Pest2_GrupoBusqueda.Location = new System.Drawing.Point(22, 23);
             this.Pest2_GrupoBusqueda.Name = "Pest2_GrupoBusqueda";
-            this.Pest2_GrupoBusqueda.Size = new System.Drawing.Size(740, 107);
+            this.Pest2_GrupoBusqueda.Size = new System.Drawing.Size(582, 107);
             this.Pest2_GrupoBusqueda.TabIndex = 1;
             this.Pest2_GrupoBusqueda.TabStop = false;
             this.Pest2_GrupoBusqueda.Text = "Busqueda de Empleados";
@@ -438,6 +436,26 @@
             this.Pest1_Grupo_ManejoEmpleados.Text = "Ingreso de Datos del Empleado";
             this.Pest1_Grupo_ManejoEmpleados.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
+            // Pest1_Txt_Contraseña
+            // 
+            this.Pest1_Txt_Contraseña.Location = new System.Drawing.Point(612, 99);
+            this.Pest1_Txt_Contraseña.MaxLength = 28;
+            this.Pest1_Txt_Contraseña.Name = "Pest1_Txt_Contraseña";
+            this.Pest1_Txt_Contraseña.Size = new System.Drawing.Size(196, 21);
+            this.Pest1_Txt_Contraseña.TabIndex = 42;
+            this.Pest1_Txt_Contraseña.TextChanged += new System.EventHandler(this.Pest1_Txt_Contraseña_TextChanged);
+            this.Pest1_Txt_Contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_Contraseña_KeyPress);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(532, 102);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 15);
+            this.label17.TabIndex = 41;
+            this.label17.Text = "Contraseña";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
             // Pest1_Mask_CelularEmpleado
             // 
             this.Pest1_Mask_CelularEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -456,6 +474,7 @@
             this.Pest1_ComBox_Estado.Name = "Pest1_ComBox_Estado";
             this.Pest1_ComBox_Estado.Size = new System.Drawing.Size(152, 23);
             this.Pest1_ComBox_Estado.TabIndex = 37;
+            this.Pest1_ComBox_Estado.SelectedIndexChanged += new System.EventHandler(this.Pest1_ComBox_Estado_SelectedIndexChanged);
             // 
             // label34
             // 
@@ -474,6 +493,7 @@
             this.Pest1_Mask_NumeroFijoEmpleado.Name = "Pest1_Mask_NumeroFijoEmpleado";
             this.Pest1_Mask_NumeroFijoEmpleado.Size = new System.Drawing.Size(153, 22);
             this.Pest1_Mask_NumeroFijoEmpleado.TabIndex = 35;
+            this.Pest1_Mask_NumeroFijoEmpleado.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Pest1_Mask_NumeroFijoEmpleado_MaskInputRejected);
             // 
             // label1
             // 
@@ -503,7 +523,7 @@
             this.Pest1_ComBox_FechaAño.FormattingEnabled = true;
             this.Pest1_ComBox_FechaAño.Location = new System.Drawing.Point(612, 66);
             this.Pest1_ComBox_FechaAño.Name = "Pest1_ComBox_FechaAño";
-            this.Pest1_ComBox_FechaAño.Size = new System.Drawing.Size(54, 23);
+            this.Pest1_ComBox_FechaAño.Size = new System.Drawing.Size(63, 23);
             this.Pest1_ComBox_FechaAño.TabIndex = 31;
             // 
             // Pest1_ComBox_FechaMes
@@ -523,9 +543,9 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.Pest1_ComBox_FechaMes.Location = new System.Drawing.Point(668, 66);
+            this.Pest1_ComBox_FechaMes.Location = new System.Drawing.Point(677, 66);
             this.Pest1_ComBox_FechaMes.Name = "Pest1_ComBox_FechaMes";
-            this.Pest1_ComBox_FechaMes.Size = new System.Drawing.Size(87, 23);
+            this.Pest1_ComBox_FechaMes.Size = new System.Drawing.Size(83, 23);
             this.Pest1_ComBox_FechaMes.TabIndex = 30;
             this.Pest1_ComBox_FechaMes.SelectedIndexChanged += new System.EventHandler(this.Pest1_ComBox_FechaMes_SelectedIndexChanged);
             // 
@@ -578,9 +598,9 @@
             "29",
             "30",
             "31"});
-            this.Pest1_ComBox_FechaDia.Location = new System.Drawing.Point(756, 66);
+            this.Pest1_ComBox_FechaDia.Location = new System.Drawing.Point(761, 66);
             this.Pest1_ComBox_FechaDia.Name = "Pest1_ComBox_FechaDia";
-            this.Pest1_ComBox_FechaDia.Size = new System.Drawing.Size(52, 23);
+            this.Pest1_ComBox_FechaDia.Size = new System.Drawing.Size(47, 23);
             this.Pest1_ComBox_FechaDia.TabIndex = 29;
             // 
             // Pest1_Text_Direccion
@@ -591,6 +611,7 @@
             this.Pest1_Text_Direccion.Size = new System.Drawing.Size(153, 83);
             this.Pest1_Text_Direccion.TabIndex = 27;
             this.Pest1_Text_Direccion.Text = "";
+            this.Pest1_Text_Direccion.TextChanged += new System.EventHandler(this.Pest1_Text_Direccion_TextChanged);
             this.Pest1_Text_Direccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Text_Direccion_KeyPress);
             // 
             // Pest1_Txt_CodigoEmpleado
@@ -645,6 +666,7 @@
             this.Pest1_Text_CorreoEmpleado.Name = "Pest1_Text_CorreoEmpleado";
             this.Pest1_Text_CorreoEmpleado.Size = new System.Drawing.Size(155, 21);
             this.Pest1_Text_CorreoEmpleado.TabIndex = 11;
+            this.Pest1_Text_CorreoEmpleado.TextChanged += new System.EventHandler(this.Pest1_Text_CorreoEmpleado_TextChanged);
             this.Pest1_Text_CorreoEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Text_CorreoEmpleado_KeyPress);
             // 
             // Pest1_ComBox_RolEmpleado
@@ -655,6 +677,7 @@
             this.Pest1_ComBox_RolEmpleado.Name = "Pest1_ComBox_RolEmpleado";
             this.Pest1_ComBox_RolEmpleado.Size = new System.Drawing.Size(152, 23);
             this.Pest1_ComBox_RolEmpleado.TabIndex = 6;
+            this.Pest1_ComBox_RolEmpleado.SelectedIndexChanged += new System.EventHandler(this.Pest1_ComBox_RolEmpleado_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -705,6 +728,7 @@
             this.Pest1_ComBox_EstadoCivil.Name = "Pest1_ComBox_EstadoCivil";
             this.Pest1_ComBox_EstadoCivil.Size = new System.Drawing.Size(155, 23);
             this.Pest1_ComBox_EstadoCivil.TabIndex = 5;
+            this.Pest1_ComBox_EstadoCivil.SelectedIndexChanged += new System.EventHandler(this.Pest1_ComBox_EstadoCivil_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -799,38 +823,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1045, 441);
             this.tabControl1.TabIndex = 0;
-            // 
-            // Pest1_Txt_Contraseña
-            // 
-            this.Pest1_Txt_Contraseña.Location = new System.Drawing.Point(612, 99);
-            this.Pest1_Txt_Contraseña.MaxLength = 28;
-            this.Pest1_Txt_Contraseña.Name = "Pest1_Txt_Contraseña";
-            this.Pest1_Txt_Contraseña.Size = new System.Drawing.Size(196, 21);
-            this.Pest1_Txt_Contraseña.TabIndex = 42;
-            this.Pest1_Txt_Contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_Contraseña_KeyPress);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(532, 102);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 15);
-            this.label17.TabIndex = 41;
-            this.label17.Text = "Contraseña";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // Pest2_Bttn_Actualizar
-            // 
-            this.Pest2_Bttn_Actualizar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Pest2_Bttn_Actualizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest2_Bttn_Actualizar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Pest2_Bttn_Actualizar.Location = new System.Drawing.Point(596, 57);
-            this.Pest2_Bttn_Actualizar.Name = "Pest2_Bttn_Actualizar";
-            this.Pest2_Bttn_Actualizar.Size = new System.Drawing.Size(139, 55);
-            this.Pest2_Bttn_Actualizar.TabIndex = 1;
-            this.Pest2_Bttn_Actualizar.Text = "Actualizar";
-            this.Pest2_Bttn_Actualizar.UseVisualStyleBackColor = false;
-            this.Pest2_Bttn_Actualizar.Click += new System.EventHandler(this.Pest2_Bttn_Actualizar_Click);
             // 
             // Form_Manejo_de_Empleados
             // 
@@ -931,6 +923,5 @@
         private System.Windows.Forms.MaskedTextBox Pest1_Mask_CelularEmpleado;
         private System.Windows.Forms.TextBox Pest1_Txt_Contraseña;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button Pest2_Bttn_Actualizar;
     }
 }

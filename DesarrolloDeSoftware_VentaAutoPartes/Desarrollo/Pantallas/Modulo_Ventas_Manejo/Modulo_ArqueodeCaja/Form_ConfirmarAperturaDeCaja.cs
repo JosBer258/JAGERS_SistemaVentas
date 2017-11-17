@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja
 {
-    public partial class Form_PantallaDeArqueo : Form
+    public partial class Form_ConfirmarAperturaDeCaja : Form
     {
-        public Form_PantallaDeArqueo()
+        public Form_ConfirmarAperturaDeCaja()
         {
             InitializeComponent();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Bttn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

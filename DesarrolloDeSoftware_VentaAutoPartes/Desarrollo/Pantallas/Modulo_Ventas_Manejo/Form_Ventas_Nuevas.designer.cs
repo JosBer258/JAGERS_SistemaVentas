@@ -63,9 +63,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -273,6 +273,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(140, 20);
             this.textBox5.TabIndex = 15;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label7
             // 
@@ -416,6 +417,18 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Nombre:";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(787, 13);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(161, 67);
+            this.button5.TabIndex = 30;
+            this.button5.Text = "Guardar";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -440,18 +453,6 @@
             this.button4.TabIndex = 29;
             this.button4.Text = "Cotizacion";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(787, 13);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(161, 67);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "Guardar";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 

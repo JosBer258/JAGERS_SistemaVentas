@@ -60,7 +60,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
                 return;
 
             }
-            else if(Txt_Password_Primera != Txt_Password_Second)
+            else if(Txt_Password_Primera.Text != Txt_Password_Second.Text)
             {
                 MessageBox.Show("La Contraseña y la confirmacion deben ser iguales", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

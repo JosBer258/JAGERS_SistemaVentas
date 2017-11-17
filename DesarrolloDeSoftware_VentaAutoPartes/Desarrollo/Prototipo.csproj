@@ -181,12 +181,6 @@
     <Compile Include="Pantallas\Modulo_Ventas_Manejo\Form_Ventas_Nuevas.designer.cs">
       <DependentUpon>Form_Ventas_Nuevas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas\Modulo_Ventas_Manejo\Modulo_ArqueodeCaja\Form_ConfirmarAperturaDeCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pantallas\Modulo_Ventas_Manejo\Modulo_ArqueodeCaja\Form_ConfirmarAperturaDeCaja.Designer.cs">
-      <DependentUpon>Form_ConfirmarAperturaDeCaja.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pantallas\Modulo_Ventas_Manejo\Modulo_ArqueodeCaja\Form_PantallaDeArqueo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,18 +271,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Form_Ventas_Nuevas.resx">
       <DependentUpon>Form_Ventas_Nuevas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Modulo_ArqueodeCaja\Form_ConfirmarAperturaDeCaja.resx">
-      <DependentUpon>Form_ConfirmarAperturaDeCaja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Modulo_ArqueodeCaja\Form_PantallaDeArqueo.resx">
-      <DependentUpon>Form_PantallaDeArqueo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Modulo_ArqueodeCaja\Form_PantallaManejoAperturaCaja.resx">
-      <DependentUpon>Form_PantallaManejoAperturaCaja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Modulo_ArqueodeCaja\Form_PantallCierreConfirmacion.resx">
-      <DependentUpon>Form_PantallCierreConfirmacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -56,7 +56,9 @@
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Picture_Decoracion = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture_Decoracion)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -294,16 +296,28 @@
             this.logOutToolStripMenuItem1.Text = "LogOut";
             this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
             // 
+            // Picture_Decoracion
+            // 
+            this.Picture_Decoracion.Image = global::Desarrollo.Properties.Resources.rayos_azules_51b330b6e7aaa;
+            this.Picture_Decoracion.Location = new System.Drawing.Point(0, 28);
+            this.Picture_Decoracion.Name = "Picture_Decoracion";
+            this.Picture_Decoracion.Size = new System.Drawing.Size(1354, 705);
+            this.Picture_Decoracion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picture_Decoracion.TabIndex = 2;
+            this.Picture_Decoracion.TabStop = false;
+            // 
             // Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::Desarrollo.Properties.Resources.rayos_azules_51b330b6e7aaa;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.ControlBox = false;
+            this.Controls.Add(this.Picture_Decoracion);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -313,6 +327,7 @@
             this.Load += new System.EventHandler(this.Menu_Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture_Decoracion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,5 +363,6 @@
         private System.Windows.Forms.ToolStripMenuItem pantallaDeSalidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aplicacionDeMoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arqueoDeCajaToolStripMenuItem1;
+        private System.Windows.Forms.PictureBox Picture_Decoracion;
     }
 }

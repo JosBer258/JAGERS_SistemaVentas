@@ -12,7 +12,7 @@ namespace Desarrollo.Clases
     class Validaciones
     {
 
-        private Boolean Verificaremail(String email)
+        public Boolean Verificaremail(String email)
         {
             String expresion;
             expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
