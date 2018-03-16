@@ -1,0 +1,359 @@
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+C:\Users\Josias\Music\Desarrollo_ De_ Software_ Programacion\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_MantenimientoEstados.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Form_Productos_ManejoProductos.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Proveedores.Form_Proveedores_Manejo.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Creditos_CargarMora.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Credito_CobroCredito.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_MantenimientoTransacciones.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_Transacciones_Vista.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Mantenimiento_Mora.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_ManejoClientes.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Nuevas.Form_Ventas_Nuevas.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Compras.Form_ManejoComprasCompleto.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoCai.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoImpuestos.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_RealizarCotizaciones.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_MantenimientoEstados.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Form_Productos_ManejoProductos.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Proveedores.Form_Proveedores_Manejo.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_ManejoClientes.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Compras.Form_ManejoComprasCompleto.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Creditos_CargarMora.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Credito_CobroCredito.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Mantenimiento_Mora.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_MantenimientoTransacciones.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_Transacciones_Vista.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoCai.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoImpuestos.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_RealizarCotizaciones.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Nuevas.Form_Ventas_Nuevas.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Josias\Desktop\Desarrollo_GUTHUB Repositorio\JAGERS_SistemaVentas\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_ConfirmarAperturaDeCaja.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaDeArqueo.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaManejoAperturaCaja.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallCierreConfirmacion.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Cotizacion_Impresion_Forma.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.cache
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.compiled
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_MantenimientoEstados.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Form_Productos_ManejoProductos.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Proveedores.Form_Proveedores_Manejo.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_ManejoClientes.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Compras.Form_ManejoComprasCompleto.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Creditos_CargarMora.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Credito_CobroCredito.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Mantenimiento_Mora.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_MantenimientoTransacciones.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_Transacciones_Vista.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Cotizacion_Impresion_Forma.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoCai.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoImpuestos.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_RealizarCotizaciones.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Nuevas.Form_Ventas_Nuevas.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_ConfirmarAperturaDeCaja.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaDeArqueo.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaManejoAperturaCaja.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallCierreConfirmacion.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Wilmer\Desktop\ZELDA---NINTENDO\segundo prototipo\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Muestra_Reporte.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_Busqueda_Producto.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_Localidades.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_BusquedaFacturas.resources
+C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_DefinirMetodoDePago.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_Localidades.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_MantenimientoEstados.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Form_Productos_ManejoProductos.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Muestra_Reporte.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Proveedores.Form_Proveedores_Manejo.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_ManejoClientes.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Compras.Form_ManejoComprasCompleto.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Creditos_CargarMora.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Credito_CobroCredito.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Mantenimiento_Mora.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_MantenimientoTransacciones.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_Transacciones_Vista.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Cotizacion_Impresion_Forma.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_BusquedaFacturas.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_Busqueda_Producto.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_DefinirMetodoDePago.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoCai.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoImpuestos.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_RealizarCotizaciones.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Nuevas.Form_Ventas_Nuevas.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_ConfirmarAperturaDeCaja.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaDeArqueo.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaManejoAperturaCaja.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallCierreConfirmacion.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.cache
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.compiled
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+D:\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_Localidades.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_MantenimientoEstados.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Form_Productos_ManejoProductos.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Muestra_Reporte.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Proveedores.Form_Proveedores_Manejo.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_ManejoClientes.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Compras.Form_ManejoComprasCompleto.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Creditos_CargarMora.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Credito_CobroCredito.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Mantenimiento_Mora.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_MantenimientoTransacciones.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_Transacciones_Vista.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Cotizacion_Impresion_Forma.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_BusquedaFacturas.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_Busqueda_Producto.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_DefinirMetodoDePago.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoCai.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoImpuestos.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_RealizarCotizaciones.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Nuevas.Form_Ventas_Nuevas.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_ConfirmarAperturaDeCaja.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaDeArqueo.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaManejoAperturaCaja.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallCierreConfirmacion.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.cache
+C:\Users\Josias\Desktop\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.compiled
+C:\Users\Josias\Desktop\ASUNTOS A ANTENDER\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Desktop\ASUNTOS A ANTENDER\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\ASUNTOS A ANTENDER\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\ASUNTOS A ANTENDER\Nueva carpeta\Desarrollo\Desarrollo de Software Semana Final\Sistema\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_Localidades.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_MantenimientoEstados.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Form_Productos_ManejoProductos.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Muestra_Reporte.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Proveedores.Form_Proveedores_Manejo.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_ManejoClientes.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Compras.Form_ManejoComprasCompleto.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Creditos_CargarMora.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Credito_CobroCredito.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Mantenimiento_Mora.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_MantenimientoTransacciones.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_Transacciones_Vista.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Cotizacion_Impresion_Forma.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_BusquedaFacturas.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_Busqueda_Producto.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_DefinirMetodoDePago.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoCai.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoImpuestos.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_RealizarCotizaciones.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Nuevas.Form_Ventas_Nuevas.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_ConfirmarAperturaDeCaja.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaDeArqueo.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaManejoAperturaCaja.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallCierreConfirmacion.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.cache
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.compiled
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Manueales.Manuales.resources
+C:\Users\Josias\Desktop\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Historicos.Historicos.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_Localidades.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Estados.Form_MantenimientoEstados.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Manueales.Manuales.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Form_Productos_ManejoProductos.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Productos.Muestra_Reporte.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo___Proveedores.Form_Proveedores_Manejo.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_ManejoRoles.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Empleados.Form_Manejo_de_Empleados.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form__Ingreso_NuevaContraseña.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_Desbloqueo_De_Usuario.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Form_ManejoClientes.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo__Ingreso_al_sistema.Menu_Principal.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Compras.Form_ManejoComprasCompleto.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Creditos_CargarMora.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Credito_CobroCredito.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Creditos.Form_Mantenimiento_Mora.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Historicos.Historicos.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_MantenimientoTransacciones.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Transacciones.Form_Transacciones_Vista.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Cotizacion_Impresion_Forma.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_BusquedaFacturas.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_Busqueda_Producto.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_DefinirMetodoDePago.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoCai.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_MantenimientoImpuestos.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Form_RealizarCotizaciones.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Nuevas.Form_Ventas_Nuevas.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_ConfirmarAperturaDeCaja.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaDeArqueo.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallaManejoAperturaCaja.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja.Form_PantallCierreConfirmacion.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\DesarrolloDeSoftware_VentaAutoPartes.csproj.GenerateResource.Cache
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.cache
+C:\Users\Josias\Desktop\Prueba y Documentacion Sistema Beta\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\obj\Debug\RdlCompile.compiled
