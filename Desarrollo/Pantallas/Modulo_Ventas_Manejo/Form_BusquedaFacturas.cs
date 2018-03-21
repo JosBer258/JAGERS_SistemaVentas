@@ -31,7 +31,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
         private void Form_BusquedaFacturas_Load(object sender, EventArgs e)
         {
             Busq.Fun_InsertarDatagriew(dataGridView1);
-            Busq.Fun_ExtraerEstados(comboBox1);
+            Busq.Fun_ExtraerEstados(CMB_Estado);
 
 
 
@@ -68,36 +68,36 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 
 
 
-            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            if (string.IsNullOrWhiteSpace(Txt_Codigo.Text))
             {
-                errorProvider1.SetError(textBox6, "Debe llenar este campo");
+                errorProvider1.SetError(Txt_Codigo, "Debe llenar este campo");
                 Ve = true;
             }
             else
             {
-                errorProvider1.SetError(textBox6, "");
+                errorProvider1.SetError(Txt_Codigo, "");
             }
 
 
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(Txt_MontoTotal.Text))
             {
-                errorProvider1.SetError(textBox1, "Debe llenar este campo");
+                errorProvider1.SetError(Txt_MontoTotal, "Debe llenar este campo");
                 Ve = true;
             }
             else
             {
-                errorProvider1.SetError(textBox1, "");
+                errorProvider1.SetError(Txt_MontoTotal, "");
             }
 
 
-            if (comboBox1.SelectedIndex==-1)
+            if (CMB_Estado.SelectedIndex==-1)
             {
-                errorProvider1.SetError(comboBox1, "Debe llenar este campo");
+                errorProvider1.SetError(CMB_Estado, "Debe llenar este campo");
                 Ve = true;
             }
             else
             {
-                errorProvider1.SetError(comboBox1, "");
+                errorProvider1.SetError(CMB_Estado, "");
             }
 
             if (Ve == true)
@@ -105,8 +105,12 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
                 return;
             }
 
-            Busq.UpdateFactura(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(textBox6.Text));
+            Busq.UpdateFactura(Convert.ToInt32(CMB_Estado.SelectedValue), (int)Convert.ToDouble(Txt_Codigo.Text));
 
+            if (Convert.ToInt32(CMB_Estado.SelectedValue)==2)
+            {
+                Busq.Fun_UpdateTransacciones((int)Convert.ToDouble(Txt_Codigo.Text));
+            }
             LimpiarTodo();
         }
 
@@ -117,11 +121,11 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox6.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox5.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            comboBox1.SelectedValue =Convert.ToDouble(dataGridView1.CurrentRow.Cells[8].Value.ToString());
+            Txt_Codigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            Txt_Nombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            Txt_Fecha.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            Txt_MontoTotal.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            CMB_Estado.SelectedValue =Convert.ToDouble(dataGridView1.CurrentRow.Cells[8].Value.ToString());
 
 
             Busq.LlenarDetalles(dataGridView2, Convert.ToDouble(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
@@ -144,11 +148,11 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox6.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox5.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            comboBox1.SelectedValue = Convert.ToDouble(dataGridView1.CurrentRow.Cells[8].Value.ToString());
+            Txt_Codigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            Txt_Nombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            Txt_Fecha.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            Txt_MontoTotal.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            CMB_Estado.SelectedValue = Convert.ToDouble(dataGridView1.CurrentRow.Cells[8].Value.ToString());
 
 
             Busq.LlenarDetalles(dataGridView2, Convert.ToDouble(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
@@ -167,10 +171,10 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             dataGridView2.Rows.Clear();
             dataGridView2.Refresh();
             Busq.Fun_InsertarDatagriew(dataGridView1);
-            textBox6.Text = string.Empty;
-            textBox5.Text = string.Empty;
-            textBox4.Text = string.Empty;
-            textBox1.Text = string.Empty;
+            Txt_Codigo.Text = string.Empty;
+            Txt_Nombre.Text = string.Empty;
+            Txt_Fecha.Text = string.Empty;
+            Txt_MontoTotal.Text = string.Empty;
         }
     }
 }

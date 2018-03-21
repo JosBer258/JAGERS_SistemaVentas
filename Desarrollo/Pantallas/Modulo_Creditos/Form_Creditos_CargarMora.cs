@@ -104,6 +104,7 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
                 mo.Fun_UpdateCreditoCliente();
                 mo.Fun_UpdateTran();
                 mo.Fun_InsertarDetalles();
+                mo.Fun_UpdateTransacciones((int)Convert.ToDouble(Txt_NumeroFactura.Text));
                 MessageBox.Show("La operacion se realizo exitosamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
@@ -125,6 +126,7 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
                 mo.Fun_UpdateCreditoCliente();
                 mo.Fun_UpdateTran();
                 mo.Fun_InsertarDetalles();
+                mo.Fun_UpdateTransacciones((int)Convert.ToDouble(Txt_NumeroFactura.Text));
                 MessageBox.Show("La operacion se realizo exitosamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else

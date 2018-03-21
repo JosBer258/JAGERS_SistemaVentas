@@ -1169,7 +1169,7 @@ WHERE Nombre like '%{0}%'", busq);
             Con.sql = string.Format(@"
             select A.Cod_Factura as 'Codigo de Factura', Fecha_Factura as 'Fecha de Realizacion', Tip.Descripcion as 'Tipo de Transaccion' ,
             ('%' + CAST(( A.[Impuesto_Porcentaje]* 100) as nvarchar)) as Impuesto, (C.Nombre + ' '+ C.Apellido) as 'Nombre del Cliente', CAST(T.Monto as decimal(10,2)) as 'Monto Total' , 
-            (select E.Descripcion_Estado from Estados as E where E.Codigo_Estado=A.Codigo_Estado and E.Descripcion_Estado like '%Transaccion%') as 'Estado de Transaccion'
+            (select E.Descripcion_Estado from Estados as E where E.Codigo_Estado=T  .Codigo_Estado and E.Descripcion_Estado like '%Transaccion%') as 'Estado de Transaccion'
             from Facturas as A inner join Transacciones as T on A.Cod_Factura=T.Numero_Documento inner join Tipo_Transaccion as Tip on Tip.Codigo_TipoTransaccion=T.Codigo_Tipo_Transaccion inner join
             Clientes as C on T.Codigo_Cliente = C.Codigo_Cliente
             where T.Codigo_Tipo_Transaccion='{0}'  and C.Codigo_Cliente ='{1}' and T.Codigo_Estado='{2}'", Tip, busq, e);
@@ -1197,7 +1197,7 @@ WHERE Nombre like '%{0}%'", busq);
             Con.sql = string.Format(@"
             select A.Cod_Factura as 'Codigo de Factura', Fecha_Factura as 'Fecha de Realizacion', Tip.Descripcion as 'Tipo de Transaccion' ,
             ('%' + CAST(( A.[Impuesto_Porcentaje]* 100) as nvarchar)) as Impuesto, (C.Nombre + ' '+ C.Apellido) as 'Nombre del Cliente', CAST(T.Monto as decimal(10,2)) as 'Monto Total' , 
-            (select E.Descripcion_Estado from Estados as E where E.Codigo_Estado=A.Codigo_Estado and E.Descripcion_Estado like '%Transaccion%') as 'Estado de Transaccion'
+            (select E.Descripcion_Estado from Estados as E where E.Codigo_Estado=T.Codigo_Estado and E.Descripcion_Estado like '%Transaccion%') as 'Estado de Transaccion'
             from Facturas as A inner join Transacciones as T on A.Cod_Factura=T.Numero_Documento inner join Tipo_Transaccion as Tip on Tip.Codigo_TipoTransaccion=T.Codigo_Tipo_Transaccion inner join
             Clientes as C on T.Codigo_Cliente = C.Codigo_Cliente
             where (T.Codigo_Tipo_Transaccion=2 or T.Codigo_Tipo_Transaccion=3)  and C.Codigo_Cliente ='{0}' and T.Codigo_Estado='{1}'", busq, e);

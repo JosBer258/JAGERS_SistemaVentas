@@ -50,7 +50,23 @@ where A.Codigo_Factura = '{0}'", busq);
             cnx.Close();
         }
 
+        public void Fun_UpdateTransacciones(int FN_Codigo)
+        {
 
+            sql = string.Format(@"update Transacciones set Codigo_Estado = 3 where Numero_Documento='{0}'", FN_Codigo);
+            cmd = new SqlCommand(sql, cnx);
+            cnx.Open();
+            try
+            {
+                SqlDataReader Reg = null;
+                Reg = cmd.ExecuteReader();
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
         public void Fun_ExtraerEstados(ComboBox RolBox)
         {
             Conexion Con = new Conexion();

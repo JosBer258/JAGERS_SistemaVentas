@@ -281,13 +281,14 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
 
         private void Pest2_DGV_MuestraDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try{
+            try
+            {
 
                 DataGridViewRow row = this.Pest2_DGV_MuestraDatos.Rows[e.RowIndex];
                 LCr_TipoTransaccion = row.Cells["Tipo de Transacción"].Value.ToString();
                 LCr_EstadoTransacion = row.Cells["Estados"].Value.ToString();
 
-                if (LCr_EstadoTransacion == "Transaccion Pagada")
+                if (LCr_EstadoTransacion == "Transaccion Pagada" || LCr_EstadoTransacion == "Transaccion Anulada")
                 {
                     Pest2_Bttn_AplicarMora.Enabled = false;
                 } else
@@ -317,7 +318,7 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
             LCr_TipoTransaccion = row.Cells["Tipo de Transacción"].Value.ToString();
             LCr_EstadoTransacion = row.Cells["Estados"].Value.ToString();
 
-            if (LCr_EstadoTransacion == "Transaccion Pagada")
+           if (LCr_EstadoTransacion == "Transaccion Pagada" || LCr_EstadoTransacion == "Transaccion Anulada")
             {
                 Pest2_Bttn_AplicarMora.Enabled = false;
             }

@@ -22,6 +22,7 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
         public string Name;
         private string TipoTransaccion;
         private string Var_OptenerCodigoMora;
+        private string Var_Tran_EstadoTransaccion;
 
 
         public Form_Transacciones_Vista()
@@ -170,9 +171,11 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
             {
                 DataGridViewRow row = this.DGV_Transacciones.Rows[e.RowIndex];
                 TipoTransaccion = row.Cells["Tipo de Transacción"].Value.ToString();
-                if (TipoTransaccion != "Credito")
+                Var_Tran_EstadoTransaccion=row.Cells["Estados"].Value.ToString();
+
+                if (TipoTransaccion != "Credito" || Var_Tran_EstadoTransaccion == "Transaccion Pagada" || Var_Tran_EstadoTransaccion == "Transaccion Anulada")
                 {
-                    MessageBox.Show("Debe selecionar una transaccion del tipo credito", "Error de aplicacion de mora", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe selecionar una transaccion del tipo credito valida", "Error de aplicacion de mora", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }              
                 txtCodTrans.Text = row.Cells["Código de Transacción"].Value.ToString();
@@ -203,9 +206,11 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
         {
             DataGridViewRow row = this.DGV_Transacciones.Rows[e.RowIndex];
             TipoTransaccion = row.Cells["Tipo de Transacción"].Value.ToString();
-            if (TipoTransaccion != "Credito" )
+            Var_Tran_EstadoTransaccion = row.Cells["Estados"].Value.ToString();
+
+            if (TipoTransaccion != "Credito" || Var_Tran_EstadoTransaccion == "Transaccion Pagada" || Var_Tran_EstadoTransaccion == "Transaccion Anulada")
             {
-                MessageBox.Show("Debe selecionar una transaccion del tipo credito", "Error de aplicacion de mora", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe selecionar una transaccion del tipo credito valida", "Error de aplicacion de mora", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             txtCodTrans.Text = row.Cells["Código de Transacción"].Value.ToString();
