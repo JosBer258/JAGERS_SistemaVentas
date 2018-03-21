@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Cai.cs" />
+    <Compile Include="Clases\C_Credito.cs" />
     <Compile Include="Clases\C_DatoHistoricos.cs" />
     <Compile Include="Clases\C_Factura.cs" />
     <Compile Include="Clases\C_Localidades.cs" />
@@ -83,6 +84,12 @@
     <Compile Include="Pantallas\Estados\Form_MantenimientoEstados.Designer.cs">
       <DependentUpon>Form_MantenimientoEstados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Manueales\Form_VistaManualPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Manueales\Form_VistaManualPDF.Designer.cs">
+      <DependentUpon>Form_VistaManualPDF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Manueales\Manuales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +101,6 @@
     </Compile>
     <Compile Include="Pantallas\Modulo _ Productos\Form_Productos_ManejoProductos.Designer.cs">
       <DependentUpon>Form_Productos_ManejoProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pantallas\Modulo _ Productos\Muestra_Reporte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pantallas\Modulo _ Productos\Muestra_Reporte.Designer.cs">
-      <DependentUpon>Muestra_Reporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Modulo _ Proveedores\Form_Proveedores_Manejo.cs">
       <SubType>Form</SubType>
@@ -172,6 +173,12 @@
     </Compile>
     <Compile Include="Pantallas\Modulo_Creditos\Form_Mantenimiento_Mora.Designer.cs">
       <DependentUpon>Form_Mantenimiento_Mora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Modulo_Creditos\Form_Muestra_Detalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Modulo_Creditos\Form_Muestra_Detalles.Designer.cs">
+      <DependentUpon>Form_Muestra_Detalles.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Modulo_Historico\Historicos.cs">
       <SubType>Form</SubType>
@@ -288,17 +295,15 @@
     <EmbeddedResource Include="Pantallas\Estados\Form_MantenimientoEstados.resx">
       <DependentUpon>Form_MantenimientoEstados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Manueales\Form_VistaManualPDF.resx">
+      <DependentUpon>Form_VistaManualPDF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Manueales\Manuales.resx">
       <DependentUpon>Manuales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Modulo _ Productos\Form_Productos_ManejoProductos.resx">
       <DependentUpon>Form_Productos_ManejoProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Modulo _ Productos\Muestra_Reporte.resx">
-      <DependentUpon>Muestra_Reporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Modulo _ Productos\ReporteActual.rdlc" />
-    <EmbeddedResource Include="Pantallas\Modulo _ Productos\Reporte_Inventario.rdlc" />
     <EmbeddedResource Include="Pantallas\Modulo _ Proveedores\Form_Proveedores_Manejo.resx">
       <DependentUpon>Form_Proveedores_Manejo.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Modulo_Creditos\Form_Mantenimiento_Mora.resx">
       <DependentUpon>Form_Mantenimiento_Mora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Modulo_Creditos\Form_Muestra_Detalles.resx">
+      <DependentUpon>Form_Muestra_Detalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Modulo_Historico\Historicos.resx">
       <DependentUpon>Historicos.cs</DependentUpon>
@@ -657,7 +665,25 @@
   <ItemGroup>
     <None Include="Resources\Sin título.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -23,8 +23,6 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Nuevas
         public double Impuesto;
         public string Lo;
 
-
-        ///NO QUIESTIONS
         public int TotalTienda;
         public int TotalBodega;
 
@@ -995,6 +993,11 @@ Codigo_Credito=(select B.Codigo_Credito from Clientes as B where B.Codigo_Client
         {
             Manueales.Manuales Manual = new Manueales.Manuales();
             Manual.ShowDialog();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

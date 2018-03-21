@@ -58,14 +58,13 @@
             this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.Picture_Decoracion = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.estadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.historicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Picture_Decoracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +84,7 @@
             this.comprasToolStripMenuItem,
             this.estadosToolStripMenuItem,
             this.logOutToolStripMenuItem,
+            this.ayudaToolStripMenuItem,
             this.logOutToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -290,7 +290,7 @@
             // 
             this.aplicacionDeMoraToolStripMenuItem.Name = "aplicacionDeMoraToolStripMenuItem";
             this.aplicacionDeMoraToolStripMenuItem.Size = new System.Drawing.Size(247, 24);
-            this.aplicacionDeMoraToolStripMenuItem.Text = "***Aplicacion de Mora";
+            this.aplicacionDeMoraToolStripMenuItem.Text = "Aplicacion de Mora";
             this.aplicacionDeMoraToolStripMenuItem.Click += new System.EventHandler(this.aplicacionDeMoraToolStripMenuItem_Click);
             // 
             // localidadesToolStripMenuItem
@@ -317,6 +317,20 @@
             this.estadosToolStripMenuItem.Text = "Estados";
             this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
             // 
+            // estadosToolStripMenuItem1
+            // 
+            this.estadosToolStripMenuItem1.Name = "estadosToolStripMenuItem1";
+            this.estadosToolStripMenuItem1.Size = new System.Drawing.Size(149, 24);
+            this.estadosToolStripMenuItem1.Text = "Estados";
+            this.estadosToolStripMenuItem1.Click += new System.EventHandler(this.estadosToolStripMenuItem1_Click);
+            // 
+            // historicosToolStripMenuItem
+            // 
+            this.historicosToolStripMenuItem.Name = "historicosToolStripMenuItem";
+            this.historicosToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.historicosToolStripMenuItem.Text = "Historicos";
+            this.historicosToolStripMenuItem.Click += new System.EventHandler(this.historicosToolStripMenuItem_Click);
+            // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
@@ -331,16 +345,6 @@
             this.logOutToolStripMenuItem1.Text = "LogOut";
             this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
             // 
-            // Picture_Decoracion
-            // 
-            this.Picture_Decoracion.Image = global::Desarrollo.Properties.Resources._2;
-            this.Picture_Decoracion.Location = new System.Drawing.Point(0, 28);
-            this.Picture_Decoracion.Name = "Picture_Decoracion";
-            this.Picture_Decoracion.Size = new System.Drawing.Size(1354, 705);
-            this.Picture_Decoracion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Picture_Decoracion.TabIndex = 2;
-            this.Picture_Decoracion.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -351,43 +355,34 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // estadosToolStripMenuItem1
+            // ayudaToolStripMenuItem
             // 
-            this.estadosToolStripMenuItem1.Name = "estadosToolStripMenuItem1";
-            this.estadosToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
-            this.estadosToolStripMenuItem1.Text = "Estados";
-            this.estadosToolStripMenuItem1.Click += new System.EventHandler(this.estadosToolStripMenuItem1_Click);
-            // 
-            // historicosToolStripMenuItem
-            // 
-            this.historicosToolStripMenuItem.Name = "historicosToolStripMenuItem";
-            this.historicosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.historicosToolStripMenuItem.Text = "Historicos";
-            this.historicosToolStripMenuItem.Click += new System.EventHandler(this.historicosToolStripMenuItem_Click);
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 23);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Picture_Decoracion);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Menu_Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Menu_Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Picture_Decoracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -424,12 +419,12 @@
         private System.Windows.Forms.ToolStripMenuItem pantallaDeSalidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aplicacionDeMoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arqueoDeCajaToolStripMenuItem1;
-        private System.Windows.Forms.PictureBox Picture_Decoracion;
         private System.Windows.Forms.ToolStripMenuItem confirmarCierreToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem historicosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
     }
 }

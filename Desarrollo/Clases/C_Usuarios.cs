@@ -99,8 +99,8 @@ namespace Desarrollo.Clases
         {
            
             bool resultado = false;
-            this.sql = string.Format(@"SELECT[ID],[Contraseña], [Nombre], [Codigo_Rol], [Codigo_Estado]
-           FROM Empleados where[ID] = '{0}' AND[Contraseña] = '{1}'", this.Var_Id_empleado, this.Var_Contrasena);
+            this.sql = string.Format(@"SELECT [ID],[Contraseña], [Nombre], [Codigo_Rol], [Codigo_Estado]
+           FROM Empleados where [ID] = '{0}' AND [Contraseña] = '{1}'", this.Var_Id_empleado, this.Var_Contrasena);
             this.cmd = new SqlCommand(this.sql, this.cnx);
             this.cnx.Open();
             SqlDataReader Reg = null;

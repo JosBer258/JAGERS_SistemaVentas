@@ -1593,7 +1593,7 @@ where A.Codigo_Factura = '{0}'", busq);
 
             string Bus;
             Bus = dataGridView2.CurrentRow.Cells[0].Value.ToString();
-            LlenarDetalles(dataGridView3, Convert.ToUInt16(Bus));
+            LlenarDetalles(dataGridView3, (int) Convert.ToDouble(Bus));
         }
 
         private void tabPage3_Click(object sender, EventArgs e)

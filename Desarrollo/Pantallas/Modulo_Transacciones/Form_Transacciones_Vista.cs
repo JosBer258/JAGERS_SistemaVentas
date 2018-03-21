@@ -17,6 +17,8 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
     public partial class Form_Transacciones_Vista : System.Windows.Forms.Form
     {
         Form_Creditos_CargarMora cargar = new Form_Creditos_CargarMora();
+        C_Transacciones Tran = new C_Transacciones();
+
         public string Name;
         private string TipoTransaccion;
         private string Var_OptenerCodigoMora;
@@ -41,10 +43,10 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
 
         private void Form_Transacciones_Vista_Load(object sender, EventArgs e)
         {
-            extraerTransacciones(DGV_Transacciones);
-            extraerEstados(cmbBxEstados);
-            extraerTipoDoc(cmbBxTipoDoc);
-            extraerTipoTrans(cmbBxTipos);
+            Tran.Fun_ExtraerTransacciones(DGV_Transacciones);
+            Tran.Fun_ExtraerEstados(cmbBxEstados);
+            Tran.Fun_ExtraerTipoDoc(cmbBxTipoDoc);
+            Tran.Fun_ExtraerTipoTrans(cmbBxTipos);
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -92,14 +94,10 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
                 MessageBox.Show("Debe selecionar una transaccion del tipo credito", "Error de aplicacion de mora", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
 
+          
             cargar.NOMBRE = Name;
-
             cargar.ShowDialog();
-
-
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -110,20 +108,20 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
         private void cmbBxEstados_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(radioEstados.Checked == true)
-                filtrarEstado(DGV_Transacciones,Convert.ToInt16( cmbBxEstados.SelectedValue));
+                Tran.Fun_FiltrarEstado(DGV_Transacciones,Convert.ToInt16( cmbBxEstados.SelectedValue));
 
         }
 
         private void cmbBxTipos_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(radioTipos.Checked == true)
-                 filtrarTipoTrans(DGV_Transacciones, Convert.ToInt16(cmbBxTipos.SelectedValue));
+                Tran.Fun_FiltrarTipoTrans(DGV_Transacciones, Convert.ToInt16(cmbBxTipos.SelectedValue));
         }
 
         private void cmbBxTipoDoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(radioTipoDoc.Checked == true)
-                 filtrarTipoDoc(DGV_Transacciones, Convert.ToInt16(cmbBxTipoDoc.SelectedValue));
+                Tran.Fun_FiltrarTipoDoc(DGV_Transacciones, Convert.ToInt16(cmbBxTipoDoc.SelectedValue));
         }
 
         private void DGV_Transacciones_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -134,248 +132,16 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
         private void radioTodas_CheckedChanged(object sender, EventArgs e)
         {
             if (radioTodas.Checked == true)
-                extraerTransacciones(DGV_Transacciones);
+                Tran.Fun_ExtraerTransacciones(DGV_Transacciones);
 
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            filtarFechaVenc(DGV_Transacciones, dateTimePicker1.Value.Date.ToString());
+            Tran.Fun_FiltarFechaVenc(DGV_Transacciones, DATE_FiltroFecha.Value.Date.ToString());
         }
 
 
-
-        public void extraerTransacciones(DataGridView dgv)
-        {
-
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                con.sql = string.Format
-                (@"select
-A.Codigo_Transaccion as [Código de Transacción],
-	               A.Numero_Documento as [No. de Documento],
-	               B.Descripcion as [Tipo de Transacción],
-	               C.Descripcion as [Tipo de Documentación],
-	               A.Fecha as [Fecha de Realización],
-	               A.Monto as [Monto Total],
-	               D.Nombre +space(2)+ D.Apellido as [Nombre del Cliente],
-	               A.Fecha_Vencimiento as [Fecha de Vencimiento],
-	               
-	               E.Porcentaje_Mora as [Porcentaje de Mora],
-                   (Select F.Descripcion_Estado from Estados as F where F.Codigo_Estado=A.Codigo_Estado and F.Descripcion_Estado like '%Transac%')
-                    FROM [dbo].[Transacciones] as A
-                    inner join [dbo].[Tipo_Transaccion] as B
-                    on A.Codigo_Tipo_Transaccion = B.Codigo_TipoTransaccion
-                    inner join [dbo].[Tipos_Documentos] as C
-                    on A.Codigo_Tipo_Documento = C.Codigo_TipoDeDocumento
-                    left join [dbo].[Clientes] as D
-                    on A.Codigo_Cliente = D.Codigo_Cliente
-                    left join [dbo].[Mora] as E
-                    on A.Codigo_Mora = E.Codigo_Mora");
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-                con.cnx.Close();
-
-            }
-            catch
-            {
-
-            }
-
-        }
-
-        public void extraerEstados(ComboBox est)
-        {
-            Conexion Con = new Conexion();
-
-            Con.cnx.Open();
-            Con.sql = string.Format(@"SELECT Codigo_Estado, Descripcion_Estado FROM Estados WHERE Codigo_Tipo_Estado = 8");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            est.ValueMember = "Codigo_Estado";
-            est.DisplayMember = "Descripcion_Estado";
-            est.DataSource = Con.dt;
-            
-        }
-
-        public void extraerTipoDoc(ComboBox tipoDoc)
-        {
-            Conexion Con = new Conexion();
-
-            Con.cnx.Open();
-            Con.sql = string.Format(@"SELECT Codigo_TipoDeDocumento, Descripcion FROM Tipos_Documentos");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            tipoDoc.ValueMember = "Codigo_TipoDeDocumento";
-            tipoDoc.DisplayMember = "Descripcion";
-            tipoDoc.DataSource = Con.dt;
-
-        }
-
-        public void extraerTipoTrans(ComboBox tipoTrans)
-        {
-            Conexion Con = new Conexion();
-
-            Con.cnx.Open();
-            Con.sql = string.Format(@"SELECT Codigo_TipoTransaccion, Descripcion FROM Tipo_Transaccion");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            tipoTrans.ValueMember = "Codigo_TipoTransaccion";
-            tipoTrans.DisplayMember = "Descripcion";
-            tipoTrans.DataSource = Con.dt;
-
-        }
-
-        public void filtrarEstado(DataGridView dgv, int a)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                con.sql = string.Format
-                (@"select
-A.Codigo_Transaccion as [Código de Transacción],
-	               A.Numero_Documento as [No. de Documento],
-	               B.Descripcion as [Tipo de Transacción],
-	               C.Descripcion as [Tipo de Documentación],
-	               A.Fecha as [Fecha de Realización],
-	               A.Monto as [Monto Total],
-	               D.Nombre +space(2)+ D.Apellido as [Nombre del Cliente],
-	               A.Fecha_Vencimiento as [Fecha de Vencimiento],
-	       
-	               E.Porcentaje_Mora as [Porcentaje de Mora],
-                   (Select F.Descripcion_Estado from Estados as F where F.Codigo_Estado=A.Codigo_Estado and F.Descripcion_Estado like '%Transac%')
-                    FROM [dbo].[Transacciones] as A
-                    inner join [dbo].[Tipo_Transaccion] as B
-                    on A.Codigo_Tipo_Transaccion = B.Codigo_TipoTransaccion
-                    inner join [dbo].[Tipos_Documentos] as C
-                    on A.Codigo_Tipo_Documento = C.Codigo_TipoDeDocumento
-                    left join [dbo].[Clientes] as D
-                    on A.Codigo_Cliente = D.Codigo_Cliente
-                    left join [dbo].[Mora] as E
-                    on A.Codigo_Mora = E.Codigo_Mora
-                    
-                   WHERE A.Codigo_Estado =" + (a));
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-                con.cnx.Close();
-            }
-            catch
-            {
-                
-            }
-
-        }
-
-        public void filtrarTipoTrans(DataGridView dgv, int a)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                con.sql = string.Format
-                (@"select
-A.Codigo_Transaccion as [Código de Transacción],
-	               A.Numero_Documento as [No. de Documento],
-	               B.Descripcion as [Tipo de Transacción],
-	               C.Descripcion as [Tipo de Documentación],
-	               A.Fecha as [Fecha de Realización],
-	               A.Monto as [Monto Total],
-	               D.Nombre +space(2)+ D.Apellido as [Nombre del Cliente],
-	               A.Fecha_Vencimiento as [Fecha de Vencimiento],
-	            
-	               E.Porcentaje_Mora as [Porcentaje de Mora],
-                   (Select F.Descripcion_Estado from Estados as F where F.Codigo_Estado=A.Codigo_Estado and F.Descripcion_Estado like '%Transac%')
-                    FROM [dbo].[Transacciones] as A
-                    inner join [dbo].[Tipo_Transaccion] as B
-                    on A.Codigo_Tipo_Transaccion = B.Codigo_TipoTransaccion
-                    inner join [dbo].[Tipos_Documentos] as C
-                    on A.Codigo_Tipo_Documento = C.Codigo_TipoDeDocumento
-                    left join [dbo].[Clientes] as D
-                    on A.Codigo_Cliente = D.Codigo_Cliente
-                    left join [dbo].[Mora] as E
-                    on A.Codigo_Mora = E.Codigo_Mora
-                    
-                   WHERE A.Codigo_Tipo_Transaccion =" + (a));
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-                con.cnx.Close();
-            }
-            catch
-            {
-
-            }
-        }
-
-        public void filtrarTipoDoc(DataGridView dgv, int a)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                con.sql = string.Format
-                (@"select
-A.Codigo_Transaccion as [Código de Transacción],
-	               A.Numero_Documento as [No. de Documento],
-	               B.Descripcion as [Tipo de Transacción],
-	               C.Descripcion as [Tipo de Documentación],
-	               A.Fecha as [Fecha de Realización],
-	               A.Monto as [Monto Total],
-	               D.Nombre +space(2)+ D.Apellido as [Nombre del Cliente],
-	               A.Fecha_Vencimiento as [Fecha de Vencimiento],
-	               
-	               E.Porcentaje_Mora as [Porcentaje de Mora],
-                   (Select F.Descripcion_Estado from Estados as F where F.Codigo_Estado=A.Codigo_Estado and F.Descripcion_Estado like '%Transac%')
-                    FROM [dbo].[Transacciones] as A
-                    inner join [dbo].[Tipo_Transaccion] as B
-                    on A.Codigo_Tipo_Transaccion = B.Codigo_TipoTransaccion
-                    inner join [dbo].[Tipos_Documentos] as C
-                    on A.Codigo_Tipo_Documento = C.Codigo_TipoDeDocumento
-                    left join [dbo].[Clientes] as D
-                    on A.Codigo_Cliente = D.Codigo_Cliente
-                    left join [dbo].[Mora] as E
-                    on A.Codigo_Mora = E.Codigo_Mora
-                    
-                   WHERE A.Codigo_Tipo_Documento =" + (a));
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-                con.cnx.Close();
-            }
-            catch
-            {
-
-            }
-        }
 
         private void radioEstados_CheckedChanged(object sender, EventArgs e)
         {
@@ -394,8 +160,8 @@ A.Codigo_Transaccion as [Código de Transacción],
         private void radioFechaVen_CheckedChanged(object sender, EventArgs e)
         {
             if (radioFechaVen.Checked == true)
-                dateTimePicker1.Enabled = true;
-            else dateTimePicker1.Enabled = false;
+                DATE_FiltroFecha.Enabled = true;
+            else DATE_FiltroFecha.Enabled = false;
         }
 
         public void selectFila(DataGridViewCellEventArgs e)
@@ -412,62 +178,20 @@ A.Codigo_Transaccion as [Código de Transacción],
                 txtCodTrans.Text = row.Cells["Código de Transacción"].Value.ToString();
                 txtNumDoc.Text = row.Cells["No. de Documento"].Value.ToString();
                 txtMonto.Text = row.Cells["Monto Total"].Value.ToString();               
-                dateTimePicker3.Value = Convert.ToDateTime(row.Cells["Fecha de Vencimiento"].Value.ToString());
+                DATE_FechaTransaccion.Value = Convert.ToDateTime(row.Cells["Fecha de Realización"].Value.ToString());
 
-
-
-                DataGridViewRow fil = DGV_Transacciones.Rows[e.RowIndex];
-                cargar.Txt_CodigoTransaccionMora.Text = Convert.ToString(fil.Cells[0].Value);
-                cargar.Txt_NombreClientes.Text = Convert.ToString(fil.Cells[6].Value);
-                
+                cargar.Txt_CodigoTransaccionMora.Text = row.Cells["Código de Transacción"].Value.ToString();
+                cargar.Txt_NombreClientes.Text = row.Cells["Nombre del Cliente"].Value.ToString();
+                cargar.Txt_MontoOriginal.Text = row.Cells["Monto Total"].Value.ToString();
+                cargar.Txt_FechaRealizacionFactura.Text = row.Cells["Fecha de Realización"].Value.ToString();
+                cargar.Txt_FechaVencimientoFactura.Text = row.Cells["Fecha de Vencimiento"].Value.ToString();
+                cargar.Txt_NumeroFactura.Text = row.Cells["No. de Documento"].Value.ToString();
+                cargar.Txt_PorcentajeMora.Text= row.Cells["Porcentaje de Mora"].Value.ToString();
+                cargar.Txt_NombreEmpleado.Text = Name;
             }
         }
                 
-        private void filtarFechaVenc(DataGridView dgv, string fechaVenc)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                con.sql = string.Format
-                (@"select
-A.Codigo_Transaccion as [Código de Transacción],
-	               A.Numero_Documento as [No. de Documento],
-	               B.Descripcion as [Tipo de Transacción],
-	               C.Descripcion as [Tipo de Documentación],
-	               A.Fecha as [Fecha de Realización],
-	               A.Monto as [Monto Total],
-	               D.Nombre + space(2)+D.Apellido as [Nombre del Cliente],
-	               A.Fecha_Vencimiento as [Fecha de Vencimiento],
-	             
-	               E.Porcentaje_Mora as [Porcentaje de Mora],
-                   (Select F.Descripcion_Estado from Estados as F where F.Codigo_Estado=A.Codigo_Estado and F.Descripcion_Estado like '%Transac%')
-                    FROM [dbo].[Transacciones] as A
-                    inner join [dbo].[Tipo_Transaccion] as B
-                    on A.Codigo_Tipo_Transaccion = B.Codigo_TipoTransaccion
-                    inner join [dbo].[Tipos_Documentos] as C
-                    on A.Codigo_Tipo_Documento = C.Codigo_TipoDeDocumento
-                    left join [dbo].[Clientes] as D
-                    on A.Codigo_Cliente = D.Codigo_Cliente
-                    left join [dbo].[Mora] as E
-                    on A.Codigo_Mora = E.Codigo_Mora
-                    
-                   WHERE A.Fecha_Vencimiento = '" + fechaVenc + "'");
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-                con.cnx.Close();
-            }
-            catch
-            {
-
-            }
-        }
-
-
+        
         private void limpiar()
         {
             txtCodTrans.Text = string.Empty;
@@ -479,7 +203,7 @@ A.Codigo_Transaccion as [Código de Transacción],
         {
             DataGridViewRow row = this.DGV_Transacciones.Rows[e.RowIndex];
             TipoTransaccion = row.Cells["Tipo de Transacción"].Value.ToString();
-            if (TipoTransaccion != "Credito")
+            if (TipoTransaccion != "Credito" )
             {
                 MessageBox.Show("Debe selecionar una transaccion del tipo credito", "Error de aplicacion de mora", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -487,12 +211,17 @@ A.Codigo_Transaccion as [Código de Transacción],
             txtCodTrans.Text = row.Cells["Código de Transacción"].Value.ToString();
             txtNumDoc.Text = row.Cells["No. de Documento"].Value.ToString();
             txtMonto.Text = row.Cells["Monto Total"].Value.ToString();     
-            dateTimePicker3.Value= Convert.ToDateTime(row.Cells["Fecha de Vencimiento"].Value.ToString());
+           DATE_FechaTransaccion.Value= Convert.ToDateTime(row.Cells["Fecha de Realización"].Value.ToString());
           
-            DataGridViewRow fil = DGV_Transacciones.Rows[e.RowIndex];
-            cargar.Txt_CodigoTransaccionMora.Text = Convert.ToString(fil.Cells[0].Value);
-            cargar.Txt_NombreClientes.Text = Convert.ToString(fil.Cells[6].Value);
-           
+
+            cargar.Txt_CodigoTransaccionMora.Text = row.Cells["Código de Transacción"].Value.ToString();
+            cargar.Txt_NombreClientes.Text = row.Cells["Nombre del Cliente"].Value.ToString();
+            cargar.Txt_MontoOriginal.Text = row.Cells["Monto Total"].Value.ToString();
+            cargar.Txt_FechaRealizacionFactura.Text = row.Cells["Fecha de Realización"].Value.ToString();
+            cargar.Txt_FechaVencimientoFactura.Text = row.Cells["Fecha de Vencimiento"].Value.ToString();
+            cargar.Txt_NumeroFactura.Text = row.Cells["No. de Documento"].Value.ToString();
+            cargar.Txt_PorcentajeMora.Text = row.Cells["Porcentaje de Mora"].Value.ToString();
+            cargar.Txt_NombreEmpleado.Text = Name;
         }
 
         private void txtCodTrans_TextChanged(object sender, EventArgs e)
@@ -502,7 +231,7 @@ A.Codigo_Transaccion as [Código de Transacción],
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            extraerTransacciones(DGV_Transacciones);
+            Tran.Fun_ExtraerTransacciones(DGV_Transacciones);
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -511,6 +240,11 @@ A.Codigo_Transaccion as [Código de Transacción],
         }
 
         private void DGV_Transacciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DATE_FechaTransaccion_ValueChanged(object sender, EventArgs e)
         {
 
         }

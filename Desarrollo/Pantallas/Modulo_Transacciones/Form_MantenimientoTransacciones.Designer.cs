@@ -48,8 +48,6 @@
             this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
             this.tipo_TransaccionTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.Tipo_TransaccionTableAdapter();
             this.Grupo_Documentacion = new System.Windows.Forms.GroupBox();
-            this.DaraGriew_Documentacion = new System.Windows.Forms.DataGridView();
-            this.tiposDocumentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Txt_EstadoDocumentacion = new System.Windows.Forms.ComboBox();
             this.Txt_DescripcionDocumentacion = new System.Windows.Forms.TextBox();
             this.Txt_CodigoDocumentacion = new System.Windows.Forms.TextBox();
@@ -58,14 +56,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.Radio_AgregarDocumentos = new System.Windows.Forms.RadioButton();
             this.Radio_ActDocumentos = new System.Windows.Forms.RadioButton();
+            this.DaraGriew_Documentacion = new System.Windows.Forms.DataGridView();
+            this.tiposDocumentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipos_DocumentosTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.Tipos_DocumentosTableAdapter();
             this.button5 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Radio_AgregarDocumentos = new System.Windows.Forms.RadioButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Grupo_Transacciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DaraGriew_Transacciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoTransaccionBindingSource)).BeginInit();
@@ -142,6 +143,7 @@
             this.Bttn_Aceptar.Size = new System.Drawing.Size(118, 53);
             this.Bttn_Aceptar.TabIndex = 7;
             this.Bttn_Aceptar.Text = "Aceptar";
+            this.toolTip1.SetToolTip(this.Bttn_Aceptar, "Dele \"Aceptar\" para cargar \r\nlos datos al sistema");
             this.Bttn_Aceptar.UseVisualStyleBackColor = true;
             this.Bttn_Aceptar.Click += new System.EventHandler(this.Bttn_Aceptar_Click);
             // 
@@ -270,26 +272,6 @@
             this.Grupo_Documentacion.TabStop = false;
             this.Grupo_Documentacion.Text = "Manejo de Documentos";
             // 
-            // DaraGriew_Documentacion
-            // 
-            this.DaraGriew_Documentacion.AllowUserToAddRows = false;
-            this.DaraGriew_Documentacion.AllowUserToDeleteRows = false;
-            this.DaraGriew_Documentacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DaraGriew_Documentacion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.DaraGriew_Documentacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DaraGriew_Documentacion.Location = new System.Drawing.Point(16, 210);
-            this.DaraGriew_Documentacion.Name = "DaraGriew_Documentacion";
-            this.DaraGriew_Documentacion.ReadOnly = true;
-            this.DaraGriew_Documentacion.Size = new System.Drawing.Size(533, 150);
-            this.DaraGriew_Documentacion.TabIndex = 12;
-            this.DaraGriew_Documentacion.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DaraGriew_Documentacion_CellContentDoubleClick);
-            this.DaraGriew_Documentacion.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DaraGriew_Documentacion_CellDoubleClick);
-            // 
-            // tiposDocumentosBindingSource
-            // 
-            this.tiposDocumentosBindingSource.DataMember = "Tipos_Documentos";
-            this.tiposDocumentosBindingSource.DataSource = this.ventasAutoPartesDataSet;
-            // 
             // Txt_EstadoDocumentacion
             // 
             this.Txt_EstadoDocumentacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -333,6 +315,7 @@
             this.Bttn_AceptarDocumentacion.Size = new System.Drawing.Size(118, 53);
             this.Bttn_AceptarDocumentacion.TabIndex = 7;
             this.Bttn_AceptarDocumentacion.Text = "Aceptar";
+            this.toolTip1.SetToolTip(this.Bttn_AceptarDocumentacion, "Dele \"Aceptar\" para cargar \r\nlos datos al sistema");
             this.Bttn_AceptarDocumentacion.UseVisualStyleBackColor = true;
             this.Bttn_AceptarDocumentacion.Click += new System.EventHandler(this.Bttn_AceptarDocumentacion_Click);
             // 
@@ -363,6 +346,18 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Codigo";
             // 
+            // Radio_AgregarDocumentos
+            // 
+            this.Radio_AgregarDocumentos.AutoSize = true;
+            this.Radio_AgregarDocumentos.Location = new System.Drawing.Point(188, 31);
+            this.Radio_AgregarDocumentos.Name = "Radio_AgregarDocumentos";
+            this.Radio_AgregarDocumentos.Size = new System.Drawing.Size(75, 19);
+            this.Radio_AgregarDocumentos.TabIndex = 3;
+            this.Radio_AgregarDocumentos.TabStop = true;
+            this.Radio_AgregarDocumentos.Text = "Agregar";
+            this.Radio_AgregarDocumentos.UseVisualStyleBackColor = true;
+            this.Radio_AgregarDocumentos.CheckedChanged += new System.EventHandler(this.Radio_AgregarDocumentos_CheckedChanged);
+            // 
             // Radio_ActDocumentos
             // 
             this.Radio_ActDocumentos.AutoSize = true;
@@ -374,6 +369,26 @@
             this.Radio_ActDocumentos.Text = "Actualizar";
             this.Radio_ActDocumentos.UseVisualStyleBackColor = true;
             this.Radio_ActDocumentos.CheckedChanged += new System.EventHandler(this.Radio_ActDocumentos_CheckedChanged);
+            // 
+            // DaraGriew_Documentacion
+            // 
+            this.DaraGriew_Documentacion.AllowUserToAddRows = false;
+            this.DaraGriew_Documentacion.AllowUserToDeleteRows = false;
+            this.DaraGriew_Documentacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DaraGriew_Documentacion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DaraGriew_Documentacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DaraGriew_Documentacion.Location = new System.Drawing.Point(16, 210);
+            this.DaraGriew_Documentacion.Name = "DaraGriew_Documentacion";
+            this.DaraGriew_Documentacion.ReadOnly = true;
+            this.DaraGriew_Documentacion.Size = new System.Drawing.Size(533, 150);
+            this.DaraGriew_Documentacion.TabIndex = 12;
+            this.DaraGriew_Documentacion.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DaraGriew_Documentacion_CellContentDoubleClick);
+            this.DaraGriew_Documentacion.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DaraGriew_Documentacion_CellDoubleClick);
+            // 
+            // tiposDocumentosBindingSource
+            // 
+            this.tiposDocumentosBindingSource.DataMember = "Tipos_Documentos";
+            this.tiposDocumentosBindingSource.DataSource = this.ventasAutoPartesDataSet;
             // 
             // tipos_DocumentosTableAdapter
             // 
@@ -422,18 +437,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tipo de Documento";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // Radio_AgregarDocumentos
-            // 
-            this.Radio_AgregarDocumentos.AutoSize = true;
-            this.Radio_AgregarDocumentos.Location = new System.Drawing.Point(188, 31);
-            this.Radio_AgregarDocumentos.Name = "Radio_AgregarDocumentos";
-            this.Radio_AgregarDocumentos.Size = new System.Drawing.Size(75, 19);
-            this.Radio_AgregarDocumentos.TabIndex = 3;
-            this.Radio_AgregarDocumentos.TabStop = true;
-            this.Radio_AgregarDocumentos.Text = "Agregar";
-            this.Radio_AgregarDocumentos.UseVisualStyleBackColor = true;
-            this.Radio_AgregarDocumentos.CheckedChanged += new System.EventHandler(this.Radio_AgregarDocumentos_CheckedChanged);
             // 
             // errorProvider1
             // 
@@ -509,5 +512,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RadioButton Radio_AgregarDocumentos;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

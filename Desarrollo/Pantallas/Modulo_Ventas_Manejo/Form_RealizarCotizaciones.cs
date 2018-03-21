@@ -227,7 +227,15 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            int Var_renglonesSeleccionados = dataGridView1.SelectedRows.Count;
+            int Var_cuadrosselecionados = dataGridView1.SelectedCells.Count;
+
+            if (Var_renglonesSeleccionados == 0 && Var_cuadrosselecionados == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar por lo menos una fila.");
+                return;
+            }
+
             double Resta;
             Resta=Convert.ToDouble(dataGridView1.CurrentRow.Cells[5].Value.ToString());
             dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);

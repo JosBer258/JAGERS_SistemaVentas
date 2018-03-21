@@ -13,8 +13,8 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 {
     public partial class Form__Ingreso_NuevaContraseña : System.Windows.Forms.Form
     {
-        Validaciones Validar = new Validaciones();   
-        C_Desbloqueo Des = new C_Desbloqueo();
+        Validaciones CL_Validar = new Validaciones();   
+        C_Desbloqueo CL_Des = new C_Desbloqueo();
 
         public string Var_base_id, Var_base_contraseña;
 
@@ -80,9 +80,9 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
            
 
 
-            contraseña_a_codificar = Validar.EncriptarContraseña(Txt_Password_Primera.Text);
-            Des.Fun_NuevaContraseña(Var_base_id, contraseña_a_codificar);
-            Des.Fun_Restauracion(Var_base_id);
+            contraseña_a_codificar = CL_Validar.EncriptarContraseña(Txt_Password_Primera.Text);
+            CL_Des.Fun_NuevaContraseña(Var_base_id, contraseña_a_codificar);
+            CL_Des.Fun_Restauracion(Var_base_id);
 
             MessageBox.Show("Contraseña cambiada con exito","Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             this.Close();
@@ -95,17 +95,17 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 
         private void Txt_Password_Primera_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.ValidarPassword(sender, e);
+            CL_Validar.ValidarPassword(sender, e);
         }
 
         private void Txt_Password_Second_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.ValidarPassword(sender, e);
+            CL_Validar.ValidarPassword(sender, e);
         }
 
         private void Txt_ContraseñaVieja_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.ValidarPassword(sender, e);
+            CL_Validar.ValidarPassword(sender, e);
         }
 
         private void Form__Ingreso_NuevaContraseña_Load(object sender, EventArgs e)

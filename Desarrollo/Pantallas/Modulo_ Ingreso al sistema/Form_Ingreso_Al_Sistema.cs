@@ -14,8 +14,8 @@ namespace Desarrollo
 {
     public partial class Form_Ingreso_Al_Sistema : System.Windows.Forms.Form
     {
-        C_Usuarios Users = new C_Usuarios();
-        Conexion con = new Conexion();
+        C_Usuarios CL_Users = new C_Usuarios();
+        Conexion Conn = new Conexion();
 
 
         public Form_Ingreso_Al_Sistema()
@@ -64,40 +64,40 @@ namespace Desarrollo
             string login_usuario = txtuser.Text;
             //string login_pass = (txtpwd.Text);
 
-            Users.Var_Id_empleado = login_usuario;
-            Users.Var_Contrasena = login_pass;
+            CL_Users.Var_Id_empleado = login_usuario;
+            CL_Users.Var_Contrasena = login_pass;
 
             if (txtuser.Text == "Usuario" && txtpwd.Text == "12345")
             {
                 MessageBox.Show("Por Favor ingrese un usuario y una contraseña", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
             }else
-            if (Users.Fun_Buscar_UserAndPass() == true)
+            if (CL_Users.Fun_Buscar_UserAndPass() == true)
             {
 
-                if(Users.Var_Codigo_estado == 1)
+                if(CL_Users.Var_Codigo_estado == 1)
                 {
-                    Users.Fun_RestablecerIntentos();
+                    CL_Users.Fun_RestablecerIntentos();
 
                           Menu_Principal Menu = new Menu_Principal();
-                         Menu.Var_codigo_rol = Convert.ToString(Users.Var_Codigo_rol); 
+                         Menu.Var_codigo_rol = Convert.ToString(CL_Users.Var_Codigo_rol); 
                          Menu.Var_empleado_contraseña = Convert.ToString(txtpwd.Text); 
                          Menu.Var_id_empleado = Convert.ToString(txtuser.Text);        
-                         Menu.Var_empleado_nombre = Convert.ToString(Users.Var_Nombre);
+                         Menu.Var_empleado_nombre = Convert.ToString(CL_Users.Var_Nombre);
                          this.Hide();
                          Menu.Show();
                  }
                 else
-                    if (Users.Var_Codigo_estado == 2)
+                    if (CL_Users.Var_Codigo_estado == 2)
                 {
-                    MessageBox.Show("Usuario: " + Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Usuario: " + CL_Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Form_Desbloqueo_De_Usuario Desbloque = new Form_Desbloqueo_De_Usuario();
                     Desbloque.Var_id_usuario_desbloquear = txtuser.Text;
                     Desbloque.ShowDialog();
                 }
-                else if (Users.Var_Codigo_estado == 3)
+                else if (CL_Users.Var_Codigo_estado == 3)
                 {
-                    MessageBox.Show("Usuario: " + Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Usuario: " + CL_Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Form_Desbloqueo_De_Usuario Desbloque = new Form_Desbloqueo_De_Usuario();
                     Desbloque.Var_id_usuario_desbloquear = txtuser.Text;
                     Desbloque.ShowDialog();
@@ -111,20 +111,20 @@ namespace Desarrollo
                 }
             }
             else
-                if (Users.Fun_Buscar_User() == true)
+                if (CL_Users.Fun_Buscar_User() == true)
             {
                 
                 txtpwd.Text = "";
                 txtpwd.Focus();
 
-                if (Users.Var_Oportunidades_numero > 0)
+                if (CL_Users.Var_Oportunidades_numero > 0)
                 {
-                    MessageBox.Show("Quedan: " + Users.Var_Oportunidades_numero + " intentos.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Quedan: " + CL_Users.Var_Oportunidades_numero + " intentos.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
                     
-                  MessageBox.Show("Usuario: " + Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                  MessageBox.Show("Usuario: " + CL_Users.Var_Id_empleado + " Ha sido bloqueado, favor acudir al Gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                
 
@@ -133,7 +133,7 @@ namespace Desarrollo
           
             }
             else 
-            if (Users.Fun_Buscar_UserAndPass() == false)
+            if (CL_Users.Fun_Buscar_UserAndPass() == false)
             {
                 cont--;
                 if (cont > 0)

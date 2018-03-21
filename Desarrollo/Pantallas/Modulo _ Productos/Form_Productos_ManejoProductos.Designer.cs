@@ -700,12 +700,12 @@
             // 
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.label41);
             this.tabPage3.Controls.Add(this.Pest3_ComBox_Estado);
             this.tabPage3.Controls.Add(this.label23);
             this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.Pest3_Txt_Categorias);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.Pest3_Txt_NombreMarca);
@@ -906,9 +906,9 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(754, 326);
+            this.button7.Location = new System.Drawing.Point(733, 308);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(107, 49);
+            this.button7.Size = new System.Drawing.Size(128, 67);
             this.button7.TabIndex = 50;
             this.button7.Text = "Limpiar";
             this.button7.UseVisualStyleBackColor = true;
@@ -916,9 +916,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(867, 326);
+            this.button6.Location = new System.Drawing.Point(867, 308);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 49);
+            this.button6.Size = new System.Drawing.Size(128, 67);
             this.button6.TabIndex = 3;
             this.button6.Text = "Aceptar";
             this.button6.UseVisualStyleBackColor = true;

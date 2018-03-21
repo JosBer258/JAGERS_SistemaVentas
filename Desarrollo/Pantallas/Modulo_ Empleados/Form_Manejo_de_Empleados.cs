@@ -14,10 +14,11 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
 {
     public partial class Form_Manejo_de_Empleados : System.Windows.Forms.Form
     {
-        C_Empleados Emp = new C_Empleados();
-        Validaciones Val = new Validaciones();
-        private bool CambiosRealizados = false;
+        C_Empleados Cl_Emp = new C_Empleados();
+        Validaciones Cl_Val = new Validaciones();
 
+        private bool LEmp_CambiosRealizados = false;
+        public string LEmp_NombEmp="";
 
         public Form_Manejo_de_Empleados()
         {
@@ -28,7 +29,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult opcion;
-            if (CambiosRealizados == true)
+            if (LEmp_CambiosRealizados == true)
             {
                 opcion = MessageBox.Show("No ha guardado los cambios realizados, ¿Quiere guardar los datos y salir?", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
                 if (opcion == DialogResult.Yes)
@@ -68,13 +69,13 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
 
         private void Form_Manejo_de_Empleados_Load(object sender, EventArgs e)
         {
-            CambiosRealizados = false;
-            Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
+            LEmp_CambiosRealizados = false;
+            Cl_Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
             Pest1_Txt_CodigoEmpleado.Enabled = false;
-            Emp.Fun_ExtraerRoles(Pest1_ComBox_RolEmpleado);
-            Val.ExtraerFechaNacimientoPermitida(Pest1_ComBox_FechaAño);
-            Emp.Fun_ExtraerEstados(Pest1_ComBox_Estado);
-            Emp.Fun_ExtraerLocalidades(Comb_Localidad);
+            Cl_Emp.Fun_ExtraerRoles(Pest1_ComBox_RolEmpleado);
+            Cl_Val.ExtraerFechaNacimientoPermitida(Pest1_ComBox_FechaAño);
+            Cl_Emp.Fun_ExtraerEstados(Pest1_ComBox_Estado);
+            Cl_Emp.Fun_ExtraerLocalidades(Comb_Localidad);
 
 
 
@@ -126,8 +127,8 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             LimpiarTodo();
             Pest1_Radio_Nuevo_Empleado.Checked = true;
-            CambiosRealizados = false;
-            Pest1_Txt_CodigoEmpleado.Text = Convert.ToString(Emp.OptenerUltimoID());
+            LEmp_CambiosRealizados = false;
+            Pest1_Txt_CodigoEmpleado.Text = Convert.ToString(Cl_Emp.Fun_OptenerUltimoID());
 
 
         }
@@ -160,7 +161,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
                     ExtraerPorIdentidad(Pest1_Txt_ID.Text);
                     Pest1_Radio_Manejo.Checked = true;
                 }
-                CambiosRealizados = false;
+                LEmp_CambiosRealizados = false;
                 MessageBox.Show("Listo");
             }
 
@@ -302,7 +303,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
             }
         }
 
@@ -349,7 +350,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
             {
                 Pest1_ComBox_Estado.Enabled = false;
                 Pest1_ComBox_Estado.SelectedValue = (4);
-                Pest1_Txt_CodigoEmpleado.Text = Convert.ToString(Emp.OptenerUltimoID());
+                Pest1_Txt_CodigoEmpleado.Text = Convert.ToString(Cl_Emp.Fun_OptenerUltimoID());
                 Pest1_Txt_Contraseña.Enabled = true;
                 Pest1_Txt_ApellidoEmpleado.Enabled = true;
                 Pest1_ComBox_FechaDia.Enabled = true;
@@ -392,63 +393,63 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
             {
                 
                 Fun_Ajecutar();
-                Emp.IngresoLogin();
+                Cl_Emp.IngresoLogin();
                 LimpiarTodo();
-                CambiosRealizados = false;
+                LEmp_CambiosRealizados = false;
             }
             else if (Pest1_Radio_Manejo.Checked == true)
             {
                 IngresoCambios();
-                CambiosRealizados = false;
+                LEmp_CambiosRealizados = false;
             }
         }
 
         private void Pest1_Txt_ID_KeyPress(object sender, KeyPressEventArgs e)
         {
          
-            Val.ValidarID(sender, e);//Validacion de ID
+            Cl_Val.ValidarID(sender, e);//Validacion de ID
         }
 
         private void Pest1_Txt_NombreEmpleado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.PrimeroMayuscula(sender, e, Pest1_Txt_NombreEmpleado);
-            Val.ValirLetrasYEspacios(sender, e, Pest1_Txt_NombreEmpleado);
+            Cl_Val.PrimeroMayuscula(sender, e, Pest1_Txt_NombreEmpleado);
+            Cl_Val.ValirLetrasYEspacios(sender, e, Pest1_Txt_NombreEmpleado);
         }
 
         private void Pest1_Txt_ApellidoEmpleado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.PrimeroMayuscula(sender, e, Pest1_Txt_ApellidoEmpleado);
-            Val.ValirLetrasYEspacios(sender, e, Pest1_Txt_ApellidoEmpleado);
+            Cl_Val.PrimeroMayuscula(sender, e, Pest1_Txt_ApellidoEmpleado);
+            Cl_Val.ValirLetrasYEspacios(sender, e, Pest1_Txt_ApellidoEmpleado);
         }
 
         private void Pest1_Text_Direccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValirLetrasYEspacios_Direccion(sender, e, Pest1_Text_Direccion);
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest1_Text_Direccion);
         }
 
         private void Pest1_Text_CorreoEmpleado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValidarCorreoIngreso(sender, e, Pest1_Text_CorreoEmpleado);
+            Cl_Val.ValidarCorreoIngreso(sender, e, Pest1_Text_CorreoEmpleado);
         }
 
         private void Pest1_Txt_Contraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValidarPassword(sender, e);
+            Cl_Val.ValidarPassword(sender, e);
         }
 
         private void Pest2_Txt_CodigoBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValidarID(sender, e);
+            Cl_Val.ValidarID(sender, e);
         }
 
         private void Pest2_Txt_IDBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValidarID(sender, e);
+            Cl_Val.ValidarID(sender, e);
         }
 
         private void Pest2_Txt_NombreBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValidarNombres_SoloLetras(sender, e);
+            Cl_Val.ValidarNombres_SoloLetras(sender, e);
         }
 
         private void label17_Click(object sender, EventArgs e)
@@ -593,7 +594,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
             else { errorProvider1.SetError(Pest1_Mask_CelularEmpleado, ""); }
 
 
-            if (Val.Verificaremail(Pest1_Text_CorreoEmpleado.Text) == true) { } else {
+            if (Cl_Val.Verificaremail(Pest1_Text_CorreoEmpleado.Text) == true) { } else {
 
                 errorProvider1.SetError(Pest1_Text_CorreoEmpleado, "El correo no tiene el formato Valido");
                 Pest1_Text_CorreoEmpleado.Focus();
@@ -621,43 +622,43 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
                 Fun_AgregarEmpleado(); }
         }
 
-
-
         private void Fun_AgregarEmpleado()
         {
-            Emp.Var_Telefono_fijo = Pest1_Mask_NumeroFijoEmpleado.Text;
-            Emp.Var_Telefono_celular = Pest1_Mask_CelularEmpleado.Text;
-            Emp.Var_Nombre_empleado = Pest1_Txt_NombreEmpleado.Text;
-            Emp.Var_Id_empleado = Pest1_Txt_ID.Text;
-            Emp.Var_Genero = Convert.ToString(Pest1_ComBox_GeneroEmpleado.SelectedItem);
-            Emp.Var_Fecha_nacimiento =
+            Cl_Emp.Var_Telefono_fijo = Pest1_Mask_NumeroFijoEmpleado.Text;
+            Cl_Emp.Var_Telefono_celular = Pest1_Mask_CelularEmpleado.Text;
+            Cl_Emp.Var_Nombre_empleado = Pest1_Txt_NombreEmpleado.Text;
+            Cl_Emp.Var_Id_empleado = Pest1_Txt_ID.Text;
+            Cl_Emp.Var_Genero = Convert.ToString(Pest1_ComBox_GeneroEmpleado.SelectedItem);
+            Cl_Emp.Var_Fecha_nacimiento =
                 (Convert.ToString(Pest1_ComBox_FechaAño.SelectedItem) + "-" +
                 Convert.ToString(Convert.ToInt16(Pest1_ComBox_FechaMes.SelectedIndex) + 1) + "-" +
                 Convert.ToString(Pest1_ComBox_FechaDia.SelectedItem));
-            Emp.Var_Estado_civil = Convert.ToString(Pest1_ComBox_EstadoCivil.SelectedItem);
-            Emp.Var_Contrasena = Val.EncriptarContraseña(Convert.ToString(Pest1_Txt_Contraseña.Text));
-            Emp.Var_Rol = Convert.ToString(Pest1_ComBox_RolEmpleado.SelectedValue.ToString());
-            Emp.Var_Codigo_estado = Convert.ToString(Pest1_ComBox_Estado.SelectedValue);
-            Emp.Var_Codigo_empleado = Convert.ToInt16(Pest1_Txt_CodigoEmpleado.Text);
-            Emp.Var_Apellido_empleado = Convert.ToString(Pest1_Txt_ApellidoEmpleado.Text);
-            Emp.Var_Correo_empleado = Convert.ToString(Pest1_Text_CorreoEmpleado.Text);
-            Emp.Var_Direccion = Convert.ToString(Pest1_Text_Direccion.Text);
-            Emp.Localidad= Convert.ToInt16(Comb_Localidad.SelectedValue);
-            if (Emp.RevisionDeDatos() == false)
+            Cl_Emp.Var_Estado_civil = Convert.ToString(Pest1_ComBox_EstadoCivil.SelectedItem);
+            Cl_Emp.Var_Contrasena = Cl_Val.EncriptarContraseña(Convert.ToString(Pest1_Txt_Contraseña.Text));
+            Cl_Emp.Var_Rol = Convert.ToString(Pest1_ComBox_RolEmpleado.SelectedValue.ToString());
+            Cl_Emp.Var_Codigo_estado = Convert.ToString(Pest1_ComBox_Estado.SelectedValue);
+            Cl_Emp.Var_Codigo_empleado = Convert.ToInt16(Pest1_Txt_CodigoEmpleado.Text);
+            Cl_Emp.Var_Apellido_empleado = Convert.ToString(Pest1_Txt_ApellidoEmpleado.Text);
+            Cl_Emp.Var_Correo_empleado = Convert.ToString(Pest1_Text_CorreoEmpleado.Text);
+            Cl_Emp.Var_Direccion = Convert.ToString(Pest1_Text_Direccion.Text);
+            Cl_Emp.Localidad= Convert.ToInt16(Comb_Localidad.SelectedValue);
+            if (Cl_Emp.Fun_RevisionDeDatos() == false)
             {
                 MessageBox.Show("Existe una duplicación de datos ya sea por el Numero de Identidad" +
                 "o el Nombre completo del empleado, por favor revise nuevamente los datos del Nuevo empleado.", "Duplicacion de Datos", MessageBoxButtons.OK);
                 return;
             } else
             {
-                Emp.IngresoDatos();
+                Cl_Emp.Fun_IngresoDatos();
+                Cl_Emp.Fun_IngresoHistoricos(Convert.ToString(Pest1_ComBox_Estado.DisplayMember),
+                    Convert.ToString(Pest1_ComBox_RolEmpleado.DisplayMember), LEmp_NombEmp);
+
                 MessageBox.Show("Se ha ingresado un Nuevo Empleado", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
+                Cl_Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
             }
             //LimpiarTodo();
 
         }
-
         
         public void Fun_LLenarDias()
         {
@@ -686,7 +687,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
 
         private void LimpiarTodo()
         {
-            Pest1_Txt_CodigoEmpleado.Text = Convert.ToString(Emp.OptenerUltimoID());
+            Pest1_Txt_CodigoEmpleado.Text = Convert.ToString(Cl_Emp.Fun_OptenerUltimoID());
             Pest1_Txt_ApellidoEmpleado.Text = "";
             Pest1_Text_CorreoEmpleado.Text = "";
             Pest1_Text_Direccion.Text = "";
@@ -725,7 +726,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
             Pest2_Radio_Codigo.Checked = false;
             Pest2_Radio_ID.Checked = false;
             Pest2_Radio_Nombre.Checked = false;
-            Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
+            Cl_Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
             Pest2_Txt_CodigoBuscar.Text = "";
             Pest2_Txt_IDBuscar.Text ="";
             Pest2_Txt_NombreBuscar.Text ="";
@@ -734,12 +735,12 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         private void Pest2_Txt_CodigoBuscar_TextChanged(object sender, EventArgs e)
         {
             if (Pest2_Txt_CodigoBuscar.Text == "") {
-                Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
+                Cl_Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
 
             }
             else
             {
-                Emp.Fun_CargarPorCodigo(Pest2_DataGriew_InformacionEmpleado, Convert.ToInt32(Convert.ToInt64(Pest2_Txt_CodigoBuscar.Text)));
+                Cl_Emp.Fun_CargarPorCodigo(Pest2_DataGriew_InformacionEmpleado, Convert.ToInt32(Convert.ToInt64(Pest2_Txt_CodigoBuscar.Text)));
             }
             }
 
@@ -747,20 +748,20 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         private void Pest2_Txt_NombreBuscar_TextChanged(object sender, EventArgs e)
         {
             if (Pest2_Txt_NombreBuscar.Text == "")
-            { Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado); }
+            { Cl_Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado); }
             else
             {
-                Emp.Fun_CargarPorNombre(Pest2_DataGriew_InformacionEmpleado, Pest2_Txt_NombreBuscar.Text);
+                Cl_Emp.Fun_CargarPorNombre(Pest2_DataGriew_InformacionEmpleado, Pest2_Txt_NombreBuscar.Text);
             }
         }
 
         private void Pest2_Txt_IDBuscar_TextChanged(object sender, EventArgs e)
         {
             if (Pest2_Txt_IDBuscar.Text == "")
-            { Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado); }
+            { Cl_Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado); }
             else
             {
-                Emp.Fun_CargarPorID(Pest2_DataGriew_InformacionEmpleado, (Pest2_Txt_IDBuscar.Text));
+                Cl_Emp.Fun_CargarPorID(Pest2_DataGriew_InformacionEmpleado, (Pest2_Txt_IDBuscar.Text));
             }
         }
 
@@ -782,7 +783,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
             }
         }
 
@@ -790,7 +791,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
             }
         }
 
@@ -798,7 +799,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
             }
         }
 
@@ -806,7 +807,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
             }
         }
 
@@ -814,7 +815,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
             }
         }
 
@@ -822,7 +823,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
             }
         }
 
@@ -830,7 +831,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                 CambiosRealizados = true;
+                 LEmp_CambiosRealizados = true;
 
             }
             
@@ -847,9 +848,9 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
             cod_r =Convert.ToInt16( Pest1_ComBox_RolEmpleado.SelectedValue);
             esta_civil = Convert.ToString(Pest1_ComBox_EstadoCivil.SelectedItem);
 
-            Contraseña_cambiada = Val.EncriptarContraseña(Pest1_Txt_Contraseña.Text);
+            Contraseña_cambiada = Cl_Val.EncriptarContraseña(Pest1_Txt_Contraseña.Text);
 
-            Emp.Fun_MoodificarDatos(
+            Cl_Emp.Fun_MoodificarDatos(
                 Pest1_Mask_CelularEmpleado.Text, 
                 Est, 
                 esta_civil, 
@@ -858,10 +859,20 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
                 Pest1_Text_CorreoEmpleado.Text,
                 Contraseña_cambiada,
                 Pest1_Mask_NumeroFijoEmpleado.Text ,
-                Convert.ToInt16(Pest1_Txt_CodigoEmpleado.Text),
+                Convert.ToInt16(Pest1_Txt_CodigoEmpleado.Text), 
                 Convert.ToInt16(Comb_Localidad.SelectedValue));
 
-            Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
+            Cl_Emp.Var_Telefono_fijo = Pest1_Mask_NumeroFijoEmpleado.Text;
+            Cl_Emp.Var_Telefono_celular = Pest1_Mask_CelularEmpleado.Text;
+            Cl_Emp.Var_Nombre_empleado = Pest1_Txt_NombreEmpleado.Text;
+            Cl_Emp.Var_Id_empleado = Pest1_Txt_ID.Text;
+            Cl_Emp.Var_Codigo_empleado = Convert.ToInt16(Pest1_Txt_CodigoEmpleado.Text);
+            Cl_Emp.Var_Apellido_empleado = Convert.ToString(Pest1_Txt_ApellidoEmpleado.Text);
+            Cl_Emp.Var_Correo_empleado = Convert.ToString(Pest1_Text_CorreoEmpleado.Text);
+
+
+            Cl_Emp.Fun_UpdateHistoricos(Convert.ToString(Pest1_ComBox_Estado.DisplayMember), Convert.ToString(Pest1_ComBox_RolEmpleado.DisplayMember), LEmp_NombEmp);
+            Cl_Emp.Fun_CargarPrimerDataGriew(Pest2_DataGriew_InformacionEmpleado);
             LimpiarTodo();
         }
 
@@ -1014,7 +1025,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
             else { errorProvider1.SetError(Pest1_Mask_CelularEmpleado, ""); }
 
 
-            if (Val.Verificaremail(Pest1_Text_CorreoEmpleado.Text) == true) {
+            if (Cl_Val.Verificaremail(Pest1_Text_CorreoEmpleado.Text) == true) {
                 errorProvider1.SetError(Pest1_Text_CorreoEmpleado, "");
             }
             else
@@ -1040,7 +1051,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
 
             }
         }
@@ -1049,7 +1060,7 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         {
             if (Pest1_Radio_Manejo.Checked == true)
             {
-                CambiosRealizados = true;
+                LEmp_CambiosRealizados = true;
 
             }
         }
@@ -1061,13 +1072,13 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
 
         private void Pest1_Text_Direccion_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            Val.PrimeroMayuscula(sender, e, Pest1_Text_Direccion);
-            Val.ValirLetrasYEspacios_Direccion(sender, e, Pest1_Text_Direccion);
+            Cl_Val.PrimeroMayuscula(sender, e, Pest1_Text_Direccion);
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest1_Text_Direccion);
         }
 
         private void Pest1_Text_Direccion_TextChanged_1(object sender, EventArgs e)
         {
-            CambiosRealizados = true;
+            LEmp_CambiosRealizados = true;
         }
     }
 }

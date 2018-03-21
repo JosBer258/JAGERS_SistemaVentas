@@ -13,8 +13,8 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
     public partial class Form_MantenimientoTransacciones : System.Windows.Forms.Form
     {
         Conexion Con = new Conexion();
-        Desarrollo.Clases.Validaciones Val = new Clases.Validaciones();
-        Desarrollo.Clases.C_Transacciones T = new Clases.C_Transacciones();
+        Desarrollo.Clases.Validaciones CL_Val = new Clases.Validaciones();
+        Desarrollo.Clases.C_Transacciones CL_Tran = new Clases.C_Transacciones();
 
         public Form_MantenimientoTransacciones()
         {
@@ -33,18 +33,16 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
 
         public void FuncionesIniciales()
         {
-            Txt_CodigoTransacciones.Text = Convert.ToString(T.UnltimoTransaccion());
-            Txt_CodigoDocumentacion.Text = Convert.ToString(T.UltimoDocumento());
+            Txt_CodigoTransacciones.Text = Convert.ToString(CL_Tran.Fun_UnltimoTransaccion());
+            Txt_CodigoDocumentacion.Text = Convert.ToString(CL_Tran.Fun_UltimoDocumento());
             this.tipo_TransaccionTableAdapter.Fill(this.ventasAutoPartesDataSet.Tipo_Transaccion);
-            T.CargarDocumentos(DaraGriew_Documentacion);
-            T.Fun_ExtraerEstados(Txt_EstadoDocumentacion);
+            CL_Tran.Fun_CargarDocumentos(DaraGriew_Documentacion);
+            CL_Tran.Fun_ExtraerEstados(Txt_EstadoDocumentacion);
 
         }
         private void Form_MantenimientoTransacciones_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'ventasAutoPartesDataSet.Tipos_Documentos' Puede moverla o quitarla según sea necesario.
             this.tipos_DocumentosTableAdapter.Fill(this.ventasAutoPartesDataSet.Tipos_Documentos);
-            // TODO: esta línea de código carga datos en la tabla 'ventasAutoPartesDataSet.Tipo_Transaccion' Puede moverla o quitarla según sea necesario.
             this.tipo_TransaccionTableAdapter.Fill(this.ventasAutoPartesDataSet.Tipo_Transaccion);
 
             FuncionesIniciales();
@@ -78,7 +76,7 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
             {
                 Txt_EstadoDocumentacion.SelectedValue = 1;
                 Txt_EstadoDocumentacion.Enabled = false;
-                Txt_CodigoDocumentacion.Text = Convert.ToString(T.UltimoDocumento());
+                Txt_CodigoDocumentacion.Text = Convert.ToString(CL_Tran.Fun_UltimoDocumento());
 
             }
             else
@@ -122,13 +120,13 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
 
             if (Radio_AgregarDocumentos.Checked == true)
             {
-                T.VerificarDocumentos(Convert.ToInt32(Txt_EstadoDocumentacion.SelectedValue), Txt_DescripcionDocumentacion.Text);
-                Txt_CodigoDocumentacion.Text = Convert.ToString(T.UltimoDocumento());
+                CL_Tran.Fun_VerificarDocumentos(Convert.ToInt32(Txt_EstadoDocumentacion.SelectedValue), Txt_DescripcionDocumentacion.Text);
+                Txt_CodigoDocumentacion.Text = Convert.ToString(CL_Tran.Fun_UltimoDocumento());
                 Txt_DescripcionDocumentacion.Text = string.Empty;
             }
             else
             {
-                T.VerificarAct_Documento(Convert.ToInt32(Txt_CodigoDocumentacion.Text), 
+                CL_Tran.Fun_VerificarAct_Documento(Convert.ToInt32(Txt_CodigoDocumentacion.Text), 
                 Convert.ToInt32(Txt_EstadoDocumentacion.SelectedValue), Txt_DescripcionDocumentacion.Text);
                 Txt_CodigoDocumentacion.Text = string.Empty;
                 Txt_DescripcionDocumentacion.Text = string.Empty;
@@ -161,7 +159,7 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
 
         private void Txt_DescripcionDocumentacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValirLetrasYEspacios(sender, e, Txt_DescripcionDocumentacion);
+            CL_Val.ValirLetrasYEspacios(sender, e, Txt_DescripcionDocumentacion);
         }
 
         private void Bttn_LimpiaDocumentacion_Click(object sender, EventArgs e)
@@ -181,17 +179,13 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
             }
             else
             {
-                Txt_CodigoTransacciones.Text = Convert.ToString(T.UnltimoTransaccion());
+                Txt_CodigoTransacciones.Text = Convert.ToString(CL_Tran.Fun_UnltimoTransaccion());
                 Txt_DescripcionTransacciones.Text = string.Empty;
                 Txt_NaturalezaTransacciones.Text  = string.Empty;
             }
         }
 
-
-
-        //**********************************************************************
-        /////FUNCIONES DE TRANSACCIONES////////////////////////////////////////
-        //********************************************************************
+        
 
         private void DaraGriew_Transacciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -245,11 +239,11 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
             }
 
             if (Radio_AgregarTransacciones.Checked == true) {
-                T.VerificarTransaccion(Txt_NaturalezaTransacciones.Text, Txt_DescripcionTransacciones.Text);
+                CL_Tran.Fun_VerificarTransaccion(Txt_NaturalezaTransacciones.Text, Txt_DescripcionTransacciones.Text);
             }
             else
             {
-                T.VerificarModiT(Convert.ToInt32(Txt_CodigoTransacciones.Text), Txt_NaturalezaTransacciones.Text, Txt_DescripcionTransacciones.Text);
+                CL_Tran.Fun_VerificarModiT(Convert.ToInt32(Txt_CodigoTransacciones.Text), Txt_NaturalezaTransacciones.Text, Txt_DescripcionTransacciones.Text);
                 Radio_AgregarTransacciones.Checked = true;
             }
 
@@ -286,12 +280,12 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
 
         private void Txt_DescripcionTransacciones_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValirLetrasYEspacios(sender, e, Txt_DescripcionTransacciones);
+            CL_Val.ValirLetrasYEspacios(sender, e, Txt_DescripcionTransacciones);
         }
 
         private void Txt_NaturalezaTransacciones_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Val.ValirLetrasYEspacios(sender, e, Txt_NaturalezaTransacciones);
+            CL_Val.ValirLetrasYEspacios(sender, e, Txt_NaturalezaTransacciones);
         }
     }
 }

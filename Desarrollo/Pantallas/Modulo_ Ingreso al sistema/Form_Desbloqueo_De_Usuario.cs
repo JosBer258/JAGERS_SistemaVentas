@@ -13,7 +13,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 {
     public partial class Form_Desbloqueo_De_Usuario : System.Windows.Forms.Form
     {
-        Validaciones Validar = new Validaciones();
+        Validaciones CL_Validar = new Validaciones();
         public string Var_id_usuario_desbloquear;
 
         public Form_Desbloqueo_De_Usuario()
@@ -50,7 +50,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 
 
 
-            string contra_encriptada = Validar.EncriptarContraseña(Txt_Password_Primera.Text);
+            string contra_encriptada = CL_Validar.EncriptarContraseña(Txt_Password_Primera.Text);
             respuesta = DesbloquearUser.Fun_Comprobacion(Txt_UserID.Text, contra_encriptada);
 
             if (respuesta == true)
@@ -69,12 +69,12 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 
         private void Txt_UserID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.ValidarID(sender, e);
+            CL_Validar.ValidarID(sender, e);
         }
 
         private void Txt_Password_Primera_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.ValidarPassword(sender, e);
+            CL_Validar.ValidarPassword(sender, e);
         }
 
         private void Form_Desbloqueo_De_Usuario_Load(object sender, EventArgs e)

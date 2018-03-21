@@ -9,35 +9,35 @@ using System.Data;
 
 namespace Desarrollo.Clases
 {
-    class C_Empleados:Conexion
-    { 
+    class C_Empleados : Conexion
+    {
 
-        private int codigo_empleado;
-        private string id_empleado;
-        private string nombre_empleado;
-        private string apellido_empleado;
-        private string correo_empleado;
-        private string telefono_fijo;
-        private string telefono_celular;
-        private string fecha_nacimiento;
-        private string genero;
-        private string contrasena;
-        private string estado_civil;
-        private string codigo_rol;
-        private string empleado_estado;
-        private string direccion;
-        private int localidad;
+        private int var_codigo_empleado;
+        private string var_id_empleado;
+        private string var_nombre_empleado;
+        private string var_apellido_empleado;
+        private string var_correo_empleado;
+        private string var_telefono_fijo;
+        private string var_telefono_celular;
+        private string var_fecha_nacimiento;
+        private string var_genero;
+        private string var_contrasena;
+        private string var_estado_civil;
+        private string var_codigo_rol;
+        private string var_empleado_estado;
+        private string var_direccion;
+        private int var_localidad;
 
         public string Var_Direccion
         {
             get
             {
-                return direccion;
+                return var_direccion;
             }
 
             set
             {
-                direccion = value;
+                var_direccion = value;
             }
         }
 
@@ -45,12 +45,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return codigo_empleado;
+                return var_codigo_empleado;
             }
 
             set
             {
-                codigo_empleado = value;
+                var_codigo_empleado = value;
             }
         }
 
@@ -58,12 +58,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return id_empleado;
+                return var_id_empleado;
             }
 
             set
             {
-                id_empleado = value;
+                var_id_empleado = value;
             }
         }
 
@@ -71,12 +71,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return nombre_empleado;
+                return var_nombre_empleado;
             }
 
             set
             {
-                nombre_empleado = value;
+                var_nombre_empleado = value;
             }
         }
 
@@ -84,12 +84,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return apellido_empleado;
+                return var_apellido_empleado;
             }
 
             set
             {
-                apellido_empleado = value;
+                var_apellido_empleado = value;
             }
         }
 
@@ -97,12 +97,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return correo_empleado;
+                return var_correo_empleado;
             }
 
             set
             {
-                correo_empleado = value;
+                var_correo_empleado = value;
             }
         }
 
@@ -110,12 +110,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return telefono_fijo;
+                return var_telefono_fijo;
             }
 
             set
             {
-                telefono_fijo = value;
+                var_telefono_fijo = value;
             }
         }
 
@@ -123,12 +123,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return telefono_celular;
+                return var_telefono_celular;
             }
 
             set
             {
-                telefono_celular = value;
+                var_telefono_celular = value;
             }
         }
 
@@ -136,12 +136,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return fecha_nacimiento;
+                return var_fecha_nacimiento;
             }
 
             set
             {
-                fecha_nacimiento = value;
+                var_fecha_nacimiento = value;
             }
         }
 
@@ -149,12 +149,12 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return genero;
+                return var_genero;
             }
 
             set
             {
-                genero = value;
+                var_genero = value;
             }
         }
 
@@ -162,79 +162,47 @@ namespace Desarrollo.Clases
         {
             get
             {
-                return contrasena;
+                return var_contrasena;
             }
 
             set
             {
-                contrasena = value;
+                var_contrasena = value;
             }
         }
 
         public string Var_Estado_civil
-        {   get{return estado_civil;}
-            set{ estado_civil = value;}
+        { get { return var_estado_civil; }
+            set { var_estado_civil = value; }
         }
 
         public string Var_Rol
-        {   get { return codigo_rol; }
-            set {codigo_rol = value;}
+        { get { return var_codigo_rol; }
+            set { var_codigo_rol = value; }
         }
 
         public string Var_Codigo_estado
-        {  get { return empleado_estado; }
-           set { empleado_estado = value;}
+        { get { return var_empleado_estado; }
+            set { var_empleado_estado = value; }
         }
 
         public int Localidad
         {
             get
             {
-                return localidad;
+                return var_localidad;
             }
 
             set
             {
-                localidad = value;
+                var_localidad = value;
             }
         }
 
-        public bool Fun_IngresoNuevoEmpleado()
+     
+        public int Fun_OptenerUltimoID()
         {
-            return false;
-        }
-
-        public bool Fun_ModificacionEmpleado()
-        {
-            return false;
-        }
-
-        public bool Fun_BusquedaDeEmpleados()
-        {
-            return false;
-        }
-
-        public bool Fun_BusquedaRoles()
-        {
-            return false;
-        }
-
-        public bool Fun_IngresarRoles()
-        {
-            return false;
-        }
-
-        public bool Fun_ModificarRoles()
-        {
-            return false;
-        }
-
-
-        //////////////////////////////////////////////////////////////CAS0: Agregar empleado
-        ////////////////////////////////////////////////////////////////////////////////////
-        public int OptenerUltimoID()
-        {
-            int Codigo=0;
+            int Codigo = 0;
             this.sql = string.Format(@"select top 1 Codigo_Empleado as CodigoFinal from Empleados order by Codigo_Empleado desc");
             this.cmd = new SqlCommand(this.sql, this.cnx);
             this.cnx.Open();
@@ -249,15 +217,14 @@ namespace Desarrollo.Clases
             }
             else
             {
-                
+
             }
 
             this.cnx.Close();
             return (Codigo + 1);
         }
 
-
-        public bool RevisionDeDatos()
+        public bool Fun_RevisionDeDatos()
         {
             this.sql = string.Format(@"select * from Empleados where ID='{0}' or (Nombre='{1}' and Apellido='{2}')", Var_Id_empleado, Var_Nombre_empleado, Var_Apellido_empleado);
             this.cmd = new SqlCommand(this.sql, this.cnx);
@@ -267,234 +234,224 @@ namespace Desarrollo.Clases
 
             if (Reg.Read())
             {
-                
+
                 this.cnx.Close();
                 return false;
-                
+
             }
             else
             {
                 this.cnx.Close();
-                
+
                 return true;
             }
 
         }
 
-        public void IngresoDatos()
+        public void Fun_IngresoDatos()
         {
-
-            //char Genero;
-
-            //if (Var_Genero.Equals("Masculino")) { Genero = 'M'; } else { Genero = 'F'; }
-            
             this.sql = string.Format(@"insert into Empleados values(
             '{0}',  '{1}',  '{2}',  '{3}', '{4}', '{5}', '{6}', '{7}','{8}','{9}', 
             '{10}', '{11}', '{12}','{13}')",
-            Var_Id_empleado, Var_Nombre_empleado, Var_Apellido_empleado,Var_Correo_empleado, Var_Telefono_fijo,
-            Var_Telefono_celular,Var_Fecha_nacimiento, Var_Genero, Var_Contrasena, Var_Estado_civil,
+            Var_Id_empleado, Var_Nombre_empleado, Var_Apellido_empleado, Var_Correo_empleado, Var_Telefono_fijo,
+            Var_Telefono_celular, Var_Fecha_nacimiento, Var_Genero, Var_Contrasena, Var_Estado_civil,
             Var_Rol, Var_Codigo_estado, Var_Direccion, Localidad);
 
             this.cmd = new SqlCommand(this.sql, this.cnx);
             this.cnx.Open();
             SqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();    
+            Reg = this.cmd.ExecuteReader();
             this.cnx.Close();
+
+
         }
 
+        public void Fun_IngresoHistoricos(string FV_Estado, string FV_Rol, string FV_Empleado)
+        {
+            C_DatoHistoricos H = new C_DatoHistoricos();
+            string Name = Var_Nombre_empleado + " " + Var_Apellido_empleado;
 
+            H.Fun_IngresoHistoricos(Var_Id_empleado, Name, Var_Correo_empleado, Var_Telefono_fijo
+            , FV_Estado, FV_Rol, FV_Empleado, "Agregar");
+        }
 
+        public void Fun_UpdateHistoricos(string FV_Estado, string FV_Rol, string FV_Empleado)
+        {
+            C_DatoHistoricos H = new C_DatoHistoricos();
+            string Name = Var_Nombre_empleado + " " + Var_Apellido_empleado;
 
-        public void Fun_MoodificarDatos(string Telefono, int Estado, string Civil, int CodigoRol, string Direccion, string correo, string contra, string fijo ,int Codigo_e, int lo)
+            H.Fun_UpdateHistoricos(Var_Codigo_empleado, Var_Id_empleado, Name, Var_Correo_empleado, Var_Telefono_fijo
+            , FV_Estado, FV_Rol, FV_Empleado, "Actualizar");
+        }
+
+        public void Fun_MoodificarDatos(string FV_Telefono, int FV_Estado, string FV_Civil, int FV_CodigoRol, string FV_Direccion, string FV_Correo, string FV_Contraseña, string FV_NFijo ,int FV_Codigo_Emp, int FV_Loc)
         {
             this.sql = string.Format(@"update Empleados
                                        set TelefonoCelular='{0}', Codigo_Estado='{1}', EstadoCivil='{2}', Codigo_Rol='{3}', 
                                          Direccion='{4}', Correo='{5}', Contraseña='{6}', TelefonoFijo='{7}', Cod_Localidad='{8}' where Codigo_Empleado = '{9}'",
-                                         Telefono, Estado, Civil, CodigoRol, Direccion, correo, contra, fijo, lo, Codigo_e);
+                                         FV_Telefono, FV_Estado, FV_Civil, FV_CodigoRol, FV_Direccion, FV_Correo, FV_Contraseña, FV_NFijo, FV_Loc, FV_Codigo_Emp);
 
-            this.cmd = new SqlCommand(this.sql, this.cnx);
-
-            this.cnx.Open();
-            SqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();
-            this.cnx.Close();
+            cmd = new SqlCommand(sql, cnx);
+            cnx.Open();
+            int Reg = cmd.ExecuteNonQuery();
+            if (Reg > 0)
+            {
+                MessageBox.Show("Se ha realizado los cambios", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            cnx.Close();
 
         }
-        ///////////////////////////////////////////////////////////////////////////////////////////////
-
-
-        public void Fun_ExtraerRoles( ComboBox RolBox)
+       
+        public void Fun_ExtraerRoles( ComboBox Com_Roles)
         {
-            Conexion Con = new Conexion();
+            cnx.Open();
+            sql = string.Format(@"select Codigo_Rol, Descripcion from Rol");
+            cmd = new SqlCommand(sql, cnx);
+            DataAdapter = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
 
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Codigo_Rol, Descripcion from Rol");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            RolBox.ValueMember = "Codigo_Rol";
-            RolBox.DisplayMember = "Descripcion";
-            RolBox.DataSource = Con.dt;
+            Com_Roles.ValueMember = "Codigo_Rol";
+            Com_Roles.DisplayMember = "Descripcion";
+            Com_Roles.DataSource = dt;
         }
 
-
-        public void Fun_ExtraerLocalidades(ComboBox RolBox)
+        public void Fun_ExtraerLocalidades(ComboBox Com_Local)
         {
-            Conexion Con = new Conexion();
+            cnx.Open();
+            sql = string.Format(@"select Cod_Localidad, Nombre from Localidad");
+            cmd = new SqlCommand(sql, cnx);
+            DataAdapter = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
 
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Cod_Localidad, Nombre from Localidad");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            RolBox.ValueMember = "Cod_Localidad";
-            RolBox.DisplayMember = "Nombre";
-            RolBox.DataSource = Con.dt;
+            Com_Local.ValueMember = "Cod_Localidad";
+            Com_Local.DisplayMember = "Nombre";
+            Com_Local.DataSource = dt;
         }
 
-
-
-        public void Fun_CargarPrimerDataGriew(DataGridView dgv)
+        public void Fun_CargarPrimerDataGriew(DataGridView FDGV_Inicial)
         {
-            Conexion con = new Conexion();
-            con.cnx.Open();
+            cnx.Open();
             try
             {
-                con.DataAdapter = new SqlDataAdapter("select A.Codigo_Empleado as Codigo,  A.ID as Id, Nombre, A.Apellido, A.Correo, A.TelefonoCelular as Telefono, A.TelefonoFijo as Celular, A.Contraseña, A.Direccion, b.Descripcion, (select Descripcion_Estado from Estados where Codigo_Tipo_Estado = 1 and Codigo_Estado = A.Codigo_Estado) as Estado from Empleados as A inner join Rol as b on A.Codigo_Rol = B.Codigo_Rol", con.ccnx);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
+                DataAdapter = new SqlDataAdapter("select A.Codigo_Empleado as Codigo,  A.ID as Id, Nombre, A.Apellido, A.Correo, A.TelefonoCelular as Telefono, A.TelefonoFijo as Celular, A.Contraseña, A.Direccion, b.Descripcion, (select Descripcion_Estado from Estados where Codigo_Tipo_Estado = 1 and Codigo_Estado = A.Codigo_Estado) as Estado from Empleados as A inner join Rol as b on A.Codigo_Rol = B.Codigo_Rol", ccnx);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                FDGV_Inicial.DataSource = dt;
 
             }
             catch
             {
 
             }
-            con.cnx.Close();
+            cnx.Close();
         }
 
-
-
-        public void Fun_CargarPorCodigo(DataGridView dgv, int a)
+        public void Fun_CargarPorCodigo(DataGridView FDGV_Inicial, int FV_Codigo)
         {
-            Conexion con = new Conexion();
-            con.cnx.Open();
+            cnx.Open();
             try
             {
-                double conv = Convert.ToDouble(Convert.ToInt32(a));
+               
+                int L_Busqueda;
+                L_Busqueda = FV_Codigo;
 
-                int busq;
-                busq = a;
 
-
-                con.sql = string.Format
+                sql = string.Format
                 (@"select A.Codigo_Empleado as Codigo, A.ID as Id, Nombre, A.Apellido, A.Correo, 
                   A.TelefonoCelular as Telefono, A.TelefonoFijo as Celular, A.Contraseña, A.Direccion, 
                   b.Descripcion, (select Descripcion_Estado from Estados where Codigo_Tipo_Estado = 1 
                   and Codigo_Estado = A.Codigo_Estado) as Estado from Empleados as A inner join Rol as b on 
-                  A.Codigo_Rol = B.Codigo_Rol where A.Codigo_Empleado like '%{0}%'", busq);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
+                  A.Codigo_Rol = B.Codigo_Rol where A.Codigo_Empleado like '%{0}%'", L_Busqueda);
+                cmd = new SqlCommand(sql, cnx);
+                DataAdapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                FDGV_Inicial.DataSource = dt;
 
             }
             catch
             {
 
             }
-            con.cnx.Close();
+            cnx.Close();
         }
 
-        public void Fun_CargarPorNombre(DataGridView dgv, string a)
+        public void Fun_CargarPorNombre(DataGridView FDGV_Inicial, string FV_Codigo)
         {
-            Conexion con = new Conexion();
-            con.cnx.Open();
+            cnx.Open();
             try
             {
-                string busq;
-                busq = a;
+                string L_Busq;
+                L_Busq = FV_Codigo;
 
 
-                con.sql = string.Format
+                sql = string.Format
                 (@"select A.Codigo_Empleado as Codigo, A.ID as Id, Nombre, A.Apellido, A.Correo, 
                   A.TelefonoCelular as Telefono, A.TelefonoFijo as Celular, A.Contraseña, A.Direccion, 
                   b.Descripcion, (select Descripcion_Estado from Estados where Codigo_Tipo_Estado = 1 
                   and Codigo_Estado = A.Codigo_Estado) as Estado from Empleados as A inner join Rol as b on 
-                  A.Codigo_Rol = B.Codigo_Rol where  A.Nombre like '%{0}%'", busq);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
+                  A.Codigo_Rol = B.Codigo_Rol where  A.Nombre like '%{0}%'", L_Busq);
+                cmd = new SqlCommand(sql, cnx);
+                DataAdapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                FDGV_Inicial.DataSource = dt;
 
             }
             catch
             {
 
             }
-            con.cnx.Close();
+            cnx.Close();
         }
 
-        public void Fun_CargarPorID(DataGridView dgv, string a)
+        public void Fun_CargarPorID(DataGridView FDGV_Inicial, string FV_Codigo)
         {
-            Conexion con = new Conexion();
-            con.cnx.Open();
+            cnx.Open();
             try
             {
-                string busq;
-                busq = a;
+                string l_Busq;
+                l_Busq = FV_Codigo;
 
 
-                con.sql = string.Format
+                sql = string.Format
                 (@"select A.Codigo_Empleado as Codigo, A.ID as Id, Nombre, A.Apellido, A.Correo, 
                   A.TelefonoCelular as Telefono, A.TelefonoFijo as Celular, A.Contraseña, A.Direccion, 
                   b.Descripcion, (select Descripcion_Estado from Estados where Codigo_Tipo_Estado = 1 
                   and Codigo_Estado = A.Codigo_Estado) as Estado from Empleados as A inner join Rol as b on 
-                  A.Codigo_Rol = B.Codigo_Rol  where A.ID like '%{0}%'", busq);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
+                  A.Codigo_Rol = B.Codigo_Rol  where A.ID like '%{0}%'", l_Busq);
+                cmd = new SqlCommand(sql, cnx);
+                DataAdapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                FDGV_Inicial.DataSource = dt;
 
             }
             catch
             {
 
             }
-            con.cnx.Close();
+            cnx.Close();
         }
 
-
-
-
-        public void Fun_ExtraerEstados(ComboBox Com)
+        public void Fun_ExtraerEstados(ComboBox Com_Estados)
         {
-            Conexion Con = new Conexion();
+            cnx.Open();
+            sql = string.Format(@"select Codigo_Estado, Descripcion_Estado from Estados where Codigo_Tipo_Estado = 1");
+            cmd = new SqlCommand(sql, cnx);
+            DataAdapter = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
 
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Codigo_Estado, Descripcion_Estado from Estados where Codigo_Tipo_Estado = 1");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            Com.ValueMember = "Codigo_Estado";
-            Com.DisplayMember = "Descripcion_Estado";
-            Com.DataSource = Con.dt;
-
-            //Pest1_ComBox_Estado
+            Com_Estados.ValueMember = "Codigo_Estado";
+            Com_Estados.DisplayMember = "Descripcion_Estado";
+            Com_Estados.DataSource = dt;
         }
-
 
         public void IngresoLogin()
         {

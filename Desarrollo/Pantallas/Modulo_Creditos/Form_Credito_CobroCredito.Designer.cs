@@ -28,324 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Txt_CodigoDeRecibo = new System.Windows.Forms.TextBox();
-            this.Txt_NombreEmpleado = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Check_Correo = new System.Windows.Forms.CheckBox();
-            this.Check_Impresion = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Txt_InformacionClienteGenerado = new System.Windows.Forms.TextBox();
-            this.Txt_Filtros_Cliente = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Check_RepresentaEmpresa = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.DataGriew_DatosFactura = new System.Windows.Forms.DataGridView();
-            this.DG_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_FechaRealizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_TotalPorCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_MontoAPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Bttn_LimpiaLista = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.Bttn_MuestraClientes = new System.Windows.Forms.Button();
             this.Bttn_Ayuda = new System.Windows.Forms.Button();
             this.Bttn_Salir = new System.Windows.Forms.Button();
             this.Bttn_LimpiarTodo = new System.Windows.Forms.Button();
-            this.Bttn_Guardar = new System.Windows.Forms.Button();
-            this.Bttn_AgregarADataGriew = new System.Windows.Forms.Button();
-            this.Bttn_LimpiarDeSeleccion = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Txt_TotalAPagarPorFactura = new System.Windows.Forms.TextBox();
-            this.Txt_Busqueda_MontoTOTALFactura = new System.Windows.Forms.TextBox();
-            this.Txt_Busqueda_TotalCargos = new System.Windows.Forms.TextBox();
-            this.Txt_Busqueda_FechaRealizacion = new System.Windows.Forms.TextBox();
-            this.Txt_Buscar_MontoFactura = new System.Windows.Forms.TextBox();
-            this.Txt_Busqueda_CodigoFactura = new System.Windows.Forms.TextBox();
-            this.Txt_FechaRealizacion = new System.Windows.Forms.TextBox();
-            this.Bttn_GenerarInformacion = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGriew_DatosFactura)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.DVG_MuesCredito = new System.Windows.Forms.TabPage();
+            this.DVG_RePago = new System.Windows.Forms.TabPage();
+            this.Pest1_Txt_NombreEmpleado = new System.Windows.Forms.TextBox();
+            this.Pest1_DATE_FechaActual = new System.Windows.Forms.DateTimePicker();
+            this.Pest1_Grupo_FiltroBusqueda = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Pest1_ComBox_MuestDatos = new System.Windows.Forms.ComboBox();
+            this.Pest1_Txt_Filtro = new System.Windows.Forms.TextBox();
+            this.Pest1_Grupo_Factura = new System.Windows.Forms.GroupBox();
+            this.Pest1_Txt_MontoResidual = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_MontoOriginal = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_NFactura = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_NTransacion = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Pest1_Bttn_Limpiar = new System.Windows.Forms.Button();
+            this.Pest1_Bttn_RealizarPag = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Pest1_Txt_MontAPagar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Pest1_ComBox_MetodoPago = new System.Windows.Forms.ComboBox();
+            this.Pest1_DGV_DatosFactura = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Pest2_Grupo_Cliente = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Pest2_ComBo_Muestra = new System.Windows.Forms.ComboBox();
+            this.Pest2_Txt_FiltroNombre = new System.Windows.Forms.TextBox();
+            this.Pest2_Grupo_Opciones = new System.Windows.Forms.GroupBox();
+            this.Pest2_Grupo_Muestra = new System.Windows.Forms.GroupBox();
+            this.Pest2_DGV_MuestraDatos = new System.Windows.Forms.DataGridView();
+            this.Pest2_Bttn_AplicarMora = new System.Windows.Forms.Button();
+            this.Pest2_Bttn_VerDetalle = new System.Windows.Forms.Button();
+            this.Pest2_Radio_Todos = new System.Windows.Forms.RadioButton();
+            this.Pest2_Radio_FilPorClie = new System.Windows.Forms.RadioButton();
+            this.Pest2_Cod_Trans = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DVG_MuesCredito.SuspendLayout();
+            this.DVG_RePago.SuspendLayout();
+            this.Pest1_Grupo_FiltroBusqueda.SuspendLayout();
+            this.Pest1_Grupo_Factura.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest1_DGV_DatosFactura)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.Pest2_Grupo_Cliente.SuspendLayout();
+            this.Pest2_Grupo_Opciones.SuspendLayout();
+            this.Pest2_Grupo_Muestra.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest2_DGV_MuestraDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // Bttn_MuestraClientes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Codigo de Recibo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre del Empleado";
-            // 
-            // Txt_CodigoDeRecibo
-            // 
-            this.Txt_CodigoDeRecibo.Enabled = false;
-            this.Txt_CodigoDeRecibo.Location = new System.Drawing.Point(182, 52);
-            this.Txt_CodigoDeRecibo.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_CodigoDeRecibo.Name = "Txt_CodigoDeRecibo";
-            this.Txt_CodigoDeRecibo.Size = new System.Drawing.Size(148, 22);
-            this.Txt_CodigoDeRecibo.TabIndex = 3;
-            // 
-            // Txt_NombreEmpleado
-            // 
-            this.Txt_NombreEmpleado.Enabled = false;
-            this.Txt_NombreEmpleado.Location = new System.Drawing.Point(182, 89);
-            this.Txt_NombreEmpleado.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_NombreEmpleado.Name = "Txt_NombreEmpleado";
-            this.Txt_NombreEmpleado.Size = new System.Drawing.Size(148, 22);
-            this.Txt_NombreEmpleado.TabIndex = 4;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.Check_Correo);
-            this.groupBox1.Controls.Add(this.Check_Impresion);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(346, 37);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 79);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Metodos de Salida de Factura";
-            // 
-            // Check_Correo
-            // 
-            this.Check_Correo.AutoSize = true;
-            this.Check_Correo.Location = new System.Drawing.Point(99, 26);
-            this.Check_Correo.Name = "Check_Correo";
-            this.Check_Correo.Size = new System.Drawing.Size(74, 20);
-            this.Check_Correo.TabIndex = 2;
-            this.Check_Correo.Text = "Correo";
-            this.Check_Correo.UseVisualStyleBackColor = true;
-            // 
-            // Check_Impresion
-            // 
-            this.Check_Impresion.AutoSize = true;
-            this.Check_Impresion.Location = new System.Drawing.Point(99, 52);
-            this.Check_Impresion.Name = "Check_Impresion";
-            this.Check_Impresion.Size = new System.Drawing.Size(95, 20);
-            this.Check_Impresion.TabIndex = 1;
-            this.Check_Impresion.Text = "Impresion";
-            this.Check_Impresion.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 16);
-            this.label3.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.Txt_InformacionClienteGenerado);
-            this.groupBox2.Controls.Add(this.Txt_Filtros_Cliente);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.Check_RepresentaEmpresa);
-            this.groupBox2.Location = new System.Drawing.Point(552, 37);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(298, 79);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cliente";
-            // 
-            // Txt_InformacionClienteGenerado
-            // 
-            this.Txt_InformacionClienteGenerado.Enabled = false;
-            this.Txt_InformacionClienteGenerado.Location = new System.Drawing.Point(163, 47);
-            this.Txt_InformacionClienteGenerado.Name = "Txt_InformacionClienteGenerado";
-            this.Txt_InformacionClienteGenerado.Size = new System.Drawing.Size(129, 22);
-            this.Txt_InformacionClienteGenerado.TabIndex = 6;
-            // 
-            // Txt_Filtros_Cliente
-            // 
-            this.Txt_Filtros_Cliente.Location = new System.Drawing.Point(58, 47);
-            this.Txt_Filtros_Cliente.Name = "Txt_Filtros_Cliente";
-            this.Txt_Filtros_Cliente.Size = new System.Drawing.Size(99, 22);
-            this.Txt_Filtros_Cliente.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nombre";
-            // 
-            // Check_RepresentaEmpresa
-            // 
-            this.Check_RepresentaEmpresa.AutoSize = true;
-            this.Check_RepresentaEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Check_RepresentaEmpresa.Location = new System.Drawing.Point(6, 20);
-            this.Check_RepresentaEmpresa.Name = "Check_RepresentaEmpresa";
-            this.Check_RepresentaEmpresa.Size = new System.Drawing.Size(168, 17);
-            this.Check_RepresentaEmpresa.TabIndex = 3;
-            this.Check_RepresentaEmpresa.Text = "Representa una Empresa";
-            this.Check_RepresentaEmpresa.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Codigo de Factura";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Fecha de Realizacion";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(513, 66);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Monto a Pagar\r\n";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(263, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Total por Cargos";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(503, 38);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Monto Total por Factura";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(267, 66);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 13);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Monto por Factura";
-            // 
-            // DataGriew_DatosFactura
-            // 
-            this.DataGriew_DatosFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGriew_DatosFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGriew_DatosFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DG_Codigo,
-            this.DG_FechaRealizacion,
-            this.DG_Monto,
-            this.DG_TotalPorCargo,
-            this.DG_MontoTotal,
-            this.DG_MontoAPagar,
-            this.DG_Estado});
-            this.DataGriew_DatosFactura.Location = new System.Drawing.Point(17, 282);
-            this.DataGriew_DatosFactura.Name = "DataGriew_DatosFactura";
-            this.DataGriew_DatosFactura.Size = new System.Drawing.Size(833, 255);
-            this.DataGriew_DatosFactura.TabIndex = 14;
-            // 
-            // DG_Codigo
-            // 
-            this.DG_Codigo.HeaderText = "Codigo";
-            this.DG_Codigo.Name = "DG_Codigo";
-            // 
-            // DG_FechaRealizacion
-            // 
-            this.DG_FechaRealizacion.HeaderText = "Fecha de Realizacion";
-            this.DG_FechaRealizacion.Name = "DG_FechaRealizacion";
-            this.DG_FechaRealizacion.ReadOnly = true;
-            // 
-            // DG_Monto
-            // 
-            this.DG_Monto.HeaderText = "Monto de Factura";
-            this.DG_Monto.Name = "DG_Monto";
-            this.DG_Monto.ReadOnly = true;
-            // 
-            // DG_TotalPorCargo
-            // 
-            this.DG_TotalPorCargo.HeaderText = "Total por Cargo";
-            this.DG_TotalPorCargo.Name = "DG_TotalPorCargo";
-            this.DG_TotalPorCargo.ReadOnly = true;
-            // 
-            // DG_MontoTotal
-            // 
-            this.DG_MontoTotal.HeaderText = "Monto Total";
-            this.DG_MontoTotal.Name = "DG_MontoTotal";
-            this.DG_MontoTotal.ReadOnly = true;
-            // 
-            // DG_MontoAPagar
-            // 
-            this.DG_MontoAPagar.HeaderText = "Monto a Pagar";
-            this.DG_MontoAPagar.Name = "DG_MontoAPagar";
-            this.DG_MontoAPagar.ReadOnly = true;
-            // 
-            // DG_Estado
-            // 
-            this.DG_Estado.HeaderText = "Estado";
-            this.DG_Estado.Name = "DG_Estado";
-            this.DG_Estado.ReadOnly = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(685, 550);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 16);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Total a Pagar: Lp. 0.00";
-            // 
-            // Bttn_LimpiaLista
-            // 
-            this.Bttn_LimpiaLista.Location = new System.Drawing.Point(173, 586);
-            this.Bttn_LimpiaLista.Name = "Bttn_LimpiaLista";
-            this.Bttn_LimpiaLista.Size = new System.Drawing.Size(167, 60);
-            this.Bttn_LimpiaLista.TabIndex = 16;
-            this.Bttn_LimpiaLista.Text = "Limpiar de Lista";
-            this.Bttn_LimpiaLista.UseVisualStyleBackColor = true;
+            this.Bttn_MuestraClientes.Location = new System.Drawing.Point(228, 558);
+            this.Bttn_MuestraClientes.Name = "Bttn_MuestraClientes";
+            this.Bttn_MuestraClientes.Size = new System.Drawing.Size(242, 99);
+            this.Bttn_MuestraClientes.TabIndex = 16;
+            this.Bttn_MuestraClientes.Text = "Clientes";
+            this.Bttn_MuestraClientes.UseVisualStyleBackColor = true;
+            this.Bttn_MuestraClientes.Click += new System.EventHandler(this.Bttn_MuestraClientes_Click);
             // 
             // Bttn_Ayuda
             // 
-            this.Bttn_Ayuda.Location = new System.Drawing.Point(520, 586);
+            this.Bttn_Ayuda.Location = new System.Drawing.Point(467, 558);
             this.Bttn_Ayuda.Name = "Bttn_Ayuda";
-            this.Bttn_Ayuda.Size = new System.Drawing.Size(167, 60);
+            this.Bttn_Ayuda.Size = new System.Drawing.Size(238, 99);
             this.Bttn_Ayuda.TabIndex = 17;
             this.Bttn_Ayuda.Text = "Ayuda";
             this.Bttn_Ayuda.UseVisualStyleBackColor = true;
@@ -353,9 +108,9 @@
             // 
             // Bttn_Salir
             // 
-            this.Bttn_Salir.Location = new System.Drawing.Point(0, 586);
+            this.Bttn_Salir.Location = new System.Drawing.Point(-6, 558);
             this.Bttn_Salir.Name = "Bttn_Salir";
-            this.Bttn_Salir.Size = new System.Drawing.Size(167, 60);
+            this.Bttn_Salir.Size = new System.Drawing.Size(244, 95);
             this.Bttn_Salir.TabIndex = 18;
             this.Bttn_Salir.Text = "Salir";
             this.Bttn_Salir.UseVisualStyleBackColor = true;
@@ -363,214 +118,537 @@
             // 
             // Bttn_LimpiarTodo
             // 
-            this.Bttn_LimpiarTodo.Location = new System.Drawing.Point(693, 586);
+            this.Bttn_LimpiarTodo.Location = new System.Drawing.Point(702, 558);
             this.Bttn_LimpiarTodo.Name = "Bttn_LimpiarTodo";
-            this.Bttn_LimpiarTodo.Size = new System.Drawing.Size(167, 60);
+            this.Bttn_LimpiarTodo.Size = new System.Drawing.Size(238, 99);
             this.Bttn_LimpiarTodo.TabIndex = 19;
             this.Bttn_LimpiarTodo.Text = "Limpiar";
             this.Bttn_LimpiarTodo.UseVisualStyleBackColor = true;
+            this.Bttn_LimpiarTodo.Click += new System.EventHandler(this.Bttn_LimpiarTodo_Click);
             // 
-            // Bttn_Guardar
+            // DVG_MuesCredito
             // 
-            this.Bttn_Guardar.Location = new System.Drawing.Point(347, 586);
-            this.Bttn_Guardar.Name = "Bttn_Guardar";
-            this.Bttn_Guardar.Size = new System.Drawing.Size(167, 60);
-            this.Bttn_Guardar.TabIndex = 20;
-            this.Bttn_Guardar.Text = "Guardar";
-            this.Bttn_Guardar.UseVisualStyleBackColor = true;
+            this.DVG_MuesCredito.Controls.Add(this.Pest2_Grupo_Muestra);
+            this.DVG_MuesCredito.Controls.Add(this.Pest2_Grupo_Opciones);
+            this.DVG_MuesCredito.Controls.Add(this.Pest2_Grupo_Cliente);
+            this.DVG_MuesCredito.Location = new System.Drawing.Point(4, 25);
+            this.DVG_MuesCredito.Name = "DVG_MuesCredito";
+            this.DVG_MuesCredito.Padding = new System.Windows.Forms.Padding(3);
+            this.DVG_MuesCredito.Size = new System.Drawing.Size(880, 494);
+            this.DVG_MuesCredito.TabIndex = 1;
+            this.DVG_MuesCredito.Text = "Muestra de Transaciones Vencidas";
+            this.DVG_MuesCredito.UseVisualStyleBackColor = true;
+            this.DVG_MuesCredito.Click += new System.EventHandler(this.DVG_MuesCredito_Click);
             // 
-            // Bttn_AgregarADataGriew
+            // DVG_RePago
             // 
-            this.Bttn_AgregarADataGriew.Location = new System.Drawing.Point(138, 103);
-            this.Bttn_AgregarADataGriew.Name = "Bttn_AgregarADataGriew";
-            this.Bttn_AgregarADataGriew.Size = new System.Drawing.Size(110, 33);
-            this.Bttn_AgregarADataGriew.TabIndex = 21;
-            this.Bttn_AgregarADataGriew.Text = "Agregar";
-            this.Bttn_AgregarADataGriew.UseVisualStyleBackColor = true;
+            this.DVG_RePago.Controls.Add(this.Pest1_Txt_NombreEmpleado);
+            this.DVG_RePago.Controls.Add(this.Pest1_DATE_FechaActual);
+            this.DVG_RePago.Controls.Add(this.Pest1_Grupo_FiltroBusqueda);
+            this.DVG_RePago.Controls.Add(this.Pest1_Grupo_Factura);
+            this.DVG_RePago.Controls.Add(this.Pest1_DGV_DatosFactura);
+            this.DVG_RePago.Location = new System.Drawing.Point(4, 25);
+            this.DVG_RePago.Name = "DVG_RePago";
+            this.DVG_RePago.Padding = new System.Windows.Forms.Padding(3);
+            this.DVG_RePago.Size = new System.Drawing.Size(880, 494);
+            this.DVG_RePago.TabIndex = 0;
+            this.DVG_RePago.Text = "Realizar Pago";
+            this.DVG_RePago.UseVisualStyleBackColor = true;
             // 
-            // Bttn_LimpiarDeSeleccion
+            // Pest1_Txt_NombreEmpleado
             // 
-            this.Bttn_LimpiarDeSeleccion.Location = new System.Drawing.Point(266, 103);
-            this.Bttn_LimpiarDeSeleccion.Name = "Bttn_LimpiarDeSeleccion";
-            this.Bttn_LimpiarDeSeleccion.Size = new System.Drawing.Size(110, 33);
-            this.Bttn_LimpiarDeSeleccion.TabIndex = 22;
-            this.Bttn_LimpiarDeSeleccion.Text = "Limpiar";
-            this.Bttn_LimpiarDeSeleccion.UseVisualStyleBackColor = true;
+            this.Pest1_Txt_NombreEmpleado.Enabled = false;
+            this.Pest1_Txt_NombreEmpleado.Location = new System.Drawing.Point(16, 60);
+            this.Pest1_Txt_NombreEmpleado.Name = "Pest1_Txt_NombreEmpleado";
+            this.Pest1_Txt_NombreEmpleado.Size = new System.Drawing.Size(294, 22);
+            this.Pest1_Txt_NombreEmpleado.TabIndex = 18;
             // 
-            // groupBox3
+            // Pest1_DATE_FechaActual
             // 
-            this.groupBox3.Controls.Add(this.Bttn_GenerarInformacion);
-            this.groupBox3.Controls.Add(this.Txt_TotalAPagarPorFactura);
-            this.groupBox3.Controls.Add(this.Bttn_AgregarADataGriew);
-            this.groupBox3.Controls.Add(this.Bttn_LimpiarDeSeleccion);
-            this.groupBox3.Controls.Add(this.Txt_Busqueda_MontoTOTALFactura);
-            this.groupBox3.Controls.Add(this.Txt_Busqueda_TotalCargos);
-            this.groupBox3.Controls.Add(this.Txt_Busqueda_FechaRealizacion);
-            this.groupBox3.Controls.Add(this.Txt_Buscar_MontoFactura);
-            this.groupBox3.Controls.Add(this.Txt_Busqueda_CodigoFactura);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(17, 134);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(833, 142);
-            this.groupBox3.TabIndex = 23;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos de Factura";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            this.Pest1_DATE_FechaActual.Enabled = false;
+            this.Pest1_DATE_FechaActual.Location = new System.Drawing.Point(16, 32);
+            this.Pest1_DATE_FechaActual.Name = "Pest1_DATE_FechaActual";
+            this.Pest1_DATE_FechaActual.Size = new System.Drawing.Size(294, 22);
+            this.Pest1_DATE_FechaActual.TabIndex = 17;
             // 
-            // Txt_TotalAPagarPorFactura
+            // Pest1_Grupo_FiltroBusqueda
             // 
-            this.Txt_TotalAPagarPorFactura.Location = new System.Drawing.Point(663, 61);
-            this.Txt_TotalAPagarPorFactura.Name = "Txt_TotalAPagarPorFactura";
-            this.Txt_TotalAPagarPorFactura.Size = new System.Drawing.Size(133, 22);
-            this.Txt_TotalAPagarPorFactura.TabIndex = 20;
+            this.Pest1_Grupo_FiltroBusqueda.Controls.Add(this.label8);
+            this.Pest1_Grupo_FiltroBusqueda.Controls.Add(this.label5);
+            this.Pest1_Grupo_FiltroBusqueda.Controls.Add(this.Pest1_ComBox_MuestDatos);
+            this.Pest1_Grupo_FiltroBusqueda.Controls.Add(this.Pest1_Txt_Filtro);
+            this.Pest1_Grupo_FiltroBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Grupo_FiltroBusqueda.Location = new System.Drawing.Point(411, 14);
+            this.Pest1_Grupo_FiltroBusqueda.Name = "Pest1_Grupo_FiltroBusqueda";
+            this.Pest1_Grupo_FiltroBusqueda.Size = new System.Drawing.Size(453, 93);
+            this.Pest1_Grupo_FiltroBusqueda.TabIndex = 16;
+            this.Pest1_Grupo_FiltroBusqueda.TabStop = false;
+            this.Pest1_Grupo_FiltroBusqueda.Text = "Busqueda de Cliente";
             // 
-            // Txt_Busqueda_MontoTOTALFactura
+            // label8
             // 
-            this.Txt_Busqueda_MontoTOTALFactura.Enabled = false;
-            this.Txt_Busqueda_MontoTOTALFactura.Location = new System.Drawing.Point(663, 35);
-            this.Txt_Busqueda_MontoTOTALFactura.Name = "Txt_Busqueda_MontoTOTALFactura";
-            this.Txt_Busqueda_MontoTOTALFactura.Size = new System.Drawing.Size(133, 22);
-            this.Txt_Busqueda_MontoTOTALFactura.TabIndex = 19;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(35, 51);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 30);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Informacion del \r\nCliente";
             // 
-            // Txt_Busqueda_TotalCargos
+            // label5
             // 
-            this.Txt_Busqueda_TotalCargos.Enabled = false;
-            this.Txt_Busqueda_TotalCargos.Location = new System.Drawing.Point(384, 33);
-            this.Txt_Busqueda_TotalCargos.Name = "Txt_Busqueda_TotalCargos";
-            this.Txt_Busqueda_TotalCargos.Size = new System.Drawing.Size(113, 22);
-            this.Txt_Busqueda_TotalCargos.TabIndex = 18;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Filtro de Busqueda";
             // 
-            // Txt_Busqueda_FechaRealizacion
+            // Pest1_ComBox_MuestDatos
             // 
-            this.Txt_Busqueda_FechaRealizacion.Enabled = false;
-            this.Txt_Busqueda_FechaRealizacion.Location = new System.Drawing.Point(138, 61);
-            this.Txt_Busqueda_FechaRealizacion.Name = "Txt_Busqueda_FechaRealizacion";
-            this.Txt_Busqueda_FechaRealizacion.Size = new System.Drawing.Size(113, 22);
-            this.Txt_Busqueda_FechaRealizacion.TabIndex = 17;
+            this.Pest1_ComBox_MuestDatos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest1_ComBox_MuestDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_ComBox_MuestDatos.FormattingEnabled = true;
+            this.Pest1_ComBox_MuestDatos.Location = new System.Drawing.Point(169, 58);
+            this.Pest1_ComBox_MuestDatos.Name = "Pest1_ComBox_MuestDatos";
+            this.Pest1_ComBox_MuestDatos.Size = new System.Drawing.Size(278, 23);
+            this.Pest1_ComBox_MuestDatos.TabIndex = 15;
+            this.Pest1_ComBox_MuestDatos.SelectedIndexChanged += new System.EventHandler(this.Pest1_ComBox_MuestDatos_SelectedIndexChanged);
             // 
-            // Txt_Buscar_MontoFactura
+            // Pest1_Txt_Filtro
             // 
-            this.Txt_Buscar_MontoFactura.Enabled = false;
-            this.Txt_Buscar_MontoFactura.Location = new System.Drawing.Point(384, 61);
-            this.Txt_Buscar_MontoFactura.Name = "Txt_Buscar_MontoFactura";
-            this.Txt_Buscar_MontoFactura.Size = new System.Drawing.Size(113, 22);
-            this.Txt_Buscar_MontoFactura.TabIndex = 16;
+            this.Pest1_Txt_Filtro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Filtro.Location = new System.Drawing.Point(169, 26);
+            this.Pest1_Txt_Filtro.MaxLength = 45;
+            this.Pest1_Txt_Filtro.Name = "Pest1_Txt_Filtro";
+            this.Pest1_Txt_Filtro.Size = new System.Drawing.Size(172, 21);
+            this.Pest1_Txt_Filtro.TabIndex = 15;
+            this.Pest1_Txt_Filtro.TextChanged += new System.EventHandler(this.Pest1_Txt_Filtro_TextChanged);
+            this.Pest1_Txt_Filtro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_Filtro_KeyPress);
             // 
-            // Txt_Busqueda_CodigoFactura
+            // Pest1_Grupo_Factura
             // 
-            this.Txt_Busqueda_CodigoFactura.Location = new System.Drawing.Point(138, 33);
-            this.Txt_Busqueda_CodigoFactura.Name = "Txt_Busqueda_CodigoFactura";
-            this.Txt_Busqueda_CodigoFactura.Size = new System.Drawing.Size(113, 22);
-            this.Txt_Busqueda_CodigoFactura.TabIndex = 14;
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_Txt_MontoResidual);
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_Txt_MontoOriginal);
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_Txt_NFactura);
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_Txt_NTransacion);
+            this.Pest1_Grupo_Factura.Controls.Add(this.label7);
+            this.Pest1_Grupo_Factura.Controls.Add(this.label6);
+            this.Pest1_Grupo_Factura.Controls.Add(this.label4);
+            this.Pest1_Grupo_Factura.Controls.Add(this.label3);
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_Bttn_Limpiar);
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_Bttn_RealizarPag);
+            this.Pest1_Grupo_Factura.Controls.Add(this.label2);
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_Txt_MontAPagar);
+            this.Pest1_Grupo_Factura.Controls.Add(this.label1);
+            this.Pest1_Grupo_Factura.Controls.Add(this.Pest1_ComBox_MetodoPago);
+            this.Pest1_Grupo_Factura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Grupo_Factura.Location = new System.Drawing.Point(16, 113);
+            this.Pest1_Grupo_Factura.Name = "Pest1_Grupo_Factura";
+            this.Pest1_Grupo_Factura.Size = new System.Drawing.Size(848, 116);
+            this.Pest1_Grupo_Factura.TabIndex = 15;
+            this.Pest1_Grupo_Factura.TabStop = false;
+            this.Pest1_Grupo_Factura.Text = "Datos de la Factura";
             // 
-            // Txt_FechaRealizacion
+            // Pest1_Txt_MontoResidual
             // 
-            this.Txt_FechaRealizacion.Enabled = false;
-            this.Txt_FechaRealizacion.Location = new System.Drawing.Point(17, 13);
-            this.Txt_FechaRealizacion.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_FechaRealizacion.Name = "Txt_FechaRealizacion";
-            this.Txt_FechaRealizacion.Size = new System.Drawing.Size(148, 22);
-            this.Txt_FechaRealizacion.TabIndex = 0;
+            this.Pest1_Txt_MontoResidual.Enabled = false;
+            this.Pest1_Txt_MontoResidual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_MontoResidual.Location = new System.Drawing.Point(326, 68);
+            this.Pest1_Txt_MontoResidual.Name = "Pest1_Txt_MontoResidual";
+            this.Pest1_Txt_MontoResidual.Size = new System.Drawing.Size(113, 21);
+            this.Pest1_Txt_MontoResidual.TabIndex = 14;
             // 
-            // Bttn_GenerarInformacion
+            // Pest1_Txt_MontoOriginal
             // 
-            this.Bttn_GenerarInformacion.Location = new System.Drawing.Point(8, 103);
-            this.Bttn_GenerarInformacion.Name = "Bttn_GenerarInformacion";
-            this.Bttn_GenerarInformacion.Size = new System.Drawing.Size(110, 33);
-            this.Bttn_GenerarInformacion.TabIndex = 23;
-            this.Bttn_GenerarInformacion.Text = "Generar";
-            this.Bttn_GenerarInformacion.UseVisualStyleBackColor = true;
+            this.Pest1_Txt_MontoOriginal.Enabled = false;
+            this.Pest1_Txt_MontoOriginal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_MontoOriginal.Location = new System.Drawing.Point(326, 32);
+            this.Pest1_Txt_MontoOriginal.Name = "Pest1_Txt_MontoOriginal";
+            this.Pest1_Txt_MontoOriginal.Size = new System.Drawing.Size(113, 21);
+            this.Pest1_Txt_MontoOriginal.TabIndex = 13;
+            // 
+            // Pest1_Txt_NFactura
+            // 
+            this.Pest1_Txt_NFactura.Enabled = false;
+            this.Pest1_Txt_NFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_NFactura.Location = new System.Drawing.Point(90, 69);
+            this.Pest1_Txt_NFactura.Name = "Pest1_Txt_NFactura";
+            this.Pest1_Txt_NFactura.Size = new System.Drawing.Size(139, 21);
+            this.Pest1_Txt_NFactura.TabIndex = 12;
+            // 
+            // Pest1_Txt_NTransacion
+            // 
+            this.Pest1_Txt_NTransacion.Enabled = false;
+            this.Pest1_Txt_NTransacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_NTransacion.Location = new System.Drawing.Point(90, 33);
+            this.Pest1_Txt_NTransacion.Name = "Pest1_Txt_NTransacion";
+            this.Pest1_Txt_NTransacion.Size = new System.Drawing.Size(139, 21);
+            this.Pest1_Txt_NTransacion.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 30);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "No. de \r\nTransacion";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 30);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "No. de \r\nFactura\r\n";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(260, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 30);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Monto \r\nResidual";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(260, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 30);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Monto \r\nOrigina";
+            // 
+            // Pest1_Bttn_Limpiar
+            // 
+            this.Pest1_Bttn_Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Bttn_Limpiar.Location = new System.Drawing.Point(710, 63);
+            this.Pest1_Bttn_Limpiar.Name = "Pest1_Bttn_Limpiar";
+            this.Pest1_Bttn_Limpiar.Size = new System.Drawing.Size(118, 39);
+            this.Pest1_Bttn_Limpiar.TabIndex = 5;
+            this.Pest1_Bttn_Limpiar.Text = "Limpiar";
+            this.Pest1_Bttn_Limpiar.UseVisualStyleBackColor = true;
+            this.Pest1_Bttn_Limpiar.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // Pest1_Bttn_RealizarPag
+            // 
+            this.Pest1_Bttn_RealizarPag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Bttn_RealizarPag.Location = new System.Drawing.Point(710, 18);
+            this.Pest1_Bttn_RealizarPag.Name = "Pest1_Bttn_RealizarPag";
+            this.Pest1_Bttn_RealizarPag.Size = new System.Drawing.Size(118, 39);
+            this.Pest1_Bttn_RealizarPag.TabIndex = 4;
+            this.Pest1_Bttn_RealizarPag.Text = "Realizar Pago";
+            this.Pest1_Bttn_RealizarPag.UseVisualStyleBackColor = true;
+            this.Pest1_Bttn_RealizarPag.Click += new System.EventHandler(this.Pest1_Bttn_RealizarPag_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(459, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 30);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Monto a \r\nPagar";
+            // 
+            // Pest1_Txt_MontAPagar
+            // 
+            this.Pest1_Txt_MontAPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_MontAPagar.Location = new System.Drawing.Point(536, 68);
+            this.Pest1_Txt_MontAPagar.MaxLength = 7;
+            this.Pest1_Txt_MontAPagar.Name = "Pest1_Txt_MontAPagar";
+            this.Pest1_Txt_MontAPagar.Size = new System.Drawing.Size(147, 21);
+            this.Pest1_Txt_MontAPagar.TabIndex = 2;
+            this.Pest1_Txt_MontAPagar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_MontAPagar_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(459, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Metodo de\r\n Pago";
+            // 
+            // Pest1_ComBox_MetodoPago
+            // 
+            this.Pest1_ComBox_MetodoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest1_ComBox_MetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_ComBox_MetodoPago.FormattingEnabled = true;
+            this.Pest1_ComBox_MetodoPago.Location = new System.Drawing.Point(536, 25);
+            this.Pest1_ComBox_MetodoPago.Name = "Pest1_ComBox_MetodoPago";
+            this.Pest1_ComBox_MetodoPago.Size = new System.Drawing.Size(147, 23);
+            this.Pest1_ComBox_MetodoPago.TabIndex = 0;
+            // 
+            // Pest1_DGV_DatosFactura
+            // 
+            this.Pest1_DGV_DatosFactura.AllowUserToAddRows = false;
+            this.Pest1_DGV_DatosFactura.AllowUserToDeleteRows = false;
+            this.Pest1_DGV_DatosFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Pest1_DGV_DatosFactura.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Pest1_DGV_DatosFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Pest1_DGV_DatosFactura.Location = new System.Drawing.Point(16, 248);
+            this.Pest1_DGV_DatosFactura.Name = "Pest1_DGV_DatosFactura";
+            this.Pest1_DGV_DatosFactura.ReadOnly = true;
+            this.Pest1_DGV_DatosFactura.Size = new System.Drawing.Size(848, 228);
+            this.Pest1_DGV_DatosFactura.TabIndex = 14;
+            this.Pest1_DGV_DatosFactura.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Pest1_DGV_DatosFactura_CellContentDoubleClick);
+            this.Pest1_DGV_DatosFactura.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Pest1_DGV_DatosFactura_CellDoubleClick);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.DVG_RePago);
+            this.tabControl1.Controls.Add(this.DVG_MuesCredito);
+            this.tabControl1.Location = new System.Drawing.Point(18, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(888, 523);
+            this.tabControl1.TabIndex = 24;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // Pest2_Grupo_Cliente
+            // 
+            this.Pest2_Grupo_Cliente.Controls.Add(this.label10);
+            this.Pest2_Grupo_Cliente.Controls.Add(this.Pest2_Txt_FiltroNombre);
+            this.Pest2_Grupo_Cliente.Controls.Add(this.Pest2_ComBo_Muestra);
+            this.Pest2_Grupo_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_Grupo_Cliente.Location = new System.Drawing.Point(186, 16);
+            this.Pest2_Grupo_Cliente.Name = "Pest2_Grupo_Cliente";
+            this.Pest2_Grupo_Cliente.Size = new System.Drawing.Size(673, 78);
+            this.Pest2_Grupo_Cliente.TabIndex = 17;
+            this.Pest2_Grupo_Cliente.TabStop = false;
+            this.Pest2_Grupo_Cliente.Text = "Busqueda de Cliente";
+            this.Pest2_Grupo_Cliente.Enter += new System.EventHandler(this.Pest2_Grupo_Cliente_Enter);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(35, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Filtro de Busqueda";
+            // 
+            // Pest2_ComBo_Muestra
+            // 
+            this.Pest2_ComBo_Muestra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest2_ComBo_Muestra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_ComBo_Muestra.FormattingEnabled = true;
+            this.Pest2_ComBo_Muestra.Location = new System.Drawing.Point(349, 29);
+            this.Pest2_ComBo_Muestra.Name = "Pest2_ComBo_Muestra";
+            this.Pest2_ComBo_Muestra.Size = new System.Drawing.Size(304, 23);
+            this.Pest2_ComBo_Muestra.TabIndex = 15;
+            this.Pest2_ComBo_Muestra.SelectedIndexChanged += new System.EventHandler(this.Pest2_ComBo_Muestra_SelectedIndexChanged);
+            // 
+            // Pest2_Txt_FiltroNombre
+            // 
+            this.Pest2_Txt_FiltroNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_Txt_FiltroNombre.Location = new System.Drawing.Point(154, 31);
+            this.Pest2_Txt_FiltroNombre.MaxLength = 45;
+            this.Pest2_Txt_FiltroNombre.Name = "Pest2_Txt_FiltroNombre";
+            this.Pest2_Txt_FiltroNombre.Size = new System.Drawing.Size(189, 21);
+            this.Pest2_Txt_FiltroNombre.TabIndex = 15;
+            this.Pest2_Txt_FiltroNombre.TextChanged += new System.EventHandler(this.Pest2_Txt_FiltroNombre_TextChanged);
+            this.Pest2_Txt_FiltroNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Txt_FiltroNombre_KeyPress);
+            // 
+            // Pest2_Grupo_Opciones
+            // 
+            this.Pest2_Grupo_Opciones.Controls.Add(this.Pest2_Radio_FilPorClie);
+            this.Pest2_Grupo_Opciones.Controls.Add(this.Pest2_Radio_Todos);
+            this.Pest2_Grupo_Opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_Grupo_Opciones.Location = new System.Drawing.Point(18, 16);
+            this.Pest2_Grupo_Opciones.Name = "Pest2_Grupo_Opciones";
+            this.Pest2_Grupo_Opciones.Size = new System.Drawing.Size(162, 78);
+            this.Pest2_Grupo_Opciones.TabIndex = 18;
+            this.Pest2_Grupo_Opciones.TabStop = false;
+            this.Pest2_Grupo_Opciones.Text = "Opciones";
+            // 
+            // Pest2_Grupo_Muestra
+            // 
+            this.Pest2_Grupo_Muestra.Controls.Add(this.label9);
+            this.Pest2_Grupo_Muestra.Controls.Add(this.Pest2_Cod_Trans);
+            this.Pest2_Grupo_Muestra.Controls.Add(this.Pest2_Bttn_VerDetalle);
+            this.Pest2_Grupo_Muestra.Controls.Add(this.Pest2_Bttn_AplicarMora);
+            this.Pest2_Grupo_Muestra.Controls.Add(this.Pest2_DGV_MuestraDatos);
+            this.Pest2_Grupo_Muestra.Location = new System.Drawing.Point(18, 111);
+            this.Pest2_Grupo_Muestra.Name = "Pest2_Grupo_Muestra";
+            this.Pest2_Grupo_Muestra.Size = new System.Drawing.Size(841, 361);
+            this.Pest2_Grupo_Muestra.TabIndex = 19;
+            this.Pest2_Grupo_Muestra.TabStop = false;
+            this.Pest2_Grupo_Muestra.Text = "Muestra de transaciones al credito";
+            this.Pest2_Grupo_Muestra.Enter += new System.EventHandler(this.Pest2_Grupo_Muestra_Enter);
+            // 
+            // Pest2_DGV_MuestraDatos
+            // 
+            this.Pest2_DGV_MuestraDatos.AllowUserToAddRows = false;
+            this.Pest2_DGV_MuestraDatos.AllowUserToDeleteRows = false;
+            this.Pest2_DGV_MuestraDatos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Pest2_DGV_MuestraDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Pest2_DGV_MuestraDatos.Location = new System.Drawing.Point(19, 73);
+            this.Pest2_DGV_MuestraDatos.Name = "Pest2_DGV_MuestraDatos";
+            this.Pest2_DGV_MuestraDatos.ReadOnly = true;
+            this.Pest2_DGV_MuestraDatos.Size = new System.Drawing.Size(802, 269);
+            this.Pest2_DGV_MuestraDatos.TabIndex = 0;
+            this.Pest2_DGV_MuestraDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Pest2_DGV_MuestraDatos_CellContentDoubleClick);
+            this.Pest2_DGV_MuestraDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Pest2_DGV_MuestraDatos_CellDoubleClick);
+            // 
+            // Pest2_Bttn_AplicarMora
+            // 
+            this.Pest2_Bttn_AplicarMora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_Bttn_AplicarMora.Location = new System.Drawing.Point(685, 21);
+            this.Pest2_Bttn_AplicarMora.Name = "Pest2_Bttn_AplicarMora";
+            this.Pest2_Bttn_AplicarMora.Size = new System.Drawing.Size(136, 45);
+            this.Pest2_Bttn_AplicarMora.TabIndex = 1;
+            this.Pest2_Bttn_AplicarMora.Text = "Aplicar Mora";
+            this.Pest2_Bttn_AplicarMora.UseVisualStyleBackColor = true;
+            this.Pest2_Bttn_AplicarMora.Click += new System.EventHandler(this.Pest2_Bttn_AplicarMora_Click);
+            // 
+            // Pest2_Bttn_VerDetalle
+            // 
+            this.Pest2_Bttn_VerDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_Bttn_VerDetalle.Location = new System.Drawing.Point(533, 22);
+            this.Pest2_Bttn_VerDetalle.Name = "Pest2_Bttn_VerDetalle";
+            this.Pest2_Bttn_VerDetalle.Size = new System.Drawing.Size(136, 45);
+            this.Pest2_Bttn_VerDetalle.TabIndex = 2;
+            this.Pest2_Bttn_VerDetalle.Text = "Ver detalles";
+            this.Pest2_Bttn_VerDetalle.UseVisualStyleBackColor = true;
+            this.Pest2_Bttn_VerDetalle.Click += new System.EventHandler(this.Pest2_Bttn_VerDetalle_Click);
+            // 
+            // Pest2_Radio_Todos
+            // 
+            this.Pest2_Radio_Todos.AutoSize = true;
+            this.Pest2_Radio_Todos.Location = new System.Drawing.Point(16, 23);
+            this.Pest2_Radio_Todos.Name = "Pest2_Radio_Todos";
+            this.Pest2_Radio_Todos.Size = new System.Drawing.Size(123, 17);
+            this.Pest2_Radio_Todos.TabIndex = 3;
+            this.Pest2_Radio_Todos.TabStop = true;
+            this.Pest2_Radio_Todos.Text = "Muestra de todos";
+            this.Pest2_Radio_Todos.UseVisualStyleBackColor = true;
+            this.Pest2_Radio_Todos.CheckedChanged += new System.EventHandler(this.Pest2_Radio_Todos_CheckedChanged);
+            // 
+            // Pest2_Radio_FilPorClie
+            // 
+            this.Pest2_Radio_FilPorClie.AutoSize = true;
+            this.Pest2_Radio_FilPorClie.Location = new System.Drawing.Point(16, 46);
+            this.Pest2_Radio_FilPorClie.Name = "Pest2_Radio_FilPorClie";
+            this.Pest2_Radio_FilPorClie.Size = new System.Drawing.Size(121, 17);
+            this.Pest2_Radio_FilPorClie.TabIndex = 4;
+            this.Pest2_Radio_FilPorClie.TabStop = true;
+            this.Pest2_Radio_FilPorClie.Text = "Filtrar por cliente";
+            this.Pest2_Radio_FilPorClie.UseVisualStyleBackColor = true;
+            this.Pest2_Radio_FilPorClie.CheckedChanged += new System.EventHandler(this.Pest2_Radio_FilPorClie_CheckedChanged);
+            // 
+            // Pest2_Cod_Trans
+            // 
+            this.Pest2_Cod_Trans.Enabled = false;
+            this.Pest2_Cod_Trans.Location = new System.Drawing.Point(336, 34);
+            this.Pest2_Cod_Trans.Name = "Pest2_Cod_Trans";
+            this.Pest2_Cod_Trans.Size = new System.Drawing.Size(175, 22);
+            this.Pest2_Cod_Trans.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(203, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 16);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Cod. Transacion";
             // 
             // Form_Credito_CobroCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(861, 649);
+            this.ClientSize = new System.Drawing.Size(925, 650);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.Bttn_Guardar);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Bttn_LimpiarTodo);
             this.Controls.Add(this.Bttn_Salir);
             this.Controls.Add(this.Bttn_Ayuda);
-            this.Controls.Add(this.Bttn_LimpiaLista);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.DataGriew_DatosFactura);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Txt_NombreEmpleado);
-            this.Controls.Add(this.Txt_CodigoDeRecibo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Txt_FechaRealizacion);
+            this.Controls.Add(this.Bttn_MuestraClientes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Credito_CobroCredito";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobro de Credito a Cliente";
             this.Load += new System.EventHandler(this.Form_Credito_CobroCredito_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGriew_DatosFactura)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.DVG_MuesCredito.ResumeLayout(false);
+            this.DVG_RePago.ResumeLayout(false);
+            this.DVG_RePago.PerformLayout();
+            this.Pest1_Grupo_FiltroBusqueda.ResumeLayout(false);
+            this.Pest1_Grupo_FiltroBusqueda.PerformLayout();
+            this.Pest1_Grupo_Factura.ResumeLayout(false);
+            this.Pest1_Grupo_Factura.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest1_DGV_DatosFactura)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.Pest2_Grupo_Cliente.ResumeLayout(false);
+            this.Pest2_Grupo_Cliente.PerformLayout();
+            this.Pest2_Grupo_Opciones.ResumeLayout(false);
+            this.Pest2_Grupo_Opciones.PerformLayout();
+            this.Pest2_Grupo_Muestra.ResumeLayout(false);
+            this.Pest2_Grupo_Muestra.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pest2_DGV_MuestraDatos)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Txt_CodigoDeRecibo;
-        private System.Windows.Forms.TextBox Txt_NombreEmpleado;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox Check_Correo;
-        private System.Windows.Forms.CheckBox Check_Impresion;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox Txt_InformacionClienteGenerado;
-        private System.Windows.Forms.TextBox Txt_Filtros_Cliente;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox Check_RepresentaEmpresa;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView DataGriew_DatosFactura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_FechaRealizacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_TotalPorCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_MontoTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_MontoAPagar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG_Estado;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button Bttn_LimpiaLista;
+        private System.Windows.Forms.Button Bttn_MuestraClientes;
         private System.Windows.Forms.Button Bttn_Ayuda;
         private System.Windows.Forms.Button Bttn_Salir;
         private System.Windows.Forms.Button Bttn_LimpiarTodo;
-        private System.Windows.Forms.Button Bttn_Guardar;
-        private System.Windows.Forms.Button Bttn_AgregarADataGriew;
-        private System.Windows.Forms.Button Bttn_LimpiarDeSeleccion;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox Txt_TotalAPagarPorFactura;
-        private System.Windows.Forms.TextBox Txt_Busqueda_MontoTOTALFactura;
-        private System.Windows.Forms.TextBox Txt_Busqueda_TotalCargos;
-        private System.Windows.Forms.TextBox Txt_Busqueda_FechaRealizacion;
-        private System.Windows.Forms.TextBox Txt_Buscar_MontoFactura;
-        private System.Windows.Forms.TextBox Txt_Busqueda_CodigoFactura;
-        private System.Windows.Forms.Button Bttn_GenerarInformacion;
-        private System.Windows.Forms.TextBox Txt_FechaRealizacion;
+        private System.Windows.Forms.TabPage DVG_MuesCredito;
+        private System.Windows.Forms.TabPage DVG_RePago;
+        private System.Windows.Forms.GroupBox Pest1_Grupo_FiltroBusqueda;
+        private System.Windows.Forms.GroupBox Pest1_Grupo_Factura;
+        private System.Windows.Forms.Button Pest1_Bttn_Limpiar;
+        private System.Windows.Forms.Button Pest1_Bttn_RealizarPag;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Pest1_Txt_MontAPagar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox Pest1_ComBox_MetodoPago;
+        private System.Windows.Forms.DataGridView Pest1_DGV_DatosFactura;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.DateTimePicker Pest1_DATE_FechaActual;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox Pest1_ComBox_MuestDatos;
+        private System.Windows.Forms.TextBox Pest1_Txt_Filtro;
+        private System.Windows.Forms.TextBox Pest1_Txt_MontoResidual;
+        private System.Windows.Forms.TextBox Pest1_Txt_MontoOriginal;
+        private System.Windows.Forms.TextBox Pest1_Txt_NFactura;
+        private System.Windows.Forms.TextBox Pest1_Txt_NTransacion;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox Pest1_Txt_NombreEmpleado;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox Pest2_Grupo_Muestra;
+        private System.Windows.Forms.DataGridView Pest2_DGV_MuestraDatos;
+        private System.Windows.Forms.GroupBox Pest2_Grupo_Opciones;
+        private System.Windows.Forms.GroupBox Pest2_Grupo_Cliente;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox Pest2_ComBo_Muestra;
+        private System.Windows.Forms.TextBox Pest2_Txt_FiltroNombre;
+        private System.Windows.Forms.Button Pest2_Bttn_VerDetalle;
+        private System.Windows.Forms.Button Pest2_Bttn_AplicarMora;
+        private System.Windows.Forms.RadioButton Pest2_Radio_FilPorClie;
+        private System.Windows.Forms.RadioButton Pest2_Radio_Todos;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Pest2_Cod_Trans;
     }
 }

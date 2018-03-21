@@ -44,7 +44,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioTodas = new System.Windows.Forms.RadioButton();
             this.cmbBxTipoDoc = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DATE_FiltroFecha = new System.Windows.Forms.DateTimePicker();
             this.radioFechaVen = new System.Windows.Forms.RadioButton();
             this.radioTipoDoc = new System.Windows.Forms.RadioButton();
             this.cmbBxTipos = new System.Windows.Forms.ComboBox();
@@ -53,15 +53,17 @@
             this.radioEstados = new System.Windows.Forms.RadioButton();
             this.transaccionesTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.TransaccionesTableAdapter();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.DATE_FechaTransaccion = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DATE_FechaActual = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.transaccionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Transacciones)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // transaccionesBindingSource
@@ -78,7 +80,7 @@
             // 
             this.DGV_Transacciones.AllowUserToAddRows = false;
             this.DGV_Transacciones.AllowUserToDeleteRows = false;
-            this.DGV_Transacciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_Transacciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGV_Transacciones.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGV_Transacciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_Transacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -86,7 +88,7 @@
             this.DGV_Transacciones.Name = "DGV_Transacciones";
             this.DGV_Transacciones.ReadOnly = true;
             this.DGV_Transacciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Transacciones.Size = new System.Drawing.Size(1076, 318);
+            this.DGV_Transacciones.Size = new System.Drawing.Size(1076, 431);
             this.DGV_Transacciones.TabIndex = 28;
             this.DGV_Transacciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Transacciones_CellClick);
             this.DGV_Transacciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Transacciones_CellContentClick);
@@ -95,24 +97,24 @@
             // txtMonto
             // 
             this.txtMonto.Enabled = false;
-            this.txtMonto.Location = new System.Drawing.Point(250, 79);
+            this.txtMonto.Location = new System.Drawing.Point(107, 58);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(181, 21);
+            this.txtMonto.Size = new System.Drawing.Size(99, 21);
             this.txtMonto.TabIndex = 27;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(83, 79);
+            this.label8.Location = new System.Drawing.Point(104, 41);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 15);
+            this.label8.Size = new System.Drawing.Size(63, 15);
             this.label8.TabIndex = 25;
-            this.label8.Text = "Monto";
+            this.label8.Text = "Monto L.";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 55);
+            this.label2.Location = new System.Drawing.Point(218, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 15);
             this.label2.TabIndex = 13;
@@ -121,9 +123,9 @@
             // txtNumDoc
             // 
             this.txtNumDoc.Enabled = false;
-            this.txtNumDoc.Location = new System.Drawing.Point(250, 52);
+            this.txtNumDoc.Location = new System.Drawing.Point(221, 58);
             this.txtNumDoc.Name = "txtNumDoc";
-            this.txtNumDoc.Size = new System.Drawing.Size(77, 21);
+            this.txtNumDoc.Size = new System.Drawing.Size(141, 21);
             this.txtNumDoc.TabIndex = 12;
             // 
             // btnAplicarMora
@@ -149,24 +151,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 28);
+            this.label1.Location = new System.Drawing.Point(11, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 15);
+            this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Codigo de Transaccion";
+            this.label1.Text = "Transaccion";
             // 
             // txtCodTrans
             // 
             this.txtCodTrans.Enabled = false;
-            this.txtCodTrans.Location = new System.Drawing.Point(250, 25);
+            this.txtCodTrans.Location = new System.Drawing.Point(14, 58);
             this.txtCodTrans.Name = "txtCodTrans";
-            this.txtCodTrans.Size = new System.Drawing.Size(77, 21);
+            this.txtCodTrans.Size = new System.Drawing.Size(82, 21);
             this.txtCodTrans.TabIndex = 2;
             this.txtCodTrans.TextChanged += new System.EventHandler(this.txtCodTrans_TextChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(984, 527);
+            this.button3.Location = new System.Drawing.Point(984, 640);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 43);
             this.button3.TabIndex = 1;
@@ -179,7 +181,7 @@
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.Controls.Add(this.radioTodas);
             this.groupBox2.Controls.Add(this.cmbBxTipoDoc);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.DATE_FiltroFecha);
             this.groupBox2.Controls.Add(this.radioFechaVen);
             this.groupBox2.Controls.Add(this.radioTipoDoc);
             this.groupBox2.Controls.Add(this.cmbBxTipos);
@@ -218,14 +220,14 @@
             this.cmbBxTipoDoc.TabIndex = 7;
             this.cmbBxTipoDoc.SelectedIndexChanged += new System.EventHandler(this.cmbBxTipoDoc_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // DATE_FiltroFecha
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(230, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 20);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.DATE_FiltroFecha.Enabled = false;
+            this.DATE_FiltroFecha.Location = new System.Drawing.Point(230, 64);
+            this.DATE_FiltroFecha.Name = "DATE_FiltroFecha";
+            this.DATE_FiltroFecha.Size = new System.Drawing.Size(265, 20);
+            this.DATE_FiltroFecha.TabIndex = 6;
+            this.DATE_FiltroFecha.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // radioFechaVen
             // 
@@ -299,7 +301,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dateTimePicker3);
+            this.groupBox3.Controls.Add(this.DATE_FechaTransaccion);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.txtCodTrans);
@@ -318,18 +320,19 @@
             this.groupBox3.Text = "Manejo de Transacciones";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // dateTimePicker3
+            // DATE_FechaTransaccion
             // 
-            this.dateTimePicker3.Enabled = false;
-            this.dateTimePicker3.Location = new System.Drawing.Point(250, 106);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(181, 21);
-            this.dateTimePicker3.TabIndex = 30;
+            this.DATE_FechaTransaccion.Enabled = false;
+            this.DATE_FechaTransaccion.Location = new System.Drawing.Point(15, 103);
+            this.DATE_FechaTransaccion.Name = "DATE_FechaTransaccion";
+            this.DATE_FechaTransaccion.Size = new System.Drawing.Size(283, 21);
+            this.DATE_FechaTransaccion.TabIndex = 30;
+            this.DATE_FechaTransaccion.ValueChanged += new System.EventHandler(this.DATE_FechaTransaccion_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 106);
+            this.label3.Location = new System.Drawing.Point(12, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 15);
             this.label3.TabIndex = 29;
@@ -345,21 +348,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // dateTimePicker2
+            // DATE_FechaActual
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(12, 22);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(291, 21);
-            this.dateTimePicker2.TabIndex = 29;
+            this.DATE_FechaActual.Location = new System.Drawing.Point(12, 22);
+            this.DATE_FechaActual.Name = "DATE_FechaActual";
+            this.DATE_FechaActual.Size = new System.Drawing.Size(291, 21);
+            this.DATE_FechaActual.TabIndex = 29;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form_Transacciones_Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1100, 580);
+            this.ClientSize = new System.Drawing.Size(1100, 695);
             this.ControlBox = false;
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.DATE_FechaActual);
             this.Controls.Add(this.DGV_Transacciones);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button3);
@@ -376,6 +383,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,7 +405,7 @@
         private System.Windows.Forms.TextBox txtCodTrans;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox cmbBxTipoDoc;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DATE_FiltroFecha;
         private System.Windows.Forms.RadioButton radioFechaVen;
         private System.Windows.Forms.RadioButton radioTipoDoc;
         private System.Windows.Forms.TextBox txtMonto;
@@ -407,7 +415,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker DATE_FechaActual;
+        private System.Windows.Forms.DateTimePicker DATE_FechaTransaccion;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

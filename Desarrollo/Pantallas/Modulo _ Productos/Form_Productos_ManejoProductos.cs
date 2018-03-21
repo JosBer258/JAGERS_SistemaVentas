@@ -14,12 +14,13 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 {
     public partial class Form_Productos_ManejoProductos : System.Windows.Forms.Form
     {
-        Conexion Con = new Conexion();
-        Validaciones val = new Validaciones();
-        C_Productos prod = new C_Productos();
-        C_Categoria_Productos categoria = new C_Categoria_Productos();
+        Conexion Conn = new Conexion();
+        C_DatoHistoricos HisDatos = new C_DatoHistoricos();
+        Validaciones Valid = new Validaciones();
+        C_Productos Products = new C_Productos();
+        C_Categoria_Productos Categ = new C_Categoria_Productos();
 
-        string comparar;
+        public string comparar;
         public string Localidad;
         public string EmpNombr;
 
@@ -40,7 +41,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         public void Cargar()
         {
-            ExtrearTodo(Pest2_DataGriew_Productos);
+            Products.ExtrearTodo(Pest2_DataGriew_Productos);
             Fun_llenarCategoria();
         }
 
@@ -48,51 +49,54 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         {
             Pest3_ComboBox_Localidad.Enabled = false;
             if (Localidad == "1" || Localidad == "2")
-            {
-                label2.Visible = true;
+            {   label2.Visible = true;
                 Pest1_Txt_TotalBodega.Visible = true;
             }
-            else
-            {
-                label2.Visible = false;
-                Pest1_Txt_TotalBodega.Visible = false;
+            else{ label2.Visible = false;
+                  Pest1_Txt_TotalBodega.Visible = false;
             }
 
 
             //BUSCAR PRODUCTOS
-            ExtrearTodo(Pest2_DataGriew_Productos);
-            Pest2_Txt_NombreFiltro.Enabled = false;
-            Pest2_Txt_CodigoFiltro.Enabled = false;
-            Pest2_Radio_Nombre.Checked = true;
+            Products.ExtrearTodo(Pest2_DataGriew_Productos);           
             OptenerUltimoCodigoProducto();
             Fun_llenarPRO();
             Cargar();
-            //
+            Products.ExtraerEstadosMarcas(Pest5_Radio_Manejo_Estados);
+            Products.Fun_ExtraerEstados(Pest3_ComBox_Estado);
 
-
-            ExtraerEstadosMarcas();
+            Pest2_Txt_NombreFiltro.Enabled = false;
+            Pest2_Txt_CodigoFiltro.Enabled = false;
+            Pest2_Radio_Nombre.Checked = true;
             Pest4_Txt_Manejo_CodCategoria.Enabled = false;
             Pest4_Txt_Manejo_Categoria.Enabled = false;
             Pest4_Txt_Busqueda_CodCategoria.Enabled = false;
             Pest4_Txt_Busqueda_Categoria.Enabled = false;
-
             Pest4_Radio_Agregar.Checked = true;
             Pest5_Radio_Buscar.Checked = true;
             radioButton1.Checked = true;
-            Fun_ExtraerEstados();
-
             Pest3_Txt_Codigo.Enabled = false;
             Pest3_Txt_Nombre.Enabled = false;
             Pest3_Txt_Categorias.Enabled = false;
             Pest3_Txt_Modelo.Enabled = false;
+            Pest6_Txt_Manejo_CodigoModulo.Enabled = false;
+            Pest6_Txt_Manejo_Descripcion.Enabled = false;
+            Pest6_Txt_Manejo_FiltroMarca.Enabled = false;
+            Pest6_ComboBox_Manejo_ResultadoMarca.Enabled = false;
+            Pest6_Txt_Busqueda_CodigoModelo.Enabled = false;
+            Pest6_Txt_Busqueda_Descripcion.Enabled = false;
+            Pest6_Txt_Busqueda_CodigoMarca.Enabled = false;
+            Pest6_ComBox_Busqueda_Estados.Enabled = false;
+            Pest6_Bttn_Busqueda_Aceptar.Enabled = false;
 
-            //Llenado de DataGriews
-            //this.productos_HistoricosTableAdapter.Fill(this.ventasAutoPartesDataSet._Productos_Historicos);
-            categoria.Fun_CargarPrimerDataGriew(Pest4_DataGrid_Categoria);
+
+            Categ.Fun_CargarPrimerDataGriew(Pest4_DataGrid_Categoria);
             this.modeloTableAdapter.Fill(this.ventasAutoPartesDataSet.Modelo);
             this.marcaTableAdapter.Fill(this.ventasAutoPartesDataSet.Marca);
+            Pest6_Bttn_Manejo_Aceptar.Enabled = false;
+            Products.Pest6_Fun_llenarEstadoModelo(Pest6_ComBox_Busqueda_Estados); 
 
-            //Radio Botons Selecionados por Default
+
             Pest6_Radio_Agregar.Checked = true;
 
 
@@ -100,7 +104,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             validacionMenu2_GrupoManejo();
             Fun_ExtraerCodigo();
             validacionMenu_GrupoBuscar();
-            actualizar();
+            actualizar(Pest5_DataGriewMarcas);
 
 
             var blankContextMenu = new ContextMenuStrip();
@@ -118,26 +122,15 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             Pest6_Txt_Busqueda_Descripcion.ContextMenuStrip = blankContextMenu;
             Pest6_Txt_Busqueda_CodigoModelo.ContextMenuStrip = blankContextMenu;
             Pest3_Cant_PorLocalidad.ContextMenuStrip = blankContextMenu;
-
             Pest3_Txt_PrecioVenta.ContextMenuStrip = blankContextMenu;
             Pest3_Txt_Compras.ContextMenuStrip = blankContextMenu;
-
-
-
             Pest1_Txt_Filtro_NombreMarca.ContextMenuStrip = blankContextMenu;
             Pest1_Txt_Filtro_NombreProveedor.ContextMenuStrip = blankContextMenu;
-            Pest6_Txt_Manejo_CodigoModulo.Enabled = false;
-            Pest6_Txt_Manejo_Descripcion.Enabled = false;
-            Pest6_Txt_Manejo_FiltroMarca.Enabled = false;
-            Pest6_ComboBox_Manejo_ResultadoMarca.Enabled = false;
 
-            Pest6_Bttn_Manejo_Aceptar.Enabled = false;
-            prod.Pest6_Fun_llenarEstadoModelo(Pest6_ComBox_Busqueda_Estados);
-            Pest6_Txt_Busqueda_CodigoModelo.Enabled = false;
-            Pest6_Txt_Busqueda_Descripcion.Enabled = false;
-            Pest6_Txt_Busqueda_CodigoMarca.Enabled = false;
-            Pest6_ComBox_Busqueda_Estados.Enabled = false;
-            Pest6_Bttn_Busqueda_Aceptar.Enabled = false;
+            
+
+            
+            
         }
 
         private void validacionMenu()
@@ -270,48 +263,26 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
             Fun_AgregarProducto();
             OptenerUltimoCodigoProducto();
-            ExtrearTodo(Pest2_DataGriew_Productos);
+            Products.ExtrearTodo(Pest2_DataGriew_Productos);
 
         }
 
         public void Fun_CargarHistoricosNew()
         {
-            C_DatoHistoricos Datos = new C_DatoHistoricos();
-            Datos.Var_IngresarProductosHistoricos(
-                            Pest1_Txt_Nombre.Text, (float)Convert.ToDouble(Pest1_Txt_PrecioVentas.Text),
-                            (float)Convert.ToDouble(Pest1_Txt_PrecioCompras.Text), EmpNombr);
+            HisDatos.Var_IngresarProductosHistoricos(Pest1_Txt_Nombre.Text, (float)Convert.ToDouble(Pest1_Txt_PrecioVentas.Text),
+                (float)Convert.ToDouble(Pest1_Txt_PrecioCompras.Text), EmpNombr);
                 
         }
 
 
         private void Pest1_Txt_Filtro_NombreProveedor_TextChanged(object sender, EventArgs e)
         {
-            Fun_Llenarproveedor();
+            Products.Fun_Llenarproveedor(Pest1_ComBox_Filtro_NombreProveedor, Pest1_Txt_Filtro_NombreProveedor);
         }
 
-        public void Fun_Llenarproveedor()
-        {
-            int a;
+        
 
-            if (Pest1_Txt_Filtro_NombreProveedor.Text == string.Empty) { a = 0; }
-            else
-            {
-                a = Convert.ToInt16(Pest1_Txt_Filtro_NombreProveedor.Text);
-            }
-            
-            Conexion Con = new Conexion();
-
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Codigo_Proveedor, Nombre from [dbo].[Proveedor] where Codigo_Proveedor like '%{0}%'", a);
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-            Pest1_ComBox_Filtro_NombreProveedor.ValueMember = "Codigo_Proveedor";
-            Pest1_ComBox_Filtro_NombreProveedor.DisplayMember = "Nombre";
-            Pest1_ComBox_Filtro_NombreProveedor.DataSource = Con.dt;
-        }
+        
 
         public void Fun_LlenarMarca()
         {
@@ -351,7 +322,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         }
         public void Fun_AgregarProducto()
         {
-            //   int cod = Convert.ToInt16(Pest1_Txt_Codigo.Text);
+ 
             string nomb = Pest1_Txt_Nombre.Text;
             float preve = Convert.ToSingle(Pest1_Txt_PrecioVentas.Text);
             float precom = Convert.ToSingle(Pest1_Txt_PrecioCompras.Text);
@@ -381,13 +352,13 @@ namespace Desarrollo.Pantallas.Modulo___Productos
                 SqlDataReader Reg = null;
                 Reg = Con.cmd.ExecuteReader();
                 Fun_CargarHistoricosNew();
-                ExtrearTodo(Pest2_DataGriew_Productos);
+                Products.ExtrearTodo(Pest2_DataGriew_Productos);
                 
             }
             catch (Exception )
             {
                 MessageBox.Show("Ocurrio un error en el ingreso del nuevo Producto","Esto es embarasoso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ExtrearTodo(Pest2_DataGriew_Productos);
+                Products.ExtrearTodo(Pest2_DataGriew_Productos);
             }
             Con.cnx.Close();
             //AGREGAR LAS CANTIDADES
@@ -406,27 +377,27 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         public void AgregarPorSucursalNormal(int Cant, int Local)
         {
-            Con.sql = string.Format(@"insert into [Producto|Localidad] (Cod_Localidad, Cod_Producto, Cantidad) values 
+            Conn.sql = string.Format(@"insert into [Producto|Localidad] (Cod_Localidad, Cod_Producto, Cantidad) values 
                                       ('{0}',(select top 1 Cod_Producto from Producto order by Cod_Producto desc),'{1}')", Local, Cant);
             
-                Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-                Con.cnx.Open();
+                Conn.cmd = new SqlCommand(Conn.sql, Conn.cnx);
+                Conn.cnx.Open();
                 SqlDataReader Reg = null;
-                Reg = Con.cmd.ExecuteReader();
-                Con.cnx.Close();
+                Reg = Conn.cmd.ExecuteReader();
+                Conn.cnx.Close();
             
         }
         
         public void AgregarPorDodega(int Cant, int Loc)
         { 
-            Con.sql = string.Format(@"insert into [Producto|Localidad] (Cod_Localidad, Cod_Producto, Cantidad) values 
+            Conn.sql = string.Format(@"insert into [Producto|Localidad] (Cod_Localidad, Cod_Producto, Cantidad) values 
                                     ('{0}',(select top 1 Cod_Producto from Producto order by Cod_Producto desc),'{1}')", Loc, Cant);
             
-                Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-                Con.cnx.Open();
+                Conn.cmd = new SqlCommand(Conn.sql, Conn.cnx);
+                Conn.cnx.Open();
                 SqlDataReader Reg = null;
-                Reg = Con.cmd.ExecuteReader();
-                Con.cnx.Close();
+                Reg = Conn.cmd.ExecuteReader();
+                Conn.cnx.Close();
            
         }
 
@@ -477,7 +448,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void Pest1_Txt_Filtro_NombreProveedor_TextChanged_1(object sender, EventArgs e)
         {
-            Fun_Llenarproveedor();
+            Products.Fun_Llenarproveedor(Pest1_ComBox_Filtro_NombreProveedor, Pest1_Txt_Filtro_NombreProveedor);
         }
 
         private void Pest1_Txt_Filtro_NombreMarca_TextChanged_1(object sender, EventArgs e)
@@ -521,30 +492,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             }
         }
 
-        public void Fun_CargarPorCodigo(DataGridView dgv, int a)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                int busq;
-                busq = a;
-
-
-                /*con.sql = string.Format(@"Select * from Categoria_Productos", busq);*/
-                con.sql = string.Format(@"select * from Categoria_Producto where Codigo_Categoria like '%{0}%'", busq);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-        }
+      
 
         public void Fun_CargarPorNombre(DataGridView dgv, string a)
         {
@@ -580,24 +528,21 @@ namespace Desarrollo.Pantallas.Modulo___Productos
            
 
             if (Pest4_Txt_Busqueda_CodCategoria.Text == "")
-            {
-                // Fun_CargarPorCodigo(dataGridView2, Convert.ToInt16(0));
-                
+            {               
                 if (Pest4_Txt_Busqueda_CodCategoria.Text == string.Empty)
-                    categoria.Fun_CargarPrimerDataGriew(Pest4_DataGrid_Categoria);
-
-
+                    Categ.Fun_CargarPrimerDataGriew(Pest4_DataGrid_Categoria);
             }
             else
             {
-                Fun_CargarPorCodigo(Pest4_DataGrid_Categoria, Convert.ToInt16(Convert.ToInt16(Pest4_Txt_Busqueda_CodCategoria.Text)));
+                Products.Fun_CargarPorCodigo(Pest4_DataGrid_Categoria, 
+                    Convert.ToInt16(Convert.ToInt16(Pest4_Txt_Busqueda_CodCategoria.Text)));
             }
         }
 
         private void Pest4_Txt_Busqueda_Categoria_TextChanged(object sender, EventArgs e)
         {
             if (Pest4_Txt_Busqueda_Categoria.Text == "")
-            {// Fun_CargarPorNombre(dataGridView2, "a");
+            {
                 C_Categoria_Productos categoria = new C_Categoria_Productos();
                 if (Pest4_Txt_Busqueda_Categoria.Text == string.Empty)
                     categoria.Fun_CargarPrimerDataGriew(Pest4_DataGrid_Categoria);
@@ -625,14 +570,14 @@ namespace Desarrollo.Pantallas.Modulo___Productos
                 Pest3_Txt_NombreMarca.Text = row.Cells["Marca"].Value.ToString();
                 comboBox1.SelectedValue = Convert.ToInt32(row.Cells["Codigo del Proveedor"].Value.ToString());
                 textBox1.Text = row.Cells["Descripcion"].Value.ToString();
-                LLenarLocalidades(Pest3_ComboBox_Localidad);
+                Products.Fun_LLenarLocalidades(Pest3_ComboBox_Localidad);
                 if (Localidad == "1" || Localidad == "2")
                 {
-                    Fun_CargarLocalidad(dataGridView1, Pest3_Txt_Codigo.Text);
+                    Products.Fun_CargarLocalidad(dataGridView1, Pest3_Txt_Codigo.Text);
                 }
                 else
                 {
-                    Fun_CargarLocalidadIndividual(dataGridView1, Pest3_Txt_Codigo.Text, Localidad);
+                    Products.Fun_CargarLocalidadIndividual(dataGridView1, Pest3_Txt_Codigo.Text, Localidad);
                 }
 
                 ModificarCant_PorLocalidad.Checked = true;
@@ -645,23 +590,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
             }
 
-        public void Fun_ExtraerEstados()
-        {
-            Conexion Con = new Conexion();
 
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Codigo_Estado, Descripcion_Estado from Estados WHERE Codigo_Tipo_Estado = 4");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-
-            Pest3_ComBox_Estado.ValueMember = "Codigo_Estado";
-            Pest3_ComBox_Estado.DisplayMember = "Descripcion_Estado";
-            Pest3_ComBox_Estado.DataSource = Con.dt;
-        }
 
 
 
@@ -793,9 +722,11 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             //catprod.Var_Estado = Convert.ToUInt16(Pest3_ComBox_Estado.SelectedValue);
 
             catprod.Fun_Modificar(Pest3_ComBox_Estado, Convert.ToInt32(comboBox1.SelectedValue));
+            HisDatos.Var_ModificarProductosHistoricos
+                (Convert.ToInt32(Pest3_Txt_Codigo.Text), Pest3_Txt_Nombre.Text, (float)Convert.ToDouble(Pest3_Txt_PrecioVenta.Text),
+                (float)Convert.ToDouble(Pest3_Txt_Compras.Text), EmpNombr, Convert.ToString(Pest3_ComBox_Estado.DisplayMember), "Modificar");
             MessageBox.Show("Se Modifico Correctamente");
-
-            ExtrearTodo(Pest2_DataGriew_Productos);
+            Products.ExtrearTodo(Pest2_DataGriew_Productos);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -935,80 +866,41 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void Pest4_Txt_Manejo_Categoria_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, Pest4_Txt_Manejo_Categoria);
+            Valid.ValirLetrasYEspacios(sender, e, Pest4_Txt_Manejo_Categoria);
         }
 
         private void Pest4_Txt_Busqueda_CodCategoria_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            val.ValidarID(sender, e); 
+            Valid.ValidarID(sender, e); 
         }
 
         private void Pest4_Txt_Busqueda_Categoria_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, Pest4_Txt_Busqueda_Categoria);
+            Valid.ValirLetrasYEspacios(sender, e, Pest4_Txt_Busqueda_Categoria);
         }
 
 
 
 
         ////////////////////////////FUNCIONES DE DAPHNER
-        public void Fun_CargarPorNombreMarcas(DataGridView dgv, string a)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                string busq;
-                busq = a;
 
-
-                con.sql = string.Format(@"select Cod_Marca as 'Codigo de Marca', Descripcion as 'Descripcion de Marca', Cod_Estado as 'Codigo de Estado', ( select E.Descripcion_Estado from Estados as E where E.Codigo_Tipo_Estado=5 and E.Codigo_Estado = Cod_Estado) as 'Estado de la Marca'  from Marca  where Descripcion like '%{0}%'", busq);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-        }
-
-        public void Fun_ExtraerCodigoMarcas()
-        {
-            Conexion Con = new Conexion();
-
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select TOP 1 Cod_Marca from Marca ORDER BY Cod_Marca DESC");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            SqlDataReader Reg2 = null;
-            Reg2 = Con.cmd.ExecuteReader();
-            if (Reg2.Read())
-            {
-                Pest5_Txt_Manejo_Codigo.Text = Convert.ToString(Convert.ToInt16((Reg2["Cod_Marca"].ToString())) + 1);
-                Con.cnx.Close();
-            }
-
-        }
-
+       
         private void Pest5_TxtDescipcionBuscar_TextChanged(object sender, EventArgs e)
         {
             if (Pest5_TxtDescipcionBuscar.Text == "")
             {
-                Fun_CargarPorNombreMarcas(Pest5_DataGriewMarcas, "a");
+                Products.Fun_CargarPorNombreMarcas(Pest5_DataGriewMarcas, "a");
 
             }
             else
             {
-                Fun_CargarPorNombreMarcas(Pest5_DataGriewMarcas, Pest5_TxtDescipcionBuscar.Text);
+                Products.Fun_CargarPorNombreMarcas(Pest5_DataGriewMarcas, Pest5_TxtDescipcionBuscar.Text);
             }
         }
 
 
-        public void actualizar()
+        public void actualizar(DataGridView dgv)
         {
             Conexion conn = new Conexion();
             conn.cnx.Open();
@@ -1016,7 +908,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             SqlDataAdapter daa = new SqlDataAdapter(cmdd);
             DataTable dtt = new DataTable();
             daa.Fill(dtt);
-            Pest5_DataGriewMarcas.DataSource = dtt;
+            dgv.DataSource = dtt;
             conn.cnx.Close();
         }
 
@@ -1077,7 +969,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
                 da.Fill(dt); ;
                 Pest5_DataGriewMarcas.DataSource = dt;
                 con.cnx.Close();
-                actualizar();
+                actualizar(Pest5_DataGriewMarcas);
 
             }
             else
@@ -1101,7 +993,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
                 da.Fill(dt);
                 Pest5_DataGriewMarcasProductos.DataSource = dt;
                 con.cnx.Close();
-                actualizar();
+                actualizar(Pest5_DataGriewMarcas);
 
             }
             else
@@ -1115,7 +1007,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             Pest5_Txt_Manejo_Codigo.Clear();
             Pest5_Txt_Manejo_Descripcion.Clear();
             Pest5_Radio_Manejo_Estados.SelectedIndex = -1;
-            actualizar();
+            actualizar(Pest5_DataGriewMarcas);
         }
 
         private void Pest5_Radio_Manejo_CheckedChanged(object sender, EventArgs e)
@@ -1131,7 +1023,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             Pest5_DataGriewMarcasProductos.Enabled = true;
             Pest5_DataGriewMarcas.Enabled = true;
             Pest5_Radio_Manejo_Estados.Enabled = true;
-            actualizar();
+            actualizar(Pest5_DataGriewMarcas);
         }
 
         private void Pest5_Radio_Buscar_CheckedChanged(object sender, EventArgs e)
@@ -1147,7 +1039,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             Pest5_DataGriewMarcasProductos.Enabled = true;
             Pest5_DataGriewMarcas.Enabled = true;
             Pest5_TxtDescipcionBuscar.Focus();
-            actualizar();
+            actualizar(Pest5_DataGriewMarcas);
         }
 
         private void Pest5_Radio_Agregar_CheckedChanged(object sender, EventArgs e)
@@ -1163,8 +1055,8 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             Pest5_DataGriewMarcasProductos.Enabled = false;
             Pest5_DataGriewMarcas.Enabled = true;
             Pest5_Radio_Manejo_Estados.Enabled = false;
-            Fun_ExtraerCodigoMarcas();
-            actualizar();
+            Products.Fun_ExtraerCodigoMarcas(Pest5_Txt_Manejo_Codigo);
+            actualizar(Pest5_DataGriewMarcas);
         }
 
         private void Pest5_DataGriewMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1187,37 +1079,18 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
 
         }
+        
 
-
-        public void ExtraerEstadosMarcas()
-        {
-            
-            Conexion Con = new Conexion();
-
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Codigo_Estado, Descripcion_Estado from Estados where Codigo_Tipo_Estado = 5");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            Pest5_Radio_Manejo_Estados.ValueMember = "Codigo_Estado";
-            Pest5_Radio_Manejo_Estados.DisplayMember = "Descripcion_Estado";
-            Pest5_Radio_Manejo_Estados.DataSource = Con.dt;
-
-            //Pest1_ComBox_Estado
-
-        }
+      
 
         private void Pest5_TxtDescipcionBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, Pest5_TxtDescipcionBuscar);
+            Valid.ValirLetrasYEspacios(sender, e, Pest5_TxtDescipcionBuscar);
         }
 
         private void Pest5_Txt_Manejo_Descripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, Pest5_Txt_Manejo_Descripcion);
+            Valid.ValirLetrasYEspacios(sender, e, Pest5_Txt_Manejo_Descripcion);
         }
 
         private void Pest2_Txt_NombreFiltro_TextChanged(object sender, EventArgs e)
@@ -1226,119 +1099,26 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
             if (Pest2_Txt_NombreFiltro.Text == string.Empty)
             {
-                ExtrearTodo(Pest2_DataGriew_Productos);
+                Products.ExtrearTodo(Pest2_DataGriew_Productos);
             }
             else
             {
-                ExtraerPorNombreroducto(Pest2_DataGriew_Productos, Pest2_Txt_NombreFiltro.Text);
+                Products.ExtraerPorNombreroducto(Pest2_DataGriew_Productos, Pest2_Txt_NombreFiltro.Text);
             }
         }
 
         private void Pest2_Txt_CodigoFiltro_TextChanged(object sender, EventArgs e)
         {
             if (Pest2_Txt_CodigoFiltro.Text==string.Empty) {
-                ExtrearTodo(Pest2_DataGriew_Productos);
+                Products.ExtrearTodo(Pest2_DataGriew_Productos);
             } else
             {
-                ExtraerPorCodigoroducto(Pest2_DataGriew_Productos, Convert.ToInt32(Pest2_Txt_CodigoFiltro.Text));
+                Products.Fun_ExtraerPorCodigoroducto(Pest2_DataGriew_Productos, Convert.ToInt32(Pest2_Txt_CodigoFiltro.Text));
             }
         }
 
         ///Busqueda de los Productos 
-        public void ExtrearTodo(DataGridView dgv)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-
-
-                con.sql = string.Format
-                (@"select A.Cod_Producto as 'Codigo del Producto', A.NombreProducto as 'Nombre', A.Descripcion as 'Descripcion' ,
-                A.Cod_Estado as 'Codigo de Estado', (select Est.Descripcion_Estado from Estados as Est where Est.Codigo_Estado=A.Cod_Estado and Est.Codigo_Tipo_Estado=4)
-                 as Estado,A.PrecioCompra as 'Precio de Compra', A.PrecioVenta as ' Precio de Venta', A.Cod_Categoria as 'Codigo de la Categoria', C.Descripcion as 'Descripcion de Categoria'
-                ,B.Cod_Modelo as 'Codigo de Modelo', B.Descripcion as 'Descripcion del Modelo',
-                D.Cod_Marca as 'Codigo de Marca', D.Descripcion as 'Marca', E.Codigo_Proveedor as 'Codigo del Proveedor', E.Nombre as 'Proveedor'
-                from Producto as A inner join Categoria_Producto as C on
-                A.Cod_Categoria = C.Codigo_Categoria inner join Modelo as B on A.Cod_Modelo=B.Cod_Modelo
-                inner join Marca D on D.Cod_Marca=B.Cod_Marca inner join Proveedor as E on E.Codigo_Proveedor=A.Cod_Proveedor");
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-        }
-
-        public void ExtraerPorNombreroducto(DataGridView dgv,string Nom)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-
-
-                con.sql = string.Format
-                (@"select A.Cod_Producto as 'Codigo del Producto', A.NombreProducto as 'Nombre', A.Descripcion as 'Descripcion' ,
-                A.Cod_Estado as 'Codigo de Estado', (select Est.Descripcion_Estado from Estados as Est where Est.Codigo_Estado=A.Cod_Estado and Est.Codigo_Tipo_Estado=4)
-                as Estado,A.PrecioCompra as 'Precio de Compra', A.PrecioVenta as ' Precio de Venta', A.Cod_Categoria as 'Codigo de la Categoria', C.Descripcion as 'Descripcion de Categoria'
-                , A.CantExistenteTienda as 'Existencia en Tienda', B.Cod_Modelo as 'Codigo de Modelo', B.Descripcion as 'Descripcion del Modelo',
-                D.Cod_Marca as 'Codigo de Marca', D.Descripcion as 'Marca', E.Codigo_Proveedor as 'Codigo del Proveedor', E.Nombre as 'Proveedor'
-                from Producto as A inner join Categoria_Producto as C on
-                A.Cod_Categoria = C.Codigo_Categoria inner join Modelo as B on A.Cod_Modelo=B.Cod_Modelo
-                inner join Marca D on D.Cod_Marca=B.Cod_Marca inner join Proveedor 
-                as E on E.Codigo_Proveedor=A.Cod_Proveedor
-                where  A.NombreProducto like '%{0}%'", Nom);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-        }
-
-        public void ExtraerPorCodigoroducto(DataGridView dgv,int Codig)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-
-
-                con.sql = string.Format
-                (@"select A.Cod_Producto as 'Codigo del Producto', A.NombreProducto as 'Nombre', A.Descripcion as 'Descripcion' ,
-                A.Cod_Estado as 'Codigo de Estado', (select Est.Descripcion_Estado from Estados as Est where Est.Codigo_Estado=A.Cod_Estado and Est.Codigo_Tipo_Estado=4)
-                as Estado,A.PrecioCompra as 'Precio de Compra', A.PrecioVenta as ' Precio de Venta', A.Cod_Categoria as 'Codigo de la Categoria', C.Descripcion as 'Descripcion de Categoria'
-                ,B.Cod_Modelo as 'Codigo de Modelo', B.Descripcion as 'Descripcion del Modelo',
-                D.Cod_Marca as 'Codigo de Marca', D.Descripcion as 'Marca', E.Codigo_Proveedor as 'Codigo del Proveedor', E.Nombre as 'Proveedor'
-                from Producto as A inner join Categoria_Producto as C on
-                A.Cod_Categoria = C.Codigo_Categoria inner join Modelo as B on A.Cod_Modelo=B.Cod_Modelo
-                inner join Marca D on D.Cod_Marca=B.Cod_Marca inner join Proveedor 
-                as E on E.Codigo_Proveedor=A.Cod_Proveedor
-                where A.Cod_Producto like '%{0}%'", Codig );
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-        }
-
+        
         private void Pest2_Radio_Nombre_CheckedChanged(object sender, EventArgs e)
         {
             if (Pest2_Radio_Nombre.Checked == true)
@@ -1370,12 +1150,12 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void Pest2_Txt_NombreFiltro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, Pest2_Txt_NombreFiltro);
+            Valid.ValirLetrasYEspacios(sender, e, Pest2_Txt_NombreFiltro);
         }
 
         private void Pest2_Txt_CodigoFiltro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void Pest1_ComBox_Filtro_NombreMarca_SelectedIndexChanged(object sender, EventArgs e)
@@ -1412,12 +1192,12 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         {
             
            
-            Con.sql = string.Format(@"select Top 1 Cod_Producto as Cod from Producto order by Cod_Producto desc");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.cnx.Open();
+            Conn.sql = string.Format(@"select Top 1 Cod_Producto as Cod from Producto order by Cod_Producto desc");
+            Conn.cmd = new SqlCommand(Conn.sql, Conn.cnx);
+            Conn.cnx.Open();
 
             SqlDataReader Reg = null;
-            Reg = Con.cmd.ExecuteReader();
+            Reg = Conn.cmd.ExecuteReader();
 
             if (Reg.Read())
             {
@@ -1429,53 +1209,53 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
             }
 
-            Con.cnx.Close();
+            Conn.cnx.Close();
             
         }
 
         private void Pest1_Txt_Filtro_NombreProveedor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void Pest1_Txt_TotalEnTienda_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void Pest1_Txt_TotalBodega_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void Pest1_CuadroTexto_Descripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspaciosMayorEspacio(sender, e, Pest1_CuadroTexto_Descripcion);
+            Valid.ValirLetrasYEspaciosMayorEspacio(sender, e, Pest1_CuadroTexto_Descripcion);
         }
 
         private void Pest1_CuadroTexto_Descripcion_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspaciosMayorEspacio(sender, e, Pest1_CuadroTexto_Descripcion);
+            Valid.ValirLetrasYEspaciosMayorEspacio(sender, e, Pest1_CuadroTexto_Descripcion);
         }
 
         private void Pest1_Txt_Filtro_NombreMarca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, Pest1_Txt_Filtro_NombreMarca);
+            Valid.ValirLetrasYEspacios(sender, e, Pest1_Txt_Filtro_NombreMarca);
         }
 
         private void Pest1_Txt_PrecioCompras_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.NumerosDecimales(sender, e, Pest1_Txt_PrecioCompras);
+            Valid.NumerosDecimales(sender, e, Pest1_Txt_PrecioCompras);
         }
 
         private void Pest1_Txt_PrecioVentas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.NumerosDecimales(sender, e, Pest1_Txt_PrecioVentas);
+            Valid.NumerosDecimales(sender, e, Pest1_Txt_PrecioVentas);
         }
 
         private void Pest1_Txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, Pest1_Txt_Nombre);
+            Valid.ValirLetrasYEspacios(sender, e, Pest1_Txt_Nombre);
         }
 
         private void Pest6_Txt_Busqueda_CodigoModelo_TextChanged(object sender, EventArgs e)
@@ -1492,12 +1272,12 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             {
                 if (Pest6_Txt_Busqueda_CodigoModelo.Text == string.Empty)
                 {
-                    prod.Pest6_Fun_CargarPorDescripcion(Pest6_DataGreiw_Busqueda, null);
+                    Products.Pest6_Fun_CargarPorDescripcion(Pest6_DataGreiw_Busqueda, null);
 
                 }
                 else
                 {
-                    prod.Pest6_Fun_CargarPorCodigo(Pest6_DataGreiw_Busqueda, CodigoFiltroEntero);
+                    Products.Pest6_Fun_CargarPorCodigo(Pest6_DataGreiw_Busqueda, CodigoFiltroEntero);
                 }
             }
         }
@@ -1507,12 +1287,12 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
             if (Pest6_Txt_Busqueda_Descripcion.Text == "")
             {
-                prod.Pest6_Fun_CargarPorDescripcion(Pest6_DataGreiw_Busqueda, null);
+                Products.Pest6_Fun_CargarPorDescripcion(Pest6_DataGreiw_Busqueda, null);
 
             }
             else
             {
-                prod.Pest6_Fun_CargarPorDescripcion(Pest6_DataGreiw_Busqueda, Pest6_Txt_Busqueda_Descripcion.Text);
+                Products.Pest6_Fun_CargarPorDescripcion(Pest6_DataGreiw_Busqueda, Pest6_Txt_Busqueda_Descripcion.Text);
             }
         }
 
@@ -1523,7 +1303,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void Pest6_Txt_Manejo_FiltroMarca_TextChanged(object sender, EventArgs e)
         {
-            prod.Pest6_Fun_LlenarMarcaModelo(Pest6_ComboBox_Manejo_ResultadoMarca, Pest6_Txt_Manejo_FiltroMarca.Text);
+            Products.Pest6_Fun_LlenarMarcaModelo(Pest6_ComboBox_Manejo_ResultadoMarca, Pest6_Txt_Manejo_FiltroMarca.Text);
 
         }
 
@@ -1545,7 +1325,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
 
                 Pest6_Bttn_Busqueda_Aceptar.Enabled = false;
-                Fun_ExtraerCodigoModelo(Pest6_Txt_Manejo_CodigoModulo);
+                Products.Fun_ExtraerCodigoModelo(Pest6_Txt_Manejo_CodigoModulo);
             }
         }
 
@@ -1626,36 +1406,20 @@ namespace Desarrollo.Pantallas.Modulo___Productos
                 return;
             }
 
-            prod.Var_CodModelo = Convert.ToInt16(Pest6_Txt_Busqueda_CodigoModelo.Text);
-            prod.Var_DescripcionModelo = Pest6_Txt_Busqueda_Descripcion.Text;
-            prod.Var_CodEstado = Convert.ToInt16(Pest6_ComBox_Busqueda_Estados.SelectedValue);
+            Products.Var_CodModelo = Convert.ToInt16(Pest6_Txt_Busqueda_CodigoModelo.Text);
+            Products.Var_DescripcionModelo = Pest6_Txt_Busqueda_Descripcion.Text;
+            Products.Var_CodEstado = Convert.ToInt16(Pest6_ComBox_Busqueda_Estados.SelectedValue);
 
-            prod.Pest6_Fun_ModificarModelo();
+            Products.Pest6_Fun_ModificarModelo();
 
             Pest6_Txt_Busqueda_CodigoModelo.Clear();
             Pest6_Txt_Busqueda_Descripcion.Clear();
             Pest6_Txt_Busqueda_CodigoMarca.Clear();
 
-            Fun_CargarPrimerDataGriew(Pest6_DataGreiw_Busqueda);
+            Products.Fun_CargarPrimerDataGriew(Pest6_DataGreiw_Busqueda);
         }
 
-        public void Fun_CargarPrimerDataGriew(DataGridView dgv)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                con.DataAdapter = new SqlDataAdapter("select * from Modelo where Cod_Estado = 1", con.ccnx);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-        }
+     
 
         private void Pest6_Bttn_Manejo_Aceptar_Click(object sender, EventArgs e)
         {
@@ -1669,17 +1433,17 @@ namespace Desarrollo.Pantallas.Modulo___Productos
                 MessageBox.Show("Debe Elejir una Marca");
                 return;
             }
-            prod.Var_CodModelo = Convert.ToInt16(Pest6_Txt_Manejo_CodigoModulo.Text);
-            prod.Var_DescripcionModelo = Pest6_Txt_Manejo_Descripcion.Text;
-            prod.Var_CodMarca = Convert.ToInt16(Pest6_ComboBox_Manejo_ResultadoMarca.SelectedValue);
-            prod.Var_CodEstado = 1;
+            Products.Var_CodModelo = Convert.ToInt16(Pest6_Txt_Manejo_CodigoModulo.Text);
+            Products.Var_DescripcionModelo = Pest6_Txt_Manejo_Descripcion.Text;
+            Products.Var_CodMarca = Convert.ToInt16(Pest6_ComboBox_Manejo_ResultadoMarca.SelectedValue);
+            Products.Var_CodEstado = 1;
 
-            prod.Pest6_Fun_AgregarModelo();
+            Products.Pest6_Fun_AgregarModelo();
 
             Pest6_Txt_Manejo_CodigoModulo.Clear();
             Pest6_Txt_Manejo_Descripcion.Clear();
             Pest6_Txt_Manejo_FiltroMarca.Clear();
-            Fun_CargarPrimerDataGriew(Pest6_DataGreiw_Busqueda);
+            Products.Fun_CargarPrimerDataGriew(Pest6_DataGreiw_Busqueda);
         }
 
         private void Pest6_Radio_Manejo_CheckedChanged(object sender, EventArgs e)
@@ -1717,25 +1481,10 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             MessageBox.Show("Listo");
         }
 
-        public void Fun_ExtraerCodigoModelo(TextBox CodigoModelo)
-        {
-            Conexion Con = new Conexion();
-            Con.cnx.Open();
-            Con.sql = String.Format(@"Select TOP 1 Cod_Modelo from Modelo ORDER BY Cod_Modelo DESC");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            SqlDataReader Reg = null;
-            Reg = Con.cmd.ExecuteReader();
-            if (Reg.Read())
-            {
-                CodigoModelo.Text = Convert.ToString(Convert.ToInt16((Reg["Cod_Modelo"].ToString())) + 1);
-                Con.cnx.Close();
-            }
-        }
+        
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Muestra_Reporte M = new Muestra_Reporte();
-            M.ShowDialog();
         }
 
         private void Pest6_Txt_Manejo_Descripcion_KeyPress(object sender, KeyPressEventArgs e)
@@ -1753,7 +1502,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void Pest6_Txt_Busqueda_CodigoModelo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void Pest6_Txt_Busqueda_Descripcion_KeyPress(object sender, KeyPressEventArgs e)
@@ -1786,28 +1535,28 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void Pest3_Txt_PrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.NumerosDecimales(sender, e, Pest3_Txt_PrecioVenta);
+            Valid.NumerosDecimales(sender, e, Pest3_Txt_PrecioVenta);
 
         }
 
         private void Pest3_Txt_Compras_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.NumerosDecimales(sender, e, Pest3_Txt_Compras);
+            Valid.NumerosDecimales(sender, e, Pest3_Txt_Compras);
         }
 
         private void Pest3_Txt_TotalTienda_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void Pest3_Txt_TotalBodega_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValirLetrasYEspacios(sender, e, textBox1);
+            Valid.ValirLetrasYEspacios(sender, e, textBox1);
         }
 
         private void Pest3_Txt_TotalTienda_TextChanged(object sender, EventArgs e)
@@ -1837,79 +1586,7 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
 
         /////MODIFICACION DE LOCALIDADES
-        public void Fun_CargarLocalidad(DataGridView dgv, string a)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                string busq;
-                busq = a;
-
-
-                con.sql = string.Format
-                (@"select P.Cod_Localidad as 'Codigo de Localidad', L.Nombre as 'Localidad', P.Cantidad as 'Unidades en existencia' 
-                from [Producto|Localidad] as P inner join Localidad as L on L.Cod_Localidad=P.Cod_Localidad
-                where P.Cod_Producto='{0}' and (P.Cod_Localidad='1' or P.Cod_Localidad='2')", a);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-            con.cnx.Close();
-        }
-
-
-
-        public void Fun_CargarLocalidadIndividual(DataGridView dgv, string a, string b)
-        {
-            Conexion con = new Conexion();
-            con.cnx.Open();
-            try
-            {
-                string busq;
-                busq = a;
-
-
-                con.sql = string.Format
-                (@"select P.Cod_Localidad as 'Codigo de Localidad', L.Nombre as 'Localidad', P.Cantidad as 'Unidades en existencia' 
-                from [Producto|Localidad] as P inner join Localidad as L on L.Cod_Localidad=P.Cod_Localidad
-                where P.Cod_Producto='{0}' and P.Cod_Localidad='{1}'", a, b);
-                con.cmd = new SqlCommand(con.sql, con.cnx);
-                con.DataAdapter = new SqlDataAdapter(con.cmd);
-                con.dt = new DataTable();
-                con.DataAdapter.Fill(con.dt);
-                dgv.DataSource = con.dt;
-
-            }
-            catch
-            {
-
-            }
-            con.cnx.Close();
-        }
-
-        public void LLenarLocalidades(ComboBox Com)
-        {
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Cod_Localidad as 'Cod', Nombre as 'Nombre' from Localidad");
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
-
-            Com.ValueMember = "Cod";
-            Com.DisplayMember = "Nombre";
-            Com.DataSource = Con.dt;
-        }
-
+        
         private void ModificarCant_PorLocalidad_CheckedChanged(object sender, EventArgs e)
         {
             if (ModificarCant_PorLocalidad.Checked == true)
@@ -1990,10 +1667,10 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             }
 
             if (Localidad == "1" || Localidad == "2")
-            { Fun_CargarLocalidad(dataGridView1, Pest3_Txt_Codigo.Text); }
+            { Products.Fun_CargarLocalidad(dataGridView1, Pest3_Txt_Codigo.Text); }
             else
             {
-                Fun_CargarLocalidadIndividual(dataGridView1, Pest3_Txt_Codigo.Text, Localidad);
+                Products.Fun_CargarLocalidadIndividual(dataGridView1, Pest3_Txt_Codigo.Text, Localidad);
             }
 
         }
@@ -2010,12 +1687,13 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
             }
 
-            LLenarLocalidades(Pest3_ComboBox_Localidad);
+            Products.Fun_LLenarLocalidades(Pest3_ComboBox_Localidad);
 
 
             if (Localidad == "1" || Localidad == "2")
-            { Fun_CargarLocalidad(dataGridView1, Pest3_Txt_Codigo.Text);}
-            else {Fun_CargarLocalidadIndividual(dataGridView1, Pest3_Txt_Codigo.Text, Localidad);
+            { Products.Fun_CargarLocalidad(dataGridView1, Pest3_Txt_Codigo.Text);}
+            else {
+                Products.Fun_CargarLocalidadIndividual(dataGridView1, Pest3_Txt_Codigo.Text, Localidad);
             }
         }
 
@@ -2034,27 +1712,27 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         public void Fun_UpdateCantidad_Localidad(int CodLocal, int Cantidad, int CodigoPro)
         {
-            Con.sql = string.Format(@"update [Producto|Localidad] set Cantidad='{0}' where Cod_Localidad='{1}' and Cod_Producto='{2}'", Cantidad, CodLocal, CodigoPro);
+            Conn.sql = string.Format(@"update [Producto|Localidad] set Cantidad='{0}' where Cod_Localidad='{1}' and Cod_Producto='{2}'", Cantidad, CodLocal, CodigoPro);
 
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
+            Conn.cmd = new SqlCommand(Conn.sql, Conn.cnx);
 
-            Con.cnx.Open();
+            Conn.cnx.Open();
             SqlDataReader Reg = null;
-            Reg = Con.cmd.ExecuteReader();
-            Con.cnx.Close();
+            Reg = Conn.cmd.ExecuteReader();
+            Conn.cnx.Close();
         }
 
         public void Fun_IngresarProductos_Localidad(int CodLocal, int Cantidad, int CodigoPro)
         {
 
-            Con.sql = string.Format(@"insert into [Producto|Localidad] values ('{0}','{1}','{2}')", CodigoPro, CodLocal, Cantidad);
+            Conn.sql = string.Format(@"insert into [Producto|Localidad] values ('{0}','{1}','{2}')", CodigoPro, CodLocal, Cantidad);
 
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
+            Conn.cmd = new SqlCommand(Conn.sql, Conn.cnx);
 
-            Con.cnx.Open();
+            Conn.cnx.Open();
             SqlDataReader Reg = null;
-            Reg = Con.cmd.ExecuteReader();
-            Con.cnx.Close();
+            Reg = Conn.cmd.ExecuteReader();
+            Conn.cnx.Close();
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -2085,14 +1763,14 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void Pest3_Cant_PorLocalidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            Valid.ValidarID(sender, e);
         }
 
         private void Pest6_Bttn_Manejo_Limpiar_Click(object sender, EventArgs e)
         {
             Pest6_Txt_Busqueda_Descripcion.Clear();
             Pest6_Txt_Busqueda_CodigoMarca.Clear();
-            Fun_ExtraerCodigoModelo(Pest6_Txt_Manejo_CodigoModulo);
+            Products.Fun_ExtraerCodigoModelo(Pest6_Txt_Manejo_CodigoModulo);
         }
     }
 

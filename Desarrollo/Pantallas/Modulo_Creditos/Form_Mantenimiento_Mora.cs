@@ -81,7 +81,7 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
             double PorcentajeMora = Convert.ToDouble(Txt_NuevaMora.Text) / 100;
             DeshabilitarOtrosMora();
 
-            mo.Agregar_Mora(PorcentajeMora, 1);
+            mo.Fun_Agregar_Mora(PorcentajeMora, 1);
             Fun_P_CargarMora();
 
 

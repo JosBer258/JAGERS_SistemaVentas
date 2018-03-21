@@ -9,23 +9,8 @@ using System.Windows.Forms;
 
 namespace Desarrollo.Clases
 {
-    class C_DatoHistoricos: Conexion
+    class C_DatoHistoricos : Conexion
     {
-        public void Fun_CargarDataClienteHistorico(DataGridView dgv)
-        {
-
-            cnx.Open();
-
-            DataAdapter = new SqlDataAdapter(@"select [Codigo_ClienteHistorico] as 'Codigo Cliente Historico',
-                                [Cod_Cliente] as 'Codigo del Cliente', [ID], Nombre,[NumeroCelular] as Celular, 
-                                [NumeroTelefonico] as Telefono, [Estado], [FechaIngreso] as 'Fecha Ingreso', 
-                                [FechaModificacion] as 'Fecha Modificacion', [NombreEmpleado_Modif] as 'Empleado Modifica', Accion
-                                from [Clientes|Historicos]", ccnx);
-            dt = new DataTable();
-            DataAdapter.Fill(dt);
-            dgv.DataSource = dt;
-            cnx.Close();
-        }
         public void Fun_CargarDataEmpleadoHistorico(DataGridView dgv)
         {
 
@@ -41,6 +26,7 @@ namespace Desarrollo.Clases
             dgv.DataSource = dt;
             cnx.Close();
         }
+
         public void Fun_CargarDataProductoHistorico(DataGridView dgv)
         {
 
@@ -57,48 +43,7 @@ namespace Desarrollo.Clases
             dgv.DataSource = dt;
             cnx.Close();
         }
-        public void Fun_CargarDataProveedorHistorico(DataGridView dgv)
-        {
 
-            cnx.Open();
-
-            DataAdapter = new SqlDataAdapter(@"select [Codigo_ProvHistorico] as 'Codigo Proveedor Historico', 
-                            [Codigo_Proveedor] as 'Codigo Proveedor', [Nombre], [Correo],  
-                            [Estado], [FechaIngreso] as 'Fecha Ingreso', [Fecha_Modificacion] as 'Fecha Modificacion',
-                            [Empleado_Modific] as 'Empleado Modifica', [Accion]
-                            from [Proveedor|Historico]", ccnx);
-            dt = new DataTable();
-            DataAdapter.Fill(dt);
-            dgv.DataSource = dt;
-            cnx.Close();
-        }
-
-        public void ExtraerNombClienteHistorico(DataGridView dgv, string Nom)
-        {
-
-            cnx.Open();
-            try
-            {
-                sql = string.Format
-                (@"select [Codigo_ClienteHistorico] as 'Codigo Cliente Historico',
-                                [Cod_Cliente] as 'Codigo del Cliente', [ID], Nombre, [NumeroCelular] as Celular, 
-                                [NumeroTelefonico] as Telefono,  [Estado], [FechaIngreso] as 'Fecha Ingreso', 
-                                [FechaModificacion] as 'Fecha Modificacion', [NombreEmpleado_Modif] as 'Empleado Modifica', Accion
-                                from [Clientes|Historicos]
-                                where Nombre like '%{0}%'", Nom);
-                cmd = new SqlCommand(sql, cnx);
-                DataAdapter = new SqlDataAdapter(cmd);
-                dt = new DataTable();
-                DataAdapter.Fill(dt);
-                dgv.DataSource = dt;
-                cnx.Close();
-            }
-            catch
-            {
-
-            }
-            cnx.Close();
-        }
         public void ExtraerNombEmpleadoHistorico(DataGridView dgv, string Nom)
         {
 
@@ -124,6 +69,7 @@ namespace Desarrollo.Clases
             }
             cnx.Close();
         }
+
         public void ExtraerNombProductoHistorico(DataGridView dgv, string Nom)
         {
 
@@ -150,33 +96,7 @@ namespace Desarrollo.Clases
             }
             cnx.Close();
         }
-        public void ExtraerNombProveedorHistorico(DataGridView dgv, string Nom)
-        {
 
-            cnx.Open();
-            try
-            {
-                sql = string.Format
-                (@"select [Codigo_ProvHistorico] as 'Codigo Proveedor Historico', 
-                            [Codigo_Proveedor] as 'Codigo Proveedor', [Nombre], [Correo], 
-                            [Estado], [FechaIngreso] as 'Fecha Ingreso', [Fecha_Modificacion] as 'Fecha Modificacion',
-                            [Empleado_Modific] as 'Empleado Modifica', [Accion]
-                            from [Proveedor|Historico]
-                            where Nombre like '%{0}%'", Nom);
-                cmd = new SqlCommand(sql, cnx);
-                DataAdapter = new SqlDataAdapter(cmd);
-                dt = new DataTable();
-                DataAdapter.Fill(dt);
-                dgv.DataSource = dt;
-            }
-            catch
-            {
-
-            }
-            cnx.Close();
-        }
-
-        //Productos Historicos
         public void Var_IngresarProductosHistoricos(string FV_Nombre, float FV_PrVenta, float FV_PrCompra, string FV_EmpMod)
         {
             sql = string.Format(@"insert into [Productos|Historicos] 
@@ -193,18 +113,18 @@ namespace Desarrollo.Clases
             cnx.Close();
         }
 
-        public void Var_ModificarProductosHistoricos(string FV_Nombre, float FV_PrVenta, float FV_PrCompra, string FV_EmpMod,
-           string  FV_Estados, string FV_ModificarEmp, string FV_Accion)
+        public void Var_ModificarProductosHistoricos(int FV_CodP, string FV_Nombre, float FV_PrVenta,
+            float FV_PrCompra, string FV_EmpMod,
+           string FV_Estados, string FV_Accion)
         {
             cnx.Open();
             sql = string.Format(@"
                             insert into [Productos|Historicos] (Cod_Producto, Nombre, PrecioVenta, PrecioCompra, 
                             FechaModificacion, Estado, Empleado_Modifacion, Accion)
                             values ('{0}','{1}','{2}','{3}',GETDATE(),'{4}','{5}','{6}')",
-                            FV_Nombre, FV_PrVenta, FV_PrCompra, FV_EmpMod, FV_Estados, FV_ModificarEmp, FV_Accion);
+                            FV_CodP, FV_Nombre, FV_PrVenta, FV_PrCompra, FV_Estados, FV_EmpMod, FV_Accion);
 
             cmd = new SqlCommand(sql, cnx);
-            cnx.Open();
             SqlDataReader Reg = null;
             Reg = cmd.ExecuteReader();
 
@@ -213,9 +133,41 @@ namespace Desarrollo.Clases
         }
 
 
+        public void Fun_IngresoHistoricos(string FV_ID, string FV_Nombre, string FV_Correo, string FV_Telefono
+            , string FV_Estado, string FV_Rol, string FV_EmplMod, string FV_Accion)
+        {
+            sql = string.Format(@"insert into [Empleado|Historico] 
+                (Codigo_Empleado, ID, Nombre, Correo, Telefono, FechaIngreso, Estado, Rol, NombreEmpleado_Modific, Accion)
+                values ((select top 1 Codigo_Empleado from Empleados order by Codigo_Empleado desc),'{0}','{1}','{2}','{3}', GETDATE(), 
+                '{4}','{5}','{6}','{7}')", FV_ID, FV_Nombre, FV_Correo, FV_Telefono, FV_Estado, FV_Rol, FV_EmplMod, FV_Accion);
 
-        //Agregar en Actualizar
+            cmd = new SqlCommand(sql, cnx);
+            cnx.Open();
+            int Reg = cmd.ExecuteNonQuery();
+            if (Reg > 0)
+            {
+
+            }
+            cnx.Close();
+        }
 
 
+        public void Fun_UpdateHistoricos(int FV_Cod,string FV_ID, string FV_Nombre, string FV_Correo, string FV_Telefono
+           , string FV_Estado, string FV_Rol, string FV_EmplMod, string FV_Accion)
+        {
+            sql = string.Format(@"insert into [Empleado|Historico] 
+                (Codigo_Empleado, ID, Nombre, Correo, Telefono, Fecha_Modificacion, Estado, Rol, NombreEmpleado_Modific, Accion)
+                values ('{0}','{1}','{2}','{3}','{4}', GETDATE(), 
+                '{5}','{6}','{7}','{8}')", FV_Cod, FV_ID, FV_Nombre, FV_Correo, FV_Telefono, FV_Estado, FV_Rol, FV_EmplMod, FV_Accion);
+
+            cmd = new SqlCommand(sql, cnx);
+            cnx.Open();
+            int Reg = cmd.ExecuteNonQuery();
+            if (Reg > 0)
+            {
+
+            }
+            cnx.Close();
+        }
     }
 }

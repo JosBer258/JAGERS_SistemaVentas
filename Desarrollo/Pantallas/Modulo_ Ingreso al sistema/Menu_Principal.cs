@@ -1,14 +1,11 @@
-﻿using Desarrollo.Pantallas.Estados;///COMPLETO
+﻿using Desarrollo.Pantallas.Estados;
 using Desarrollo.Pantallas.Modulo___Productos;
 using Desarrollo.Pantallas.Modulo___Proveedores;
-using Desarrollo.Pantallas.Modulo_Ventas_Nuevas;//
-using Desarrollo.Pantallas.Modulo__Empleados;///COMPLETO
+using Desarrollo.Pantallas.Modulo_Ventas_Nuevas;
+using Desarrollo.Pantallas.Modulo__Empleados;
 using Desarrollo.Pantallas.Modulo__Ingreso_al_sistema;
 using Desarrollo.Pantallas.Modulo_Creditos;
 using Desarrollo.Pantallas.Modulo_Transacciones;
-
-
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +15,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using Desarrollo.Pantallas.Modulo_Compras;
 using Desarrollo.Pantallas.Modulo_Ventas_Manejo;
 using Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja;
@@ -40,6 +36,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
         {
             //Pantalla del Manejo del Empleado
             Form_Manejo_de_Empleados Empleados = new Form_Manejo_de_Empleados();
+            Empleados.LEmp_NombEmp = Var_empleado_nombre;
             Empleados.ShowDialog();
        
         }
@@ -115,6 +112,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
         {
             //Pantalla de Cobro de Credito
             Form_Credito_CobroCredito CobrarCreditos = new Form_Credito_CobroCredito();
+            CobrarCreditos.Pest1_Txt_NombreEmpleado.Text = this.Var_empleado_nombre;
             CobrarCreditos.ShowDialog();
             
         }
@@ -196,9 +194,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 
         private void aplicacionDeMoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Pantalla de Cargar Mora 
-            Form_Creditos_CargarMora CargarMora = new Form_Creditos_CargarMora();
-            CargarMora.ShowDialog();
+            
             
         }
 

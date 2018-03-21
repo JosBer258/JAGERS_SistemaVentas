@@ -33,7 +33,7 @@
             this.empleadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ventasAutoPartesDataSet = new Desarrollo.VentasAutoPartesDataSet();
             this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Botton_Salir = new System.Windows.Forms.Button();
+            this.Bttn_Salir = new System.Windows.Forms.Button();
             this.empleadosTableAdapter = new Desarrollo.VentasAutoPartesDataSetTableAdapters.EmpleadosTableAdapter();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -70,10 +70,10 @@
             this.label34 = new System.Windows.Forms.Label();
             this.Pest1_Mask_NumeroFijoEmpleado = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Pest1_Limpiar = new System.Windows.Forms.Button();
+            this.Pest1_Bttn_Limpiar = new System.Windows.Forms.Button();
             this.Pest1_ComBox_FechaAño = new System.Windows.Forms.ComboBox();
             this.Pest1_ComBox_FechaMes = new System.Windows.Forms.ComboBox();
-            this.Pest1_Guardar = new System.Windows.Forms.Button();
+            this.Pest1_Bttn_Guardar = new System.Windows.Forms.Button();
             this.Pest1_ComBox_FechaDia = new System.Windows.Forms.ComboBox();
             this.Pest1_Txt_CodigoEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,6 +98,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Bttn_Ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasAutoPartesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
@@ -129,18 +130,18 @@
             this.empleadosBindingSource.DataMember = "Empleados";
             this.empleadosBindingSource.DataSource = this.ventasAutoPartesDataSet;
             // 
-            // Botton_Salir
+            // Bttn_Salir
             // 
-            this.Botton_Salir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Botton_Salir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Botton_Salir.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Botton_Salir.Location = new System.Drawing.Point(918, 459);
-            this.Botton_Salir.Name = "Botton_Salir";
-            this.Botton_Salir.Size = new System.Drawing.Size(139, 55);
-            this.Botton_Salir.TabIndex = 1;
-            this.Botton_Salir.Text = "Salir";
-            this.Botton_Salir.UseVisualStyleBackColor = false;
-            this.Botton_Salir.Click += new System.EventHandler(this.button1_Click);
+            this.Bttn_Salir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Bttn_Salir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Salir.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Bttn_Salir.Location = new System.Drawing.Point(918, 459);
+            this.Bttn_Salir.Name = "Bttn_Salir";
+            this.Bttn_Salir.Size = new System.Drawing.Size(139, 55);
+            this.Bttn_Salir.TabIndex = 1;
+            this.Bttn_Salir.Text = "Salir";
+            this.Bttn_Salir.UseVisualStyleBackColor = false;
+            this.Bttn_Salir.Click += new System.EventHandler(this.button1_Click);
             // 
             // empleadosTableAdapter
             // 
@@ -363,6 +364,8 @@
             this.Pest1_Radio_Manejo.TabIndex = 34;
             this.Pest1_Radio_Manejo.TabStop = true;
             this.Pest1_Radio_Manejo.Text = "Manejo de Empleado Existente";
+            this.toolTip1.SetToolTip(this.Pest1_Radio_Manejo, "Seleccione un empleado\r\nen la pestaña de búsqueda\r\npara editar los datos de este\t" +
+        "\r\n");
             this.Pest1_Radio_Manejo.UseVisualStyleBackColor = true;
             this.Pest1_Radio_Manejo.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Manejo_CheckedChanged);
             // 
@@ -375,6 +378,7 @@
             this.Pest1_Radio_Nuevo_Empleado.TabIndex = 33;
             this.Pest1_Radio_Nuevo_Empleado.TabStop = true;
             this.Pest1_Radio_Nuevo_Empleado.Text = "Nuevo Empleado";
+            this.toolTip1.SetToolTip(this.Pest1_Radio_Nuevo_Empleado, "Seleccione para\r\nagregar un nuevo empleado\r\n");
             this.Pest1_Radio_Nuevo_Empleado.UseVisualStyleBackColor = true;
             this.Pest1_Radio_Nuevo_Empleado.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Nuevo_Empleado_CheckedChanged);
             // 
@@ -414,10 +418,10 @@
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.label34);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Mask_NumeroFijoEmpleado);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.label1);
-            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Limpiar);
+            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Bttn_Limpiar);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_ComBox_FechaAño);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_ComBox_FechaMes);
-            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Guardar);
+            this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Bttn_Guardar);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_ComBox_FechaDia);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.Pest1_Txt_CodigoEmpleado);
             this.Pest1_Grupo_ManejoEmpleados.Controls.Add(this.label2);
@@ -549,18 +553,18 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 32;
             // 
-            // Pest1_Limpiar
+            // Pest1_Bttn_Limpiar
             // 
-            this.Pest1_Limpiar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Pest1_Limpiar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Limpiar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Pest1_Limpiar.Location = new System.Drawing.Point(748, 218);
-            this.Pest1_Limpiar.Name = "Pest1_Limpiar";
-            this.Pest1_Limpiar.Size = new System.Drawing.Size(129, 56);
-            this.Pest1_Limpiar.TabIndex = 16;
-            this.Pest1_Limpiar.Text = "Limpiar";
-            this.Pest1_Limpiar.UseVisualStyleBackColor = false;
-            this.Pest1_Limpiar.Click += new System.EventHandler(this.button4_Click);
+            this.Pest1_Bttn_Limpiar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Pest1_Bttn_Limpiar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Bttn_Limpiar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Pest1_Bttn_Limpiar.Location = new System.Drawing.Point(748, 218);
+            this.Pest1_Bttn_Limpiar.Name = "Pest1_Bttn_Limpiar";
+            this.Pest1_Bttn_Limpiar.Size = new System.Drawing.Size(129, 56);
+            this.Pest1_Bttn_Limpiar.TabIndex = 16;
+            this.Pest1_Bttn_Limpiar.Text = "Limpiar";
+            this.Pest1_Bttn_Limpiar.UseVisualStyleBackColor = false;
+            this.Pest1_Bttn_Limpiar.Click += new System.EventHandler(this.button4_Click);
             // 
             // Pest1_ComBox_FechaAño
             // 
@@ -594,18 +598,18 @@
             this.Pest1_ComBox_FechaMes.TabIndex = 13;
             this.Pest1_ComBox_FechaMes.SelectedIndexChanged += new System.EventHandler(this.Pest1_ComBox_FechaMes_SelectedIndexChanged);
             // 
-            // Pest1_Guardar
+            // Pest1_Bttn_Guardar
             // 
-            this.Pest1_Guardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Pest1_Guardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Guardar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Pest1_Guardar.Location = new System.Drawing.Point(583, 218);
-            this.Pest1_Guardar.Name = "Pest1_Guardar";
-            this.Pest1_Guardar.Size = new System.Drawing.Size(129, 56);
-            this.Pest1_Guardar.TabIndex = 17;
-            this.Pest1_Guardar.Text = "Guardar";
-            this.Pest1_Guardar.UseVisualStyleBackColor = false;
-            this.Pest1_Guardar.Click += new System.EventHandler(this.Pest1_Guardar_Click);
+            this.Pest1_Bttn_Guardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Pest1_Bttn_Guardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Bttn_Guardar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Pest1_Bttn_Guardar.Location = new System.Drawing.Point(583, 218);
+            this.Pest1_Bttn_Guardar.Name = "Pest1_Bttn_Guardar";
+            this.Pest1_Bttn_Guardar.Size = new System.Drawing.Size(129, 56);
+            this.Pest1_Bttn_Guardar.TabIndex = 17;
+            this.Pest1_Bttn_Guardar.Text = "Guardar";
+            this.Pest1_Bttn_Guardar.UseVisualStyleBackColor = false;
+            this.Pest1_Bttn_Guardar.Click += new System.EventHandler(this.Pest1_Guardar_Click);
             // 
             // Pest1_ComBox_FechaDia
             // 
@@ -863,6 +867,18 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // Bttn_Ayuda
+            // 
+            this.Bttn_Ayuda.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Bttn_Ayuda.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Ayuda.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Bttn_Ayuda.Location = new System.Drawing.Point(773, 459);
+            this.Bttn_Ayuda.Name = "Bttn_Ayuda";
+            this.Bttn_Ayuda.Size = new System.Drawing.Size(139, 55);
+            this.Bttn_Ayuda.TabIndex = 2;
+            this.Bttn_Ayuda.Text = "Ayuda";
+            this.Bttn_Ayuda.UseVisualStyleBackColor = false;
+            // 
             // Form_Manejo_de_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -870,8 +886,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1061, 516);
             this.ControlBox = false;
+            this.Controls.Add(this.Bttn_Ayuda);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.Botton_Salir);
+            this.Controls.Add(this.Bttn_Salir);
             this.Name = "Form_Manejo_de_Empleados";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Manejo de Empleados";
@@ -898,7 +915,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button Botton_Salir;
+        private System.Windows.Forms.Button Bttn_Salir;
         private VentasAutoPartesDataSet ventasAutoPartesDataSet;
         private System.Windows.Forms.BindingSource empleadosBindingSource;
         private VentasAutoPartesDataSetTableAdapters.EmpleadosTableAdapter empleadosTableAdapter;
@@ -932,10 +949,10 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.MaskedTextBox Pest1_Mask_NumeroFijoEmpleado;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Pest1_Limpiar;
+        private System.Windows.Forms.Button Pest1_Bttn_Limpiar;
         private System.Windows.Forms.ComboBox Pest1_ComBox_FechaAño;
         private System.Windows.Forms.ComboBox Pest1_ComBox_FechaMes;
-        private System.Windows.Forms.Button Pest1_Guardar;
+        private System.Windows.Forms.Button Pest1_Bttn_Guardar;
         private System.Windows.Forms.ComboBox Pest1_ComBox_FechaDia;
         private System.Windows.Forms.TextBox Pest1_Txt_CodigoEmpleado;
         private System.Windows.Forms.Label label2;
@@ -966,5 +983,6 @@
         private System.Windows.Forms.TextBox Pest1_Text_Direccion;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox Comb_Localidad;
+        private System.Windows.Forms.Button Bttn_Ayuda;
     }
 }

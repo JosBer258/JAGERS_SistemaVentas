@@ -171,19 +171,17 @@ namespace Desarrollo.Clases
             }
 
 
-            Conexion Con = new Conexion();
-
-            Con.cnx.Open();
-            Con.sql = string.Format(@"select Codigo_Proveedor, Nombre from [dbo].[Proveedor] where Codigo_Proveedor like '%{0}%'", a);
-            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
-            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
-            Con.dt = new DataTable();
-            Con.DataAdapter.Fill(Con.dt);
-            Con.cnx.Close();
+            cnx.Open();
+            sql = string.Format(@"select Codigo_Proveedor, Nombre from [dbo].[Proveedor] where Codigo_Proveedor like '%{0}%'", a);
+            cmd = new SqlCommand(sql, cnx);
+            DataAdapter = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
 
             Comb.ValueMember = "Codigo_Proveedor";
             Comb.DisplayMember = "Nombre";
-            Comb.DataSource = Con.dt;
+            Comb.DataSource = dt;
         }
 
 
@@ -366,7 +364,6 @@ namespace Desarrollo.Clases
             try
             {
                 con.DataAdapter = new SqlDataAdapter("select * from Modelo where Cod_Modelo like '{0}'", con.ccnx);
-                /* con.sql = string.Format(@"select from Categoria_Producto where Codigo_Categoria like '{0}'", busq);*/
                 con.dt = new DataTable();
                 con.DataAdapter.Fill(con.dt);
                 dgv.DataSource = con.dt;
@@ -385,7 +382,6 @@ namespace Desarrollo.Clases
             try
             {
 
-                /*con.sql = string.Format(@"Select * from Categoria_Productos", busq);*/
                 con.sql = string.Format(@"select * from Modelo where Cod_Modelo like '{0}'", a);
                 con.cmd = new SqlCommand(con.sql, con.cnx);
                 con.DataAdapter = new SqlDataAdapter(con.cmd);
@@ -494,5 +490,347 @@ namespace Desarrollo.Clases
             MessageBox.Show("Registro modificacdo Correctamente");
 
         }
+
+
+
+        public void Fun_ExtraerCodigoMarcas(TextBox FN_Pest5_ManCod)
+        {
+            Conexion Con = new Conexion();
+
+            Con.cnx.Open();
+            Con.sql = string.Format(@"select TOP 1 Cod_Marca from Marca ORDER BY Cod_Marca DESC");
+            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
+            SqlDataReader Reg2 = null;
+            Reg2 = Con.cmd.ExecuteReader();
+            if (Reg2.Read())
+            {
+                FN_Pest5_ManCod.Text = Convert.ToString(Convert.ToInt16((Reg2["Cod_Marca"].ToString())) + 1);
+                Con.cnx.Close();
+            }
+
+        }
+
+
+        public void ExtraerEstadosMarcas(ComboBox Pest5_ManEstados)
+        {
+
+            Conexion Con = new Conexion();
+
+            Con.cnx.Open();
+            Con.sql = string.Format(@"select Codigo_Estado, Descripcion_Estado from Estados where Codigo_Tipo_Estado = 5");
+            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
+            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
+            Con.dt = new DataTable();
+            Con.DataAdapter.Fill(Con.dt);
+            Con.cnx.Close();
+
+            Pest5_ManEstados.ValueMember = "Codigo_Estado";
+            Pest5_ManEstados.DisplayMember = "Descripcion_Estado";
+            Pest5_ManEstados.DataSource = Con.dt;
+
+
+        }
+
+        public void Fun_Llenarproveedor(ComboBox Pest1_FilNom, TextBox Pest1_FilNomProv)
+        {
+            int a;
+
+            if (Pest1_FilNomProv.Text == string.Empty) { a = 0; }
+            else
+            {
+                a = Convert.ToInt16(Pest1_FilNomProv.Text);
+            }
+
+            Conexion Con = new Conexion();
+
+            Con.cnx.Open();
+            Con.sql = string.Format(@"select Codigo_Proveedor, Nombre from [dbo].[Proveedor] where Codigo_Proveedor like '%{0}%'", a);
+            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
+            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
+            Con.dt = new DataTable();
+            Con.DataAdapter.Fill(Con.dt);
+            Con.cnx.Close();
+            Pest1_FilNom.ValueMember = "Codigo_Proveedor";
+            Pest1_FilNom.DisplayMember = "Nombre";
+            Pest1_FilNom.DataSource = Con.dt;
+        }
+
+        public void Fun_CargarPorCodigo(DataGridView dgv, int FN_CodBusq)
+        {
+            Conexion con = new Conexion();
+            con.cnx.Open();
+            try
+            {
+                int busq;
+                busq = FN_CodBusq;
+
+
+                con.sql = string.Format(@"select * from Categoria_Producto where Codigo_Categoria like '%{0}%'", busq);
+                con.cmd = new SqlCommand(con.sql, con.cnx);
+                con.DataAdapter = new SqlDataAdapter(con.cmd);
+                con.dt = new DataTable();
+                con.DataAdapter.Fill(con.dt);
+                dgv.DataSource = con.dt;
+
+            }
+            catch
+            {
+
+            }
+        }
+
+
+
+        public void Fun_ExtraerEstados(ComboBox Pest3_Estado)
+        {
+            Conexion Con = new Conexion();
+
+            Con.cnx.Open();
+            Con.sql = string.Format(@"select Codigo_Estado, Descripcion_Estado from Estados WHERE Codigo_Tipo_Estado = 4");
+            Con.cmd = new SqlCommand(Con.sql, Con.cnx);
+            Con.DataAdapter = new SqlDataAdapter(Con.cmd);
+            Con.dt = new DataTable();
+            Con.DataAdapter.Fill(Con.dt);
+            Con.cnx.Close();
+
+
+            Pest3_Estado.ValueMember = "Codigo_Estado";
+            Pest3_Estado.DisplayMember = "Descripcion_Estado";
+            Pest3_Estado.DataSource = Con.dt;
+        }
+
+
+
+        public void Fun_CargarPorNombreMarcas(DataGridView dgv, string a)
+        {
+            Conexion con = new Conexion();
+            con.cnx.Open();
+            try
+            {
+                string busq;
+                busq = a;
+
+
+                con.sql = string.Format(@"select Cod_Marca as 'Codigo de Marca', Descripcion as 'Descripcion de Marca', Cod_Estado as 'Codigo de Estado', ( select E.Descripcion_Estado from Estados as E where E.Codigo_Tipo_Estado=5 and E.Codigo_Estado = Cod_Estado) as 'Estado de la Marca'  from Marca  where Descripcion like '%{0}%'", busq);
+                con.cmd = new SqlCommand(con.sql, con.cnx);
+                con.DataAdapter = new SqlDataAdapter(con.cmd);
+                con.dt = new DataTable();
+                con.DataAdapter.Fill(con.dt);
+                dgv.DataSource = con.dt;
+
+            }
+            catch
+            {
+
+            }
+        }
+
+
+        public void ExtrearTodo(DataGridView dgv)
+        {
+            Conexion con = new Conexion();
+            con.cnx.Open();
+            try
+            {
+
+
+                con.sql = string.Format
+                (@"select A.Cod_Producto as 'Codigo del Producto', A.NombreProducto as 'Nombre', A.Descripcion as 'Descripcion' ,
+                A.Cod_Estado as 'Codigo de Estado', (select Est.Descripcion_Estado from Estados as Est where Est.Codigo_Estado=A.Cod_Estado and Est.Codigo_Tipo_Estado=4)
+                 as Estado,A.PrecioCompra as 'Precio de Compra', A.PrecioVenta as ' Precio de Venta', A.Cod_Categoria as 'Codigo de la Categoria', C.Descripcion as 'Descripcion de Categoria'
+                ,B.Cod_Modelo as 'Codigo de Modelo', B.Descripcion as 'Descripcion del Modelo',
+                D.Cod_Marca as 'Codigo de Marca', D.Descripcion as 'Marca', E.Codigo_Proveedor as 'Codigo del Proveedor', E.Nombre as 'Proveedor'
+                from Producto as A inner join Categoria_Producto as C on
+                A.Cod_Categoria = C.Codigo_Categoria inner join Modelo as B on A.Cod_Modelo=B.Cod_Modelo
+                inner join Marca D on D.Cod_Marca=B.Cod_Marca inner join Proveedor as E on E.Codigo_Proveedor=A.Cod_Proveedor");
+                con.cmd = new SqlCommand(con.sql, con.cnx);
+                con.DataAdapter = new SqlDataAdapter(con.cmd);
+                con.dt = new DataTable();
+                con.DataAdapter.Fill(con.dt);
+                dgv.DataSource = con.dt;
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void ExtraerPorNombreroducto(DataGridView dgv, string Nom)
+        {
+            Conexion con = new Conexion();
+            con.cnx.Open();
+            try
+            {
+
+
+                con.sql = string.Format
+                (@"select A.Cod_Producto as 'Codigo del Producto', A.NombreProducto as 'Nombre', A.Descripcion as 'Descripcion' ,
+                A.Cod_Estado as 'Codigo de Estado', (select Est.Descripcion_Estado from Estados as Est where Est.Codigo_Estado=A.Cod_Estado and Est.Codigo_Tipo_Estado=4)
+                as Estado,A.PrecioCompra as 'Precio de Compra', A.PrecioVenta as ' Precio de Venta', A.Cod_Categoria as 'Codigo de la Categoria', C.Descripcion as 'Descripcion de Categoria'
+                , A.CantExistenteTienda as 'Existencia en Tienda', B.Cod_Modelo as 'Codigo de Modelo', B.Descripcion as 'Descripcion del Modelo',
+                D.Cod_Marca as 'Codigo de Marca', D.Descripcion as 'Marca', E.Codigo_Proveedor as 'Codigo del Proveedor', E.Nombre as 'Proveedor'
+                from Producto as A inner join Categoria_Producto as C on
+                A.Cod_Categoria = C.Codigo_Categoria inner join Modelo as B on A.Cod_Modelo=B.Cod_Modelo
+                inner join Marca D on D.Cod_Marca=B.Cod_Marca inner join Proveedor 
+                as E on E.Codigo_Proveedor=A.Cod_Proveedor
+                where  A.NombreProducto like '%{0}%'", Nom);
+                con.cmd = new SqlCommand(con.sql, con.cnx);
+                con.DataAdapter = new SqlDataAdapter(con.cmd);
+                con.dt = new DataTable();
+                con.DataAdapter.Fill(con.dt);
+                dgv.DataSource = con.dt;
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void Fun_ExtraerPorCodigoroducto(DataGridView dgv, int VF_Codig)
+        {
+
+            cnx.Open();
+            try
+            {
+
+
+                sql = string.Format
+                (@"select A.Cod_Producto as 'Codigo del Producto', A.NombreProducto as 'Nombre', A.Descripcion as 'Descripcion' ,
+                A.Cod_Estado as 'Codigo de Estado', (select Est.Descripcion_Estado from Estados as Est where Est.Codigo_Estado=A.Cod_Estado and Est.Codigo_Tipo_Estado=4)
+                as Estado,A.PrecioCompra as 'Precio de Compra', A.PrecioVenta as ' Precio de Venta', A.Cod_Categoria as 'Codigo de la Categoria', C.Descripcion as 'Descripcion de Categoria'
+                ,B.Cod_Modelo as 'Codigo de Modelo', B.Descripcion as 'Descripcion del Modelo',
+                D.Cod_Marca as 'Codigo de Marca', D.Descripcion as 'Marca', E.Codigo_Proveedor as 'Codigo del Proveedor', E.Nombre as 'Proveedor'
+                from Producto as A inner join Categoria_Producto as C on
+                A.Cod_Categoria = C.Codigo_Categoria inner join Modelo as B on A.Cod_Modelo=B.Cod_Modelo
+                inner join Marca D on D.Cod_Marca=B.Cod_Marca inner join Proveedor 
+                as E on E.Codigo_Proveedor=A.Cod_Proveedor
+                where A.Cod_Producto like '%{0}%'", VF_Codig);
+                cmd = new SqlCommand(sql, cnx);
+                DataAdapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
+
+
+        public void Fun_CargarPrimerDataGriew(DataGridView dgv)
+        {
+     
+            cnx.Open();
+            try
+            {
+                DataAdapter = new SqlDataAdapter("select * from Modelo where Cod_Estado = 1", ccnx);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
+
+
+        public void Fun_ExtraerCodigoModelo(TextBox VF_CodigoModelo)
+        {
+
+            cnx.Open();
+            sql = String.Format(@"Select TOP 1 Cod_Modelo from Modelo ORDER BY Cod_Modelo DESC");
+            cmd = new SqlCommand(sql, cnx);
+            SqlDataReader Reg = null;
+            Reg = cmd.ExecuteReader();
+            if (Reg.Read())
+            {
+                VF_CodigoModelo.Text = Convert.ToString(Convert.ToInt16((Reg["Cod_Modelo"].ToString())) + 1);
+                cnx.Close();
+            }
+        }
+
+
+        public void Fun_CargarLocalidad(DataGridView dgv, string VF_CodBus)
+        {
+
+            cnx.Open();
+            try
+            {
+                string busq;
+                busq = VF_CodBus;
+
+
+                sql = string.Format
+                (@"select P.Cod_Localidad as 'Codigo de Localidad', L.Nombre as 'Localidad', P.Cantidad as 'Unidades en existencia' 
+                from [Producto|Localidad] as P inner join Localidad as L on L.Cod_Localidad=P.Cod_Localidad
+                where P.Cod_Producto='{0}' and (P.Cod_Localidad='1' or P.Cod_Localidad='2')", VF_CodBus);
+                cmd = new SqlCommand(sql, cnx);
+                DataAdapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
+
+
+        public void Fun_CargarLocalidadIndividual(DataGridView dgv, string VF_CodPro, string VF_CodLoc)
+        {
+           
+            cnx.Open();
+            try
+            {
+                string busq;
+                busq = VF_CodPro;
+
+
+                sql = string.Format
+                (@"select P.Cod_Localidad as 'Codigo de Localidad', L.Nombre as 'Localidad', P.Cantidad as 'Unidades en existencia' 
+                from [Producto|Localidad] as P inner join Localidad as L on L.Cod_Localidad=P.Cod_Localidad
+                where P.Cod_Producto='{0}' and P.Cod_Localidad='{1}'", VF_CodPro, VF_CodLoc);
+                cmd = new SqlCommand(sql, cnx);
+                DataAdapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
+
+
+        public void Fun_LLenarLocalidades(ComboBox VF_ComLoc)
+        {
+            cnx.Open();
+            sql = string.Format(@"select Cod_Localidad as 'Cod', Nombre as 'Nombre' from Localidad");
+            cmd = new SqlCommand(sql, cnx);
+            DataAdapter = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
+
+            VF_ComLoc.ValueMember = "Cod";
+            VF_ComLoc.DisplayMember = "Nombre";
+            VF_ComLoc.DataSource = dt;
+        }
+
+
     }
 }
