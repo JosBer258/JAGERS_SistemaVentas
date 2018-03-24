@@ -83,12 +83,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label41 = new System.Windows.Forms.Label();
             this.Pest3_ComBox_Estado = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.Pest3_Txt_Categorias = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.Pest3_Txt_NombreMarca = new System.Windows.Forms.TextBox();
@@ -194,6 +194,7 @@
             this.fKModeloMarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKProductoModeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKProductosHistoricosProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Bttn_Ayuda = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -865,6 +866,16 @@
             this.textBox1.TabIndex = 57;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(867, 308);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(128, 67);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Aceptar";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
@@ -913,16 +924,6 @@
             this.button7.Text = "Limpiar";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(867, 308);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(128, 67);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Aceptar";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Pest3_Txt_Categorias
             // 
@@ -1945,6 +1946,17 @@
             this.fKProductosHistoricosProductoBindingSource.DataMember = "FK_Productos|Historicos_Producto";
             this.fKProductosHistoricosProductoBindingSource.DataSource = this.productoBindingSource1;
             // 
+            // Bttn_Ayuda
+            // 
+            this.Bttn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Ayuda.Location = new System.Drawing.Point(745, 430);
+            this.Bttn_Ayuda.Name = "Bttn_Ayuda";
+            this.Bttn_Ayuda.Size = new System.Drawing.Size(128, 67);
+            this.Bttn_Ayuda.TabIndex = 2;
+            this.Bttn_Ayuda.Text = "Ayuda";
+            this.Bttn_Ayuda.UseVisualStyleBackColor = true;
+            this.Bttn_Ayuda.Click += new System.EventHandler(this.Bttn_Ayuda_Click);
+            // 
             // Form_Productos_ManejoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1952,6 +1964,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1035, 502);
             this.ControlBox = false;
+            this.Controls.Add(this.Bttn_Ayuda);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form_Productos_ManejoProductos";
@@ -2188,5 +2201,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox Pest3_ComboBox_Localidad;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Bttn_Ayuda;
     }
 }

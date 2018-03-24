@@ -350,6 +350,7 @@
             // 
             // DATE_FechaActual
             // 
+            this.DATE_FechaActual.Enabled = false;
             this.DATE_FechaActual.Location = new System.Drawing.Point(12, 22);
             this.DATE_FechaActual.Name = "DATE_FechaActual";
             this.DATE_FechaActual.Size = new System.Drawing.Size(291, 21);

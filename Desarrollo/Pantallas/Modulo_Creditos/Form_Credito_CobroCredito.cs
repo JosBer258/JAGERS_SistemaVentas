@@ -33,9 +33,9 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form_VistaManualPDF Manual = new Form_VistaManualPDF();
-            Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\Manual del Gerente.pdf");
-            Manual.ShowDialog();
+           //Form_VistaManualPDF Manual = new Form_VistaManualPDF();
+           // Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualesPantalla\Manual Pantalla de Empleados.pdf");
+           //Manual.ShowDialog();
         }
 
         private void Form_Credito_CobroCredito_Load(object sender, EventArgs e)

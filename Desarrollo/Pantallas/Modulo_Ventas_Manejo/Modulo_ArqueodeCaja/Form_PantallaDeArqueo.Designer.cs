@@ -118,6 +118,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 127);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -154,6 +155,7 @@
             this.Grupo_Busqueda.TabIndex = 5;
             this.Grupo_Busqueda.TabStop = false;
             this.Grupo_Busqueda.Text = "Opciones de Busqueda de Transacciones ";
+            this.Grupo_Busqueda.Enter += new System.EventHandler(this.Grupo_Busqueda_Enter);
             // 
             // Bttn_Generar
             // 

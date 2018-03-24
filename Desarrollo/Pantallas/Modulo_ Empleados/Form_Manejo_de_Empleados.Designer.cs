@@ -38,6 +38,8 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Picture = new System.Windows.Forms.PictureBox();
+            this.Pest1_Radio_Manejo = new System.Windows.Forms.RadioButton();
+            this.Pest1_Radio_Nuevo_Empleado = new System.Windows.Forms.RadioButton();
             this.Pest_BusquedaEmpleados = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Pest2_GrupoBusqueda = new System.Windows.Forms.GroupBox();
@@ -54,8 +56,6 @@
             this.Pest_NuevoEmpleado = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Pest1_Grupo_OpcionesManejo = new System.Windows.Forms.GroupBox();
-            this.Pest1_Radio_Manejo = new System.Windows.Forms.RadioButton();
-            this.Pest1_Radio_Nuevo_Empleado = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -160,6 +160,33 @@
             this.toolTip1.SetToolTip(this.Picture, "Dele doble click sobre el Codigo  o el ID del Empleado que desea actualizar\r\n par" +
         "a que los datos se extraigan y se muestren en la Pestaña de Manejo de Empleados");
             this.Picture.Click += new System.EventHandler(this.Picture_Click);
+            // 
+            // Pest1_Radio_Manejo
+            // 
+            this.Pest1_Radio_Manejo.AutoSize = true;
+            this.Pest1_Radio_Manejo.Location = new System.Drawing.Point(205, 37);
+            this.Pest1_Radio_Manejo.Name = "Pest1_Radio_Manejo";
+            this.Pest1_Radio_Manejo.Size = new System.Drawing.Size(241, 20);
+            this.Pest1_Radio_Manejo.TabIndex = 34;
+            this.Pest1_Radio_Manejo.TabStop = true;
+            this.Pest1_Radio_Manejo.Text = "Manejo de Empleado Existente";
+            this.toolTip1.SetToolTip(this.Pest1_Radio_Manejo, "Seleccione un empleado\r\nen la pestaña de búsqueda\r\npara editar los datos de este\t" +
+        "\r\n");
+            this.Pest1_Radio_Manejo.UseVisualStyleBackColor = true;
+            this.Pest1_Radio_Manejo.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Manejo_CheckedChanged);
+            // 
+            // Pest1_Radio_Nuevo_Empleado
+            // 
+            this.Pest1_Radio_Nuevo_Empleado.AutoSize = true;
+            this.Pest1_Radio_Nuevo_Empleado.Location = new System.Drawing.Point(25, 37);
+            this.Pest1_Radio_Nuevo_Empleado.Name = "Pest1_Radio_Nuevo_Empleado";
+            this.Pest1_Radio_Nuevo_Empleado.Size = new System.Drawing.Size(146, 20);
+            this.Pest1_Radio_Nuevo_Empleado.TabIndex = 33;
+            this.Pest1_Radio_Nuevo_Empleado.TabStop = true;
+            this.Pest1_Radio_Nuevo_Empleado.Text = "Nuevo Empleado";
+            this.toolTip1.SetToolTip(this.Pest1_Radio_Nuevo_Empleado, "Seleccione para\r\nagregar un nuevo empleado\r\n");
+            this.Pest1_Radio_Nuevo_Empleado.UseVisualStyleBackColor = true;
+            this.Pest1_Radio_Nuevo_Empleado.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Nuevo_Empleado_CheckedChanged);
             // 
             // Pest_BusquedaEmpleados
             // 
@@ -354,33 +381,6 @@
             this.Pest1_Grupo_OpcionesManejo.TabIndex = 30;
             this.Pest1_Grupo_OpcionesManejo.TabStop = false;
             this.Pest1_Grupo_OpcionesManejo.Text = "Opciones de Manejo";
-            // 
-            // Pest1_Radio_Manejo
-            // 
-            this.Pest1_Radio_Manejo.AutoSize = true;
-            this.Pest1_Radio_Manejo.Location = new System.Drawing.Point(205, 37);
-            this.Pest1_Radio_Manejo.Name = "Pest1_Radio_Manejo";
-            this.Pest1_Radio_Manejo.Size = new System.Drawing.Size(241, 20);
-            this.Pest1_Radio_Manejo.TabIndex = 34;
-            this.Pest1_Radio_Manejo.TabStop = true;
-            this.Pest1_Radio_Manejo.Text = "Manejo de Empleado Existente";
-            this.toolTip1.SetToolTip(this.Pest1_Radio_Manejo, "Seleccione un empleado\r\nen la pestaña de búsqueda\r\npara editar los datos de este\t" +
-        "\r\n");
-            this.Pest1_Radio_Manejo.UseVisualStyleBackColor = true;
-            this.Pest1_Radio_Manejo.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Manejo_CheckedChanged);
-            // 
-            // Pest1_Radio_Nuevo_Empleado
-            // 
-            this.Pest1_Radio_Nuevo_Empleado.AutoSize = true;
-            this.Pest1_Radio_Nuevo_Empleado.Location = new System.Drawing.Point(25, 37);
-            this.Pest1_Radio_Nuevo_Empleado.Name = "Pest1_Radio_Nuevo_Empleado";
-            this.Pest1_Radio_Nuevo_Empleado.Size = new System.Drawing.Size(146, 20);
-            this.Pest1_Radio_Nuevo_Empleado.TabIndex = 33;
-            this.Pest1_Radio_Nuevo_Empleado.TabStop = true;
-            this.Pest1_Radio_Nuevo_Empleado.Text = "Nuevo Empleado";
-            this.toolTip1.SetToolTip(this.Pest1_Radio_Nuevo_Empleado, "Seleccione para\r\nagregar un nuevo empleado\r\n");
-            this.Pest1_Radio_Nuevo_Empleado.UseVisualStyleBackColor = true;
-            this.Pest1_Radio_Nuevo_Empleado.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Nuevo_Empleado_CheckedChanged);
             // 
             // label12
             // 
@@ -878,6 +878,7 @@
             this.Bttn_Ayuda.TabIndex = 2;
             this.Bttn_Ayuda.Text = "Ayuda";
             this.Bttn_Ayuda.UseVisualStyleBackColor = false;
+            this.Bttn_Ayuda.Click += new System.EventHandler(this.Bttn_Ayuda_Click);
             // 
             // Form_Manejo_de_Empleados
             // 

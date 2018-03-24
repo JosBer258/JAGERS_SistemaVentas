@@ -1,4 +1,5 @@
 ﻿using Desarrollo.Clases;
+using Desarrollo.Pantallas.Manueales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -1079,6 +1080,13 @@ namespace Desarrollo.Pantallas.Modulo__Empleados
         private void Pest1_Text_Direccion_TextChanged_1(object sender, EventArgs e)
         {
             LEmp_CambiosRealizados = true;
+        }
+
+        private void Bttn_Ayuda_Click(object sender, EventArgs e)
+        {
+            Form_VistaManualPDF Manual = new Form_VistaManualPDF();
+            Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualesPantalla\Manual Pantalla de Empleados.pdf");
+            Manual.ShowDialog();
         }
     }
 }

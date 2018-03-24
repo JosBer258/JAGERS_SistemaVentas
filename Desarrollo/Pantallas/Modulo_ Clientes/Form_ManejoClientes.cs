@@ -1,4 +1,5 @@
 ﻿using Desarrollo.Clases;
+using Desarrollo.Pantallas.Manueales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -2141,6 +2142,13 @@ where A.Codigo_Factura = '{0}'", busq);
         {
             val.ValirLetrasYEspacios(sender, e, Pest5_Pest2_Txt_Apellido);
            
+        }
+
+        private void Bttn_Ayuda_Click(object sender, EventArgs e)
+        {
+            Form_VistaManualPDF Manual = new Form_VistaManualPDF();
+            Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualesPantalla\Manual Pantalla de Clientes.pdf");
+            Manual.ShowDialog();
         }
 
         private void Pest5_Txt_Nombre_TextChanged(object sender, EventArgs e)

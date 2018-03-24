@@ -19,6 +19,7 @@ using Desarrollo.Pantallas.Modulo_Compras;
 using Desarrollo.Pantallas.Modulo_Ventas_Manejo;
 using Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja;
 using System.Data.SqlClient;
+using Desarrollo.Pantallas.Manueales;
 
 namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
 {
@@ -277,6 +278,33 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
             Form_Localidades Local = new Form_Localidades();
             Local.ShowDialog();
             
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_VistaManualPDF Manual = new Form_VistaManualPDF();
+
+            if (Convert.ToInt16(Var_codigo_rol) == 1)//Gerente --- x
+            {
+
+
+                Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualRoles\Manual del Gerente.pdf");
+                
+            }
+            else if (Convert.ToInt16(Var_codigo_rol) == 2)//Vendedor
+            {
+                Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualRoles\Manual del Vendedor.pdf");
+            }
+            else if (Convert.ToInt16(Var_codigo_rol) == 3)//Agente de Cobros
+            {
+                Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualRoles\Manual del Agente de Credito.pdf");
+            }
+            else if (Convert.ToInt16(Var_codigo_rol) == 4)//Agente de Bodega
+            {
+                Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualRoles\Manual del Agente de Bodega.pdf");
+            }
+
+            Manual.ShowDialog();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

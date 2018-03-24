@@ -224,7 +224,7 @@ namespace Desarrollo.Pantallas.Modulo_Transacciones
             cargar.Txt_MontoOriginal.Text = row.Cells["Monto Total"].Value.ToString();
             cargar.Txt_FechaRealizacionFactura.Text = row.Cells["Fecha de Realización"].Value.ToString();
             cargar.Txt_FechaVencimientoFactura.Text = row.Cells["Fecha de Vencimiento"].Value.ToString();
-            cargar.Txt_NumeroFactura.Text = row.Cells["No. de Documento"].Value.ToString();
+            cargar.Txt_NumeroFactura.Text = row.Cells["No. de Documento"].Value. ToString();
             cargar.Txt_PorcentajeMora.Text = row.Cells["Porcentaje de Mora"].Value.ToString();
             cargar.Txt_NombreEmpleado.Text = Name;
         }

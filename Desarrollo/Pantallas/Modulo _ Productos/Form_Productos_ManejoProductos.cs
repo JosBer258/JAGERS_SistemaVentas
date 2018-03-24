@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Desarrollo.Clases;
+using Desarrollo.Pantallas.Manueales;
 
 namespace Desarrollo.Pantallas.Modulo___Productos
 {
@@ -1771,6 +1772,14 @@ namespace Desarrollo.Pantallas.Modulo___Productos
             Pest6_Txt_Busqueda_Descripcion.Clear();
             Pest6_Txt_Busqueda_CodigoMarca.Clear();
             Products.Fun_ExtraerCodigoModelo(Pest6_Txt_Manejo_CodigoModulo);
+        }
+
+        private void Bttn_Ayuda_Click(object sender, EventArgs e)
+        {
+            
+            Form_VistaManualPDF Manual = new Form_VistaManualPDF();
+            Manual.PDF_Local.src = (Application.StartupPath + @"\ManualesHTML\ManualesPantalla\Manual Pantalla de Productos.pdf");
+            Manual.ShowDialog();
         }
     }
 

@@ -223,6 +223,7 @@
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.toolmessage = new System.Windows.Forms.ToolStrip();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Bttn_Ayuda = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -2518,6 +2519,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // Bttn_Ayuda
+            // 
+            this.Bttn_Ayuda.Location = new System.Drawing.Point(956, 471);
+            this.Bttn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
+            this.Bttn_Ayuda.Name = "Bttn_Ayuda";
+            this.Bttn_Ayuda.Size = new System.Drawing.Size(117, 39);
+            this.Bttn_Ayuda.TabIndex = 30;
+            this.Bttn_Ayuda.Text = "Ayuda";
+            this.Bttn_Ayuda.UseVisualStyleBackColor = true;
+            this.Bttn_Ayuda.Click += new System.EventHandler(this.Bttn_Ayuda_Click);
+            // 
             // Form_ManejoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -2525,6 +2537,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1231, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.Bttn_Ayuda);
             this.Controls.Add(this.toolmessage);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.tabControl1);
@@ -2786,5 +2799,6 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.ComboBox Pest5_Estados;
         private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Button Bttn_Ayuda;
     }
 }

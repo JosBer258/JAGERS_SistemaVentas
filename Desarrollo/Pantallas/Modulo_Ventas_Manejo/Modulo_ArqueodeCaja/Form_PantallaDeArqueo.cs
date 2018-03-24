@@ -37,6 +37,8 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja
             Txt_Creditos.Text = Convert.ToString(MontoActual(1));
             Txt_NumTotalVentas.Text = Convert.ToString(SacarNumeroVentasActuales());
 
+            ExtraerFechaNacimientoPermitida(ComBox_Año);
+
         }
 
         private void Bttn_salir_Click(object sender, EventArgs e)
@@ -62,7 +64,6 @@ A.Codigo_Transaccion as [Código de Transacción],
 	               A.Monto as [Monto Total],
 	               D.Nombre +space(2)+ D.Apellido as [Nombre del Cliente],
 	               A.Fecha_Vencimiento as [Fecha de Vencimiento],
-	               A.ID_Transacion_Padre as [ID de Transacción Padre],
 	               E.Porcentaje_Mora as [Porcentaje de Mora],
                    (Select F.Descripcion_Estado from Estados as F where F.Codigo_Estado=A.Codigo_Estado and F.Descripcion_Estado like '%Transac%')
                     FROM [dbo].[Transacciones] as A
@@ -108,10 +109,15 @@ A.Codigo_Transaccion as [Código de Transacción],
         {
             int años = 0;
             años = DateTime.Now.Year;
-            for (int i = (años - 60); i <= (años); i++)
+            int i;
+
+            for ( i= (años); i>=(años-60); i--)
             {
+               
                 Combo.Items.Add(i);
             }
+
+        
         }
 
 
@@ -134,7 +140,7 @@ A.Codigo_Transaccion as [Código de Transacción],
                 }
 
                 int m, a;
-                m = Convert.ToInt16(ComBox_Mess.SelectedIndex) +2;
+                m = Convert.ToInt16(ComBox_Mess.SelectedIndex) +1;
                 a = Convert.ToInt16(ComBox_Año.SelectedItem);
                 LlenarPorFecha(dataGridView1, m, a);
                 Txt_NumTotalVentas.Text = Convert.ToString(SacarNumeroManual(m, a));
@@ -161,7 +167,6 @@ A.Codigo_Transaccion as [Código de Transacción],
 	               A.Monto as [Monto Total],
 	               D.Nombre +space(2)+ D.Apellido as [Nombre del Cliente],
 	               A.Fecha_Vencimiento as [Fecha de Vencimiento],
-	               A.ID_Transacion_Padre as [ID de Transacción Padre],
 	               E.Porcentaje_Mora as [Porcentaje de Mora],
                    (Select F.Descripcion_Estado from Estados as F where F.Codigo_Estado=A.Codigo_Estado and F.Descripcion_Estado like '%Transac%')
                     FROM [dbo].[Transacciones] as A
@@ -308,6 +313,11 @@ on A.Cod_Factura=B.Numero_Documento where MONTH( B.Fecha)='{0}' and YEAR(B.Fecha
             Conex.cnx.Close();
 
             return Cant;
+        }
+
+        private void Grupo_Busqueda_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
