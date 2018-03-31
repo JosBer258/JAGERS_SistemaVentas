@@ -13,7 +13,18 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 {
     public partial class Cotizacion_Impresion_Forma : System.Windows.Forms.Form
     {
-        public string NomCliente, NomEmpleado, FechaRealizacion, Total, FechaFinal;
+        DateTime Var_Hoy = DateTime.Today;
+        public string Var_fecha_actual;
+
+        
+
+        public string NomCliente="xxx", NomEmpleado = "xxx", FechaRealizacion = "xxx", Total, FechaFinal = "xxx";
+        public string CodCai, CodigoFactura, Subtotal_R, Porcentaje_R, Impuesto_r;
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+          
+        }
 
         public Cotizacion_Impresion_Forma()
         {
@@ -22,11 +33,24 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
         public List<Cotizaccion_LlenadoDeDataGriew> Datos = new List<Cotizaccion_LlenadoDeDataGriew>();
         private void Cotizacion_Impresion_Forma_Load(object sender, EventArgs e)
         {
+            FechaRealizacion = Var_Hoy.ToString("dd-MM-yyyy");
+
             ReportParameter p = new ReportParameter("NombreCliente", NomCliente);
+
             reportViewer1.LocalReport.SetParameters(p);
 
-            ReportParameter A = new ReportParameter("NombreEmpleado", NomEmpleado);
-            reportViewer1.LocalReport.SetParameters(A);
+        
+            ReportParameter Sub = new ReportParameter("SubTotalRepor", Subtotal_R);
+            reportViewer1.LocalReport.SetParameters(Sub);
+
+            ReportParameter Por = new ReportParameter("PorcentajeImpRepor", Porcentaje_R);
+            reportViewer1.LocalReport.SetParameters(Por);
+
+            ReportParameter Imp = new ReportParameter("ImpuestoR", Impuesto_r);
+            reportViewer1.LocalReport.SetParameters(Imp);
+
+
+
 
             ReportParameter B = new ReportParameter("Fecha", FechaRealizacion);
             reportViewer1.LocalReport.SetParameters(B);
@@ -34,9 +58,12 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             ReportParameter C = new ReportParameter("Total", Total);
             reportViewer1.LocalReport.SetParameters(C);
 
-            ReportParameter E = new ReportParameter("FechaFinal", FechaFinal);
-            reportViewer1.LocalReport.SetParameters(E);
 
+            ReportParameter CCai = new ReportParameter("CodigoCai", CodCai);
+            reportViewer1.LocalReport.SetParameters(CCai);
+
+            ReportParameter CoFac = new ReportParameter("CodFactura", CodigoFactura);
+            reportViewer1.LocalReport.SetParameters(CoFac);
 
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", Datos));

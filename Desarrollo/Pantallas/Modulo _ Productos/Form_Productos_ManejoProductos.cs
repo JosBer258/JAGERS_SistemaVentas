@@ -10,6 +10,15 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Desarrollo.Clases;
 using Desarrollo.Pantallas.Manueales;
+<<<<<<< Updated upstream
+=======
+using System.IO;
+using System.Reflection;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
+
+>>>>>>> Stashed changes
 
 namespace Desarrollo.Pantallas.Modulo___Productos
 {
@@ -24,6 +33,8 @@ namespace Desarrollo.Pantallas.Modulo___Productos
         public string comparar;
         public string Localidad;
         public string EmpNombr;
+
+
 
         public Form_Productos_ManejoProductos()
         {
@@ -1486,7 +1497,137 @@ namespace Desarrollo.Pantallas.Modulo___Productos
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            try
+            {
+              
+            DateTime Hoy = DateTime.Today;
+            string fecha_actual = Hoy.ToString("dd-MM-yyyy");
+            string Nombre = "Reporte Inventario" + fecha_actual;
+            string Ruta = @"C:\Rogers\Reportes\" + Nombre + ".pdf";
+
+            
+                reporteInventario(Pest2_DataGriew_Productos);
+                ExportDataTableToPdf(Pest2_DataGriew_Productos,Ruta, "Reporte de Inventario");
+                System.Diagnostics.Process.Start(Ruta);
+                llenarDataGridView(Pest2_DataGriew_Productos);
         }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message");
+            }
+
+}
+
+        public void llenarDataGridView(DataGridView dgv)
+        {
+            Conexion Con = new Conexion();
+            try
+            {
+
+                Con.DataAdapter = new SqlDataAdapter(@"Select *
+		                                                FROM Producto", Con.cnx);
+                Con.dt = new DataTable();
+                Con.DataAdapter.Fill(Con.dt);
+                dgv.DataSource = Con.dt;
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        void ExportDataTableToPdf(DataGridView dgvTable, String strPdfPath, string strHeader)
+        {
+            System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
+            Document document = new Document();
+            document.SetPageSize(iTextSharp.text.PageSize.A4);
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            document.Open();
+
+            //Report Header
+           BaseFont bfntHead = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntHead = new iTextSharp.text.Font(bfntHead, 16, 1, iTextSharp.text.BaseColor.BLACK);
+            Paragraph prgHeading = new Paragraph();
+            prgHeading.Alignment = Element.ALIGN_CENTER;
+            prgHeading.Add(new Chunk(strHeader.ToUpper(), fntHead));
+            document.Add(prgHeading);
+
+            //Author
+            Paragraph prgAuthor = new Paragraph();
+            BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntAuthor = new iTextSharp.text.Font(btnAuthor, 10, 2, iTextSharp.text.BaseColor.BLACK);
+            prgAuthor.Alignment = Element.ALIGN_RIGHT;
+            prgAuthor.Add(new Chunk("\nFecha : " + DateTime.Now.ToShortDateString(), fntAuthor));
+            document.Add(prgAuthor);
+
+            //Add a line seperation
+            Paragraph p = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, iTextSharp.text.BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+            document.Add(p);
+
+            //Add line break
+            document.Add(new Chunk("\n", fntHead));
+
+            //Write the table
+            PdfPTable tabl = new PdfPTable(dgvTable.Columns.Count);
+            //Table header
+            BaseFont btnColumnHeader = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntColumnHeader = new iTextSharp.text.Font(btnColumnHeader, 12, 0, iTextSharp.text.BaseColor.WHITE);
+
+            for (int i = 0; i < dgvTable.Columns.Count; i++)
+            {
+                PdfPCell cell = new PdfPCell();
+                cell.BackgroundColor = iTextSharp.text.BaseColor.DARK_GRAY;
+                cell.AddElement(new Chunk(dgvTable.Columns[i].HeaderText, fntColumnHeader));
+                
+                tabl.AddCell(cell);
+            }
+            //table Data
+            for (int i = 0; i < dgvTable.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvTable.Columns.Count; j++)
+                {
+                    tabl.AddCell(Convert.ToString(dgvTable.Rows[i].Cells[j].Value));
+                    //Nombre, Codigo, Cantidad, precio compra, precio venta
+                }
+            }
+            try
+            {
+               document.Add(tabl);
+                document.Close();
+                writer.Close();
+                fs.Close();
+            }
+            catch(Exception) { }
+        }
+
+        private void reporteInventario(DataGridView dgv)
+        { Conexion Con = new Conexion();
+            try
+            {
+
+                Con.DataAdapter = new SqlDataAdapter(@"Select Cod_Producto as [Código de Producto],
+		                                                NombreProducto as [Nombre de Producto],
+		                                              
+		                                                PrecioCompra as [Precio de Compra],
+		                                                PrecioVenta as [Precio de Venta]
+		                                                FROM Producto", Con.cnx);
+                Con.dt = new DataTable();
+                Con.DataAdapter.Fill(Con.dt);
+                dgv.DataSource = Con.dt;
+              
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+        //***********************************************************************************************
+        //***********************************************************************************************
+        //***********************************************************************************************
+        //***********************************************************************************************
 
         private void Pest6_Txt_Manejo_Descripcion_KeyPress(object sender, KeyPressEventArgs e)
         {

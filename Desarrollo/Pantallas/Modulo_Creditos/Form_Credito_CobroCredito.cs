@@ -1,6 +1,7 @@
 ﻿using Desarrollo.Clases;
 using Desarrollo.Pantallas.Manueales;
 using Desarrollo.Pantallas.Modulo__Ingreso_al_sistema;
+using Desarrollo.Pantallas.Modulo_Ventas_Manejo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
         C_Credito Cl_Credito = new C_Credito();
         Validaciones CL_Valid = new Validaciones();
         Form_Creditos_CargarMora CL_Mora = new Form_Creditos_CargarMora();
+        Form_ConfirmImprCredito Cl_ConfCredito = new Form_ConfirmImprCredito();
+
         private string LCr_TipoTransaccion;
         private string LCr_EstadoTransacion;
 
@@ -98,16 +101,7 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
 
         private void Pest1_ComBox_MuestDatos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Pest1_ComBox_MuestDatos.SelectedIndex == -1)
-            {
-                Pest1_DGV_DatosFactura.DataSource = null;
-                Pest1_DGV_DatosFactura.Refresh();
-
-                return;
-            }
-            Cl_Credito.Var_filtro_cod_client = (int) Convert.ToDouble(Pest1_ComBox_MuestDatos.SelectedValue);
-            Cl_Credito.Fun_MostrarCreditos(Pest1_DGV_DatosFactura);
-            Fun_Limpiar();
+           
 
         }
 
@@ -174,6 +168,7 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
             Cl_Credito.Var_filtro_cod_client = (int)Convert.ToDouble(Pest1_ComBox_MuestDatos.SelectedValue);
             Cl_Credito.Fun_MostrarCreditos(Pest1_DGV_DatosFactura);
 
+            Cl_ConfCredito.DGV_Datos.Rows.Insert(0, Pest1_Txt_NFactura.Text, Pest1_Txt_MontAPagar.Text, Cl_Credito.Var_resid_actual);
             Fun_Limpiar();
             MessageBox.Show("Se realizo el pago exitosamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
@@ -229,6 +224,10 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
             Fun_Limpiar();
             Pest1_Txt_Filtro.Clear();
             Pest1_ComBox_MuestDatos.SelectedIndex = -1;
+            Pest1_DGV_DatosFactura.DataSource = null;
+            Pest1_DGV_DatosFactura.Refresh();
+
+            Cl_ConfCredito.limpiar();
         }
 
         private void Bttn_MuestraClientes_Click(object sender, EventArgs e)
@@ -364,6 +363,47 @@ namespace Desarrollo.Pantallas.Modulo_Creditos
             Form_Muestra_Detalles Detalles = new Form_Muestra_Detalles();
             Detalles.LDt_CodTran = Convert.ToInt32(Pest2_Cod_Trans.Text);
             Detalles.ShowDialog();
+        }
+
+        private void Bttn_Generar_Click(object sender, EventArgs e)
+        {
+            if (Pest1_ComBox_MuestDatos.SelectedIndex == -1)
+            {
+                Pest1_DGV_DatosFactura.DataSource = null;
+                Pest1_DGV_DatosFactura.Refresh();
+
+                return;
+            }
+            Cl_Credito.Var_filtro_cod_client = (int)Convert.ToDouble(Pest1_ComBox_MuestDatos.SelectedValue);
+            Cl_Credito.Fun_MostrarCreditos(Pest1_DGV_DatosFactura);
+            Pest1_Txt_Filtro.Enabled = false;
+            Pest1_ComBox_MuestDatos.Enabled = false;
+            Bttn_Cambiar.Enabled = true;
+            Bttn_Generar.Enabled = false;
+
+            Cl_ConfCredito.Var_Cliente.Text= Pest1_ComBox_MuestDatos.Text;
+            Cl_ConfCredito.Var_NomEmp.Text = Pest1_Txt_NombreEmpleado.Text;
+            Fun_Limpiar();
+        }
+
+        private void Bttn_Cambiar_Click(object sender, EventArgs e)
+        {
+
+            Pest1_DGV_DatosFactura.DataSource = null;
+            Pest1_DGV_DatosFactura.Refresh();
+            Cl_ConfCredito.limpiar();
+
+            Pest1_Txt_Filtro.Enabled = true;
+            Bttn_Generar.Enabled = true;
+            Pest1_ComBox_MuestDatos.Enabled = true;
+            Bttn_Cambiar.Enabled = false;
+
+           
+        }
+
+        private void Bttn_Imprimir_Click(object sender, EventArgs e)
+        {
+            Cl_ConfCredito.ShowDialog();
         }
     }
 }

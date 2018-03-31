@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Label_Total = new System.Windows.Forms.Label();
             this.lb_Total = new System.Windows.Forms.Label();
             this.btn_Limpiar = new System.Windows.Forms.Button();
             this.btn_Guardar = new System.Windows.Forms.Button();
@@ -37,12 +37,6 @@
             this.btn_DescartarProducto = new System.Windows.Forms.Button();
             this.btn_Ayuda = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DataGrid_NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGrid_Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGrid_Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGrid_PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DG_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_Cotizacion = new System.Windows.Forms.GroupBox();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +54,7 @@
             this.txt_Nombre2 = new System.Windows.Forms.TextBox();
             this.gb_DatosCliente = new System.Windows.Forms.GroupBox();
             this.Check_RepresentarEmpresa = new System.Windows.Forms.CheckBox();
-            this.cmb_Nombre = new System.Windows.Forms.ComboBox();
+            this.Combo_NombreCliente = new System.Windows.Forms.ComboBox();
             this.lb_Nombre1 = new System.Windows.Forms.Label();
             this.txt_Nombre1 = new System.Windows.Forms.TextBox();
             this.lb_NombreEmpleado = new System.Windows.Forms.Label();
@@ -69,21 +63,25 @@
             this.Date_Fecha = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Date_FechaLimite = new System.Windows.Forms.DateTimePicker();
+            this.DataGrid_NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGrid_PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gb_Cotizacion.SuspendLayout();
             this.gb_DatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // Label_Total
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 537);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "0.00";
+            this.Label_Total.AutoSize = true;
+            this.Label_Total.Location = new System.Drawing.Point(85, 537);
+            this.Label_Total.Name = "Label_Total";
+            this.Label_Total.Size = new System.Drawing.Size(32, 13);
+            this.Label_Total.TabIndex = 49;
+            this.Label_Total.Text = "0.00";
             // 
             // lb_Total
             // 
@@ -152,8 +150,6 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGrid_NombreProducto,
-            this.DataGrid_Marca,
-            this.DataGrid_Modelo,
             this.DataGrid_PrecioVenta,
             this.DG_Cantidad,
             this.DG_Total});
@@ -162,42 +158,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(788, 278);
             this.dataGridView1.TabIndex = 38;
-            // 
-            // DataGrid_NombreProducto
-            // 
-            this.DataGrid_NombreProducto.HeaderText = "Nombre de Producto";
-            this.DataGrid_NombreProducto.Name = "DataGrid_NombreProducto";
-            this.DataGrid_NombreProducto.ReadOnly = true;
-            // 
-            // DataGrid_Marca
-            // 
-            this.DataGrid_Marca.HeaderText = "Marca";
-            this.DataGrid_Marca.Name = "DataGrid_Marca";
-            this.DataGrid_Marca.ReadOnly = true;
-            // 
-            // DataGrid_Modelo
-            // 
-            this.DataGrid_Modelo.HeaderText = "Modelo";
-            this.DataGrid_Modelo.Name = "DataGrid_Modelo";
-            this.DataGrid_Modelo.ReadOnly = true;
-            // 
-            // DataGrid_PrecioVenta
-            // 
-            this.DataGrid_PrecioVenta.HeaderText = "Precio Unitario";
-            this.DataGrid_PrecioVenta.Name = "DataGrid_PrecioVenta";
-            this.DataGrid_PrecioVenta.ReadOnly = true;
-            // 
-            // DG_Cantidad
-            // 
-            this.DG_Cantidad.HeaderText = "Cantidad";
-            this.DG_Cantidad.Name = "DG_Cantidad";
-            this.DG_Cantidad.ReadOnly = true;
-            // 
-            // DG_Total
-            // 
-            this.DG_Total.HeaderText = "Total";
-            this.DG_Total.Name = "DG_Total";
-            this.DG_Total.ReadOnly = true;
             // 
             // gb_Cotizacion
             // 
@@ -354,7 +314,7 @@
             // gb_DatosCliente
             // 
             this.gb_DatosCliente.Controls.Add(this.Check_RepresentarEmpresa);
-            this.gb_DatosCliente.Controls.Add(this.cmb_Nombre);
+            this.gb_DatosCliente.Controls.Add(this.Combo_NombreCliente);
             this.gb_DatosCliente.Controls.Add(this.lb_Nombre1);
             this.gb_DatosCliente.Controls.Add(this.txt_Nombre1);
             this.gb_DatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -375,14 +335,14 @@
             this.Check_RepresentarEmpresa.Text = "Representa a alguna empresa?\r\n";
             this.Check_RepresentarEmpresa.UseVisualStyleBackColor = true;
             // 
-            // cmb_Nombre
+            // Combo_NombreCliente
             // 
-            this.cmb_Nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Nombre.FormattingEnabled = true;
-            this.cmb_Nombre.Location = new System.Drawing.Point(48, 77);
-            this.cmb_Nombre.Name = "cmb_Nombre";
-            this.cmb_Nombre.Size = new System.Drawing.Size(246, 24);
-            this.cmb_Nombre.TabIndex = 14;
+            this.Combo_NombreCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_NombreCliente.FormattingEnabled = true;
+            this.Combo_NombreCliente.Location = new System.Drawing.Point(48, 77);
+            this.Combo_NombreCliente.Name = "Combo_NombreCliente";
+            this.Combo_NombreCliente.Size = new System.Drawing.Size(246, 24);
+            this.Combo_NombreCliente.TabIndex = 14;
             // 
             // lb_Nombre1
             // 
@@ -455,14 +415,42 @@
             this.label3.TabIndex = 52;
             this.label3.Text = "Fecha Limite:";
             // 
-            // dateTimePicker1
+            // Date_FechaLimite
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 71);
-            this.dateTimePicker1.MinDate = new System.DateTime(2017, 11, 29, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 20);
-            this.dateTimePicker1.TabIndex = 53;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 11, 29, 12, 45, 35, 0);
+            this.Date_FechaLimite.Location = new System.Drawing.Point(180, 71);
+            this.Date_FechaLimite.MinDate = new System.DateTime(2017, 11, 29, 0, 0, 0, 0);
+            this.Date_FechaLimite.Name = "Date_FechaLimite";
+            this.Date_FechaLimite.Size = new System.Drawing.Size(261, 20);
+            this.Date_FechaLimite.TabIndex = 53;
+            this.Date_FechaLimite.Value = new System.DateTime(2017, 11, 29, 12, 45, 35, 0);
+            // 
+            // DataGrid_NombreProducto
+            // 
+            this.DataGrid_NombreProducto.FillWeight = 228.1524F;
+            this.DataGrid_NombreProducto.HeaderText = "Informacion de Producto";
+            this.DataGrid_NombreProducto.Name = "DataGrid_NombreProducto";
+            this.DataGrid_NombreProducto.ReadOnly = true;
+            // 
+            // DataGrid_PrecioVenta
+            // 
+            this.DataGrid_PrecioVenta.FillWeight = 73.63128F;
+            this.DataGrid_PrecioVenta.HeaderText = "Precio Unitario";
+            this.DataGrid_PrecioVenta.Name = "DataGrid_PrecioVenta";
+            this.DataGrid_PrecioVenta.ReadOnly = true;
+            // 
+            // DG_Cantidad
+            // 
+            this.DG_Cantidad.FillWeight = 60.9137F;
+            this.DG_Cantidad.HeaderText = "Cantidad";
+            this.DG_Cantidad.Name = "DG_Cantidad";
+            this.DG_Cantidad.ReadOnly = true;
+            // 
+            // DG_Total
+            // 
+            this.DG_Total.FillWeight = 37.30265F;
+            this.DG_Total.HeaderText = "Total";
+            this.DG_Total.Name = "DG_Total";
+            this.DG_Total.ReadOnly = true;
             // 
             // Form_RealizarCotizaciones
             // 
@@ -471,10 +459,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(814, 646);
             this.ControlBox = false;
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Date_FechaLimite);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Date_Fecha);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Label_Total);
             this.Controls.Add(this.lb_Total);
             this.Controls.Add(this.btn_Limpiar);
             this.Controls.Add(this.btn_Guardar);
@@ -504,7 +492,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Label_Total;
         private System.Windows.Forms.Label lb_Total;
         private System.Windows.Forms.Button btn_Limpiar;
         private System.Windows.Forms.Button btn_Guardar;
@@ -519,7 +507,7 @@
         private System.Windows.Forms.Label lb_Nombre2;
         private System.Windows.Forms.TextBox txt_Nombre2;
         private System.Windows.Forms.GroupBox gb_DatosCliente;
-        private System.Windows.Forms.ComboBox cmb_Nombre;
+        private System.Windows.Forms.ComboBox Combo_NombreCliente;
         private System.Windows.Forms.Label lb_Nombre1;
         private System.Windows.Forms.TextBox txt_Nombre1;
         private System.Windows.Forms.Label lb_NombreEmpleado;
@@ -535,15 +523,13 @@
         private System.Windows.Forms.DateTimePicker Date_Fecha;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox Txt_Cantidad;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker Date_FechaLimite;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGrid_NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGrid_Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGrid_Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGrid_PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn DG_Total;
-        private System.Windows.Forms.TextBox Txt_Cantidad;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
     }
 }

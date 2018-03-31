@@ -34,11 +34,14 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Desarrollo.Pantallas.Modulo_Ventas_Manejo.Reporte_Cotizaciones.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-1, -1);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(847, 494);
+            this.reportViewer1.Size = new System.Drawing.Size(353, 602);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // button1
             // 
@@ -56,8 +59,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(847, 553);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(376, 626);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Cotizacion_Impresion_Forma";

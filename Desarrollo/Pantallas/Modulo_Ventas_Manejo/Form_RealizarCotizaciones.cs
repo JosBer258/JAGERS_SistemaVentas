@@ -9,12 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 {
     public partial class Form_RealizarCotizaciones : System.Windows.Forms.Form
     {
-        public string Cot_NombreEmpleado="";
+        public string Cot_NombreEmpleado = "";
         double Total;
         Conexion Con = new Conexion();
         Validaciones Val = new Validaciones();
@@ -40,7 +44,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
         {
             this.Close();
         }
-        
+
         ////LLENADO DE LOS DATOS*********************************************************
 
         private void FiltroClienteEmpresa(string NombreEmpresa)
@@ -60,10 +64,10 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             Con.cnx.Close();
 
 
-            cmb_Nombre.ValueMember = "Codigo_Empresa";
-            cmb_Nombre.DisplayMember = "NombreEmpresa";
-            cmb_Nombre.DataSource = Con.dt;
-            Con.cnx.Close();
+            Combo_NombreCliente.ValueMember = "Codigo_Empresa";
+            Combo_NombreCliente.DisplayMember = "NombreEmpresa";
+            Combo_NombreCliente.DataSource = Con.dt;
+         
         }
 
         private void FiltroClienteNormal(string NombreCliente)
@@ -73,9 +77,9 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
                 NombreCliente = "a";
             }
             Con.cnx.Open();
-            
 
-            Con.sql = string.Format(@"select Codigo_Cliente,(Nombre + ' ' + Apellido) as Nombre from Clientes where Nombre like '%{0}%'", NombreCliente);
+
+            Con.sql = string.Format(@"select Codigo_Cliente,(Nombre + ' ' + Apellido) as 'Nombre' from Clientes where (Nombre + ' ' + Apellido) like '%{0}%'", NombreCliente);
             Con.cmd = new SqlCommand(Con.sql, Con.cnx);
             Con.DataAdapter = new SqlDataAdapter(Con.cmd);
             Con.dt = new DataTable();
@@ -83,21 +87,22 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             Con.cnx.Close();
 
 
-            cmb_Nombre.ValueMember = "Codigo_Cliente";
-            cmb_Nombre.DisplayMember = "Nombre";
-            cmb_Nombre.DataSource = Con.dt;
-            Con.cnx.Close();
+            Combo_NombreCliente.ValueMember = "Codigo_Cliente";
+            Combo_NombreCliente.DisplayMember = "Nombre";
+            Combo_NombreCliente.DataSource = Con.dt;
+      
         }
 
         private void txt_Nombre1_TextChanged(object sender, EventArgs e)
         {
-            cmb_Nombre.DataSource = null;
-            cmb_Nombre.Items.Clear();
+            Combo_NombreCliente.DataSource = null;
+            Combo_NombreCliente.Items.Clear();
 
-            if (Check_RepresentarEmpresa.Checked==true)
+            if (Check_RepresentarEmpresa.Checked == true)
             {
                 FiltroClienteEmpresa(txt_Nombre1.Text);
-            } else
+            }
+            else
             {
                 FiltroClienteNormal(txt_Nombre1.Text);
             }
@@ -113,7 +118,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             Con.cnx.Open();
 
 
-            Con.sql = string.Format(@"select Cod_Producto, NombreProducto from Producto where NombreProducto like '%{0}%'", NombreProducto);
+            Con.sql = string.Format(@"select Cod_Producto, NombreProducto from Producto where NombreProducto like '%{0}%' and Cod_Estado=1", NombreProducto);
             Con.cmd = new SqlCommand(Con.sql, Con.cnx);
             Con.DataAdapter = new SqlDataAdapter(Con.cmd);
             Con.dt = new DataTable();
@@ -124,7 +129,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             ComBox_DescripcionProducto.ValueMember = "Cod_Producto";
             ComBox_DescripcionProducto.DisplayMember = "NombreProducto";
             ComBox_DescripcionProducto.DataSource = Con.dt;
-        
+
         }
 
         private void txt_Nombre2_TextChanged(object sender, EventArgs e)
@@ -134,7 +139,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 
         private void AgregarProductos(int a)
         {
-            
+
             Con.sql = string.Format(@"
             select A.NombreProducto as Nombre, A.PrecioVenta as Precio, 
             B.Descripcion as Modelo, C.Descripcion as Marca from Producto As A inner Join Modelo as B
@@ -148,8 +153,8 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 
             if (Reg.Read())
             {
-                
-                NombreProducto =(Reg["Nombre"].ToString());
+
+                NombreProducto = (Reg["Nombre"].ToString());
                 Text_Marca.Text = (Reg["Marca"].ToString());
                 Text_Modelo.Text = (Reg["Modelo"].ToString());
                 Text_Precio.Text = (Reg["Precio"].ToString());
@@ -160,21 +165,21 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
                 Con.cnx.Close();
             }
 
-            
+
         }
 
         private void ComBox_DescripcionProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             AgregarProductos(Convert.ToInt32(ComBox_DescripcionProducto.SelectedValue));
-           
+
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            bool verif=false;
-            double TotalPorP=0;
-            
+            bool Local_Verif = false;
+            double Local_TotalPorP = 0;
+            string Local_InfoProducto;
 
             if (ComBox_DescripcionProducto.SelectedIndex == -1)
             {
@@ -186,43 +191,45 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
                 errorProvider1.SetError(ComBox_DescripcionProducto, "");
             }
 
-            if (string.IsNullOrWhiteSpace(Txt_Cantidad.Text) || Convert.ToUInt32(Txt_Cantidad.Text)<=0)
+            if (string.IsNullOrWhiteSpace(Txt_Cantidad.Text) || Convert.ToUInt32(Txt_Cantidad.Text) <= 0)
             {
                 errorProvider1.SetError(Txt_Cantidad, "Debe Ingresar una Cantidad mayor de 0");
                 return;
             }
             else
             {
-                errorProvider1.SetError(Txt_Cantidad,"");
+                errorProvider1.SetError(Txt_Cantidad, "");
             }
 
-            
+
 
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                if (Convert.ToString((string)this.dataGridView1.Rows[i].Cells[0].Value) == NombreProducto) {
-                    verif = true; }                                                 
+                if (Convert.ToString((string)this.dataGridView1.Rows[i].Cells[0].Value) == NombreProducto)
+                {
+                    Local_Verif = true;
+                }
             }
 
 
-            if (verif == true)
+            if (Local_Verif == true)
             {
                 MessageBox.Show("Un producto solo puede ser agregado una sola vez");
                 return;
             }
 
             Total = Total + (Convert.ToDouble(Text_Precio.Text) * Convert.ToUInt32(Txt_Cantidad.Text));
-            TotalPorP = Convert.ToDouble(Total);
+            Local_TotalPorP = Convert.ToDouble(Total);
+            Local_InfoProducto ="Nombre:" + NombreProducto + " \nde Marca: " + Text_Marca.Text + " \nY de Modelo: " + Text_Modelo.Text;
 
-            dataGridView1.Rows.Insert(0,NombreProducto, Text_Marca.Text,  
-                Text_Modelo.Text , Text_Precio.Text, Txt_Cantidad.Text, Convert.ToString(TotalPorP));
-            label2.Text = Convert.ToString(Total);
+            dataGridView1.Rows.Insert(0, Local_InfoProducto, Text_Precio.Text, Txt_Cantidad.Text, Convert.ToString(Local_TotalPorP));
+            Label_Total.Text = Convert.ToString(Total);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-                     
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -237,39 +244,40 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             }
 
             double Resta;
-            Resta=Convert.ToDouble(dataGridView1.CurrentRow.Cells[5].Value.ToString());
+            Resta = Convert.ToDouble(dataGridView1.CurrentRow.Cells[5].Value.ToString());
             dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
             Total = Total - Resta;
-            label2.Text = Convert.ToString(Total);
+            Label_Total.Text = Convert.ToString(Total);
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            
+
 
             if (dataGridView1.RowCount == 0)
             {
-                MessageBox.Show("Debe agregar algun Producto","",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe agregar algun Producto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (cmb_Nombre.SelectedIndex == -1)
+            if (Combo_NombreCliente.SelectedIndex == -1)
             {
                 NombreCliente = "Desconocido";
             }
             else
             {
-                if (Check_RepresentarEmpresa.Checked==true) {
-                    ClienteEmpresa(Convert.ToInt32(cmb_Nombre.SelectedValue));
+                if (Check_RepresentarEmpresa.Checked == true)
+                {
+                    ClienteEmpresa(Convert.ToInt32(Combo_NombreCliente.SelectedValue));
                 }
                 else
                 {
-                    ClienteNormal(Convert.ToInt32(cmb_Nombre.SelectedValue));
+                    ClienteNormal(Convert.ToInt32(Combo_NombreCliente.SelectedValue));
                 }
             }
 
-            
-
+            InformeA();
+            /*
 
             Cotizacion_Impresion_Forma Coti = new Cotizacion_Impresion_Forma();
             Coti.NomCliente= NombreCliente;
@@ -290,13 +298,13 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
                 Cot.Precio = Convert.ToString("L. " + Convert.ToString(this.dataGridView1.Rows[i].Cells[5].Value));
                 Coti.Datos.Add(Cot);
             }
-             Coti.ShowDialog();
+             Coti.ShowDialog();*/
         }
 
         private void btn_Limpiar_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            label2.Text = "0";
+            Label_Total.Text = "0";
             txt_Nombre2.Text = string.Empty;
 
         }
@@ -316,7 +324,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             Resta = Convert.ToDouble(dataGridView1.CurrentRow.Cells[5].Value.ToString());
             dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
             Total = Total - Resta;
-            label2.Text = Convert.ToString(Total);
+            Label_Total.Text = Convert.ToString(Total);
         }
 
 
@@ -338,7 +346,9 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             else
             {
 
+
             }
+            Con.cnx.Close();
         }
 
         public void ClienteEmpresa(int a)
@@ -354,7 +364,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
             {
 
                 NombreCliente = (Reg["NombreEmpresa"].ToString());
-         
+
             }
             else
             {
@@ -375,15 +385,134 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
 
         private void Txt_Cantidad_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Txt_Cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             Val.ValidarID(sender, e);
         }
+
+
+
+        private void InformeA()
+        {
+            string Var_NombreCliente;
+            DateTime Var_Hoy = DateTime.Today;
+            string Var_fecha_actual = Var_Hoy.ToString("dd-MM-yyyy");
+
+            try
+            {
+                if (Combo_NombreCliente.SelectedIndex == -1)
+                {
+                    Var_NombreCliente = "Desconocido";
+                }else
+                {
+                  
+                    Var_NombreCliente = Combo_NombreCliente.Text;
+                }
+
+                string Nombre = "Cotizacion" + Var_fecha_actual + "-" + Var_NombreCliente;
+                string Ruta = @"C:\Rogers\Cotizaciones\" + Nombre + ".pdf";               
+                ExportDataTableToPdf(dataGridView1, Ruta, "Cotizacion de Inventario");
+                System.Diagnostics.Process.Start(Ruta);
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message");
+            }
+        }
+
+
+        void ExportDataTableToPdf(DataGridView dgvTable, String strPdfPath, string strHeader)
+        {
+            string Var_NombreCliente;
+
+            if (Combo_NombreCliente.SelectedIndex == -1)
+            {
+                Var_NombreCliente = "Desconocido";
+            }
+            else
+            {
+
+                Var_NombreCliente = Combo_NombreCliente.Text;
+            }
+            DateTime Var_Hoy = DateTime.Today;
+            string Var_fecha_actual = Var_Hoy.ToString("dd-MM-yyyy");
+
+            System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
+            Document document = new Document();
+            document.SetPageSize(iTextSharp.text.PageSize.A4);
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            document.Open();
+
+
+            //Report Header
+            BaseFont bfntHead = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntHead = new iTextSharp.text.Font(bfntHead, 16, 1, iTextSharp.text.BaseColor.BLACK);
+            Paragraph prgHeading = new Paragraph();
+            prgHeading.Alignment = Element.ALIGN_CENTER;
+            prgHeading.Add(new Chunk(strHeader.ToUpper(), fntHead));
+            document.Add(prgHeading);
+
+            //Author
+            Paragraph prgAuthor = new Paragraph();
+            BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntAuthor = new iTextSharp.text.Font(btnAuthor, 10, 2, iTextSharp.text.BaseColor.BLACK);
+            prgAuthor.Alignment = Element.ALIGN_RIGHT;
+            prgAuthor.Add(new Chunk("\nRogers Truck presenta esta cotización en la fecha: " + DateTime.Now.ToShortDateString(), fntAuthor));
+            document.Add(prgAuthor);
+
+            iTextSharp.text.Image PNG = iTextSharp.text.Image.GetInstance("Pictures/Logo.png");
+            PNG.ScalePercent(30f);
+            PNG.SetAbsolutePosition(document.PageSize.Width -40f -530f, document.PageSize.Height -100f);
+            document.Add(PNG);
+             Paragraph p = new Paragraph("\nRealizada por el Miembro del Equipo de Rogers Truck: "+ Txt_NombreEmpleado.Text +
+                "\nlos Nombres y los Precios de los productos que el cliente: " + Var_NombreCliente + 
+                "\nha solicitado anteriormente" +
+                "\nEste documento tendra valides hasta la fecha del: " + Date_FechaLimite.Value +
+                "\n\nLa empresa Rogers Truck Parts no se compromete de ninguna forma con el cliente: " + Var_NombreCliente +
+                "\nDe la consistencia de la siguiente información ahora presentada acerca de los productos que ofrece Rogers Truck Parts." +
+                "\nEsta cotización es únicamente con fines de informar al cliente:" + Var_NombreCliente +
+                "\nacerca de los productos que están presentándose actualmente.");
+            document.Add(p);
+            document.Add(new Chunk("\n", fntHead));
+
+
+            PdfPTable tabl = new PdfPTable(dgvTable.Columns.Count);
+            BaseFont btnColumnHeader = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntColumnHeader = new iTextSharp.text.Font(btnColumnHeader, 14, 0, iTextSharp.text.BaseColor.WHITE);
+
+             for (int i = 0; i < dgvTable.Columns.Count; i++)
+             {
+                 PdfPCell cell = new PdfPCell();
+                 cell.BackgroundColor = iTextSharp.text.BaseColor.DARK_GRAY;
+                 cell.AddElement(new Chunk(dgvTable.Columns[i].HeaderText, fntColumnHeader));
+
+                 tabl.AddCell(cell);
+             }
+         
+            for (int i = 0; i < dgvTable.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvTable.Columns.Count; j++)
+                {
+                    tabl.AddCell(Convert.ToString(dgvTable.Rows[i].Cells[j].Value));
+
+                }
+            }
+
+
+            
+            document.Add(tabl);
+            Paragraph foot = new Paragraph("\nPor un total de: Lps: " + Label_Total.Text +
+        "\nAttentamente. \nLa Gerencia.");
+            document.Add(foot);
+            document.Add(new Chunk("\n", fntHead));
+              document.Close();
+                writer.Close();
+                fs.Close();
+           
+        }
     }
-
-
-
 }

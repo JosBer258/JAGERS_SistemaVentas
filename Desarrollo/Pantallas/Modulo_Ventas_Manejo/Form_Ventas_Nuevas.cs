@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Desarrollo.Clases;
 using Desarrollo.Pantallas.Modulo__Ingreso_al_sistema;
 using Desarrollo.Pantallas.Modulo_Ventas_Manejo.Modulo_ArqueodeCaja;
+using Desarrollo.Pantallas.Modulo_Ventas_Manejo;
 
 namespace Desarrollo.Pantallas.Modulo_Ventas_Nuevas
 {
@@ -161,7 +162,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Nuevas
 
             Con.cnx.Open();
             Con.sql = string.Format(@"select A.Codigo_Cliente as 'Codigo del Cliente', (A.Nombre + ' ' + A.Apellido) as 'Nombre Cliente' FROM Clientes as A 
-                                        WHERE A.Nombre like '%{0}%'", a);
+                                        WHERE (A.Nombre + ' ' + A.Apellido) like '%{0}%' and A.Codigo_Estado=1", a);
             Con.cmd = new SqlCommand(Con.sql, Con.cnx);
             Con.DataAdapter = new SqlDataAdapter(Con.cmd);
             Con.dt = new DataTable();
@@ -190,7 +191,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Nuevas
             Con.sql = string.Format(@"select P.Codigo_PersonasAutorizadas as 'Cod Persona', 
                                     (P.Nombre + ' - ' + P.Numero_Identidad ) as 'Nombre Autorizada' 
                                     from Clientes as A inner join PersonasAutorizadas as P on A.Codigo_Cliente=P.Codigo_Cliente
-                                    where A.Nombre like '%{0}%'", a);
+                                    where (P.Nombre + ' - ' + P.Numero_Identidad ) like '%{0}%'  and P.Codigo_Estado=1 and A.Codigo_Cliente=1", a);
 
             Con.cmd = new SqlCommand(Con.sql, Con.cnx);
             Con.DataAdapter = new SqlDataAdapter(Con.cmd);
@@ -620,6 +621,9 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Nuevas
 
         private void button20_Click(object sender, EventArgs e)
         {
+            RealizarImpresion();
+            return;
+
             if (Var_ConfirmarMetodoDePago == false)
             {
                 MessageBox.Show("Defina los metodos de pago que se van a utilizar", "Error de Impresion", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -998,6 +1002,34 @@ Codigo_Credito=(select B.Codigo_Credito from Clientes as B where B.Codigo_Client
         private void button15_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+
+        private void RealizarImpresion()
+        {
+            string Descripcion = "";
+            Cotizacion_Impresion_Forma Coti = new Cotizacion_Impresion_Forma();
+            Coti.CodCai = txt_codigoCai.Text;
+            Coti.CodigoFactura = txt_codigoFactura.Text;
+
+            Coti.Subtotal_R = TextBo_Cal_Suptotal.Text;
+            Coti.Porcentaje_R = Convert.ToString(txt_Impuesto.Text);
+            Coti.Impuesto_r = TextBo_Cal_IVA.Text;
+            Coti.Total = TextBo_Cal_TOTAL.Text;
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                Cotizaccion_LlenadoDeDataGriew Cot = new Cotizaccion_LlenadoDeDataGriew();
+                Descripcion = Convert.ToString("Producto: "+ Convert.ToString(this.dataGridView1.Rows[i].Cells[1].Value) + 
+                    "\nPrecio: " + Convert.ToString(this.dataGridView1.Rows[i].Cells[2].Value) +
+                    "\nCantidad: " + Convert.ToString(this.dataGridView1.Rows[i].Cells[3].Value)
+                    );
+                Cot.Descripcion = Convert.ToString(Descripcion);
+                Cot.Precio = Convert.ToString("L. " + Convert.ToString(this.dataGridView1.Rows[i].Cells[5].Value));
+
+                Coti.Datos.Add(Cot);
+            }
+            Coti.ShowDialog(); 
         }
     }
 }

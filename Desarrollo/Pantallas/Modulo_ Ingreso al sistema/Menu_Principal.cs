@@ -357,7 +357,7 @@ namespace Desarrollo.Pantallas.Modulo__Ingreso_al_sistema
                 realizarCotizacionesToolStripMenuItem.Visible = true;
                 busqueDeVentasToolStripMenuItem.Visible = true;
                 manejoDeImpuestosToolStripMenuItem.Visible = true;
-                pantallaDeSalidaToolStripMenuItem.Visible = true;
+                
 
             }
             else if (Convert.ToInt16(Var_codigo_rol) == 2)//Vendedor

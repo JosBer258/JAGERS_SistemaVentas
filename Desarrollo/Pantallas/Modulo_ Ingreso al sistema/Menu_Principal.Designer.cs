@@ -44,9 +44,7 @@
             this.realizarCotizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arqueoDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aperturaDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pantallaDeSalidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arqueoDeCajaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.confirmarCierreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoDeTransaccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +52,6 @@
             this.creditosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoDeMoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cobrarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aplicacionDeMoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -195,9 +192,7 @@
             // 
             this.arqueoDeCajaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aperturaDeCajaToolStripMenuItem,
-            this.pantallaDeSalidaToolStripMenuItem,
             this.arqueoDeCajaToolStripMenuItem1,
-            this.confirmarCierreToolStripMenuItem,
             this.nuevaVentaToolStripMenuItem1});
             this.arqueoDeCajaToolStripMenuItem.Name = "arqueoDeCajaToolStripMenuItem";
             this.arqueoDeCajaToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
@@ -206,36 +201,22 @@
             // aperturaDeCajaToolStripMenuItem
             // 
             this.aperturaDeCajaToolStripMenuItem.Name = "aperturaDeCajaToolStripMenuItem";
-            this.aperturaDeCajaToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
+            this.aperturaDeCajaToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
             this.aperturaDeCajaToolStripMenuItem.Text = "Apertura de Caja";
             this.aperturaDeCajaToolStripMenuItem.Click += new System.EventHandler(this.aperturaDeCajaToolStripMenuItem_Click);
-            // 
-            // pantallaDeSalidaToolStripMenuItem
-            // 
-            this.pantallaDeSalidaToolStripMenuItem.Name = "pantallaDeSalidaToolStripMenuItem";
-            this.pantallaDeSalidaToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.pantallaDeSalidaToolStripMenuItem.Text = "***Pantalla de Apertura";
-            this.pantallaDeSalidaToolStripMenuItem.Click += new System.EventHandler(this.pantallaDeSalidaToolStripMenuItem_Click);
             // 
             // arqueoDeCajaToolStripMenuItem1
             // 
             this.arqueoDeCajaToolStripMenuItem1.Name = "arqueoDeCajaToolStripMenuItem1";
-            this.arqueoDeCajaToolStripMenuItem1.Size = new System.Drawing.Size(243, 24);
+            this.arqueoDeCajaToolStripMenuItem1.Size = new System.Drawing.Size(245, 24);
             this.arqueoDeCajaToolStripMenuItem1.Text = "Arqueo de Caja";
             this.arqueoDeCajaToolStripMenuItem1.Click += new System.EventHandler(this.arqueoDeCajaToolStripMenuItem1_Click);
-            // 
-            // confirmarCierreToolStripMenuItem
-            // 
-            this.confirmarCierreToolStripMenuItem.Name = "confirmarCierreToolStripMenuItem";
-            this.confirmarCierreToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.confirmarCierreToolStripMenuItem.Text = "****ConfirmarCierre";
-            this.confirmarCierreToolStripMenuItem.Click += new System.EventHandler(this.confirmarCierreToolStripMenuItem_Click);
             // 
             // nuevaVentaToolStripMenuItem1
             // 
             this.nuevaVentaToolStripMenuItem1.Name = "nuevaVentaToolStripMenuItem1";
-            this.nuevaVentaToolStripMenuItem1.Size = new System.Drawing.Size(243, 24);
-            this.nuevaVentaToolStripMenuItem1.Text = "*******Nueva Venta";
+            this.nuevaVentaToolStripMenuItem1.Size = new System.Drawing.Size(245, 24);
+            this.nuevaVentaToolStripMenuItem1.Text = "(Prototipo)Nueva Venta";
             this.nuevaVentaToolStripMenuItem1.Click += new System.EventHandler(this.nuevaVentaToolStripMenuItem1_Click);
             // 
             // transaccionesToolStripMenuItem
@@ -265,8 +246,7 @@
             // 
             this.creditosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenimientoDeMoraToolStripMenuItem,
-            this.cobrarFacturaToolStripMenuItem,
-            this.aplicacionDeMoraToolStripMenuItem});
+            this.cobrarFacturaToolStripMenuItem});
             this.creditosToolStripMenuItem.Name = "creditosToolStripMenuItem";
             this.creditosToolStripMenuItem.Size = new System.Drawing.Size(78, 23);
             this.creditosToolStripMenuItem.Text = "Creditos";
@@ -285,13 +265,6 @@
             this.cobrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(247, 24);
             this.cobrarFacturaToolStripMenuItem.Text = "Cobrar Factura";
             this.cobrarFacturaToolStripMenuItem.Click += new System.EventHandler(this.cobrarFacturaToolStripMenuItem_Click);
-            // 
-            // aplicacionDeMoraToolStripMenuItem
-            // 
-            this.aplicacionDeMoraToolStripMenuItem.Name = "aplicacionDeMoraToolStripMenuItem";
-            this.aplicacionDeMoraToolStripMenuItem.Size = new System.Drawing.Size(247, 24);
-            this.aplicacionDeMoraToolStripMenuItem.Text = "Aplicacion de Mora";
-            this.aplicacionDeMoraToolStripMenuItem.Click += new System.EventHandler(this.aplicacionDeMoraToolStripMenuItem_Click);
             // 
             // localidadesToolStripMenuItem
             // 
@@ -417,10 +390,7 @@
         private System.Windows.Forms.ToolStripMenuItem realizarCotizacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arqueoDeCajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aperturaDeCajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pantallaDeSalidaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aplicacionDeMoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arqueoDeCajaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem confirmarCierreToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem1;

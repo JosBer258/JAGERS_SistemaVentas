@@ -42,7 +42,8 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
                 //(@"select * from Producto");
                 (@"select A.Cod_Producto as 'Codigo del Producto', A.NombreProducto as 'Producto', A.Descripcion as 'Descripcion', D.Cantidad as 'Cantidad Existente',
                 L.Cod_Localidad as 'Codigo de Localidad',L.Nombre as 'Localidad',
-                CAST(A.PrecioVenta as decimal(10,2)) as 'Precio' from Producto A inner join [Producto|Localidad] as D on D.Cod_Producto=A.Cod_Producto inner join Localidad as L on D.Cod_Localidad=L.Cod_Localidad");
+                CAST(A.PrecioVenta as decimal(10,2)) as 'Precio' from Producto A inner join [Producto|Localidad] as D on D.Cod_Producto=A.Cod_Producto inner join Localidad as L on D.Cod_Localidad=L.Cod_Localidad
+                where  A.Cod_Estado= '1'");
                 con.cmd = new SqlCommand(con.sql, con.cnx);
                 con.DataAdapter = new SqlDataAdapter(con.cmd);
                 con.dt = new DataTable();
@@ -67,7 +68,7 @@ namespace Desarrollo.Pantallas.Modulo_Ventas_Manejo
                 (@"select A.Cod_Producto as 'Codigo del Producto',A.NombreProducto as 'Producto',A.Descripcion as 'Descripcion',D.Cantidad 
                 as 'Cantidad Existente', L.Cod_Localidad as 'Codigo de Localidad',L.Nombre as 'Localidad',
                 CAST(A.PrecioVenta as decimal(10,2)) as 'Precio' from Producto A inner join [Producto|Localidad] as D on D.Cod_Producto=A.Cod_Producto inner join Localidad as L on D.Cod_Localidad=L.Cod_Localidad
-                where  A.NombreProducto like '%{0}%'", Nom); 
+                where  A.NombreProducto like '%{0}%' and A.Cod_Estado= '1'", Nom); 
                 con.cmd = new SqlCommand(con.sql, con.cnx);
                 con.DataAdapter = new SqlDataAdapter(con.cmd);
                 con.dt = new DataTable();

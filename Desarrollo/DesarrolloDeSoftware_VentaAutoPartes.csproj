@@ -33,10 +33,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -217,6 +230,12 @@
     <Compile Include="Pantallas\Modulo_Ventas_Manejo\Form_Busqueda_Producto.Designer.cs">
       <DependentUpon>Form_Busqueda_Producto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Modulo_Ventas_Manejo\Form_ConfirmImprCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Modulo_Ventas_Manejo\Form_ConfirmImprCredito.Designer.cs">
+      <DependentUpon>Form_ConfirmImprCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Modulo_Ventas_Manejo\Form_DefinirMetodoDePago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Form_Busqueda_Producto.resx">
       <DependentUpon>Form_Busqueda_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Form_ConfirmImprCredito.resx">
+      <DependentUpon>Form_ConfirmImprCredito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Modulo_Ventas_Manejo\Form_DefinirMetodoDePago.resx">
       <DependentUpon>Form_DefinirMetodoDePago.cs</DependentUpon>
@@ -666,6 +688,15 @@
     <None Include="Resources\Sin título.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="Acrobat">
+      <Guid>{E64169B3-3592-47D2-816E-602C5C13F328}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="AcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
       <VersionMajor>1</VersionMajor>
