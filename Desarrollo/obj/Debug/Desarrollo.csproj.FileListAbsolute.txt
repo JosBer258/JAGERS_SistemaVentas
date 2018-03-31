@@ -1,0 +1,21 @@
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\bin\Debug\Desarrollo.exe.config
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\bin\Debug\Desarrollo.exe
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\bin\Debug\Desarrollo.pdb
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\obj\Debug\Desarrollo.csprojResolveAssemblyReference.cache
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\obj\Debug\Desarrollo.Form1.resources
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\obj\Debug\Desarrollo.csproj.GenerateResource.Cache
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\obj\Debug\Desarrollo.exe
+c:\users\wilmer\documents\visual studio 2015\Projects\Desarrollo\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Videos\DESARROLLO\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Videos\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Videos\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\bin\Debug\Desarrollo.exe.config
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.exe
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.pdb
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\bin\Debug\Desarrollo.exe
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\bin\Debug\Desarrollo.pdb
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.csprojResolveAssemblyReference.cache
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.Properties.Resources.resources
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.csproj.GenerateResource.Cache
+C:\Users\Josias\Music\DESARROLLO\Desarrollo\obj\Debug\Desarrollo.Form_Ingreso_Al_Sistema.resources

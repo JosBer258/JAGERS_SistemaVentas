@@ -1,0 +1,55 @@
+﻿'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\assembly\GAC_MSIL\Microsoft.VisualStudio.HostingProcess.Utilities\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.HostingProcess.Utilities.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\assembly\GAC_MSIL\Microsoft.VisualStudio.HostingProcess.Utilities.Sync\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\assembly\GAC_MSIL\Microsoft.VisualStudio.Debugger.Runtime\14.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.Debugger.Runtime.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.vshost.exe' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Deployment\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Deployment.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Net.Http\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Net.Http.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_es_b77a5c561934e089\mscorlib.resources.dll' cargado. El módulo se compiló sin símbolos.
+El subproceso 0xc4 terminó con código 0 (0x0).
+El subproceso 0x1628 terminó con código 0 (0x0).
+El subproceso 0x1e2c terminó con código 0 (0x0).
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\Users\Josias\Desktop\Prototipo_Proyecto\DesarrolloDeSoftware_VentaAutoPartes\Desarrollo\bin\Debug\Desarrollo.exe' cargado. Símbolos cargados.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Data.resources\v4.0_4.0.0.0_es_b77a5c561934e089\System.Data.resources.dll' cargado. El módulo se compiló sin símbolos.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Caching\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Caching.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms.resources\v4.0_4.0.0.0_es_b77a5c561934e089\System.Windows.Forms.resources.dll' cargado. El módulo se compiló sin símbolos.
+'Desarrollo.vshost.exe' (CLR v4.0.30319: Desarrollo.vshost.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+Excepción producida: 'System.Data.ConstraintException' en System.Data.dll
+El subproceso 0x2d40 terminó con código 0 (0x0).
+El subproceso 0x77c terminó con código 0 (0x0).
+El subproceso 0x1d6c terminó con código 0 (0x0).
+El subproceso 0x2db0 terminó con código 0 (0x0).
+El subproceso 0x13cc terminó con código 0 (0x0).
+El subproceso 0x2fe8 terminó con código 0 (0x0).
+El subproceso 0x23d8 terminó con código 0 (0x0).
+El subproceso 0x29f8 terminó con código 0 (0x0).
+El subproceso 0x2b5c terminó con código 0 (0x0).
+El subproceso 0x3a94 terminó con código 0 (0x0).
+El subproceso 0x3d70 terminó con código 0 (0x0).
+El subproceso 0x460 terminó con código 0 (0x0).
+El subproceso 0x2348 terminó con código 0 (0x0).
+El subproceso 0x1144 terminó con código 0 (0x0).
+El subproceso 0x2eb8 terminó con código 0 (0x0).
+El subproceso 0x38f0 terminó con código 0 (0x0).
+El subproceso 0x134c terminó con código 0 (0x0).
+El subproceso 0x1078 terminó con código 0 (0x0).
+Excepción producida: 'System.Data.ConstraintException' en System.Data.dll
+El subproceso 0x38b8 terminó con código 0 (0x0).
+El subproceso 0x54c terminó con código 0 (0x0).
+El subproceso 0x3248 terminó con código 0 (0x0).
+El programa '[15416] Desarrollo.vshost.exe: Seguimiento de programa' terminó con código 0 (0x0).
+El programa '[15416] Desarrollo.vshost.exe' terminó con código -1 (0xffffffff).
